@@ -1,0 +1,239 @@
+\doxysection{Modules/juce\+\_\+gui\+\_\+basics/juce\+\_\+gui\+\_\+basics.h File Reference}
+\hypertarget{juce__gui__basics_8h}{}\label{juce__gui__basics_8h}\index{Modules/juce\_gui\_basics/juce\_gui\_basics.h@{Modules/juce\_gui\_basics/juce\_gui\_basics.h}}
+{\ttfamily \#include $<$juce\+\_\+graphics/juce\+\_\+graphics.\+h$>$}\newline
+{\ttfamily \#include $<$juce\+\_\+data\+\_\+structures/juce\+\_\+data\+\_\+structures.\+h$>$}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Cursor.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Listener.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Modifier\+Keys.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Input\+Source.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Event.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Key\+Press.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Key\+Listener.\+h"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Component\+Traverser.\+h"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Focus\+Traverser.\+h"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Modal\+Component\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Component\+Listener.\+h"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Cached\+Component\+Image.\+h"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Animator.\+h"{}}\newline
+{\ttfamily \#include "{}desktop/juce\+\_\+\+Desktop.\+h"{}}\newline
+{\ttfamily \#include "{}desktop/juce\+\_\+\+Displays.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Bounds\+Constrainer.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Component\+Dragger.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Drag\+And\+Drop\+Target.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Drag\+And\+Drop\+Container.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+File\+Drag\+And\+Drop\+Target.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Selected\+Item\+Set.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Inactivity\+Detector.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Text\+Drag\+And\+Drop\+Target.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Tooltip\+Client.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Caret\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Keyboard\+Focus\+Traverser.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+System\+Clipboard.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Text\+Editor\+Key\+Mapper.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Text\+Input\+Target.\+h"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Application\+Command\+ID.\+h"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Application\+Command\+Info.\+h"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Application\+Command\+Target.\+h"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Application\+Command\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Key\+Press\+Mapping\+Set.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Arrow\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Drawable\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Hyperlink\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Image\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Shape\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Text\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Toggle\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Animated\+Position.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Animated\+Position\+Behaviours.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Builder.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Movement\+Watcher.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Concertina\+Panel.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Group\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Resizable\+Border\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Resizable\+Corner\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Resizable\+Edge\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Scroll\+Bar.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Stretchable\+Layout\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Stretchable\+Layout\+Resizer\+Bar.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Stretchable\+Object\+Resizer.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Tabbed\+Button\+Bar.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Tabbed\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Viewport.\+h"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Popup\+Menu.\+h"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Menu\+Bar\+Model.\+h"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Menu\+Bar\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Coordinate.\+h"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Marker\+List.\+h"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Point.\+h"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Rectangle.\+h"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Coordinate\+Positioner.\+h"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Parallelogram.\+h"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Point\+Path.\+h"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable.\+h"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Shape.\+h"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Composite.\+h"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Image.\+h"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Path.\+h"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Rectangle.\+h"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Text.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Text\+Editor.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Label.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Combo\+Box.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Image\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+List\+Box.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Progress\+Bar.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Slider.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Table\+Header\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Table\+List\+Box.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Toolbar.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Toolbar\+Item\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Toolbar\+Item\+Factory.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Toolbar\+Item\+Palette.\+h"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Burger\+Menu\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Toolbar\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+Drop\+Shadower.\+h"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+Focus\+Outline.\+h"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+JUCESplash\+Screen.\+h"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Tree\+View.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Top\+Level\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Message\+Box\+Options.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Alert\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Call\+Out\+Box.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Component\+Peer.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Resizable\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Document\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Dialog\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Native\+Message\+Box.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Thread\+With\+Progress\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Tooltip\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Multi\+Document\+Panel.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Side\+Panel.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Browser\+Listener.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Directory\+Contents\+List.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Directory\+Contents\+Display\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Browser\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Chooser.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Chooser\+Dialog\+Box.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+List\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Filename\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Preview\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Search\+Path\+List\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Tree\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Image\+Preview\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Content\+Sharer.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Property\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Boolean\+Property\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Button\+Property\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Choice\+Property\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Property\+Panel.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Slider\+Property\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Text\+Property\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Multi\+Choice\+Property\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}application/juce\+\_\+\+Application.\+h"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+Bubble\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel.\+h"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V2.\+h"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V1.\+h"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V3.\+h"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V4.\+h"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Lasso\+Component.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/interfaces/juce\+\_\+\+Accessibility\+Cell\+Interface.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/interfaces/juce\+\_\+\+Accessibility\+Table\+Interface.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/interfaces/juce\+\_\+\+Accessibility\+Text\+Interface.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/interfaces/juce\+\_\+\+Accessibility\+Value\+Interface.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/enums/juce\+\_\+\+Accessibility\+Actions.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/enums/juce\+\_\+\+Accessibility\+Event.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/enums/juce\+\_\+\+Accessibility\+Role.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/juce\+\_\+\+Accessibility\+State.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/juce\+\_\+\+Accessibility\+Handler.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Flex\+Item.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Flex\+Box.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Grid\+Item.\+h"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Grid.\+h"{}}\newline
+{\ttfamily \#include "{}native/juce\+\_\+\+Scoped\+DPIAwareness\+Disabler.\+h"{}}\newline
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{juce__gui__basics_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacejuce}{juce}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_a9abf38ffd371109f783e65a40a1c96e8}{JUCE\+\_\+\+GUI\+\_\+\+BASICS\+\_\+\+H\+\_\+\+INCLUDED}}
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_a34520aa8fda8d7f52f01949bd4f4f18e}{JUCE\+\_\+\+ENABLE\+\_\+\+REPAINT\+\_\+\+DEBUGGING}}~0
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_ac576e0a6f7c687d22de1637bd3268985}{JUCE\+\_\+\+USE\+\_\+\+XRANDR}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_ad3356c6ae8a89c1f95ade383340b3544}{JUCE\+\_\+\+USE\+\_\+\+XINERAMA}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_a27c2a962c8e7ca15df5f75b4f02e14c0}{JUCE\+\_\+\+USE\+\_\+\+XSHM}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_a20c7c6da8a56ffc88bf62db813cd6139}{JUCE\+\_\+\+USE\+\_\+\+XRENDER}}~0
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_a63a74fc56f169c9e6f5ed38442402956}{JUCE\+\_\+\+USE\+\_\+\+XCURSOR}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8h_a34cb261cbdbe2f7811a9f323f9651b0c}{JUCE\+\_\+\+WIN\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+DPI\+\_\+\+AWARE}}~1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{juce__gui__basics_8h_a34520aa8fda8d7f52f01949bd4f4f18e}\label{juce__gui__basics_8h_a34520aa8fda8d7f52f01949bd4f4f18e} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_ENABLE\_REPAINT\_DEBUGGING@{JUCE\_ENABLE\_REPAINT\_DEBUGGING}}
+\index{JUCE\_ENABLE\_REPAINT\_DEBUGGING@{JUCE\_ENABLE\_REPAINT\_DEBUGGING}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_ENABLE\_REPAINT\_DEBUGGING}{JUCE\_ENABLE\_REPAINT\_DEBUGGING}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+ENABLE\+\_\+\+REPAINT\+\_\+\+DEBUGGING~0}
+
+Config\+: JUCE\+\_\+\+ENABLE\+\_\+\+REPAINT\+\_\+\+DEBUGGING If this option is turned on, each area of the screen that gets repainted will flash in a random colour, so that you can see exactly which bits of your components are being drawn. \Hypertarget{juce__gui__basics_8h_a9abf38ffd371109f783e65a40a1c96e8}\label{juce__gui__basics_8h_a9abf38ffd371109f783e65a40a1c96e8} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_GUI\_BASICS\_H\_INCLUDED@{JUCE\_GUI\_BASICS\_H\_INCLUDED}}
+\index{JUCE\_GUI\_BASICS\_H\_INCLUDED@{JUCE\_GUI\_BASICS\_H\_INCLUDED}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_GUI\_BASICS\_H\_INCLUDED}{JUCE\_GUI\_BASICS\_H\_INCLUDED}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+GUI\+\_\+\+BASICS\+\_\+\+H\+\_\+\+INCLUDED}
+
+\Hypertarget{juce__gui__basics_8h_a63a74fc56f169c9e6f5ed38442402956}\label{juce__gui__basics_8h_a63a74fc56f169c9e6f5ed38442402956} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_USE\_XCURSOR@{JUCE\_USE\_XCURSOR}}
+\index{JUCE\_USE\_XCURSOR@{JUCE\_USE\_XCURSOR}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_USE\_XCURSOR}{JUCE\_USE\_XCURSOR}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+USE\+\_\+\+XCURSOR~1}
+
+Config\+: JUCE\+\_\+\+USE\+\_\+\+XCURSOR Uses XCursor to allow ARGB cursor on Linux. This is best left turned on unless you have a good reason to disable it. \Hypertarget{juce__gui__basics_8h_ad3356c6ae8a89c1f95ade383340b3544}\label{juce__gui__basics_8h_ad3356c6ae8a89c1f95ade383340b3544} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_USE\_XINERAMA@{JUCE\_USE\_XINERAMA}}
+\index{JUCE\_USE\_XINERAMA@{JUCE\_USE\_XINERAMA}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_USE\_XINERAMA}{JUCE\_USE\_XINERAMA}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+USE\+\_\+\+XINERAMA~1}
+
+Config\+: JUCE\+\_\+\+USE\+\_\+\+XINERAMA Enables Xinerama multi-\/monitor support (Linux only). Unless you specifically want to disable this, it\textquotesingle{}s best to leave this option turned on. This will be used as a fallback if JUCE\+\_\+\+USE\+\_\+\+XRANDR not set or libxrandr cannot be found. Note that your users do not need to have Xinerama installed for your JUCE app to run, as the availability of Xinerama is queried during runtime. \Hypertarget{juce__gui__basics_8h_ac576e0a6f7c687d22de1637bd3268985}\label{juce__gui__basics_8h_ac576e0a6f7c687d22de1637bd3268985} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_USE\_XRANDR@{JUCE\_USE\_XRANDR}}
+\index{JUCE\_USE\_XRANDR@{JUCE\_USE\_XRANDR}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_USE\_XRANDR}{JUCE\_USE\_XRANDR}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+USE\+\_\+\+XRANDR~1}
+
+Config\+: JUCE\+\_\+\+USE\+\_\+\+XRANDR Enables Xrandr multi-\/monitor support (Linux only). Unless you specifically want to disable this, it\textquotesingle{}s best to leave this option turned on. Note that your users do not need to have Xrandr installed for your JUCE app to run, as the availability of Xrandr is queried during runtime. \Hypertarget{juce__gui__basics_8h_a20c7c6da8a56ffc88bf62db813cd6139}\label{juce__gui__basics_8h_a20c7c6da8a56ffc88bf62db813cd6139} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_USE\_XRENDER@{JUCE\_USE\_XRENDER}}
+\index{JUCE\_USE\_XRENDER@{JUCE\_USE\_XRENDER}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_USE\_XRENDER}{JUCE\_USE\_XRENDER}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+USE\+\_\+\+XRENDER~0}
+
+Config\+: JUCE\+\_\+\+USE\+\_\+\+XRENDER Enables XRender to allow semi-\/transparent windowing on Linux. \Hypertarget{juce__gui__basics_8h_a27c2a962c8e7ca15df5f75b4f02e14c0}\label{juce__gui__basics_8h_a27c2a962c8e7ca15df5f75b4f02e14c0} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_USE\_XSHM@{JUCE\_USE\_XSHM}}
+\index{JUCE\_USE\_XSHM@{JUCE\_USE\_XSHM}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_USE\_XSHM}{JUCE\_USE\_XSHM}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+USE\+\_\+\+XSHM~1}
+
+Config\+: JUCE\+\_\+\+USE\+\_\+\+XSHM Enables X shared memory for faster rendering on Linux. This is best left turned on unless you have a good reason to disable it. \Hypertarget{juce__gui__basics_8h_a34cb261cbdbe2f7811a9f323f9651b0c}\label{juce__gui__basics_8h_a34cb261cbdbe2f7811a9f323f9651b0c} 
+\index{juce\_gui\_basics.h@{juce\_gui\_basics.h}!JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE@{JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE}}
+\index{JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE@{JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE}!juce\_gui\_basics.h@{juce\_gui\_basics.h}}
+\doxysubsubsection{\texorpdfstring{JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE}{JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+WIN\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+DPI\+\_\+\+AWARE~1}
+
+Config\+: JUCE\+\_\+\+WIN\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+DPI\+\_\+\+AWARE Enables per-\/monitor DPI awareness on Windows 8.\+1 and above. 

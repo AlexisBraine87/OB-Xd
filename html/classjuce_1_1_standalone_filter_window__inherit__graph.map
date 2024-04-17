@@ -1,0 +1,9 @@
+<map id="juce::StandaloneFilterWindow" name="juce::StandaloneFilterWindow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="134,79,328,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,134,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,35,204,76,202,81,110,40"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="158,5,304,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,46,234,79,228,79,228,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="327,5,436,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="343,40,258,81,255,76,341,36"/>
+</map>

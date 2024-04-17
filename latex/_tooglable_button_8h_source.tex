@@ -1,0 +1,156 @@
+\doxysection{Tooglable\+Button.\+h}
+\hypertarget{_tooglable_button_8h_source}{}\label{_tooglable_button_8h_source}\index{Source/Gui/TooglableButton.h@{Source/Gui/TooglableButton.h}}
+\mbox{\hyperlink{_tooglable_button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ {\ucr}\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}../Source/Engine/SynthEngine.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_scale_component_8h}{../Components/ScaleComponent.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tooglable_button}{TooglableButton}}\ \ :\ \textcolor{keyword}{public}\ ImageButton,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ juce::String\ \mbox{\hyperlink{class_tooglable_button_a624858e2265ab6c7cc4543174246f1b7}{img\_name}};}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_a2f948d1107b37f0e32e0d1922ac9af59}{TooglableButton}}\ (juce::String\ name,\ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\ *owner)\ :\ ImageButton(),\mbox{\hyperlink{class_scalable_component}{ScalableComponent}}(owner),\ \mbox{\hyperlink{class_tooglable_button_a624858e2265ab6c7cc4543174246f1b7}{img\_name}}(name)}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//this-\/>setImages}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//kni\ =\ k;}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_a7bf6859b52f5afcb8fd46a58836cc198}{scaleFactorChanged}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//toogled\ =\ false;}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_a86ef244dc42696b44033a01a97be0f31}{width}}\ =\ \mbox{\hyperlink{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06}{kni}}.getWidth();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_a3ffdeba5928d5bcb780841275c04319b}{height}}\ =\ \mbox{\hyperlink{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06}{kni}}.getHeight();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_a00ec442925293b0cde7590a75487e6ed}{w2}}\ =\ \mbox{\hyperlink{class_tooglable_button_a86ef244dc42696b44033a01a97be0f31}{width}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_a1f52038722a300337e0f9d9533827fb0}{h2}}\ =\ \mbox{\hyperlink{class_tooglable_button_a3ffdeba5928d5bcb780841275c04319b}{height}}\ /\ 2;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ this-\/>setClickingTogglesState\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tooglable_button_a7bf6859b52f5afcb8fd46a58836cc198}{scaleFactorChanged}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00046\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06}{kni}}\ =\ \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{getScaledImageFromCache}}(\mbox{\hyperlink{class_tooglable_button_a624858e2265ab6c7cc4543174246f1b7}{img\_name}},\ \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{getScaleFactor}}(),\ \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{getIsHighResolutionDisplay}}());}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ backgroundImage\ =}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ allImage.getClippedImage(Rectangle<int>(0,}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getHeight()\ /\ 2,}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getWidth(),}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getHeight()\ /\ 2));}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ repaint();}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_acf35b461adf2e3ae63ff19e4d8f33359}{\string~TooglableButton}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \};}
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Source:\ https://git.iem.at/audioplugins/IEMPluginSuite/-\//blob/master/resources/customComponents/ReverseSlider.h}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment}{ToggleAttachment}}\ \ :\ \textcolor{keyword}{public}\ juce::AudioProcessorValueTreeState::ButtonAttachment}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ RangedAudioParameter*\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_af83c1e12d1754f10b5dd6e9a1ee7085e}{parameter}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button}{TooglableButton}}*\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a89de9bb92e9aa115107fe8c2a66276ce}{buttonToControl}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a2cbf81577d1a9f52507db1a142fa565e}{ToggleAttachment}}\ (juce::AudioProcessorValueTreeState\&\ stateToControl,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ juce::String\&\ parameterID,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button}{TooglableButton}}\&\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a89de9bb92e9aa115107fe8c2a66276ce}{buttonToControl}})\ :\ AudioProcessorValueTreeState::ButtonAttachment\ (stateToControl,\ parameterID,\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a89de9bb92e9aa115107fe8c2a66276ce}{buttonToControl}}),\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a89de9bb92e9aa115107fe8c2a66276ce}{buttonToControl}}(\&\mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a89de9bb92e9aa115107fe8c2a66276ce}{buttonToControl}})}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_af83c1e12d1754f10b5dd6e9a1ee7085e}{parameter}}\ =\ stateToControl.getParameter\ (parameterID);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//buttonToControl.setParameter\ (parameter);}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ \ \ ToggleAttachment\ (juce::AudioProcessorValueTreeState\&\ stateToControl,}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ juce::String\&\ parameterID,}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Button\&\ buttonToControl)\ :\ AudioProcessorValueTreeState::ButtonAttachment\ (stateToControl,\ parameterID,\ buttonToControl)}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a94619db48912118240965a9747806012}{updateToSlider}}()\{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ val\ =\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_af83c1e12d1754f10b5dd6e9a1ee7085e}{parameter}}-\/>getValue();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//buttonToControl-\/>setValue(parameter-\/>convertFrom0to1(val0to1),\ NotificationType::dontSendNotification);}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ DBG(\textcolor{stringliteral}{"{}Toggle\ Parameter:\ "{}}\ <<\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_af83c1e12d1754f10b5dd6e9a1ee7085e}{parameter}}-\/>name\ <<\ \textcolor{stringliteral}{"{}\ Val:\ "{}}\ <<\ val);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a89de9bb92e9aa115107fe8c2a66276ce}{buttonToControl}}-\/>setToggleState(val,\ NotificationType::dontSendNotification);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment_a6e9b51bf6218460444f5c703c18d98a2}{\string~ToggleAttachment}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00087\ \ \ \ \ \};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ void\ setParameter\ (const\ AudioProcessorParameter*\ p)}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (parameter\ ==\ p)}}
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ return;}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ parameter\ =\ p;}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ repaint();}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ \}*/}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ void\ clicked()\ override}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ toogled\ =\ !\ toogled;}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ //this-\/>setColour(1,Colours::blue);}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ \ \ \ \ //if(toogled)}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ \ this-\/>setColour(TextButton::ColourIds::buttonColourId,Colours::lightgreen);}}
+\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ \ \ \ \ //else}}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ \ this-\/>removeColour(TextButton::ColourIds::buttonColourId);}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ //this-\/>setColour(DrawableButton::ColourIds::backgroundColourId,Colours::lightpink);}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ Button::clicked();}}
+\DoxyCodeLine{00108\ \textcolor{comment}{}}
+\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ \ \};*/}}
+\DoxyCodeLine{00110\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tooglable_button_aaf11eabcf4b9c2b3de2bff98f605f4c0}{paintButton}}\ (Graphics\&\ g,\ \textcolor{keywordtype}{bool}\ isMouseOverButton,\ \textcolor{keywordtype}{bool}\ isButtonDown)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00112\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ offset\ =\ 0;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (toogled)}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (getToggleState())}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ offset\ =\ 1;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ g.drawImage(\mbox{\hyperlink{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06}{kni}},\ 0,\ 0,\ getWidth(),\ getHeight(),\ 0,\ offset\ *\ \mbox{\hyperlink{class_tooglable_button_a1f52038722a300337e0f9d9533827fb0}{h2}}\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}()\ ,\ \mbox{\hyperlink{class_tooglable_button_a00ec442925293b0cde7590a75487e6ed}{w2}}\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}(),\ \mbox{\hyperlink{class_tooglable_button_a1f52038722a300337e0f9d9533827fb0}{h2}}\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}());}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00124\ \textcolor{comment}{\ \ \ \ void\ setValue\ (float\ state,\ int\ notify)}}
+\DoxyCodeLine{00125\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00126\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (state\ >\ 0.5)}}
+\DoxyCodeLine{00127\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ toogled\ =\ true;}}
+\DoxyCodeLine{00128\ \textcolor{comment}{\ \ \ \ \ \ \ \ else\ toogled\ =\ false;}}
+\DoxyCodeLine{00129\ \textcolor{comment}{\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00130\ \textcolor{comment}{\ \ \ \ \ \ \ \ repaint();}}
+\DoxyCodeLine{00131\ \textcolor{comment}{\ \ \ \ \}*/}}
+\DoxyCodeLine{00132\ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{/*float\ getValue()}}
+\DoxyCodeLine{00134\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00135\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (toogled)}}
+\DoxyCodeLine{00136\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ return\ 1;}}
+\DoxyCodeLine{00137\ \textcolor{comment}{\ \ \ \ \ \ \ \ else\ return\ 0;}}
+\DoxyCodeLine{00138\ \textcolor{comment}{\ \ \ \ \}*/}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ paint(Graphics\&\ g)}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\{}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ \ g.drawImageTransformed(kni,AffineTransform::rotation(((getValue()\ -\/\ getMinimum())/(getMaximum()\ -\/\ getMinimum()))*float\_Pi\ -\/\ float\_Pi*2));}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\}}}
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//bool\ toogled;}}
+\DoxyCodeLine{00145\ \ \ \ \ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00147\ \ \ \ \ Image\ \mbox{\hyperlink{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06}{kni}};}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tooglable_button_a86ef244dc42696b44033a01a97be0f31}{width}},\ \mbox{\hyperlink{class_tooglable_button_a3ffdeba5928d5bcb780841275c04319b}{height}},\ \mbox{\hyperlink{class_tooglable_button_a00ec442925293b0cde7590a75487e6ed}{w2}},\ \mbox{\hyperlink{class_tooglable_button_a1f52038722a300337e0f9d9533827fb0}{h2}};}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//const\ AudioProcessorParameter*\ parameter;}}
+\DoxyCodeLine{00150\ \};}
+
+\end{DoxyCode}

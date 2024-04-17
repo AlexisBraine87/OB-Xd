@@ -1,0 +1,7 @@
+<map id="ObxdAudioProcessorEditor::createMidi" name="ObxdAudioProcessorEditor::createMidi">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,46"/>
+<area shape="rect" id="Node000002" href="$class_obxd_audio_processor.html#aa31dd6071b5e54c9553d76034eef2149" title=" " alt="" coords="232,5,376,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,216,23,216,28,184,28"/>
+<area shape="rect" id="Node000003" href="$class_obxd_audio_processor.html#a7729e32681fdeee946d73a5e6da05812" title=" " alt="" coords="424,5,568,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,23,409,23,409,28,376,28"/>
+</map>

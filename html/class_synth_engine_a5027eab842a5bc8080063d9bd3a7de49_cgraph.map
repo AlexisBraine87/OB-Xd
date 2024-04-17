@@ -1,0 +1,33 @@
+<map id="SynthEngine::processOversampling" name="SynthEngine::processOversampling">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,227,235,252"/>
+<area shape="rect" id="Node000002" href="$class_motherboard.html#a75b5415cb6fde12502d876edffd33529" title=" " alt="" coords="283,227,474,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,237,267,237,267,242,235,242"/>
+<area shape="rect" id="Node000003" href="$class_obxd_voice.html#a8acc694533ce65c64379902322784dab" title=" " alt="" coords="548,177,679,203"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="443,223,534,204,535,209,444,229"/>
+<area shape="rect" id="Node000012" href="$class_lfo.html#ae71a394188ebe2d93ee7bc847bde7411" title=" " alt="" coords="545,227,682,252"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="475,237,529,237,529,242,475,242"/>
+<area shape="rect" id="Node000013" href="$class_obxd_voice.html#aa2f9a9aa1e1fba3d298071acc822a7f5" title=" " alt="" coords="522,276,705,302"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="444,250,535,270,534,275,443,256"/>
+<area shape="rect" id="Node000004" href="$class_obxd_oscillator_b.html#a27399beedd764603188b74a90503c4c5" title=" " alt="" coords="753,79,987,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="648,174,819,108,821,113,650,179"/>
+<area shape="rect" id="Node000008" href="$class_obxd_oscillator_b.html#ae3164a17b91b0f9232cf848e10e3673e" title=" " alt="" coords="766,177,974,203"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="680,188,750,188,750,193,680,193"/>
+<area shape="rect" id="Node000005" href="$class_pulse_osc.html#adfae2869d363edeea8acc818281fdced" title=" " alt="" coords="1041,5,1237,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="912,76,1034,40,1061,33,1063,38,1035,45,914,81"/>
+<area shape="rect" id="Node000006" href="$class_saw_osc.html#a5e6ec728cb30236b6accf605e6b95f52" title=" " alt="" coords="1045,55,1233,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="987,78,1029,75,1030,80,988,84"/>
+<area shape="rect" id="Node000007" href="$class_triangle_osc.html#acaf1dea4fe9fe1a6c211ca6455a3050c" title=" " alt="" coords="1035,104,1243,130"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="988,100,1019,103,1019,108,987,105"/>
+<area shape="rect" id="Node000009" href="$class_pulse_osc.html#a61366fcb106d20c2ffc5687f46103417" title=" " alt="" coords="1054,153,1224,179"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="974,178,1038,172,1039,178,975,184"/>
+<area shape="rect" id="Node000010" href="$class_saw_osc.html#a7472180eae72c431af58cc0c302030a9" title=" " alt="" coords="1057,203,1221,228"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="975,197,1042,204,1041,209,974,203"/>
+<area shape="rect" id="Node000011" href="$class_triangle_osc.html#aaa238a0e69e98a68c935738aac54ef08" title=" " alt="" coords="1047,252,1231,278"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="952,201,988,212,1012,225,1036,238,1055,245,1053,250,1034,243,1009,230,986,217,951,206"/>
+<area shape="rect" id="Node000014" href="$class_adsr_envelope.html#a111b7fc835536000f5fb86eccdd53147" title=" " alt="" coords="770,227,970,252"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="684,273,784,253,785,258,685,278"/>
+<area shape="rect" id="Node000015" href="$class_filter.html#a63645acc79f1944479c40dcfff722b41" title=" " alt="" coords="796,276,944,302"/>
+<area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="706,286,780,286,780,292,706,292"/>
+<area shape="rect" id="Node000016" href="$class_obxd_oscillator_b.html#a2180c5d1fa9a5fe5635be4a18c04f56e" title=" " alt="" coords="763,325,977,351"/>
+<area shape="poly" id="edge15_Node000013_Node000016" title=" " alt="" coords="685,300,785,319,784,324,684,305"/>
+</map>

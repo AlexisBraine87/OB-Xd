@@ -1,0 +1,12 @@
+<map id="juce::StandaloneFilterWindow::MainContentComponent::MainContentComponent" name="juce::StandaloneFilterWindow::MainContentComponent::MainContentComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,258,101"/>
+<area shape="rect" id="Node000002" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#afa382f41115d59cb7bef9bef6c9d8165" title=" " alt="" coords="306,5,548,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,53,290,49,290,54,259,59"/>
+<area shape="rect" id="Node000004" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a36d07aa23be8cf5fa41391bea4a246c4" title=" " alt="" coords="306,85,548,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="259,88,290,92,290,97,258,93"/>
+<area shape="rect" id="Node000003" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a618ce5f6b1992ee1b492bab0c00ed020" title=" " alt="" coords="596,9,832,65"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="549,32,581,33,581,38,548,38"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="534,82,591,67,592,72,535,87"/>
+<area shape="rect" id="Node000005" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a0803264e2b28f76f3981154a96d11e03" title=" " alt="" coords="604,93,824,134"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="548,111,588,111,588,116,548,116"/>
+</map>

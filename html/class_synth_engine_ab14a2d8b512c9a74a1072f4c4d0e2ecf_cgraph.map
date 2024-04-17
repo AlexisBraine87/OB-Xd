@@ -1,0 +1,7 @@
+<map id="SynthEngine::processLoudnessEnvelopeRelease" name="SynthEngine::processLoudnessEnvelopeRelease">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,211,64"/>
+<area shape="rect" id="Node000002" href="$_audio_utils_8h.html#a86c573cb84544ddad4fd2dd6d1b2104e" title=" " alt="" coords="321,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,30,305,20,305,25,211,35"/>
+<area shape="rect" id="Node000003" href="$class_adsr_envelope.html#aaec1b9c371a2c5404985f6514ffe9cff" title=" " alt="" coords="259,55,435,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,51,243,54,243,60,211,57"/>
+</map>

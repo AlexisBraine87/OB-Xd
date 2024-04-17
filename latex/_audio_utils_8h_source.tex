@@ -1,0 +1,96 @@
+\doxysection{Audio\+Utils.\+h}
+\hypertarget{_audio_utils_8h_source}{}\label{_audio_utils_8h_source}\index{Source/Engine/AudioUtils.h@{Source/Engine/AudioUtils.h}}
+\mbox{\hyperlink{_audio_utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ ©\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_synth_engine_8h}{SynthEngine.h}}"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_a57e88770d78e1b604ad49a015ecc28dd}{sq2\_12}}\ =\ 1.0594630943592953f;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_a9000fe1bff7c39526c3d25bd9cb1db68}{dc}}\ =\ 1e-\/18;}
+\DoxyCodeLine{00031\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_ae83e5030253f51f2b5370310d392abfa}{ln2}}\ =\ 0.69314718056f;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_aab14d0b619a7dd46654e4b116b294544}{mult}}\ =\ \mbox{\hyperlink{_audio_utils_8h_ae83e5030253f51f2b5370310d392abfa}{ln2}}\ /\ 12.0;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_a9dc9d1c2f03d5b9379a71fce9a2a6d14}{getPitch}}(\textcolor{keywordtype}{float}\ index)}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//Lookup\ table\ is\ not\ that\ effective\ compared\ to\ SSE\ exp}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//SSE\ should\ be\ on}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//const\ int\ mulres\ =\ 2;}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//const\ int\ lowerBound\ =\ -\/94;}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//const\ int\ upperBound\ =\ 94;}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//const\ int\ lutlen\ =\ (upperBound-\/lowerBound)*2;}}
+\DoxyCodeLine{00042\ \ \ \ \textcolor{keywordflow}{return}\ 440\ *\ expf(\mbox{\hyperlink{_audio_utils_8h_aab14d0b619a7dd46654e4b116b294544}{mult}}\ *\ index);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//static\ const\ float\ lut\ [lutlen]=\{1.929,1.986,2.044,2.104,2.165,2.229,2.294,2.361,2.431,2.502,2.575,2.651,2.728,2.808,2.891,2.975,3.062,3.152,3.245,3.340,3.437,3.538,3.642,3.749,3.858,3.972,4.088,4.208,4.331,4.458,4.589,4.723,4.861,5.004,5.150,5.301,5.457,5.617,5.781,5.951,6.125,6.304,6.489,6.679,6.875,7.076,7.284,7.497,7.717,7.943,8.176,8.415,8.662,8.916,9.177,9.446,9.723,10.008,10.301,10.603,10.913,11.233,11.562,11.901,12.250,12.609,12.978,13.359,13.750,14.153,14.568,14.994,15.434,15.886,16.352,16.831,17.324,17.832,18.354,18.892,19.445,20.015,20.602,21.205,21.827,22.466,23.125,23.802,24.500,25.218,25.957,26.717,27.500,28.306,29.135,29.989,30.868,31.772,32.703,33.661,34.648,35.663,36.708,37.784,38.891,40.030,41.203,42.411,43.654,44.933,46.249,47.605,48.999,50.435,51.913,53.434,55.000,56.612,58.270,59.978,61.735,63.544,65.406,67.323,69.296,71.326,73.416,75.567,77.782,80.061,82.407,84.822,87.307,89.865,92.499,95.209,97.999,100.870,103.826,106.869,110.000,113.223,116.541,119.956,123.471,127.089,130.813,134.646,138.591,142.652,146.832,151.135,155.563,160.122,164.814,169.643,174.614,179.731,184.997,190.418,195.998,201.741,207.652,213.737,220.000,226.446,233.082,239.912,246.942,254.178,261.626,269.292,277.183,285.305,293.665,302.270,311.127,320.244,329.628,339.286,349.228,359.461,369.994,380.836,391.995,403.482,415.305,427.474,440.000,452.893,466.164,479.823,493.883,508.355,523.251,538.584,554.365,570.609,587.330,604.540,622.254,640.487,659.255,678.573,698.456,718.923,739.989,761.672,783.991,806.964,830.609,854.948,880.000,905.786,932.328,959.647,987.767,1016.710,1046.502,1077.167,1108.731,1141.219,1174.659,1209.079,1244.508,1280.975,1318.510,1357.146,1396.913,1437.846,1479.978,1523.344,1567.982,1613.927,1661.219,1709.896,1760.000,1811.572,1864.655,1919.294,1975.533,2033.421,2093.005,2154.334,2217.461,2282.438,2349.318,2418.158,2489.016,2561.950,2637.020,2714.291,2793.826,2875.691,2959.955,3046.689,3135.964,3227.854,3322.438,3419.792,3520.000,3623.144,3729.310,3838.587,3951.066,4066.842,4186.009,4308.668,4434.922,4564.875,4698.636,4836.317,4978.032,5123.899,5274.041,5428.582,5587.652,5751.382,5919.911,6093.377,6271.927,6455.709,6644.875,6839.585,7040.000,7246.288,7458.620,7677.174,7902.133,8133.683,8372.018,8617.337,8869.844,9129.751,9397.273,9672.634,9956.064,10247.798,10548.082,10857.164,11175.304,11502.765,11839.822,12186.755,12543.854,12911.417,13289.750,13679.170,14080.000,14492.576,14917.241,15354.349,15804.266,16267.366,16744.036,17234.674,17739.689,18259.501,18794.545,19345.268,19912.127,20495.597,21096.164,21714.329,22350.607,23005.530,23679.643,24373.510,25087.708,25822.834,26579.501,27358.340,28160.000,28985.151,29834.481,30708.698,31608.532,32534.732,33488.073,34469.348,35479.377,36519.002,37589.091,38690.535,39824.254,40991.194,42192.328,43428.657,44701.214,46011.060,47359.287,48747.020,50175.416,51645.668,53159.002,54716.680,56320.001,57970.303,59668.962,61417.396,63217.063,65069.465,66976.146,68938.697,70958.755,73038.005,75178.182,77381.071,79648.509,81982.388,84384.656,86857.315,89402.429,92022.120,94718.574,97494.040\};}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//if(index\ >\ 92.0)}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ \ return\ lut[lutlen-\/1];}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//if(index\ <\ -\/94.0)}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ \ return\ lut[0];}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//index\ =\ (index\ -\/\ lowerBound)*mulres;}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//int\ mi\ =\ floor(index);}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//float\ ofs\ =\ index-\/mi;}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00052\ \ \textcolor{comment}{//\ return\ lut[mi]\ +\ (lut[mi+1]\ -\/\ lut[mi])\ *\ ofs;}}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_ac3859c5924990491cd92652dee7d5321}{tptlpupw}}(\textcolor{keywordtype}{float}\ \&\ state\ ,\ \textcolor{keywordtype}{float}\ inp\ ,\ \textcolor{keywordtype}{float}\ cutoff\ ,\ \textcolor{keywordtype}{float}\ srInv)}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ cutoff\ =\ (cutoff\ *\ srInv)*juce::float\_Pi;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{double}\ v\ =\ (inp\ -\/\ state)\ *\ cutoff\ /\ (1\ +\ cutoff);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{double}\ res\ =\ v\ +\ state;}
+\DoxyCodeLine{00060\ \ \ \ \ state\ =\ res\ +\ v;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_af3cc14994ff9c8a9d8c08a68a74aab59}{tptlp}}(\textcolor{keywordtype}{float}\&\ state,\textcolor{keywordtype}{float}\ inp,\textcolor{keywordtype}{float}\ cutoff,\textcolor{keywordtype}{float}\ srInv)}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ cutoff\ =\ tan(cutoff\ *\ (srInv)*\ (juce::float\_Pi))\ ;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{double}\ v\ =\ (inp\ -\/\ state)\ *\ cutoff\ /\ (1\ +\ cutoff);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{double}\ res\ =\ v\ +\ state;}
+\DoxyCodeLine{00069\ \ \ \ \ state\ =\ res\ +\ v;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_a3c51b4c070577ec0a8964423e22c2d0d}{tptpc}}(\textcolor{keywordtype}{float}\&\ state,\textcolor{keywordtype}{float}\ inp,\textcolor{keywordtype}{float}\ cutoff)}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ v\ =\ (inp\ -\/\ state)\ *\ cutoff\ /\ (1\ +\ cutoff);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ res\ =\ v\ +\ state;}
+\DoxyCodeLine{00077\ \ \ \ \ state\ =\ res\ +\ v;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{00079\ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_ada07461abdebc44c78bea4c951f6ed79}{linsc}}(\textcolor{keywordtype}{float}\ param,\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ min,\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ max)}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \textcolor{keywordflow}{return}\ (param)\ *\ (max\ -\/\ min)\ +\ min;}
+\DoxyCodeLine{00084\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_audio_utils_8h_a86c573cb84544ddad4fd2dd6d1b2104e}{logsc}}(\textcolor{keywordtype}{float}\ param,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ min,\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ max,\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ rolloff\ =\ 19.0f)}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ ((expf(param\ *\ logf(rolloff+1))\ -\/\ 1.0f)\ /\ (rolloff))\ *\ (max-\/min)\ +\ min;}
+\DoxyCodeLine{00089\ \}}
+\DoxyCodeLine{00090\ }
+
+\end{DoxyCode}

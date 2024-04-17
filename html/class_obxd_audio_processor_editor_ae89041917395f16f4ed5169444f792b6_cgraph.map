@@ -1,0 +1,7 @@
+<map id="ObxdAudioProcessorEditor::addKnob" name="ObxdAudioProcessorEditor::addKnob">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,184,79"/>
+<area shape="rect" id="Node000002" href="$class_obxd_audio_processor.html#a79d31ca6a08527372417d349a02471ed" title=" " alt="" coords="232,5,390,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,43,216,38,217,43,184,48"/>
+<area shape="rect" id="Node000003" href="$class_obxd_audio_processor.html#a016ece6dab1ba0523ec6f1bcb7d55610" title=" " alt="" coords="239,71,383,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,70,224,75,223,81,184,75"/>
+</map>

@@ -1,0 +1,86 @@
+\doxysection{Tuning.\+h}
+\hypertarget{_tuning_8h_source}{}\label{_tuning_8h_source}\index{Source/Engine/Tuning.h@{Source/Engine/Tuning.h}}
+\mbox{\hyperlink{_tuning_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ Tuning.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ OB-\/Xd}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Created\ by\ Natalia\ Escalera\ on\ 12/28/21.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ Copyright\ ©\ 2021\ discoDSP.\ All\ rights\ reserved.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lib_m_t_s_client_8h}{../MTS/libMTSClient.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tuning}{Tuning}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}*\ \mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}}\{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343}{Mode}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343a2a772144c250e698f98c1c053428c470}{MTS\_ESP}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tuning_a72a51f80e5fa511ee70668914f7d91e3}{TWELVE\_TET}}}
+\DoxyCodeLine{00020\ \ \ \ \ \}\ mode\{\mbox{\hyperlink{class_tuning_a72a51f80e5fa511ee70668914f7d91e3}{TWELVE\_TET}}\};}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_tuning_a02fae50199cc274b770b2b612a9676bd}{Tuning}}()}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_tuning_a137fc4f5ab5ffccf710b548ec03e6da6}{\string~Tuning}}()}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lib_m_t_s_client_8cpp_a0c9b6dec8535e7220dc0f357c49faca5}{MTS\_DeregisterClient}}(\mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tuning_a5c6ed697f4dae7b681c09ad6de771e48}{updateMTSESPStatus}}()}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}}\ =\ \mbox{\hyperlink{lib_m_t_s_client_8cpp_a76696080794280bbac195d9e85096510}{MTS\_RegisterClient}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ mode\ =\ \mbox{\hyperlink{class_tuning_a554d124958c4f17d8c5cfce70389667e}{hasMTSMaster}}()\ ?\ \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343a2a772144c250e698f98c1c053428c470}{MTS\_ESP}}\ :\ \mbox{\hyperlink{class_tuning_a72a51f80e5fa511ee70668914f7d91e3}{TWELVE\_TET}};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_tuning_a463c4fbf991ef15e1a48ca445792029d}{midiNoteFromMTS}}(\textcolor{keywordtype}{int}\ midiIndex)}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ midiIndex\ +\ \mbox{\hyperlink{lib_m_t_s_client_8cpp_a43b1c598fda0c61ac4c5338faa92d201}{MTS\_RetuningInSemitones}}(\mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}},\ midiIndex,\ -\/1);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_tuning_a689a8ed4ce87be8cab4a0d61f01d99f9}{tunedMidiNote}}(\textcolor{keywordtype}{int}\ midiIndex)}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(mode)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_tuning_a72a51f80e5fa511ee70668914f7d91e3}{TWELVE\_TET}}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ midiIndex;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343a2a772144c250e698f98c1c053428c470}{MTS\_ESP}}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_tuning_a463c4fbf991ef15e1a48ca445792029d}{midiNoteFromMTS}}(midiIndex);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ midiIndex;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ These\ methods\ can\ be\ later\ be\ used\ for\ implementing\ other\ steps\ in\ the\ MTS-\/ESP\ guide:}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ https://github.com/ODDSound/MTS-\/ESP/blob/main/Client/libMTSClient.h}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tuning_a554d124958c4f17d8c5cfce70389667e}{hasMTSMaster}}()}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{lib_m_t_s_client_8cpp_a3263194a12cb35a3542eb71c9cd35cb7}{MTS\_HasMaster}}(\mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}});}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_tuning_abf66f150656139924f2b0e1a7568ccf1}{getMTSScale}}()}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{lib_m_t_s_client_8cpp_a49497ca200e2ca58b9b630212a45a3cb}{MTS\_GetScaleName}}(\mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\_client}});}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ }
+\DoxyCodeLine{00080\ \};}
+
+\end{DoxyCode}

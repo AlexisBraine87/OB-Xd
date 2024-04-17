@@ -1,0 +1,85 @@
+\doxysection{Params.\+h}
+\hypertarget{_params_8h_source}{}\label{_params_8h_source}\index{Source/Engine/Params.h@{Source/Engine/Params.h}}
+\mbox{\hyperlink{_params_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ {\ucr}\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_obxd_voice_8h}{ObxdVoice.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_params_enum_8h}{ParamsEnum.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_params}{ObxdParams}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea724d398352bbb3700034ae3bcbc96aca}{PARAM\_COUNT}}];}
+\DoxyCodeLine{00031\ \ \ \ \ String\ \mbox{\hyperlink{class_obxd_params_adc31475fb396812e3ece707da65e666d}{name}};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a668409169b52f7c607f38933d0fe7977}{ObxdParams}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_adc31475fb396812e3ece707da65e666d}{name}}\ =\ \textcolor{stringliteral}{"{}Default"{}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//values\ =\ new\ float[PARAM\_COUNT];}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a1580760c48fc9be79436f3596889981d}{setDefaultValues}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_params_a1580760c48fc9be79436f3596889981d}{setDefaultValues}}()}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0\ ;\ k\ <\ \mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea724d398352bbb3700034ae3bcbc96aca}{PARAM\_COUNT}};++k)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[k]\ =\ 0.0f;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea0ee82a83444aea10d802d5333d19506b}{VOICE\_COUNT}}]\ =\ 0.2f;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea46b1a1705dc1e975e82422901b8ecdf2}{BRIGHTNESS}}]=1.0f;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea2f92753ad800d7a02c93188be33f6b53}{OCTAVE}}]=0.5;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea618756c1e6237e34fcba1b84f1da2ba6}{TUNE}}]\ =\ 0.5f;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea283374ba0a8d27fda7ccf8c7c2d8fcba}{OSC2\_DET}}]=0.4;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea54ebe9444fbc1d87d985d926fc295c2a}{LSUS}}]=1.0f;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea278478053b06bc4f8b53e7392b85dc70}{CUTOFF}}]=1.0f;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea9d326c2efb1f1ef1840d474c0f9b8a48}{VOLUME}}]=0.5f;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eae39fbaec5b7d4f996b3a15757991226d}{OSC1MIX}}]=1;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eacd5185fb30c3cb0102ccb7a39046480d}{OSC2MIX}}]=1;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea49345ab98f0f445733f3dc508a341865}{OSC1Saw}}]=1;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea10ae2fc424475868e616f30a2ca52ee7}{OSC2Saw}}]=1;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea53721f12773c123ed943eff9b26a68c4}{BENDLFORATE}}]=0.6;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ \ \ \ \ \ values[FILTER\_DRIVE]=\ 0.01;}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eaaf7cb84c8aaccf452a5c0037ae4e1ee0}{PAN1}}]=0.5;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eac228f3c3dda41d89f1bb01467bb21f6a}{PAN2}}]=0.5;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eab3057642df714aac4af270f7eed70433}{PAN3}}]=0.5;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea33ea09ca6d76df72c8c7694abcee80dc}{PAN4}}]=0.5;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea033ee9cd70375fc39e19410c8cc5a6fa}{PAN5}}]=0.5;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea1e5b638571b96b5f25bd154cd6c9224a}{PAN6}}]=0.5;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea117448eec7621b5ada48c3f7da4f1a6f}{PAN7}}]=0.5;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eaedd40ac066311328e3582a2f50b7335c}{PAN8}}]=0.5;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea74287d4573e43b3669b95668ec400aa2}{ECONOMY\_MODE}}]\ =\ 1;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea7a708a3005ce473ae23c2ad2ec1b14a6}{ENVDER}}]\ =\ 0.3;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eaabc795705dce90b9bcf5df8ef298210a}{FILTERDER}}]=0.3;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea1a9cfa472e41e09e10893418d68bd67a}{LEVEL\_DIF}}]=0.3;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00eaf1379c64663421bb2e8729ffd389662d}{PORTADER}}]=0.3;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a9ffa2c5fc973ee479014cfafd77f252e}{values}}[\mbox{\hyperlink{_params_enum_8h_a163bb1132990e1c0f94cdba4fc2ec00ea7150e3025a58f19786476ae24d7c4a47}{UDET}}]=0.2;}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_obxd_params_a6db67aa4a01792ff1ac57f0310e6b67f}{\string~ObxdParams}}()}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ values;}}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR(ObxdParams)}}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

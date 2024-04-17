@@ -1,0 +1,248 @@
+\doxysection{Modules/juce\+\_\+gui\+\_\+basics/juce\+\_\+gui\+\_\+basics.cpp File Reference}
+\hypertarget{juce__gui__basics_8cpp}{}\label{juce__gui__basics_8cpp}\index{Modules/juce\_gui\_basics/juce\_gui\_basics.cpp@{Modules/juce\_gui\_basics/juce\_gui\_basics.cpp}}
+{\ttfamily \#include "{}juce\+\_\+gui\+\_\+basics.\+h"{}}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Pointer\+State.\+h"{}}\newline
+{\ttfamily \#include "{}accessibility/juce\+\_\+\+Accessibility\+Handler.\+cpp"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Component\+Listener.\+cpp"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Focus\+Traverser.\+cpp"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Input\+Source.\+cpp"{}}\newline
+{\ttfamily \#include "{}desktop/juce\+\_\+\+Displays.\+cpp"{}}\newline
+{\ttfamily \#include "{}desktop/juce\+\_\+\+Desktop.\+cpp"{}}\newline
+{\ttfamily \#include "{}components/juce\+\_\+\+Modal\+Component\+Manager.\+cpp"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Component\+Dragger.\+cpp"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Drag\+And\+Drop\+Container.\+cpp"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Event.\+cpp"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Inactivity\+Detector.\+cpp"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Listener.\+cpp"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Caret\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Keyboard\+Focus\+Traverser.\+cpp"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Key\+Listener.\+cpp"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Key\+Press.\+cpp"{}}\newline
+{\ttfamily \#include "{}keyboard/juce\+\_\+\+Modifier\+Keys.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Arrow\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Drawable\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Hyperlink\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Image\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Shape\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Text\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Toggle\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}buttons/juce\+\_\+\+Toolbar\+Button.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Composite.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Image.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Path.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Rectangle.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Shape.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+Drawable\+Text.\+cpp"{}}\newline
+{\ttfamily \#include "{}drawables/juce\+\_\+\+SVGParser.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Directory\+Contents\+Display\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Directory\+Contents\+List.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Browser\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Chooser.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Chooser\+Dialog\+Box.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+List\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Filename\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Search\+Path\+List\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+File\+Tree\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Image\+Preview\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}filebrowser/juce\+\_\+\+Content\+Sharer.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Animator.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Bounds\+Constrainer.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Builder.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Component\+Movement\+Watcher.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Concertina\+Panel.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Group\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Multi\+Document\+Panel.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Resizable\+Border\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Resizable\+Corner\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Resizable\+Edge\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Scroll\+Bar.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Side\+Panel.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Stretchable\+Layout\+Manager.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Stretchable\+Layout\+Resizer\+Bar.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Stretchable\+Object\+Resizer.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Tabbed\+Button\+Bar.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Tabbed\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Viewport.\+cpp"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel.\+cpp"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V2.\+cpp"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V1.\+cpp"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V3.\+cpp"{}}\newline
+{\ttfamily \#include "{}lookandfeel/juce\+\_\+\+Look\+And\+Feel\+\_\+\+V4.\+cpp"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Menu\+Bar\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Burger\+Menu\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Menu\+Bar\+Model.\+cpp"{}}\newline
+{\ttfamily \#include "{}menus/juce\+\_\+\+Popup\+Menu.\+cpp"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Marker\+List.\+cpp"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Coordinate.\+cpp"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Coordinate\+Positioner.\+cpp"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Parallelogram.\+cpp"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Point.\+cpp"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Point\+Path.\+cpp"{}}\newline
+{\ttfamily \#include "{}positioning/juce\+\_\+\+Relative\+Rectangle.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Boolean\+Property\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Button\+Property\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Choice\+Property\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Property\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Property\+Panel.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Slider\+Property\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Text\+Property\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}properties/juce\+\_\+\+Multi\+Choice\+Property\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Combo\+Box.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Image\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Label.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+List\+Box.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Progress\+Bar.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Slider.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Table\+Header\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Table\+List\+Box.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Text\+Editor.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Toolbar\+Item\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Toolbar.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Toolbar\+Item\+Palette.\+cpp"{}}\newline
+{\ttfamily \#include "{}widgets/juce\+\_\+\+Tree\+View.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Alert\+Window.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Call\+Out\+Box.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Component\+Peer.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Dialog\+Window.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Document\+Window.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Resizable\+Window.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Thread\+With\+Progress\+Window.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Tooltip\+Window.\+cpp"{}}\newline
+{\ttfamily \#include "{}windows/juce\+\_\+\+Top\+Level\+Window.\+cpp"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Application\+Command\+Info.\+cpp"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Application\+Command\+Manager.\+cpp"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Application\+Command\+Target.\+cpp"{}}\newline
+{\ttfamily \#include "{}commands/juce\+\_\+\+Key\+Press\+Mapping\+Set.\+cpp"{}}\newline
+{\ttfamily \#include "{}application/juce\+\_\+\+Application.\+cpp"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+Bubble\+Component.\+cpp"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+Drop\+Shadower.\+cpp"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+Focus\+Outline.\+cpp"{}}\newline
+{\ttfamily \#include "{}misc/juce\+\_\+\+JUCESplash\+Screen.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Flex\+Box.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Grid\+Item.\+cpp"{}}\newline
+{\ttfamily \#include "{}layout/juce\+\_\+\+Grid.\+cpp"{}}\newline
+{\ttfamily \#include "{}mouse/juce\+\_\+\+Mouse\+Cursor.\+cpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjuce_1_1_custom_mouse_cursor_info}{juce\+::\+Custom\+Mouse\+Cursor\+Info}}
+\item 
+class \mbox{\hyperlink{classjuce_1_1_accessibility_handler_1_1_accessibility_native_impl}{juce\+::\+Accessibility\+Handler\+::\+Accessibility\+Native\+Impl}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacejuce}{juce}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_ae6ec94766dbe2b97b349bd18f55c6b0d}{NS\+\_\+\+FORMAT\+\_\+\+FUNCTION}}(F,  A)
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_a01f234a727269ea39a6912b758b5f261}{JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+OBJC\+\_\+\+HELPERS}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_aeaef2a4db63e6185bf9eb23020a5964a}{JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+COM\+\_\+\+SMART\+\_\+\+PTR}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_aa63bfeb10b6b0a7a1357fd64fba1ae2f}{JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+JNI\+\_\+\+HELPERS}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_ac13048286d5778137959086d2ede980a}{JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+NATIVE\+\_\+\+HEADERS}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_a11eb6598ecde4f7d09a9a1ca341b40bd}{JUCE\+\_\+\+EVENTS\+\_\+\+INCLUDE\+\_\+\+WIN32\+\_\+\+MESSAGE\+\_\+\+WINDOW}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_a524c94374d419793c521d1667aaa03e0}{JUCE\+\_\+\+GRAPHICS\+\_\+\+INCLUDE\+\_\+\+COREGRAPHICS\+\_\+\+HELPERS}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_aad85fdcbe6da21866ad148dd5a85f373}{JUCE\+\_\+\+GUI\+\_\+\+BASICS\+\_\+\+INCLUDE\+\_\+\+XHEADERS}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_a0bbb2672bcd2e0f5697166fb0b55ba46}{JUCE\+\_\+\+GUI\+\_\+\+BASICS\+\_\+\+INCLUDE\+\_\+\+SCOPED\+\_\+\+THREAD\+\_\+\+DPI\+\_\+\+AWARENESS\+\_\+\+SETTER}}~1
+\item 
+\#define \mbox{\hyperlink{juce__gui__basics_8cpp_acdbe9f4cd57153f6c69db00ac8a3c6e5}{JUCE\+\_\+\+ASSERT\+\_\+\+MESSAGE\+\_\+\+MANAGER\+\_\+\+IS\+\_\+\+LOCKED\+\_\+\+OR\+\_\+\+OFFSCREEN}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacejuce_a817b68fe0868d562c4e65e04d0308112}{juce\+::juce\+\_\+are\+There\+Any\+Always\+On\+Top\+Windows}} ()
+\item 
+bool \mbox{\hyperlink{namespacejuce_a3753e5c701e88d306a4b61c34c49415a}{juce\+::is\+Embedded\+In\+Foreground\+Process}} (Component \texorpdfstring{$\ast$}{*}c)
+\item 
+static bool \mbox{\hyperlink{namespacejuce_af3eb432200eb2c2794fe3878d9e38c5a}{juce\+::is\+Foreground\+Or\+Embedded\+Process}} (Component \texorpdfstring{$\ast$}{*}view\+Component)
+\item 
+bool \mbox{\hyperlink{namespacejuce_ac60d6ad3a4ae93d882f223fbb5e99831}{juce\+::is\+Window\+On\+Current\+Virtual\+Desktop}} (void \texorpdfstring{$\ast$}{*})
+\item 
+{\footnotesize template$<$typename Member\+Fn $>$ }\\static const Accessibility\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacejuce_ab6632f937997cce908e9e30633d862d5}{juce\+::get\+Enclosing\+Handler\+With\+Interface}} (const Accessibility\+Handler \texorpdfstring{$\ast$}{*}handler, Member\+Fn fn)
+\item 
+void \mbox{\hyperlink{namespacejuce_a5245af2f8664ea9983d2569b3f9da384}{juce\+::notify\+Accessibility\+Event\+Internal}} (const Accessibility\+Handler \&, Internal\+Accessibility\+Event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{juce__gui__basics_8cpp_acdbe9f4cd57153f6c69db00ac8a3c6e5}\label{juce__gui__basics_8cpp_acdbe9f4cd57153f6c69db00ac8a3c6e5} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_ASSERT\_MESSAGE\_MANAGER\_IS\_LOCKED\_OR\_OFFSCREEN@{JUCE\_ASSERT\_MESSAGE\_MANAGER\_IS\_LOCKED\_OR\_OFFSCREEN}}
+\index{JUCE\_ASSERT\_MESSAGE\_MANAGER\_IS\_LOCKED\_OR\_OFFSCREEN@{JUCE\_ASSERT\_MESSAGE\_MANAGER\_IS\_LOCKED\_OR\_OFFSCREEN}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_ASSERT\_MESSAGE\_MANAGER\_IS\_LOCKED\_OR\_OFFSCREEN}{JUCE\_ASSERT\_MESSAGE\_MANAGER\_IS\_LOCKED\_OR\_OFFSCREEN}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+ASSERT\+\_\+\+MESSAGE\+\_\+\+MANAGER\+\_\+\+IS\+\_\+\+LOCKED\+\_\+\+OR\+\_\+\+OFFSCREEN}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ jassert\ ((MessageManager::getInstanceWithoutCreating()\ !=\ \textcolor{keyword}{nullptr}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ MessageManager::getInstanceWithoutCreating()-\/>currentThreadHasLockedMessageManager())\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ getPeer()\ ==\ \textcolor{keyword}{nullptr});}
+
+\end{DoxyCode}
+\Hypertarget{juce__gui__basics_8cpp_aeaef2a4db63e6185bf9eb23020a5964a}\label{juce__gui__basics_8cpp_aeaef2a4db63e6185bf9eb23020a5964a} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_CORE\_INCLUDE\_COM\_SMART\_PTR@{JUCE\_CORE\_INCLUDE\_COM\_SMART\_PTR}}
+\index{JUCE\_CORE\_INCLUDE\_COM\_SMART\_PTR@{JUCE\_CORE\_INCLUDE\_COM\_SMART\_PTR}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_CORE\_INCLUDE\_COM\_SMART\_PTR}{JUCE\_CORE\_INCLUDE\_COM\_SMART\_PTR}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+COM\+\_\+\+SMART\+\_\+\+PTR~1}
+
+\Hypertarget{juce__gui__basics_8cpp_aa63bfeb10b6b0a7a1357fd64fba1ae2f}\label{juce__gui__basics_8cpp_aa63bfeb10b6b0a7a1357fd64fba1ae2f} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_CORE\_INCLUDE\_JNI\_HELPERS@{JUCE\_CORE\_INCLUDE\_JNI\_HELPERS}}
+\index{JUCE\_CORE\_INCLUDE\_JNI\_HELPERS@{JUCE\_CORE\_INCLUDE\_JNI\_HELPERS}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_CORE\_INCLUDE\_JNI\_HELPERS}{JUCE\_CORE\_INCLUDE\_JNI\_HELPERS}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+JNI\+\_\+\+HELPERS~1}
+
+\Hypertarget{juce__gui__basics_8cpp_ac13048286d5778137959086d2ede980a}\label{juce__gui__basics_8cpp_ac13048286d5778137959086d2ede980a} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_CORE\_INCLUDE\_NATIVE\_HEADERS@{JUCE\_CORE\_INCLUDE\_NATIVE\_HEADERS}}
+\index{JUCE\_CORE\_INCLUDE\_NATIVE\_HEADERS@{JUCE\_CORE\_INCLUDE\_NATIVE\_HEADERS}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_CORE\_INCLUDE\_NATIVE\_HEADERS}{JUCE\_CORE\_INCLUDE\_NATIVE\_HEADERS}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+NATIVE\+\_\+\+HEADERS~1}
+
+\Hypertarget{juce__gui__basics_8cpp_a01f234a727269ea39a6912b758b5f261}\label{juce__gui__basics_8cpp_a01f234a727269ea39a6912b758b5f261} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_CORE\_INCLUDE\_OBJC\_HELPERS@{JUCE\_CORE\_INCLUDE\_OBJC\_HELPERS}}
+\index{JUCE\_CORE\_INCLUDE\_OBJC\_HELPERS@{JUCE\_CORE\_INCLUDE\_OBJC\_HELPERS}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_CORE\_INCLUDE\_OBJC\_HELPERS}{JUCE\_CORE\_INCLUDE\_OBJC\_HELPERS}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+CORE\+\_\+\+INCLUDE\+\_\+\+OBJC\+\_\+\+HELPERS~1}
+
+\Hypertarget{juce__gui__basics_8cpp_a11eb6598ecde4f7d09a9a1ca341b40bd}\label{juce__gui__basics_8cpp_a11eb6598ecde4f7d09a9a1ca341b40bd} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_EVENTS\_INCLUDE\_WIN32\_MESSAGE\_WINDOW@{JUCE\_EVENTS\_INCLUDE\_WIN32\_MESSAGE\_WINDOW}}
+\index{JUCE\_EVENTS\_INCLUDE\_WIN32\_MESSAGE\_WINDOW@{JUCE\_EVENTS\_INCLUDE\_WIN32\_MESSAGE\_WINDOW}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_EVENTS\_INCLUDE\_WIN32\_MESSAGE\_WINDOW}{JUCE\_EVENTS\_INCLUDE\_WIN32\_MESSAGE\_WINDOW}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+EVENTS\+\_\+\+INCLUDE\+\_\+\+WIN32\+\_\+\+MESSAGE\+\_\+\+WINDOW~1}
+
+\Hypertarget{juce__gui__basics_8cpp_a524c94374d419793c521d1667aaa03e0}\label{juce__gui__basics_8cpp_a524c94374d419793c521d1667aaa03e0} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_GRAPHICS\_INCLUDE\_COREGRAPHICS\_HELPERS@{JUCE\_GRAPHICS\_INCLUDE\_COREGRAPHICS\_HELPERS}}
+\index{JUCE\_GRAPHICS\_INCLUDE\_COREGRAPHICS\_HELPERS@{JUCE\_GRAPHICS\_INCLUDE\_COREGRAPHICS\_HELPERS}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_GRAPHICS\_INCLUDE\_COREGRAPHICS\_HELPERS}{JUCE\_GRAPHICS\_INCLUDE\_COREGRAPHICS\_HELPERS}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+GRAPHICS\+\_\+\+INCLUDE\+\_\+\+COREGRAPHICS\+\_\+\+HELPERS~1}
+
+\Hypertarget{juce__gui__basics_8cpp_a0bbb2672bcd2e0f5697166fb0b55ba46}\label{juce__gui__basics_8cpp_a0bbb2672bcd2e0f5697166fb0b55ba46} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_GUI\_BASICS\_INCLUDE\_SCOPED\_THREAD\_DPI\_AWARENESS\_SETTER@{JUCE\_GUI\_BASICS\_INCLUDE\_SCOPED\_THREAD\_DPI\_AWARENESS\_SETTER}}
+\index{JUCE\_GUI\_BASICS\_INCLUDE\_SCOPED\_THREAD\_DPI\_AWARENESS\_SETTER@{JUCE\_GUI\_BASICS\_INCLUDE\_SCOPED\_THREAD\_DPI\_AWARENESS\_SETTER}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_GUI\_BASICS\_INCLUDE\_SCOPED\_THREAD\_DPI\_AWARENESS\_SETTER}{JUCE\_GUI\_BASICS\_INCLUDE\_SCOPED\_THREAD\_DPI\_AWARENESS\_SETTER}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+GUI\+\_\+\+BASICS\+\_\+\+INCLUDE\+\_\+\+SCOPED\+\_\+\+THREAD\+\_\+\+DPI\+\_\+\+AWARENESS\+\_\+\+SETTER~1}
+
+\Hypertarget{juce__gui__basics_8cpp_aad85fdcbe6da21866ad148dd5a85f373}\label{juce__gui__basics_8cpp_aad85fdcbe6da21866ad148dd5a85f373} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!JUCE\_GUI\_BASICS\_INCLUDE\_XHEADERS@{JUCE\_GUI\_BASICS\_INCLUDE\_XHEADERS}}
+\index{JUCE\_GUI\_BASICS\_INCLUDE\_XHEADERS@{JUCE\_GUI\_BASICS\_INCLUDE\_XHEADERS}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{JUCE\_GUI\_BASICS\_INCLUDE\_XHEADERS}{JUCE\_GUI\_BASICS\_INCLUDE\_XHEADERS}}
+{\footnotesize\ttfamily \#define JUCE\+\_\+\+GUI\+\_\+\+BASICS\+\_\+\+INCLUDE\+\_\+\+XHEADERS~1}
+
+\Hypertarget{juce__gui__basics_8cpp_ae6ec94766dbe2b97b349bd18f55c6b0d}\label{juce__gui__basics_8cpp_ae6ec94766dbe2b97b349bd18f55c6b0d} 
+\index{juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}!NS\_FORMAT\_FUNCTION@{NS\_FORMAT\_FUNCTION}}
+\index{NS\_FORMAT\_FUNCTION@{NS\_FORMAT\_FUNCTION}!juce\_gui\_basics.cpp@{juce\_gui\_basics.cpp}}
+\doxysubsubsection{\texorpdfstring{NS\_FORMAT\_FUNCTION}{NS\_FORMAT\_FUNCTION}}
+{\footnotesize\ttfamily \#define NS\+\_\+\+FORMAT\+\_\+\+FUNCTION(\begin{DoxyParamCaption}\item[{}]{F,  }\item[{}]{A }\end{DoxyParamCaption})}
+

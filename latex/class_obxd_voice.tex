@@ -1,0 +1,751 @@
+\doxysection{Obxd\+Voice Class Reference}
+\hypertarget{class_obxd_voice}{}\label{class_obxd_voice}\index{ObxdVoice@{ObxdVoice}}
+
+
+{\ttfamily \#include $<$Obxd\+Voice.\+h$>$}
+
+
+
+Collaboration diagram for Obxd\+Voice\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obxd_voice_a8854f977fddf200511ddee1cb9022024}{Obxd\+Voice}} ()
+\item 
+\mbox{\hyperlink{class_obxd_voice_aa37398c59c355c9f3d1b4d371522b6df}{\texorpdfstring{$\sim$}{\string~}\+Obxd\+Voice}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a97734225fe9e3290932f49b02d71943e}{init\+Tuning}} (\mbox{\hyperlink{class_tuning}{Tuning}} \texorpdfstring{$\ast$}{*}t)
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a54f64be26658ff5b37fae10538372c5b}{Process\+Sample}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a87e70f1a66a6a9651d04466fc3e8e230}{set\+Brightness}} (float val)
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a1b480c4a1a951467986ea69e92a7f94e}{set\+Env\+Der}} (float d)
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a8acc694533ce65c64379902322784dab}{set\+HQ}} (bool \mbox{\hyperlink{class_obxd_voice_ab5267de2633267fdb8ee868c819ef1a5}{hq}})
+\item 
+void \mbox{\hyperlink{class_obxd_voice_aa2f9a9aa1e1fba3d298071acc822a7f5}{set\+Sample\+Rate}} (float sr)
+\item 
+void \mbox{\hyperlink{class_obxd_voice_aec041ec0d2bb25eaa5e6d021dda5a287}{check\+Adsr\+State}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a9127c134994520c9a8b367344c2554ed}{Reset\+Envelope}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a25ec8af99c861e8007703aeb4f56bbc5}{Note\+On}} (int mididx, float velocity)
+\item 
+void \mbox{\hyperlink{class_obxd_voice_abcad3a5f43b4bbf50edc805536af74cb}{Note\+Off}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a92d3738f426dd0e6a421ebe3bb9dafbd}{sust\+On}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_voice_a53c15c195b36e4f633b6f29b0c636085}{sust\+Off}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_ab6d6ec49d9481545735825e721583c1d}{sustain\+Hold}}
+\item 
+\mbox{\hyperlink{class_adsr_envelope}{Adsr\+Envelope}} \mbox{\hyperlink{class_obxd_voice_a79cc8b0f989f551e9f4f569109739e20}{env}}
+\item 
+\mbox{\hyperlink{class_adsr_envelope}{Adsr\+Envelope}} \mbox{\hyperlink{class_obxd_voice_a56b69c100bb7cd9c0c8e495728b61698}{fenv}}
+\item 
+\mbox{\hyperlink{class_obxd_oscillator_b}{Obxd\+OscillatorB}} \mbox{\hyperlink{class_obxd_voice_a5b16bb0afadf8e44c416f8d8efdc39e4}{osc}}
+\item 
+\mbox{\hyperlink{class_filter}{Filter}} \mbox{\hyperlink{class_obxd_voice_ad2e4d4af6101cc0b9074ff7cea7b2af8}{flt}}
+\item 
+Random \mbox{\hyperlink{class_obxd_voice_a0cb723768c794ea4c06b1ef15bfd8aa3}{ng}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a7695b5733995c3261432ef9dc5668325}{vamp}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a4ff277c8a14cd7251721f75b43cea01f}{vflt}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a9bc932c72c8fd9e42a466b9b73740e51}{cutoff}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a70155e817497d1af0eeb681a0f2586c9}{fenvamt}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_ac8403b6222cdbf6ec36d5a93fd3e9b57}{Env\+Detune}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a368f5cf0354a5423d97dd608bac05ca9}{Fenv\+Detune}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_aa8f4e3f3dc32c974f316d013bad76605}{Flt\+Detune}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_af54f8d2b4e1ff54a817834e7d5e340b8}{Flt\+Det\+Amt}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_af4ef69aaa425f27f66ad855195c1c90b}{Porta\+Detune}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a963f0ac41c1123b64323020c139a660a}{Porta\+Detune\+Amt}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a9a94c097308bfa9bc3562d6c29e1f70d}{level\+Detune}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_ade9339d3bb2d9317816febef855169ba}{level\+Detune\+Amt}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a01cb65b23444508a43265f47294710da}{bright\+Coef}}
+\item 
+int \mbox{\hyperlink{class_obxd_voice_a70516b40659cb7379572a3edc81beb6d}{midi\+Indx}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a8b5bf8bdd68ef439c14566eac681b936}{Active}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a1f01f3790b6c12338a3524ad05a48cad}{should\+Processed}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a7642bcff465583d624d60bfa3eb1c29e}{flt\+KF}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_ae8f60864777499a8fa405f3d214ef86e}{porta}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a4b86d23d5379966c1c42ad8717fa9255}{prtst}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_aee04e5ced67275f6fd46a8289303905c}{cutoffwas}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a8a0e23879ebf4d34e34769e91d007db9}{envelopewas}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a9277a03f1fb30de6efbb9d540fceb9bf}{lfo\+In}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a8fc72aa7142d9d6949450eac2f45479d}{lfo\+Vibrato\+In}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_ab89326076042f15dc16c69846b9a3bde}{pitch\+Wheel}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_adec49097f936449e1676e90cb9108ae9}{pitch\+Wheel\+Amt}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_aebf5ed3414be4687c84edb7b6bc5ade4}{pitch\+Wheel\+Osc2\+Only}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a03c674d8168e334e7526200b65f42a31}{lfoa1}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a37c1c7dda4adcb00402b90c1e54e7272}{lfoa2}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a4407168074561b38dd59a9cb7c1b8881}{lfoo1}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a19acb3f6bdb9876c39a4cff30095a65a}{lfoo2}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a89522edc08545c2318623aeb5c575ce8}{lfof}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_aa4578f69eff3a861c83fe5ea07c33ddc}{lfopw1}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a7f0378e42ba64d527c144c7c365806d6}{lfopw2}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a3521e2b401af370a81cb65efd0cca0ab}{Oversample}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_ab5fc640babdb3ee5ef91342125299acf}{self\+Osc\+Push}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a17a5a2984ad19cbb2a320d88f44a3d35}{envpitchmod}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_aa77f035b8d4ccf5c0acdc256c7529901}{pwenvmod}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_aed3588897eef8a2227365efcacb16caa}{pw\+Ofs}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a5799e8edd85f99d58a63044333bfc117}{pw\+Env\+Both}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a9577099b718e68d0638424fdf6ee66f1}{pitch\+Mod\+Both}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a6c163c4baabb647f6abedeb1a849912d}{invert\+Fenv}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_a2dd0ee56ade8d101c7f4d37b08439384}{fourpole}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2 $>$ \mbox{\hyperlink{class_obxd_voice_acf17b2ef515f3f3cef29e887b4e2f228}{lenvd}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2 $>$ \mbox{\hyperlink{class_obxd_voice_a896acc8ac8761cf64d7316b7736243a1}{fenvd}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2 $>$ \mbox{\hyperlink{class_obxd_voice_aeee49772a772f3997b080f0d38a3603a}{lfod}}
+\item 
+\mbox{\hyperlink{class_ap_interpolator}{Ap\+Interpolator}} \mbox{\hyperlink{class_obxd_voice_a4ee6099e90de4fbeb5eed9f9b3148a74}{ap}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a4171f3a2a236e7033bd010f970037e13}{oscpsw}}
+\item 
+int \mbox{\hyperlink{class_obxd_voice_ae0c9469f328a4de82b1f2ea2f3071862}{legato\+Mode}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_aef7cbf84ff1c9c29e46fecde5e91031c}{bri\+Hold}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a8105f6aa00a4071b7d09dcff2483503d}{Sample\+Rate}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_ac4d7c08d75c6763670dac1a99963eec3}{sample\+Rate\+Inv}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a87e7da885c87610c4dac5e5e35512ea7}{Volume}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a25a2d15b49ba5f5b3e21c4a3da93611b}{port}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a93abf19abf49e8e79bc5e460a4f411a0}{velocity\+Value}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a9d5d29ecfac80d5dc16639486564dd35}{d1}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_ae22b22d22d4aa596ab4581918649716f}{d2}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a58f9535a002394d549be73799d8d550a}{c1}}
+\item 
+float \mbox{\hyperlink{class_obxd_voice_a8428d79e0c2150f4a208cfd333680306}{c2}}
+\item 
+bool \mbox{\hyperlink{class_obxd_voice_ab5267de2633267fdb8ee868c819ef1a5}{hq}}
+\item 
+\mbox{\hyperlink{class_tuning}{Tuning}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_obxd_voice_a79b8fb57f794278dbcb4b5d33d7e5af7}{tuning}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_obxd_voice_a8854f977fddf200511ddee1cb9022024}\label{class_obxd_voice_a8854f977fddf200511ddee1cb9022024} 
+\index{ObxdVoice@{ObxdVoice}!ObxdVoice@{ObxdVoice}}
+\index{ObxdVoice@{ObxdVoice}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{ObxdVoice()}{ObxdVoice()}}
+{\footnotesize\ttfamily Obxd\+Voice\+::\+Obxd\+Voice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_voice_aa37398c59c355c9f3d1b4d371522b6df}\label{class_obxd_voice_aa37398c59c355c9f3d1b4d371522b6df} 
+\index{ObxdVoice@{ObxdVoice}!````~ObxdVoice@{\texorpdfstring{$\sim$}{\string~}ObxdVoice}}
+\index{````~ObxdVoice@{\texorpdfstring{$\sim$}{\string~}ObxdVoice}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ObxdVoice()}{\string~ObxdVoice()}}
+{\footnotesize\ttfamily Obxd\+Voice\+::\texorpdfstring{$\sim$}{\string~}\+Obxd\+Voice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_obxd_voice_aec041ec0d2bb25eaa5e6d021dda5a287}\label{class_obxd_voice_aec041ec0d2bb25eaa5e6d021dda5a287} 
+\index{ObxdVoice@{ObxdVoice}!checkAdsrState@{checkAdsrState}}
+\index{checkAdsrState@{checkAdsrState}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{checkAdsrState()}{checkAdsrState()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::check\+Adsr\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_aec041ec0d2bb25eaa5e6d021dda5a287_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a97734225fe9e3290932f49b02d71943e}\label{class_obxd_voice_a97734225fe9e3290932f49b02d71943e} 
+\index{ObxdVoice@{ObxdVoice}!initTuning@{initTuning}}
+\index{initTuning@{initTuning}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{initTuning()}{initTuning()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::init\+Tuning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tuning}{Tuning}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_voice_abcad3a5f43b4bbf50edc805536af74cb}\label{class_obxd_voice_abcad3a5f43b4bbf50edc805536af74cb} 
+\index{ObxdVoice@{ObxdVoice}!NoteOff@{NoteOff}}
+\index{NoteOff@{NoteOff}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{NoteOff()}{NoteOff()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::\+Note\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_abcad3a5f43b4bbf50edc805536af74cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a25ec8af99c861e8007703aeb4f56bbc5}\label{class_obxd_voice_a25ec8af99c861e8007703aeb4f56bbc5} 
+\index{ObxdVoice@{ObxdVoice}!NoteOn@{NoteOn}}
+\index{NoteOn@{NoteOn}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{NoteOn()}{NoteOn()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::\+Note\+On (\begin{DoxyParamCaption}\item[{int}]{mididx,  }\item[{float}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_a25ec8af99c861e8007703aeb4f56bbc5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a54f64be26658ff5b37fae10538372c5b}\label{class_obxd_voice_a54f64be26658ff5b37fae10538372c5b} 
+\index{ObxdVoice@{ObxdVoice}!ProcessSample@{ProcessSample}}
+\index{ProcessSample@{ProcessSample}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{ProcessSample()}{ProcessSample()}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Process\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_a54f64be26658ff5b37fae10538372c5b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a9127c134994520c9a8b367344c2554ed}\label{class_obxd_voice_a9127c134994520c9a8b367344c2554ed} 
+\index{ObxdVoice@{ObxdVoice}!ResetEnvelope@{ResetEnvelope}}
+\index{ResetEnvelope@{ResetEnvelope}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{ResetEnvelope()}{ResetEnvelope()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::\+Reset\+Envelope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_a9127c134994520c9a8b367344c2554ed_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a87e70f1a66a6a9651d04466fc3e8e230}\label{class_obxd_voice_a87e70f1a66a6a9651d04466fc3e8e230} 
+\index{ObxdVoice@{ObxdVoice}!setBrightness@{setBrightness}}
+\index{setBrightness@{setBrightness}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{setBrightness()}{setBrightness()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::set\+Brightness (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_voice_a1b480c4a1a951467986ea69e92a7f94e}\label{class_obxd_voice_a1b480c4a1a951467986ea69e92a7f94e} 
+\index{ObxdVoice@{ObxdVoice}!setEnvDer@{setEnvDer}}
+\index{setEnvDer@{setEnvDer}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{setEnvDer()}{setEnvDer()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::set\+Env\+Der (\begin{DoxyParamCaption}\item[{float}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_a1b480c4a1a951467986ea69e92a7f94e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a8acc694533ce65c64379902322784dab}\label{class_obxd_voice_a8acc694533ce65c64379902322784dab} 
+\index{ObxdVoice@{ObxdVoice}!setHQ@{setHQ}}
+\index{setHQ@{setHQ}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{setHQ()}{setHQ()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::set\+HQ (\begin{DoxyParamCaption}\item[{bool}]{hq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_a8acc694533ce65c64379902322784dab_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_aa2f9a9aa1e1fba3d298071acc822a7f5}\label{class_obxd_voice_aa2f9a9aa1e1fba3d298071acc822a7f5} 
+\index{ObxdVoice@{ObxdVoice}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_aa2f9a9aa1e1fba3d298071acc822a7f5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a53c15c195b36e4f633b6f29b0c636085}\label{class_obxd_voice_a53c15c195b36e4f633b6f29b0c636085} 
+\index{ObxdVoice@{ObxdVoice}!sustOff@{sustOff}}
+\index{sustOff@{sustOff}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{sustOff()}{sustOff()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::sust\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_voice_a53c15c195b36e4f633b6f29b0c636085_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_voice_a92d3738f426dd0e6a421ebe3bb9dafbd}\label{class_obxd_voice_a92d3738f426dd0e6a421ebe3bb9dafbd} 
+\index{ObxdVoice@{ObxdVoice}!sustOn@{sustOn}}
+\index{sustOn@{sustOn}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{sustOn()}{sustOn()}}
+{\footnotesize\ttfamily void Obxd\+Voice\+::sust\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_obxd_voice_a8b5bf8bdd68ef439c14566eac681b936}\label{class_obxd_voice_a8b5bf8bdd68ef439c14566eac681b936} 
+\index{ObxdVoice@{ObxdVoice}!Active@{Active}}
+\index{Active@{Active}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{Active}{Active}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::\+Active}
+
+\Hypertarget{class_obxd_voice_a4ee6099e90de4fbeb5eed9f9b3148a74}\label{class_obxd_voice_a4ee6099e90de4fbeb5eed9f9b3148a74} 
+\index{ObxdVoice@{ObxdVoice}!ap@{ap}}
+\index{ap@{ap}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{ap}{ap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ap_interpolator}{Ap\+Interpolator}} Obxd\+Voice\+::ap}
+
+\Hypertarget{class_obxd_voice_a01cb65b23444508a43265f47294710da}\label{class_obxd_voice_a01cb65b23444508a43265f47294710da} 
+\index{ObxdVoice@{ObxdVoice}!brightCoef@{brightCoef}}
+\index{brightCoef@{brightCoef}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{brightCoef}{brightCoef}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::bright\+Coef}
+
+\Hypertarget{class_obxd_voice_aef7cbf84ff1c9c29e46fecde5e91031c}\label{class_obxd_voice_aef7cbf84ff1c9c29e46fecde5e91031c} 
+\index{ObxdVoice@{ObxdVoice}!briHold@{briHold}}
+\index{briHold@{briHold}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{briHold}{briHold}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::bri\+Hold}
+
+\Hypertarget{class_obxd_voice_a58f9535a002394d549be73799d8d550a}\label{class_obxd_voice_a58f9535a002394d549be73799d8d550a} 
+\index{ObxdVoice@{ObxdVoice}!c1@{c1}}
+\index{c1@{c1}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{c1}{c1}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::c1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_a8428d79e0c2150f4a208cfd333680306}\label{class_obxd_voice_a8428d79e0c2150f4a208cfd333680306} 
+\index{ObxdVoice@{ObxdVoice}!c2@{c2}}
+\index{c2@{c2}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{c2}{c2}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::c2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_a9bc932c72c8fd9e42a466b9b73740e51}\label{class_obxd_voice_a9bc932c72c8fd9e42a466b9b73740e51} 
+\index{ObxdVoice@{ObxdVoice}!cutoff@{cutoff}}
+\index{cutoff@{cutoff}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{cutoff}{cutoff}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::cutoff}
+
+\Hypertarget{class_obxd_voice_aee04e5ced67275f6fd46a8289303905c}\label{class_obxd_voice_aee04e5ced67275f6fd46a8289303905c} 
+\index{ObxdVoice@{ObxdVoice}!cutoffwas@{cutoffwas}}
+\index{cutoffwas@{cutoffwas}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{cutoffwas}{cutoffwas}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::cutoffwas}
+
+\Hypertarget{class_obxd_voice_a9d5d29ecfac80d5dc16639486564dd35}\label{class_obxd_voice_a9d5d29ecfac80d5dc16639486564dd35} 
+\index{ObxdVoice@{ObxdVoice}!d1@{d1}}
+\index{d1@{d1}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{d1}{d1}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::d1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_ae22b22d22d4aa596ab4581918649716f}\label{class_obxd_voice_ae22b22d22d4aa596ab4581918649716f} 
+\index{ObxdVoice@{ObxdVoice}!d2@{d2}}
+\index{d2@{d2}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{d2}{d2}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::d2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_a79cc8b0f989f551e9f4f569109739e20}\label{class_obxd_voice_a79cc8b0f989f551e9f4f569109739e20} 
+\index{ObxdVoice@{ObxdVoice}!env@{env}}
+\index{env@{env}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{env}{env}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_adsr_envelope}{Adsr\+Envelope}} Obxd\+Voice\+::env}
+
+\Hypertarget{class_obxd_voice_ac8403b6222cdbf6ec36d5a93fd3e9b57}\label{class_obxd_voice_ac8403b6222cdbf6ec36d5a93fd3e9b57} 
+\index{ObxdVoice@{ObxdVoice}!EnvDetune@{EnvDetune}}
+\index{EnvDetune@{EnvDetune}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{EnvDetune}{EnvDetune}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Env\+Detune}
+
+\Hypertarget{class_obxd_voice_a8a0e23879ebf4d34e34769e91d007db9}\label{class_obxd_voice_a8a0e23879ebf4d34e34769e91d007db9} 
+\index{ObxdVoice@{ObxdVoice}!envelopewas@{envelopewas}}
+\index{envelopewas@{envelopewas}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{envelopewas}{envelopewas}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::envelopewas}
+
+\Hypertarget{class_obxd_voice_a17a5a2984ad19cbb2a320d88f44a3d35}\label{class_obxd_voice_a17a5a2984ad19cbb2a320d88f44a3d35} 
+\index{ObxdVoice@{ObxdVoice}!envpitchmod@{envpitchmod}}
+\index{envpitchmod@{envpitchmod}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{envpitchmod}{envpitchmod}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::envpitchmod}
+
+\Hypertarget{class_obxd_voice_a56b69c100bb7cd9c0c8e495728b61698}\label{class_obxd_voice_a56b69c100bb7cd9c0c8e495728b61698} 
+\index{ObxdVoice@{ObxdVoice}!fenv@{fenv}}
+\index{fenv@{fenv}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{fenv}{fenv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_adsr_envelope}{Adsr\+Envelope}} Obxd\+Voice\+::fenv}
+
+\Hypertarget{class_obxd_voice_a70155e817497d1af0eeb681a0f2586c9}\label{class_obxd_voice_a70155e817497d1af0eeb681a0f2586c9} 
+\index{ObxdVoice@{ObxdVoice}!fenvamt@{fenvamt}}
+\index{fenvamt@{fenvamt}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{fenvamt}{fenvamt}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::fenvamt}
+
+\Hypertarget{class_obxd_voice_a896acc8ac8761cf64d7316b7736243a1}\label{class_obxd_voice_a896acc8ac8761cf64d7316b7736243a1} 
+\index{ObxdVoice@{ObxdVoice}!fenvd@{fenvd}}
+\index{fenvd@{fenvd}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{fenvd}{fenvd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}\texorpdfstring{$\ast$}{*}2$>$ Obxd\+Voice\+::fenvd}
+
+\Hypertarget{class_obxd_voice_a368f5cf0354a5423d97dd608bac05ca9}\label{class_obxd_voice_a368f5cf0354a5423d97dd608bac05ca9} 
+\index{ObxdVoice@{ObxdVoice}!FenvDetune@{FenvDetune}}
+\index{FenvDetune@{FenvDetune}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{FenvDetune}{FenvDetune}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Fenv\+Detune}
+
+\Hypertarget{class_obxd_voice_ad2e4d4af6101cc0b9074ff7cea7b2af8}\label{class_obxd_voice_ad2e4d4af6101cc0b9074ff7cea7b2af8} 
+\index{ObxdVoice@{ObxdVoice}!flt@{flt}}
+\index{flt@{flt}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{flt}{flt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_filter}{Filter}} Obxd\+Voice\+::flt}
+
+\Hypertarget{class_obxd_voice_af54f8d2b4e1ff54a817834e7d5e340b8}\label{class_obxd_voice_af54f8d2b4e1ff54a817834e7d5e340b8} 
+\index{ObxdVoice@{ObxdVoice}!FltDetAmt@{FltDetAmt}}
+\index{FltDetAmt@{FltDetAmt}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{FltDetAmt}{FltDetAmt}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Flt\+Det\+Amt}
+
+\Hypertarget{class_obxd_voice_aa8f4e3f3dc32c974f316d013bad76605}\label{class_obxd_voice_aa8f4e3f3dc32c974f316d013bad76605} 
+\index{ObxdVoice@{ObxdVoice}!FltDetune@{FltDetune}}
+\index{FltDetune@{FltDetune}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{FltDetune}{FltDetune}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Flt\+Detune}
+
+\Hypertarget{class_obxd_voice_a7642bcff465583d624d60bfa3eb1c29e}\label{class_obxd_voice_a7642bcff465583d624d60bfa3eb1c29e} 
+\index{ObxdVoice@{ObxdVoice}!fltKF@{fltKF}}
+\index{fltKF@{fltKF}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{fltKF}{fltKF}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::flt\+KF}
+
+\Hypertarget{class_obxd_voice_a2dd0ee56ade8d101c7f4d37b08439384}\label{class_obxd_voice_a2dd0ee56ade8d101c7f4d37b08439384} 
+\index{ObxdVoice@{ObxdVoice}!fourpole@{fourpole}}
+\index{fourpole@{fourpole}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{fourpole}{fourpole}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::fourpole}
+
+\Hypertarget{class_obxd_voice_ab5267de2633267fdb8ee868c819ef1a5}\label{class_obxd_voice_ab5267de2633267fdb8ee868c819ef1a5} 
+\index{ObxdVoice@{ObxdVoice}!hq@{hq}}
+\index{hq@{hq}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{hq}{hq}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::hq\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_a6c163c4baabb647f6abedeb1a849912d}\label{class_obxd_voice_a6c163c4baabb647f6abedeb1a849912d} 
+\index{ObxdVoice@{ObxdVoice}!invertFenv@{invertFenv}}
+\index{invertFenv@{invertFenv}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{invertFenv}{invertFenv}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::invert\+Fenv}
+
+\Hypertarget{class_obxd_voice_ae0c9469f328a4de82b1f2ea2f3071862}\label{class_obxd_voice_ae0c9469f328a4de82b1f2ea2f3071862} 
+\index{ObxdVoice@{ObxdVoice}!legatoMode@{legatoMode}}
+\index{legatoMode@{legatoMode}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{legatoMode}{legatoMode}}
+{\footnotesize\ttfamily int Obxd\+Voice\+::legato\+Mode}
+
+\Hypertarget{class_obxd_voice_acf17b2ef515f3f3cef29e887b4e2f228}\label{class_obxd_voice_acf17b2ef515f3f3cef29e887b4e2f228} 
+\index{ObxdVoice@{ObxdVoice}!lenvd@{lenvd}}
+\index{lenvd@{lenvd}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lenvd}{lenvd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}\texorpdfstring{$\ast$}{*}2$>$ Obxd\+Voice\+::lenvd}
+
+\Hypertarget{class_obxd_voice_a9a94c097308bfa9bc3562d6c29e1f70d}\label{class_obxd_voice_a9a94c097308bfa9bc3562d6c29e1f70d} 
+\index{ObxdVoice@{ObxdVoice}!levelDetune@{levelDetune}}
+\index{levelDetune@{levelDetune}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{levelDetune}{levelDetune}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::level\+Detune}
+
+\Hypertarget{class_obxd_voice_ade9339d3bb2d9317816febef855169ba}\label{class_obxd_voice_ade9339d3bb2d9317816febef855169ba} 
+\index{ObxdVoice@{ObxdVoice}!levelDetuneAmt@{levelDetuneAmt}}
+\index{levelDetuneAmt@{levelDetuneAmt}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{levelDetuneAmt}{levelDetuneAmt}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::level\+Detune\+Amt}
+
+\Hypertarget{class_obxd_voice_a03c674d8168e334e7526200b65f42a31}\label{class_obxd_voice_a03c674d8168e334e7526200b65f42a31} 
+\index{ObxdVoice@{ObxdVoice}!lfoa1@{lfoa1}}
+\index{lfoa1@{lfoa1}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfoa1}{lfoa1}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::lfoa1}
+
+\Hypertarget{class_obxd_voice_a37c1c7dda4adcb00402b90c1e54e7272}\label{class_obxd_voice_a37c1c7dda4adcb00402b90c1e54e7272} 
+\index{ObxdVoice@{ObxdVoice}!lfoa2@{lfoa2}}
+\index{lfoa2@{lfoa2}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfoa2}{lfoa2}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::lfoa2}
+
+\Hypertarget{class_obxd_voice_aeee49772a772f3997b080f0d38a3603a}\label{class_obxd_voice_aeee49772a772f3997b080f0d38a3603a} 
+\index{ObxdVoice@{ObxdVoice}!lfod@{lfod}}
+\index{lfod@{lfod}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfod}{lfod}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}\texorpdfstring{$\ast$}{*}2$>$ Obxd\+Voice\+::lfod}
+
+\Hypertarget{class_obxd_voice_a89522edc08545c2318623aeb5c575ce8}\label{class_obxd_voice_a89522edc08545c2318623aeb5c575ce8} 
+\index{ObxdVoice@{ObxdVoice}!lfof@{lfof}}
+\index{lfof@{lfof}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfof}{lfof}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::lfof}
+
+\Hypertarget{class_obxd_voice_a9277a03f1fb30de6efbb9d540fceb9bf}\label{class_obxd_voice_a9277a03f1fb30de6efbb9d540fceb9bf} 
+\index{ObxdVoice@{ObxdVoice}!lfoIn@{lfoIn}}
+\index{lfoIn@{lfoIn}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfoIn}{lfoIn}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::lfo\+In}
+
+\Hypertarget{class_obxd_voice_a4407168074561b38dd59a9cb7c1b8881}\label{class_obxd_voice_a4407168074561b38dd59a9cb7c1b8881} 
+\index{ObxdVoice@{ObxdVoice}!lfoo1@{lfoo1}}
+\index{lfoo1@{lfoo1}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfoo1}{lfoo1}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::lfoo1}
+
+\Hypertarget{class_obxd_voice_a19acb3f6bdb9876c39a4cff30095a65a}\label{class_obxd_voice_a19acb3f6bdb9876c39a4cff30095a65a} 
+\index{ObxdVoice@{ObxdVoice}!lfoo2@{lfoo2}}
+\index{lfoo2@{lfoo2}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfoo2}{lfoo2}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::lfoo2}
+
+\Hypertarget{class_obxd_voice_aa4578f69eff3a861c83fe5ea07c33ddc}\label{class_obxd_voice_aa4578f69eff3a861c83fe5ea07c33ddc} 
+\index{ObxdVoice@{ObxdVoice}!lfopw1@{lfopw1}}
+\index{lfopw1@{lfopw1}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfopw1}{lfopw1}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::lfopw1}
+
+\Hypertarget{class_obxd_voice_a7f0378e42ba64d527c144c7c365806d6}\label{class_obxd_voice_a7f0378e42ba64d527c144c7c365806d6} 
+\index{ObxdVoice@{ObxdVoice}!lfopw2@{lfopw2}}
+\index{lfopw2@{lfopw2}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfopw2}{lfopw2}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::lfopw2}
+
+\Hypertarget{class_obxd_voice_a8fc72aa7142d9d6949450eac2f45479d}\label{class_obxd_voice_a8fc72aa7142d9d6949450eac2f45479d} 
+\index{ObxdVoice@{ObxdVoice}!lfoVibratoIn@{lfoVibratoIn}}
+\index{lfoVibratoIn@{lfoVibratoIn}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{lfoVibratoIn}{lfoVibratoIn}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::lfo\+Vibrato\+In}
+
+\Hypertarget{class_obxd_voice_a70516b40659cb7379572a3edc81beb6d}\label{class_obxd_voice_a70516b40659cb7379572a3edc81beb6d} 
+\index{ObxdVoice@{ObxdVoice}!midiIndx@{midiIndx}}
+\index{midiIndx@{midiIndx}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{midiIndx}{midiIndx}}
+{\footnotesize\ttfamily int Obxd\+Voice\+::midi\+Indx}
+
+\Hypertarget{class_obxd_voice_a0cb723768c794ea4c06b1ef15bfd8aa3}\label{class_obxd_voice_a0cb723768c794ea4c06b1ef15bfd8aa3} 
+\index{ObxdVoice@{ObxdVoice}!ng@{ng}}
+\index{ng@{ng}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{ng}{ng}}
+{\footnotesize\ttfamily Random Obxd\+Voice\+::ng}
+
+\Hypertarget{class_obxd_voice_a5b16bb0afadf8e44c416f8d8efdc39e4}\label{class_obxd_voice_a5b16bb0afadf8e44c416f8d8efdc39e4} 
+\index{ObxdVoice@{ObxdVoice}!osc@{osc}}
+\index{osc@{osc}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{osc}{osc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obxd_oscillator_b}{Obxd\+OscillatorB}} Obxd\+Voice\+::osc}
+
+\Hypertarget{class_obxd_voice_a4171f3a2a236e7033bd010f970037e13}\label{class_obxd_voice_a4171f3a2a236e7033bd010f970037e13} 
+\index{ObxdVoice@{ObxdVoice}!oscpsw@{oscpsw}}
+\index{oscpsw@{oscpsw}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{oscpsw}{oscpsw}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::oscpsw}
+
+\Hypertarget{class_obxd_voice_a3521e2b401af370a81cb65efd0cca0ab}\label{class_obxd_voice_a3521e2b401af370a81cb65efd0cca0ab} 
+\index{ObxdVoice@{ObxdVoice}!Oversample@{Oversample}}
+\index{Oversample@{Oversample}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{Oversample}{Oversample}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::\+Oversample}
+
+\Hypertarget{class_obxd_voice_a9577099b718e68d0638424fdf6ee66f1}\label{class_obxd_voice_a9577099b718e68d0638424fdf6ee66f1} 
+\index{ObxdVoice@{ObxdVoice}!pitchModBoth@{pitchModBoth}}
+\index{pitchModBoth@{pitchModBoth}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{pitchModBoth}{pitchModBoth}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::pitch\+Mod\+Both}
+
+\Hypertarget{class_obxd_voice_ab89326076042f15dc16c69846b9a3bde}\label{class_obxd_voice_ab89326076042f15dc16c69846b9a3bde} 
+\index{ObxdVoice@{ObxdVoice}!pitchWheel@{pitchWheel}}
+\index{pitchWheel@{pitchWheel}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{pitchWheel}{pitchWheel}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::pitch\+Wheel}
+
+\Hypertarget{class_obxd_voice_adec49097f936449e1676e90cb9108ae9}\label{class_obxd_voice_adec49097f936449e1676e90cb9108ae9} 
+\index{ObxdVoice@{ObxdVoice}!pitchWheelAmt@{pitchWheelAmt}}
+\index{pitchWheelAmt@{pitchWheelAmt}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{pitchWheelAmt}{pitchWheelAmt}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::pitch\+Wheel\+Amt}
+
+\Hypertarget{class_obxd_voice_aebf5ed3414be4687c84edb7b6bc5ade4}\label{class_obxd_voice_aebf5ed3414be4687c84edb7b6bc5ade4} 
+\index{ObxdVoice@{ObxdVoice}!pitchWheelOsc2Only@{pitchWheelOsc2Only}}
+\index{pitchWheelOsc2Only@{pitchWheelOsc2Only}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{pitchWheelOsc2Only}{pitchWheelOsc2Only}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::pitch\+Wheel\+Osc2\+Only}
+
+\Hypertarget{class_obxd_voice_a25a2d15b49ba5f5b3e21c4a3da93611b}\label{class_obxd_voice_a25a2d15b49ba5f5b3e21c4a3da93611b} 
+\index{ObxdVoice@{ObxdVoice}!port@{port}}
+\index{port@{port}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::port\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_ae8f60864777499a8fa405f3d214ef86e}\label{class_obxd_voice_ae8f60864777499a8fa405f3d214ef86e} 
+\index{ObxdVoice@{ObxdVoice}!porta@{porta}}
+\index{porta@{porta}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{porta}{porta}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::porta}
+
+\Hypertarget{class_obxd_voice_af4ef69aaa425f27f66ad855195c1c90b}\label{class_obxd_voice_af4ef69aaa425f27f66ad855195c1c90b} 
+\index{ObxdVoice@{ObxdVoice}!PortaDetune@{PortaDetune}}
+\index{PortaDetune@{PortaDetune}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{PortaDetune}{PortaDetune}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Porta\+Detune}
+
+\Hypertarget{class_obxd_voice_a963f0ac41c1123b64323020c139a660a}\label{class_obxd_voice_a963f0ac41c1123b64323020c139a660a} 
+\index{ObxdVoice@{ObxdVoice}!PortaDetuneAmt@{PortaDetuneAmt}}
+\index{PortaDetuneAmt@{PortaDetuneAmt}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{PortaDetuneAmt}{PortaDetuneAmt}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Porta\+Detune\+Amt}
+
+\Hypertarget{class_obxd_voice_a4b86d23d5379966c1c42ad8717fa9255}\label{class_obxd_voice_a4b86d23d5379966c1c42ad8717fa9255} 
+\index{ObxdVoice@{ObxdVoice}!prtst@{prtst}}
+\index{prtst@{prtst}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{prtst}{prtst}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::prtst}
+
+\Hypertarget{class_obxd_voice_a5799e8edd85f99d58a63044333bfc117}\label{class_obxd_voice_a5799e8edd85f99d58a63044333bfc117} 
+\index{ObxdVoice@{ObxdVoice}!pwEnvBoth@{pwEnvBoth}}
+\index{pwEnvBoth@{pwEnvBoth}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{pwEnvBoth}{pwEnvBoth}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::pw\+Env\+Both}
+
+\Hypertarget{class_obxd_voice_aa77f035b8d4ccf5c0acdc256c7529901}\label{class_obxd_voice_aa77f035b8d4ccf5c0acdc256c7529901} 
+\index{ObxdVoice@{ObxdVoice}!pwenvmod@{pwenvmod}}
+\index{pwenvmod@{pwenvmod}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{pwenvmod}{pwenvmod}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::pwenvmod}
+
+\Hypertarget{class_obxd_voice_aed3588897eef8a2227365efcacb16caa}\label{class_obxd_voice_aed3588897eef8a2227365efcacb16caa} 
+\index{ObxdVoice@{ObxdVoice}!pwOfs@{pwOfs}}
+\index{pwOfs@{pwOfs}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{pwOfs}{pwOfs}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::pw\+Ofs}
+
+\Hypertarget{class_obxd_voice_a8105f6aa00a4071b7d09dcff2483503d}\label{class_obxd_voice_a8105f6aa00a4071b7d09dcff2483503d} 
+\index{ObxdVoice@{ObxdVoice}!SampleRate@{SampleRate}}
+\index{SampleRate@{SampleRate}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{SampleRate}{SampleRate}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_ac4d7c08d75c6763670dac1a99963eec3}\label{class_obxd_voice_ac4d7c08d75c6763670dac1a99963eec3} 
+\index{ObxdVoice@{ObxdVoice}!sampleRateInv@{sampleRateInv}}
+\index{sampleRateInv@{sampleRateInv}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{sampleRateInv}{sampleRateInv}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::sample\+Rate\+Inv\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_ab5fc640babdb3ee5ef91342125299acf}\label{class_obxd_voice_ab5fc640babdb3ee5ef91342125299acf} 
+\index{ObxdVoice@{ObxdVoice}!selfOscPush@{selfOscPush}}
+\index{selfOscPush@{selfOscPush}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{selfOscPush}{selfOscPush}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::self\+Osc\+Push}
+
+\Hypertarget{class_obxd_voice_a1f01f3790b6c12338a3524ad05a48cad}\label{class_obxd_voice_a1f01f3790b6c12338a3524ad05a48cad} 
+\index{ObxdVoice@{ObxdVoice}!shouldProcessed@{shouldProcessed}}
+\index{shouldProcessed@{shouldProcessed}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{shouldProcessed}{shouldProcessed}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::should\+Processed}
+
+\Hypertarget{class_obxd_voice_ab6d6ec49d9481545735825e721583c1d}\label{class_obxd_voice_ab6d6ec49d9481545735825e721583c1d} 
+\index{ObxdVoice@{ObxdVoice}!sustainHold@{sustainHold}}
+\index{sustainHold@{sustainHold}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{sustainHold}{sustainHold}}
+{\footnotesize\ttfamily bool Obxd\+Voice\+::sustain\+Hold}
+
+\Hypertarget{class_obxd_voice_a79b8fb57f794278dbcb4b5d33d7e5af7}\label{class_obxd_voice_a79b8fb57f794278dbcb4b5d33d7e5af7} 
+\index{ObxdVoice@{ObxdVoice}!tuning@{tuning}}
+\index{tuning@{tuning}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{tuning}{tuning}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tuning}{Tuning}}\texorpdfstring{$\ast$}{*} Obxd\+Voice\+::tuning\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_a7695b5733995c3261432ef9dc5668325}\label{class_obxd_voice_a7695b5733995c3261432ef9dc5668325} 
+\index{ObxdVoice@{ObxdVoice}!vamp@{vamp}}
+\index{vamp@{vamp}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{vamp}{vamp}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::vamp}
+
+\Hypertarget{class_obxd_voice_a93abf19abf49e8e79bc5e460a4f411a0}\label{class_obxd_voice_a93abf19abf49e8e79bc5e460a4f411a0} 
+\index{ObxdVoice@{ObxdVoice}!velocityValue@{velocityValue}}
+\index{velocityValue@{velocityValue}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{velocityValue}{velocityValue}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::velocity\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_voice_a4ff277c8a14cd7251721f75b43cea01f}\label{class_obxd_voice_a4ff277c8a14cd7251721f75b43cea01f} 
+\index{ObxdVoice@{ObxdVoice}!vflt@{vflt}}
+\index{vflt@{vflt}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{vflt}{vflt}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::vflt}
+
+\Hypertarget{class_obxd_voice_a87e7da885c87610c4dac5e5e35512ea7}\label{class_obxd_voice_a87e7da885c87610c4dac5e5e35512ea7} 
+\index{ObxdVoice@{ObxdVoice}!Volume@{Volume}}
+\index{Volume@{Volume}!ObxdVoice@{ObxdVoice}}
+\doxysubsubsection{\texorpdfstring{Volume}{Volume}}
+{\footnotesize\ttfamily float Obxd\+Voice\+::\+Volume\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_obxd_voice_8h}{Obxd\+Voice.\+h}}\end{DoxyCompactItemize}

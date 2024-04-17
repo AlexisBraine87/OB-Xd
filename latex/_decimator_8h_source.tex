@@ -1,0 +1,92 @@
+\doxysection{Decimator.\+h}
+\hypertarget{_decimator_8h_source}{}\label{_decimator_8h_source}\index{Source/Engine/Decimator.h@{Source/Engine/Decimator.h}}
+\mbox{\hyperlink{_decimator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//MusicDsp\ }}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ T.Rochebois}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//still\ indev}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_decimator17}{Decimator17}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_decimator17_a1c858094d62a9333e2a5a0668677679b}{h0}},\mbox{\hyperlink{class_decimator17_a2a8f583fccff2e0a704a2aa13b0900e2}{h1}},\mbox{\hyperlink{class_decimator17_a71f2884d7017bf60ad7c443965af8655}{h3}},\mbox{\hyperlink{class_decimator17_a67ddba8bd3fc5d5ffe75ec5f9275ed69}{h5}},\mbox{\hyperlink{class_decimator17_ad78311ce467747877d0477ad00f0a73b}{h7}},\mbox{\hyperlink{class_decimator17_ad319b123f7cf53d803ad61fd14eab6d3}{h9}},\mbox{\hyperlink{class_decimator17_a82289337a605f25b4091b025b944930e}{h11}},\mbox{\hyperlink{class_decimator17_af31c51b07d9fbbb1a4b64430412e7e7a}{h13}},\mbox{\hyperlink{class_decimator17_a74d317e15ddf885faa2eae24193a591d}{h15}},\mbox{\hyperlink{class_decimator17_aeb33385479284abcab2606ccecb9a0a7}{h17}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_decimator17_a9b4008eb03d51770a1c5a86e671b5ad6}{R1}},\mbox{\hyperlink{class_decimator17_aa24f133ad2bb6c1b7a9c7881491d1555}{R2}},\mbox{\hyperlink{class_decimator17_a3996d813c2e7299c351b8d484ffe6901}{R3}},\mbox{\hyperlink{class_decimator17_a67d15c2bdf1e102536de1e017ced84af}{R4}},\mbox{\hyperlink{class_decimator17_a4713b6d1c0d607126d1a87e0cd70ea15}{R5}},\mbox{\hyperlink{class_decimator17_a56754ca623e71a4f6246f1b1c1113b28}{R6}},\mbox{\hyperlink{class_decimator17_aeeecdadf2d90c37240120371d0c5df8f}{R7}},\mbox{\hyperlink{class_decimator17_ad38b2e3ed6c6903a81e9d756220802e8}{R8}},\mbox{\hyperlink{class_decimator17_aae6d49d411518eb855ca4a2a11a77671}{R9}},\mbox{\hyperlink{class_decimator17_ab245a774ae8430ffd07618f4de832476}{R10}},\mbox{\hyperlink{class_decimator17_af5310c5684968fcfb4adaee20f19bb30}{R11}},\mbox{\hyperlink{class_decimator17_af2e98fa5e632eaf3b73c375943e8d757}{R12}},\mbox{\hyperlink{class_decimator17_acc718485077c7cfd8e75fd08f5155bc2}{R13}},\mbox{\hyperlink{class_decimator17_af529154a5dce6f08b973d258b5bf4d52}{R14}},\mbox{\hyperlink{class_decimator17_a49884a843369c2b8c1fa5b01527dc7e7}{R15}},\mbox{\hyperlink{class_decimator17_a54170a15f604f8f9ca0052187c5bd5ce}{R16}},\mbox{\hyperlink{class_decimator17_a4b1dee080c1486563dd9ffed5a2dd881}{R17}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_decimator17_a379c5473afbf5448ed74299304651516}{Decimator17}}()}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_decimator17_a1c858094d62a9333e2a5a0668677679b}{h0}}(0.5)}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_a2a8f583fccff2e0a704a2aa13b0900e2}{h1}}(0.314356238)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_a71f2884d7017bf60ad7c443965af8655}{h3}}(-\/0.0947515890)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_a67ddba8bd3fc5d5ffe75ec5f9275ed69}{h5}}(0.0463142134)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_ad78311ce467747877d0477ad00f0a73b}{h7}}(-\/0.0240881704)}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_ad319b123f7cf53d803ad61fd14eab6d3}{h9}}(0.0120250406)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_a82289337a605f25b4091b025b944930e}{h11}}(-\/0.00543170841)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_af31c51b07d9fbbb1a4b64430412e7e7a}{h13}}(0.00207426259)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_a74d317e15ddf885faa2eae24193a591d}{h15}}(-\/0.000572688237)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_decimator17_aeb33385479284abcab2606ccecb9a0a7}{h17}}(5.18944944e-\/005)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a9b4008eb03d51770a1c5a86e671b5ad6}{R1}}=\mbox{\hyperlink{class_decimator17_aa24f133ad2bb6c1b7a9c7881491d1555}{R2}}=\mbox{\hyperlink{class_decimator17_a3996d813c2e7299c351b8d484ffe6901}{R3}}=\mbox{\hyperlink{class_decimator17_a67d15c2bdf1e102536de1e017ced84af}{R4}}=\mbox{\hyperlink{class_decimator17_a4713b6d1c0d607126d1a87e0cd70ea15}{R5}}=\mbox{\hyperlink{class_decimator17_a56754ca623e71a4f6246f1b1c1113b28}{R6}}=\mbox{\hyperlink{class_decimator17_aeeecdadf2d90c37240120371d0c5df8f}{R7}}=\mbox{\hyperlink{class_decimator17_ad38b2e3ed6c6903a81e9d756220802e8}{R8}}=\mbox{\hyperlink{class_decimator17_aae6d49d411518eb855ca4a2a11a77671}{R9}}=\mbox{\hyperlink{class_decimator17_ab245a774ae8430ffd07618f4de832476}{R10}}=\mbox{\hyperlink{class_decimator17_af5310c5684968fcfb4adaee20f19bb30}{R11}}=\mbox{\hyperlink{class_decimator17_af2e98fa5e632eaf3b73c375943e8d757}{R12}}=\mbox{\hyperlink{class_decimator17_acc718485077c7cfd8e75fd08f5155bc2}{R13}}=\mbox{\hyperlink{class_decimator17_af529154a5dce6f08b973d258b5bf4d52}{R14}}=\mbox{\hyperlink{class_decimator17_a49884a843369c2b8c1fa5b01527dc7e7}{R15}}=\mbox{\hyperlink{class_decimator17_a54170a15f604f8f9ca0052187c5bd5ce}{R16}}=\mbox{\hyperlink{class_decimator17_a4b1dee080c1486563dd9ffed5a2dd881}{R17}}=0;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_decimator17_a2b9f61bab518a86b7bd95245087f1139}{Calc}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ x0,\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ x1)}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h17x0\ =\ \mbox{\hyperlink{class_decimator17_aeb33385479284abcab2606ccecb9a0a7}{h17}}\ *x0;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h15x0\ =\ \mbox{\hyperlink{class_decimator17_a74d317e15ddf885faa2eae24193a591d}{h15}}\ *x0;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h13x0\ =\ \mbox{\hyperlink{class_decimator17_af31c51b07d9fbbb1a4b64430412e7e7a}{h13}}\ *x0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h11x0=\ \ \mbox{\hyperlink{class_decimator17_a82289337a605f25b4091b025b944930e}{h11}}\ *x0;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h9x0=\mbox{\hyperlink{class_decimator17_ad319b123f7cf53d803ad61fd14eab6d3}{h9}}*x0;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h7x0=\mbox{\hyperlink{class_decimator17_ad78311ce467747877d0477ad00f0a73b}{h7}}*x0;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h5x0=\mbox{\hyperlink{class_decimator17_a67ddba8bd3fc5d5ffe75ec5f9275ed69}{h5}}*x0;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h3x0=\mbox{\hyperlink{class_decimator17_a71f2884d7017bf60ad7c443965af8655}{h3}}*x0;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h1x0=\mbox{\hyperlink{class_decimator17_a2a8f583fccff2e0a704a2aa13b0900e2}{h1}}*x0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ R18=\mbox{\hyperlink{class_decimator17_a4b1dee080c1486563dd9ffed5a2dd881}{R17}}+h17x0;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a4b1dee080c1486563dd9ffed5a2dd881}{R17}}\ =\ \mbox{\hyperlink{class_decimator17_a54170a15f604f8f9ca0052187c5bd5ce}{R16}}\ +\ h15x0;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a54170a15f604f8f9ca0052187c5bd5ce}{R16}}\ =\ \mbox{\hyperlink{class_decimator17_a49884a843369c2b8c1fa5b01527dc7e7}{R15}}\ +\ h13x0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a49884a843369c2b8c1fa5b01527dc7e7}{R15}}\ =\ \mbox{\hyperlink{class_decimator17_af529154a5dce6f08b973d258b5bf4d52}{R14}}\ +\ h11x0;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_af529154a5dce6f08b973d258b5bf4d52}{R14}}\ =\ \mbox{\hyperlink{class_decimator17_acc718485077c7cfd8e75fd08f5155bc2}{R13}}\ +\ h9x0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_acc718485077c7cfd8e75fd08f5155bc2}{R13}}\ =\ \mbox{\hyperlink{class_decimator17_af2e98fa5e632eaf3b73c375943e8d757}{R12}}\ +\ h7x0;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_af2e98fa5e632eaf3b73c375943e8d757}{R12}}\ =\ \mbox{\hyperlink{class_decimator17_af5310c5684968fcfb4adaee20f19bb30}{R11}}\ +\ h5x0;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_af5310c5684968fcfb4adaee20f19bb30}{R11}}\ =\ \mbox{\hyperlink{class_decimator17_ab245a774ae8430ffd07618f4de832476}{R10}}\ +\ h3x0;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_ab245a774ae8430ffd07618f4de832476}{R10}}\ =\ \mbox{\hyperlink{class_decimator17_aae6d49d411518eb855ca4a2a11a77671}{R9}}\ \ +\ h1x0;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_aae6d49d411518eb855ca4a2a11a77671}{R9}}\ \ =\ \mbox{\hyperlink{class_decimator17_ad38b2e3ed6c6903a81e9d756220802e8}{R8}}\ \ +\ h1x0\ +\ \mbox{\hyperlink{class_decimator17_a1c858094d62a9333e2a5a0668677679b}{h0}}*x1;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_ad38b2e3ed6c6903a81e9d756220802e8}{R8}}\ \ =\ \mbox{\hyperlink{class_decimator17_aeeecdadf2d90c37240120371d0c5df8f}{R7}}\ \ +\ h3x0;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_aeeecdadf2d90c37240120371d0c5df8f}{R7}}\ \ =\ \mbox{\hyperlink{class_decimator17_a56754ca623e71a4f6246f1b1c1113b28}{R6}}\ \ +\ h5x0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a56754ca623e71a4f6246f1b1c1113b28}{R6}}\ \ =\ \mbox{\hyperlink{class_decimator17_a4713b6d1c0d607126d1a87e0cd70ea15}{R5}}\ \ +\ h7x0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a4713b6d1c0d607126d1a87e0cd70ea15}{R5}}\ \ =\ \mbox{\hyperlink{class_decimator17_a67d15c2bdf1e102536de1e017ced84af}{R4}}\ \ +\ h9x0;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a67d15c2bdf1e102536de1e017ced84af}{R4}}\ \ =\ \mbox{\hyperlink{class_decimator17_a3996d813c2e7299c351b8d484ffe6901}{R3}}\ \ +\ h11x0;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a3996d813c2e7299c351b8d484ffe6901}{R3}}\ \ =\ \mbox{\hyperlink{class_decimator17_aa24f133ad2bb6c1b7a9c7881491d1555}{R2}}\ \ +\ h13x0;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_aa24f133ad2bb6c1b7a9c7881491d1555}{R2}}\ \ =\ \mbox{\hyperlink{class_decimator17_a9b4008eb03d51770a1c5a86e671b5ad6}{R1}}\ \ +\ h15x0;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator17_a9b4008eb03d51770a1c5a86e671b5ad6}{R1}}\ \ =\ h17x0;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ R18;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_decimator9}{Decimator9}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_decimator9_a19726169472c633d65b2d80220f53f53}{h0}},\mbox{\hyperlink{class_decimator9_a499040e12f68e542f328124d1a4a2d63}{h1}},\mbox{\hyperlink{class_decimator9_a40c1b0ba963fb628fe9710f3d30a5747}{h3}},\mbox{\hyperlink{class_decimator9_a548d0268dd14b63b9f9fb87c4762e5fb}{h5}},\mbox{\hyperlink{class_decimator9_ac717c0e9af50c289316544230f4fa73f}{h7}},\mbox{\hyperlink{class_decimator9_a3371fe49124e1b5d5b4d4266271c8bae}{h9}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_decimator9_a1119cb17a6fbba981b453c436a67a892}{R1}},\mbox{\hyperlink{class_decimator9_af538f423bc12dcd9757214c6dac9cdc7}{R2}},\mbox{\hyperlink{class_decimator9_ae1d089dffc744f9fd19cc3098934d8ae}{R3}},\mbox{\hyperlink{class_decimator9_aa54d36f1ce9fdbd8a6dead996e893b1f}{R4}},\mbox{\hyperlink{class_decimator9_a22c13398bd9dcf95f31d17f05a717cf2}{R5}},\mbox{\hyperlink{class_decimator9_a3d7ef548bb03d53a805e8b8b1a34b4ca}{R6}},\mbox{\hyperlink{class_decimator9_ad16129eff8f701f63654f118bf27e5e8}{R7}},\mbox{\hyperlink{class_decimator9_abc0479b315afdc4b02c8c75112720a24}{R8}},\mbox{\hyperlink{class_decimator9_ae8a9c46f5cc8cfea00a9e0d20d054d34}{R9}};}
+\DoxyCodeLine{00062\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_decimator9_a87180f3c5325be61ac8a006cf5c7c238}{Decimator9}}()\ :\ \mbox{\hyperlink{class_decimator9_a19726169472c633d65b2d80220f53f53}{h0}}(8192/16384.0f),\mbox{\hyperlink{class_decimator9_a499040e12f68e542f328124d1a4a2d63}{h1}}(5042/16384.0f),\mbox{\hyperlink{class_decimator9_a40c1b0ba963fb628fe9710f3d30a5747}{h3}}(-\/1277/16384.0f),\mbox{\hyperlink{class_decimator9_a548d0268dd14b63b9f9fb87c4762e5fb}{h5}}(429/16384.0f),\mbox{\hyperlink{class_decimator9_ac717c0e9af50c289316544230f4fa73f}{h7}}(-\/116/16384.0f),\mbox{\hyperlink{class_decimator9_a3371fe49124e1b5d5b4d4266271c8bae}{h9}}(18/16384.0f)}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_a1119cb17a6fbba981b453c436a67a892}{R1}}=\mbox{\hyperlink{class_decimator9_af538f423bc12dcd9757214c6dac9cdc7}{R2}}=\mbox{\hyperlink{class_decimator9_ae1d089dffc744f9fd19cc3098934d8ae}{R3}}=\mbox{\hyperlink{class_decimator9_aa54d36f1ce9fdbd8a6dead996e893b1f}{R4}}=\mbox{\hyperlink{class_decimator9_a22c13398bd9dcf95f31d17f05a717cf2}{R5}}=\mbox{\hyperlink{class_decimator9_a3d7ef548bb03d53a805e8b8b1a34b4ca}{R6}}=\mbox{\hyperlink{class_decimator9_ad16129eff8f701f63654f118bf27e5e8}{R7}}=\mbox{\hyperlink{class_decimator9_abc0479b315afdc4b02c8c75112720a24}{R8}}=\mbox{\hyperlink{class_decimator9_ae8a9c46f5cc8cfea00a9e0d20d054d34}{R9}}=0.0f;}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_decimator9_ad1f84733087ace0523adfffabf7876b3}{Calc}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ x0,\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ x1)}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h9x0=\mbox{\hyperlink{class_decimator9_a3371fe49124e1b5d5b4d4266271c8bae}{h9}}*x0;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h7x0=\mbox{\hyperlink{class_decimator9_ac717c0e9af50c289316544230f4fa73f}{h7}}*x0;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h5x0=\mbox{\hyperlink{class_decimator9_a548d0268dd14b63b9f9fb87c4762e5fb}{h5}}*x0;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h3x0=\mbox{\hyperlink{class_decimator9_a40c1b0ba963fb628fe9710f3d30a5747}{h3}}*x0;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h1x0=\mbox{\hyperlink{class_decimator9_a499040e12f68e542f328124d1a4a2d63}{h1}}*x0;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ R10=\mbox{\hyperlink{class_decimator9_ae8a9c46f5cc8cfea00a9e0d20d054d34}{R9}}+h9x0;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_ae8a9c46f5cc8cfea00a9e0d20d054d34}{R9}}=\mbox{\hyperlink{class_decimator9_abc0479b315afdc4b02c8c75112720a24}{R8}}+h7x0;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_abc0479b315afdc4b02c8c75112720a24}{R8}}=\mbox{\hyperlink{class_decimator9_ad16129eff8f701f63654f118bf27e5e8}{R7}}+h5x0;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_ad16129eff8f701f63654f118bf27e5e8}{R7}}=\mbox{\hyperlink{class_decimator9_a3d7ef548bb03d53a805e8b8b1a34b4ca}{R6}}+h3x0;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_a3d7ef548bb03d53a805e8b8b1a34b4ca}{R6}}=\mbox{\hyperlink{class_decimator9_a22c13398bd9dcf95f31d17f05a717cf2}{R5}}+h1x0;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_a22c13398bd9dcf95f31d17f05a717cf2}{R5}}=\mbox{\hyperlink{class_decimator9_aa54d36f1ce9fdbd8a6dead996e893b1f}{R4}}+h1x0+\mbox{\hyperlink{class_decimator9_a19726169472c633d65b2d80220f53f53}{h0}}*x1;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_aa54d36f1ce9fdbd8a6dead996e893b1f}{R4}}=\mbox{\hyperlink{class_decimator9_ae1d089dffc744f9fd19cc3098934d8ae}{R3}}+h3x0;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_ae1d089dffc744f9fd19cc3098934d8ae}{R3}}=\mbox{\hyperlink{class_decimator9_af538f423bc12dcd9757214c6dac9cdc7}{R2}}+h5x0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_af538f423bc12dcd9757214c6dac9cdc7}{R2}}=\mbox{\hyperlink{class_decimator9_a1119cb17a6fbba981b453c436a67a892}{R1}}+h7x0;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decimator9_a1119cb17a6fbba981b453c436a67a892}{R1}}=h9x0;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ R10;}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \};}
+
+\end{DoxyCode}

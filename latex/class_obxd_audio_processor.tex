@@ -1,0 +1,1149 @@
+\doxysection{Obxd\+Audio\+Processor Class Reference}
+\hypertarget{class_obxd_audio_processor}{}\label{class_obxd_audio_processor}\index{ObxdAudioProcessor@{ObxdAudioProcessor}}
+
+
+{\ttfamily \#include $<$Plugin\+Processor.\+h$>$}
+
+
+
+Inheritance diagram for Obxd\+Audio\+Processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Obxd\+Audio\+Processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obxd_audio_processor_a6f71097c970a7384a197b749ed0439c7}{Obxd\+Audio\+Processor}} ()
+\item 
+\mbox{\hyperlink{class_obxd_audio_processor_aa1c9556363ed15f9b7d88fa57e7b94cd}{\texorpdfstring{$\sim$}{\string~}\+Obxd\+Audio\+Processor}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a106e8a8df3c94df8565bf54ff5c389b0}{prepare\+To\+Play}} (double sample\+Rate, int samples\+Per\+Block) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_ae007c37f866260347961bd940ca0d7e9}{release\+Resources}} () override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_afb60f9e0314bd26049c930cce61b2990}{process\+Block}} (Audio\+Sample\+Buffer \&buffer, Midi\+Buffer \&midi\+Messages) override
+\item 
+Audio\+Processor\+Editor \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_obxd_audio_processor_a6b3e41a33d987f2077a554ec6315fd7e}{create\+Editor}} () override
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a4f980880384fe2295da6546e54ff8c85}{has\+Editor}} () const override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a3d15fa88270557f9e22d1312d8691dba}{process\+Midi\+Per\+Sample}} (Midi\+Buffer\+::\+Iterator \texorpdfstring{$\ast$}{*}iter, const int sample\+Pos)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_ad24624e82137cf86eb7862a63a7a314b}{get\+Next\+Event}} (Midi\+Buffer\+::\+Iterator \texorpdfstring{$\ast$}{*}iter, const int sample\+Pos)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_afc5e82462ccae91ff5be9ec20f185384}{init\+All\+Params}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a762661cecce1421e62f6ee508f0e55bf}{init\+Midi}} ()
+\item 
+const String \mbox{\hyperlink{class_obxd_audio_processor_a5eab4689cc73367a38607d70b0907ee0}{get\+Input\+Channel\+Name}} (int channel\+Index) const override
+\item 
+const String \mbox{\hyperlink{class_obxd_audio_processor_af37d52081d7a11d4d0542158649652d1}{get\+Output\+Channel\+Name}} (int channel\+Index) const override
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_afc7001c07d88e0de90bafea577063865}{is\+Input\+Channel\+Stereo\+Pair}} (int index) const override
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_abec7fe75f6b0888c3582b2617c921c23}{is\+Output\+Channel\+Stereo\+Pair}} (int index) const override
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a89d2a474766ce86a57028841e79d47be}{accepts\+Midi}} () const override
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_ad54d9f1e0e006ea627f2f6749bb0dc20}{produces\+Midi}} () const override
+\item 
+double \mbox{\hyperlink{class_obxd_audio_processor_a0a34facb813573716a40bebd1bdc7471}{get\+Tail\+Length\+Seconds}} () const override
+\item 
+const String \mbox{\hyperlink{class_obxd_audio_processor_ae583d581017e9b9505dc9bba3712d14b}{get\+Name}} () const override
+\item 
+int \mbox{\hyperlink{class_obxd_audio_processor_a643479df65fed8ed62fe2d3dab34c6a7}{get\+Num\+Programs}} () override
+\item 
+int \mbox{\hyperlink{class_obxd_audio_processor_aea6cd11054bf8df131c4d4c072a8e313}{get\+Current\+Program}} () override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a2294109462c3163e3ac21b5c17689c44}{set\+Current\+Program}} (int index) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a1aa9c3f42ef531068caf6ccf4ad7383c}{set\+Current\+Program}} (int index, bool update\+Host)
+\item 
+const String \mbox{\hyperlink{class_obxd_audio_processor_a72cda5b4bc253be485d89cc9e633dfc6}{get\+Program\+Name}} (int index) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a238223fbcf0bb5e50a2e755465859ee5}{change\+Program\+Name}} (int index, const String \&new\+Name) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a7dbb6b4d1fdaae0aab7ee447e0ffa537}{get\+State\+Information}} (Memory\+Block \&dest\+Data) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a662f65e9aef6f057c058f08b43ed67b3}{set\+State\+Information}} (const void \texorpdfstring{$\ast$}{*}data, int size\+In\+Bytes) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a0fd96de98e48ef5da9bacd1e83302336}{set\+Current\+Program\+State\+Information}} (const void \texorpdfstring{$\ast$}{*}data, int size\+In\+Bytes) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a2c0237c5a6eab45d48f4dcab57963393}{get\+Current\+Program\+State\+Information}} (Memory\+Block \&dest\+Data) override
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a93bea430b69b982a5164b8394c6ea3ed}{scan\+And\+Update\+Banks}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a791ed521ed86fdca227775afb9892565}{scan\+And\+Update\+Skins}} ()
+\item 
+const Array$<$ File $>$ \& \mbox{\hyperlink{class_obxd_audio_processor_a9fb77e44bdd316517acb778a1ca38223}{get\+Bank\+Files}} () const
+\item 
+const Array$<$ File $>$ \& \mbox{\hyperlink{class_obxd_audio_processor_a0b4ceb91700d5fe06a19fc82fb0e4f0e}{get\+Skin\+Files}} () const
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a4ef270f3b7531f7dba5c272325cf8325}{delete\+Bank}} ()
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_ad649212bb19571f1b101d7a57220d882}{load\+Preset}} (const File \&fxp\+File)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a97b8f234677abd9accfbe55c6491af70}{save\+Preset}} (const File \&fxp\+File)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a28883bba26c42a8879bcd98cfc0918b1}{serialize\+Preset}} (Memory\+Block \&memory\+Block)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a71fbd384b378cd37f63514365f350485}{change\+Preset\+Name}} (const String \&name)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a3686a6554436e849aac07fd38b0520da}{new\+Preset}} (const String \&name)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a416c6684b848cf7fcf5b68f51f9b8537}{delete\+Preset}} ()
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a737a23b63352ef5626617c87ebf319df}{load\+From\+FXPFile}} (const File \&fxb\+File)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a41c4088bf197e58b4f22e71f66b893d4}{load\+From\+FXBFile}} (const File \&fxb\+File)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_ae22d8d445e7878a7fbe69362c5c4fb30}{is\+Memory\+Block\+APreset}} (const Memory\+Block \&memory\+Block)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_afe598d5320ecc0b50f61b39a8d2d58bc}{load\+From\+Memory\+Block}} (Memory\+Block \&memory\+Block)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a8fce9c64ca8a7d7c496f35931cb0bf38}{save\+FXBFile}} (const File \&fxb\+File)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_aebc6e5ea681d4e428221ef8337e1fe3c}{save\+FXPFile}} (const File \&fxp\+File)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a8d88b3014e34e512900892fc20f00941}{save\+Bank}} (const File \&fxb\+File)
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a27fdd5ee8c9ab8acf18b16a0479c8e0d}{restore\+Program\+Settings}} (const \mbox{\hyperlink{structfx_program}{fx\+Program}} \texorpdfstring{$\ast$}{*}const prog)
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_a209d2b8f128ff3aadd5bba85177d5fb5}{get\+Current\+Bank\+File}} () const
+\item 
+\mbox{\hyperlink{class_midi_map}{Midi\+Map}} \& \mbox{\hyperlink{class_obxd_audio_processor_add421bc612cecd418635212d83b5dddd}{get\+Midi\+Map}} ()
+\item 
+const \mbox{\hyperlink{class_obxd_bank}{Obxd\+Bank}} \& \mbox{\hyperlink{class_obxd_audio_processor_aa152a836adfe36d92a7f17e53873a38e}{get\+Programs}} () const
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_a7729e32681fdeee946d73a5e6da05812}{get\+Document\+Folder}} () const
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_afa7832080a1d323dfd9d41ad9eb540b4}{get\+Skin\+Folder}} () const
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_a93423a7ae2ffd74863cad1c486231c91}{get\+Presets\+Folder}} () const
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_ac5bbf49741d6caccb5fdf99554e5d7df}{get\+Banks\+Folder}} () const
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_aa31dd6071b5e54c9553d76034eef2149}{get\+Midi\+Folder}} () const
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_aa68bb4f73b273dc03ce3481709e88c92}{get\+Current\+Skin\+Folder}} () const
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a3c686b25ab87462742577bae4083b7fa}{set\+Current\+Skin\+Folder}} (const String \&folder\+Name)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a66365b13ac77873107834742453798f4}{set\+Gui\+Size}} (const int \mbox{\hyperlink{class_obxd_audio_processor_a30b77550da1da2c32a2ba53aa14827cd}{gui\+\_\+size}})
+\item 
+\mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}} \mbox{\hyperlink{class_obxd_audio_processor_a686938c34e201f94aac124c7a31acd63}{get\+Tooltip\+Behavior}} () const
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_ad8b3463839110c8a79cd1a23230ea908}{set\+Tooltip\+Behavior}} (const \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}} tooltip)
+\item 
+int \mbox{\hyperlink{class_obxd_audio_processor_a8af639155db68a7c289fc20f716d9cf2}{get\+Parameter\+Index\+From\+Id}} (String)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_ade695873cba742ce40ccd80719ca5ba9}{set\+Engine\+Parameter\+Value}} (int, float, bool notify\+To\+Host=false)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_ae7e67b15cd51139e63311865fefbebf8}{parameter\+Changed}} (const String \&, float) override
+\item 
+Audio\+Processor\+Value\+Tree\+State \& \mbox{\hyperlink{class_obxd_audio_processor_a016ece6dab1ba0523ec6f1bcb7d55610}{get\+Plugin\+State}} ()
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_af2ea050c8265c290e394af436418e76c}{get\+Show\+Preset\+Bar}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a6d9c02053f6440dc602aa4d63782eb2f}{set\+Show\+Preset\+Bar}} (bool val)
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a9fd892e0358f2813df590d75f893b3db}{save\+Bank}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a9499e42ea46a7543a32e1c063347f2be}{save\+Preset}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_audio_processor_a8a410d69d76cc301b1e6ac509d2af887}{update\+Config}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{class_obxd_audio_processor_a79d31ca6a08527372417d349a02471ed}{get\+Engine\+Parameter\+Id}} (size\+\_\+t)
+\item 
+static String \mbox{\hyperlink{class_obxd_audio_processor_a7cf65eb58c98597a3d8209f241a65642}{get\+True\+Parameter\+Value\+From\+Normalized\+Range}} (size\+\_\+t, float normalized\+Value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_obxd_audio_processor_a70fb35661848ab3a9c606b70190bb621}{physical\+Pixel\+Scale\+Factor}}
+\item 
+int \mbox{\hyperlink{class_obxd_audio_processor_a30b77550da1da2c32a2ba53aa14827cd}{gui\+\_\+size}}
+\item 
+String \mbox{\hyperlink{class_obxd_audio_processor_a14607a9f3c484e60909f4d282210195c}{current\+Skin}}
+\item 
+String \mbox{\hyperlink{class_obxd_audio_processor_a2d75fc2f089b2fdbe23e0d8ac1d426f6}{current\+Bank}}
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_a63d0ec023ca846d88282cea2c97386c4}{current\+Bank\+File}}
+\item 
+String \mbox{\hyperlink{class_obxd_audio_processor_a947ced94feff1095ceea260bcd500d9a}{current\+Midi\+Path}}
+\item 
+String \mbox{\hyperlink{class_obxd_audio_processor_a251769a0a0e262b400703bffecb7d8dd}{current\+Preset}}
+\item 
+File \mbox{\hyperlink{class_obxd_audio_processor_aae5dec01580c5017c26b60330242f9f1}{current\+Preset\+File}}
+\item 
+\mbox{\hyperlink{class_midi_map}{Midi\+Map}} \mbox{\hyperlink{class_obxd_audio_processor_a06a54cb52fa1ef776cdfc6335a2fa7ca}{bindings}}
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a794fc30e99a2b25d2fcf22767d299683}{show\+Preset\+Bar}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a1fc81b322e869c2e807b98f824dca81d}{is\+Host\+Automated\+Change}}
+\item 
+int \mbox{\hyperlink{class_obxd_audio_processor_ad5b2bc841a2380e13daeeb770bdf16ba}{last\+Moved\+Controller}}
+\item 
+int \mbox{\hyperlink{class_obxd_audio_processor_a6380641a80e2f35b7252d8730c61d50a}{last\+Used\+Parameter}}
+\item 
+Midi\+Message \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_obxd_audio_processor_a87ca3b3f8dbe70340a949c3fabafb66a}{next\+Midi}}
+\item 
+Midi\+Message \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_obxd_audio_processor_afc1796fe54dce620167208dc27e6df9f}{midi\+Msg}}
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_aaaa50435b99f0eaac37e1b2b7d4d1cc3}{midi\+Controlled\+Param\+Set}}
+\item 
+bool \mbox{\hyperlink{class_obxd_audio_processor_a0f35b49da7d1f302a7550f62d49994c4}{has\+Midi\+Message}}
+\item 
+int \mbox{\hyperlink{class_obxd_audio_processor_a9c0efd622e7423c4d7b8800abf5f9c09}{midi\+Event\+Pos}}
+\item 
+\mbox{\hyperlink{class_synth_engine}{Synth\+Engine}} \mbox{\hyperlink{class_obxd_audio_processor_af4f6d5787fe0e7d101e75159a4806d33}{synth}}
+\item 
+\mbox{\hyperlink{class_obxd_bank}{Obxd\+Bank}} \mbox{\hyperlink{class_obxd_audio_processor_a50804a54b929b247b8cbe1fe773a0b5b}{programs}}
+\item 
+Array$<$ File $>$ \mbox{\hyperlink{class_obxd_audio_processor_a6e06dc2b9bf958dd25be737deab02620}{bank\+Files}}
+\item 
+Array$<$ File $>$ \mbox{\hyperlink{class_obxd_audio_processor_a77215dca1339137fe10bcd9584b4ff00}{skin\+Files}}
+\item 
+\mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}} \mbox{\hyperlink{class_obxd_audio_processor_a4799099d43d7acfe45328b15d2d27f6f}{tooltip\+Behavior}}
+\item 
+std\+::unique\+\_\+ptr$<$ Properties\+File $>$ \mbox{\hyperlink{class_obxd_audio_processor_a72ebd5c0b916f7d6bf06472a122d3f0c}{config}}
+\item 
+Inter\+Process\+Lock \mbox{\hyperlink{class_obxd_audio_processor_a829a87b2fc01d3309d2452eb6eb886fa}{config\+Lock}}
+\item 
+Audio\+Processor\+Value\+Tree\+State \mbox{\hyperlink{class_obxd_audio_processor_a11a612061e28376a3e9f2754dbd1d616}{apvt\+State}}
+\item 
+Undo\+Manager \mbox{\hyperlink{class_obxd_audio_processor_a7f8107f83b27c229eddc0a8d1a1e45aa}{undo\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_obxd_audio_processor_a6f71097c970a7384a197b749ed0439c7}\label{class_obxd_audio_processor_a6f71097c970a7384a197b749ed0439c7} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{ObxdAudioProcessor()}{ObxdAudioProcessor()}}
+{\footnotesize\ttfamily Obxd\+Audio\+Processor\+::\+Obxd\+Audio\+Processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a6f71097c970a7384a197b749ed0439c7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_aa1c9556363ed15f9b7d88fa57e7b94cd}\label{class_obxd_audio_processor_aa1c9556363ed15f9b7d88fa57e7b94cd} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!````~ObxdAudioProcessor@{\texorpdfstring{$\sim$}{\string~}ObxdAudioProcessor}}
+\index{````~ObxdAudioProcessor@{\texorpdfstring{$\sim$}{\string~}ObxdAudioProcessor}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ObxdAudioProcessor()}{\string~ObxdAudioProcessor()}}
+{\footnotesize\ttfamily Obxd\+Audio\+Processor\+::\texorpdfstring{$\sim$}{\string~}\+Obxd\+Audio\+Processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_obxd_audio_processor_a89d2a474766ce86a57028841e79d47be}\label{class_obxd_audio_processor_a89d2a474766ce86a57028841e79d47be} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!acceptsMidi@{acceptsMidi}}
+\index{acceptsMidi@{acceptsMidi}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{acceptsMidi()}{acceptsMidi()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::accepts\+Midi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a71fbd384b378cd37f63514365f350485}\label{class_obxd_audio_processor_a71fbd384b378cd37f63514365f350485} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!changePresetName@{changePresetName}}
+\index{changePresetName@{changePresetName}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{changePresetName()}{changePresetName()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::change\+Preset\+Name (\begin{DoxyParamCaption}\item[{const String \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_obxd_audio_processor_a238223fbcf0bb5e50a2e755465859ee5}\label{class_obxd_audio_processor_a238223fbcf0bb5e50a2e755465859ee5} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!changeProgramName@{changeProgramName}}
+\index{changeProgramName@{changeProgramName}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{changeProgramName()}{changeProgramName()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::change\+Program\+Name (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const String \&}]{new\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a6b3e41a33d987f2077a554ec6315fd7e}\label{class_obxd_audio_processor_a6b3e41a33d987f2077a554ec6315fd7e} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!createEditor@{createEditor}}
+\index{createEditor@{createEditor}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{createEditor()}{createEditor()}}
+{\footnotesize\ttfamily Audio\+Processor\+Editor \texorpdfstring{$\ast$}{*} Obxd\+Audio\+Processor\+::create\+Editor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a4ef270f3b7531f7dba5c272325cf8325}\label{class_obxd_audio_processor_a4ef270f3b7531f7dba5c272325cf8325} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!deleteBank@{deleteBank}}
+\index{deleteBank@{deleteBank}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{deleteBank()}{deleteBank()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::delete\+Bank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a4ef270f3b7531f7dba5c272325cf8325_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a416c6684b848cf7fcf5b68f51f9b8537}\label{class_obxd_audio_processor_a416c6684b848cf7fcf5b68f51f9b8537} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!deletePreset@{deletePreset}}
+\index{deletePreset@{deletePreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{deletePreset()}{deletePreset()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::delete\+Preset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a416c6684b848cf7fcf5b68f51f9b8537_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a9fb77e44bdd316517acb778a1ca38223}\label{class_obxd_audio_processor_a9fb77e44bdd316517acb778a1ca38223} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getBankFiles@{getBankFiles}}
+\index{getBankFiles@{getBankFiles}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getBankFiles()}{getBankFiles()}}
+{\footnotesize\ttfamily const Array$<$ File $>$ \& Obxd\+Audio\+Processor\+::get\+Bank\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_obxd_audio_processor_ac5bbf49741d6caccb5fdf99554e5d7df}\label{class_obxd_audio_processor_ac5bbf49741d6caccb5fdf99554e5d7df} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getBanksFolder@{getBanksFolder}}
+\index{getBanksFolder@{getBanksFolder}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getBanksFolder()}{getBanksFolder()}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::get\+Banks\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_obxd_audio_processor_ac5bbf49741d6caccb5fdf99554e5d7df_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a209d2b8f128ff3aadd5bba85177d5fb5}\label{class_obxd_audio_processor_a209d2b8f128ff3aadd5bba85177d5fb5} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getCurrentBankFile@{getCurrentBankFile}}
+\index{getCurrentBankFile@{getCurrentBankFile}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getCurrentBankFile()}{getCurrentBankFile()}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::get\+Current\+Bank\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a209d2b8f128ff3aadd5bba85177d5fb5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_aea6cd11054bf8df131c4d4c072a8e313}\label{class_obxd_audio_processor_aea6cd11054bf8df131c4d4c072a8e313} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getCurrentProgram@{getCurrentProgram}}
+\index{getCurrentProgram@{getCurrentProgram}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getCurrentProgram()}{getCurrentProgram()}}
+{\footnotesize\ttfamily int Obxd\+Audio\+Processor\+::get\+Current\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a2c0237c5a6eab45d48f4dcab57963393}\label{class_obxd_audio_processor_a2c0237c5a6eab45d48f4dcab57963393} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getCurrentProgramStateInformation@{getCurrentProgramStateInformation}}
+\index{getCurrentProgramStateInformation@{getCurrentProgramStateInformation}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getCurrentProgramStateInformation()}{getCurrentProgramStateInformation()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::get\+Current\+Program\+State\+Information (\begin{DoxyParamCaption}\item[{Memory\+Block \&}]{dest\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_aa68bb4f73b273dc03ce3481709e88c92}\label{class_obxd_audio_processor_aa68bb4f73b273dc03ce3481709e88c92} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getCurrentSkinFolder@{getCurrentSkinFolder}}
+\index{getCurrentSkinFolder@{getCurrentSkinFolder}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getCurrentSkinFolder()}{getCurrentSkinFolder()}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::get\+Current\+Skin\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_aa68bb4f73b273dc03ce3481709e88c92_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a7729e32681fdeee946d73a5e6da05812}\label{class_obxd_audio_processor_a7729e32681fdeee946d73a5e6da05812} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getDocumentFolder@{getDocumentFolder}}
+\index{getDocumentFolder@{getDocumentFolder}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getDocumentFolder()}{getDocumentFolder()}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::get\+Document\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_obxd_audio_processor_a79d31ca6a08527372417d349a02471ed}\label{class_obxd_audio_processor_a79d31ca6a08527372417d349a02471ed} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getEngineParameterId@{getEngineParameterId}}
+\index{getEngineParameterId@{getEngineParameterId}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getEngineParameterId()}{getEngineParameterId()}}
+{\footnotesize\ttfamily String Obxd\+Audio\+Processor\+::get\+Engine\+Parameter\+Id (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_obxd_audio_processor_a5eab4689cc73367a38607d70b0907ee0}\label{class_obxd_audio_processor_a5eab4689cc73367a38607d70b0907ee0} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getInputChannelName@{getInputChannelName}}
+\index{getInputChannelName@{getInputChannelName}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getInputChannelName()}{getInputChannelName()}}
+{\footnotesize\ttfamily const String Obxd\+Audio\+Processor\+::get\+Input\+Channel\+Name (\begin{DoxyParamCaption}\item[{int}]{channel\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_aa31dd6071b5e54c9553d76034eef2149}\label{class_obxd_audio_processor_aa31dd6071b5e54c9553d76034eef2149} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getMidiFolder@{getMidiFolder}}
+\index{getMidiFolder@{getMidiFolder}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getMidiFolder()}{getMidiFolder()}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::get\+Midi\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_obxd_audio_processor_aa31dd6071b5e54c9553d76034eef2149_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_add421bc612cecd418635212d83b5dddd}\label{class_obxd_audio_processor_add421bc612cecd418635212d83b5dddd} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getMidiMap@{getMidiMap}}
+\index{getMidiMap@{getMidiMap}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getMidiMap()}{getMidiMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_midi_map}{Midi\+Map}} \& Obxd\+Audio\+Processor\+::get\+Midi\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_audio_processor_ae583d581017e9b9505dc9bba3712d14b}\label{class_obxd_audio_processor_ae583d581017e9b9505dc9bba3712d14b} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getName@{getName}}
+\index{getName@{getName}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const String Obxd\+Audio\+Processor\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_ad24624e82137cf86eb7862a63a7a314b}\label{class_obxd_audio_processor_ad24624e82137cf86eb7862a63a7a314b} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getNextEvent@{getNextEvent}}
+\index{getNextEvent@{getNextEvent}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getNextEvent()}{getNextEvent()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::get\+Next\+Event (\begin{DoxyParamCaption}\item[{Midi\+Buffer\+::\+Iterator \texorpdfstring{$\ast$}{*}}]{iter,  }\item[{const int}]{sample\+Pos }\end{DoxyParamCaption})}
+
+\Hypertarget{class_obxd_audio_processor_a643479df65fed8ed62fe2d3dab34c6a7}\label{class_obxd_audio_processor_a643479df65fed8ed62fe2d3dab34c6a7} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getNumPrograms@{getNumPrograms}}
+\index{getNumPrograms@{getNumPrograms}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getNumPrograms()}{getNumPrograms()}}
+{\footnotesize\ttfamily int Obxd\+Audio\+Processor\+::get\+Num\+Programs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_af37d52081d7a11d4d0542158649652d1}\label{class_obxd_audio_processor_af37d52081d7a11d4d0542158649652d1} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getOutputChannelName@{getOutputChannelName}}
+\index{getOutputChannelName@{getOutputChannelName}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getOutputChannelName()}{getOutputChannelName()}}
+{\footnotesize\ttfamily const String Obxd\+Audio\+Processor\+::get\+Output\+Channel\+Name (\begin{DoxyParamCaption}\item[{int}]{channel\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a8af639155db68a7c289fc20f716d9cf2}\label{class_obxd_audio_processor_a8af639155db68a7c289fc20f716d9cf2} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getParameterIndexFromId@{getParameterIndexFromId}}
+\index{getParameterIndexFromId@{getParameterIndexFromId}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getParameterIndexFromId()}{getParameterIndexFromId()}}
+{\footnotesize\ttfamily int Obxd\+Audio\+Processor\+::get\+Parameter\+Index\+From\+Id (\begin{DoxyParamCaption}\item[{String}]{param\+Id }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a8af639155db68a7c289fc20f716d9cf2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a016ece6dab1ba0523ec6f1bcb7d55610}\label{class_obxd_audio_processor_a016ece6dab1ba0523ec6f1bcb7d55610} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getPluginState@{getPluginState}}
+\index{getPluginState@{getPluginState}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getPluginState()}{getPluginState()}}
+{\footnotesize\ttfamily Audio\+Processor\+Value\+Tree\+State \& Obxd\+Audio\+Processor\+::get\+Plugin\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_obxd_audio_processor_a93423a7ae2ffd74863cad1c486231c91}\label{class_obxd_audio_processor_a93423a7ae2ffd74863cad1c486231c91} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getPresetsFolder@{getPresetsFolder}}
+\index{getPresetsFolder@{getPresetsFolder}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getPresetsFolder()}{getPresetsFolder()}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::get\+Presets\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_obxd_audio_processor_a93423a7ae2ffd74863cad1c486231c91_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a72cda5b4bc253be485d89cc9e633dfc6}\label{class_obxd_audio_processor_a72cda5b4bc253be485d89cc9e633dfc6} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getProgramName@{getProgramName}}
+\index{getProgramName@{getProgramName}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getProgramName()}{getProgramName()}}
+{\footnotesize\ttfamily const String Obxd\+Audio\+Processor\+::get\+Program\+Name (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_aa152a836adfe36d92a7f17e53873a38e}\label{class_obxd_audio_processor_aa152a836adfe36d92a7f17e53873a38e} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getPrograms@{getPrograms}}
+\index{getPrograms@{getPrograms}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getPrograms()}{getPrograms()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_obxd_bank}{Obxd\+Bank}} \& Obxd\+Audio\+Processor\+::get\+Programs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_audio_processor_af2ea050c8265c290e394af436418e76c}\label{class_obxd_audio_processor_af2ea050c8265c290e394af436418e76c} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getShowPresetBar@{getShowPresetBar}}
+\index{getShowPresetBar@{getShowPresetBar}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getShowPresetBar()}{getShowPresetBar()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::get\+Show\+Preset\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_audio_processor_a0b4ceb91700d5fe06a19fc82fb0e4f0e}\label{class_obxd_audio_processor_a0b4ceb91700d5fe06a19fc82fb0e4f0e} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getSkinFiles@{getSkinFiles}}
+\index{getSkinFiles@{getSkinFiles}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getSkinFiles()}{getSkinFiles()}}
+{\footnotesize\ttfamily const Array$<$ File $>$ \& Obxd\+Audio\+Processor\+::get\+Skin\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_obxd_audio_processor_afa7832080a1d323dfd9d41ad9eb540b4}\label{class_obxd_audio_processor_afa7832080a1d323dfd9d41ad9eb540b4} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getSkinFolder@{getSkinFolder}}
+\index{getSkinFolder@{getSkinFolder}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getSkinFolder()}{getSkinFolder()}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::get\+Skin\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_obxd_audio_processor_afa7832080a1d323dfd9d41ad9eb540b4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a7dbb6b4d1fdaae0aab7ee447e0ffa537}\label{class_obxd_audio_processor_a7dbb6b4d1fdaae0aab7ee447e0ffa537} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getStateInformation@{getStateInformation}}
+\index{getStateInformation@{getStateInformation}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getStateInformation()}{getStateInformation()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::get\+State\+Information (\begin{DoxyParamCaption}\item[{Memory\+Block \&}]{dest\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a0a34facb813573716a40bebd1bdc7471}\label{class_obxd_audio_processor_a0a34facb813573716a40bebd1bdc7471} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getTailLengthSeconds@{getTailLengthSeconds}}
+\index{getTailLengthSeconds@{getTailLengthSeconds}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getTailLengthSeconds()}{getTailLengthSeconds()}}
+{\footnotesize\ttfamily double Obxd\+Audio\+Processor\+::get\+Tail\+Length\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a686938c34e201f94aac124c7a31acd63}\label{class_obxd_audio_processor_a686938c34e201f94aac124c7a31acd63} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getTooltipBehavior@{getTooltipBehavior}}
+\index{getTooltipBehavior@{getTooltipBehavior}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getTooltipBehavior()}{getTooltipBehavior()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}} Obxd\+Audio\+Processor\+::get\+Tooltip\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_obxd_audio_processor_a7cf65eb58c98597a3d8209f241a65642}\label{class_obxd_audio_processor_a7cf65eb58c98597a3d8209f241a65642} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!getTrueParameterValueFromNormalizedRange@{getTrueParameterValueFromNormalizedRange}}
+\index{getTrueParameterValueFromNormalizedRange@{getTrueParameterValueFromNormalizedRange}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{getTrueParameterValueFromNormalizedRange()}{getTrueParameterValueFromNormalizedRange()}}
+{\footnotesize\ttfamily String Obxd\+Audio\+Processor\+::get\+True\+Parameter\+Value\+From\+Normalized\+Range (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{float}]{normalized\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_obxd_audio_processor_a7cf65eb58c98597a3d8209f241a65642_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a4f980880384fe2295da6546e54ff8c85}\label{class_obxd_audio_processor_a4f980880384fe2295da6546e54ff8c85} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!hasEditor@{hasEditor}}
+\index{hasEditor@{hasEditor}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{hasEditor()}{hasEditor()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::has\+Editor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_afc5e82462ccae91ff5be9ec20f185384}\label{class_obxd_audio_processor_afc5e82462ccae91ff5be9ec20f185384} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!initAllParams@{initAllParams}}
+\index{initAllParams@{initAllParams}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{initAllParams()}{initAllParams()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::init\+All\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_afc5e82462ccae91ff5be9ec20f185384_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a762661cecce1421e62f6ee508f0e55bf}\label{class_obxd_audio_processor_a762661cecce1421e62f6ee508f0e55bf} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!initMidi@{initMidi}}
+\index{initMidi@{initMidi}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{initMidi()}{initMidi()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::init\+Midi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a762661cecce1421e62f6ee508f0e55bf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_afc7001c07d88e0de90bafea577063865}\label{class_obxd_audio_processor_afc7001c07d88e0de90bafea577063865} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!isInputChannelStereoPair@{isInputChannelStereoPair}}
+\index{isInputChannelStereoPair@{isInputChannelStereoPair}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{isInputChannelStereoPair()}{isInputChannelStereoPair()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::is\+Input\+Channel\+Stereo\+Pair (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_ae22d8d445e7878a7fbe69362c5c4fb30}\label{class_obxd_audio_processor_ae22d8d445e7878a7fbe69362c5c4fb30} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!isMemoryBlockAPreset@{isMemoryBlockAPreset}}
+\index{isMemoryBlockAPreset@{isMemoryBlockAPreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{isMemoryBlockAPreset()}{isMemoryBlockAPreset()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::is\+Memory\+Block\+APreset (\begin{DoxyParamCaption}\item[{const Memory\+Block \&}]{memory\+Block }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_obxd_audio_processor_ae22d8d445e7878a7fbe69362c5c4fb30_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_abec7fe75f6b0888c3582b2617c921c23}\label{class_obxd_audio_processor_abec7fe75f6b0888c3582b2617c921c23} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!isOutputChannelStereoPair@{isOutputChannelStereoPair}}
+\index{isOutputChannelStereoPair@{isOutputChannelStereoPair}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{isOutputChannelStereoPair()}{isOutputChannelStereoPair()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::is\+Output\+Channel\+Stereo\+Pair (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a41c4088bf197e58b4f22e71f66b893d4}\label{class_obxd_audio_processor_a41c4088bf197e58b4f22e71f66b893d4} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!loadFromFXBFile@{loadFromFXBFile}}
+\index{loadFromFXBFile@{loadFromFXBFile}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{loadFromFXBFile()}{loadFromFXBFile()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::load\+From\+FXBFile (\begin{DoxyParamCaption}\item[{const File \&}]{fxb\+File }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a41c4088bf197e58b4f22e71f66b893d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a737a23b63352ef5626617c87ebf319df}\label{class_obxd_audio_processor_a737a23b63352ef5626617c87ebf319df} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!loadFromFXPFile@{loadFromFXPFile}}
+\index{loadFromFXPFile@{loadFromFXPFile}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{loadFromFXPFile()}{loadFromFXPFile()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::load\+From\+FXPFile (\begin{DoxyParamCaption}\item[{const File \&}]{fxb\+File }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a737a23b63352ef5626617c87ebf319df_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_afe598d5320ecc0b50f61b39a8d2d58bc}\label{class_obxd_audio_processor_afe598d5320ecc0b50f61b39a8d2d58bc} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!loadFromMemoryBlock@{loadFromMemoryBlock}}
+\index{loadFromMemoryBlock@{loadFromMemoryBlock}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{loadFromMemoryBlock()}{loadFromMemoryBlock()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::load\+From\+Memory\+Block (\begin{DoxyParamCaption}\item[{Memory\+Block \&}]{memory\+Block }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_afe598d5320ecc0b50f61b39a8d2d58bc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_ad649212bb19571f1b101d7a57220d882}\label{class_obxd_audio_processor_ad649212bb19571f1b101d7a57220d882} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!loadPreset@{loadPreset}}
+\index{loadPreset@{loadPreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{loadPreset()}{loadPreset()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::load\+Preset (\begin{DoxyParamCaption}\item[{const File \&}]{fxp\+File }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_ad649212bb19571f1b101d7a57220d882_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a3686a6554436e849aac07fd38b0520da}\label{class_obxd_audio_processor_a3686a6554436e849aac07fd38b0520da} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!newPreset@{newPreset}}
+\index{newPreset@{newPreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{newPreset()}{newPreset()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::new\+Preset (\begin{DoxyParamCaption}\item[{const String \&}]{name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_a3686a6554436e849aac07fd38b0520da_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_ae7e67b15cd51139e63311865fefbebf8}\label{class_obxd_audio_processor_ae7e67b15cd51139e63311865fefbebf8} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!parameterChanged@{parameterChanged}}
+\index{parameterChanged@{parameterChanged}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{parameterChanged()}{parameterChanged()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::parameter\+Changed (\begin{DoxyParamCaption}\item[{const String \&}]{parameter,  }\item[{float}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_ae7e67b15cd51139e63311865fefbebf8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a106e8a8df3c94df8565bf54ff5c389b0}\label{class_obxd_audio_processor_a106e8a8df3c94df8565bf54ff5c389b0} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!prepareToPlay@{prepareToPlay}}
+\index{prepareToPlay@{prepareToPlay}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{prepareToPlay()}{prepareToPlay()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::prepare\+To\+Play (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate,  }\item[{int}]{samples\+Per\+Block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a106e8a8df3c94df8565bf54ff5c389b0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_afb60f9e0314bd26049c930cce61b2990}\label{class_obxd_audio_processor_afb60f9e0314bd26049c930cce61b2990} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!processBlock@{processBlock}}
+\index{processBlock@{processBlock}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{processBlock()}{processBlock()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::process\+Block (\begin{DoxyParamCaption}\item[{Audio\+Sample\+Buffer \&}]{buffer,  }\item[{Midi\+Buffer \&}]{midi\+Messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_afb60f9e0314bd26049c930cce61b2990_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a3d15fa88270557f9e22d1312d8691dba}\label{class_obxd_audio_processor_a3d15fa88270557f9e22d1312d8691dba} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!processMidiPerSample@{processMidiPerSample}}
+\index{processMidiPerSample@{processMidiPerSample}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{processMidiPerSample()}{processMidiPerSample()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::process\+Midi\+Per\+Sample (\begin{DoxyParamCaption}\item[{Midi\+Buffer\+::\+Iterator \texorpdfstring{$\ast$}{*}}]{iter,  }\item[{const int}]{sample\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_a3d15fa88270557f9e22d1312d8691dba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_ad54d9f1e0e006ea627f2f6749bb0dc20}\label{class_obxd_audio_processor_ad54d9f1e0e006ea627f2f6749bb0dc20} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!producesMidi@{producesMidi}}
+\index{producesMidi@{producesMidi}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{producesMidi()}{producesMidi()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::produces\+Midi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_ae007c37f866260347961bd940ca0d7e9}\label{class_obxd_audio_processor_ae007c37f866260347961bd940ca0d7e9} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!releaseResources@{releaseResources}}
+\index{releaseResources@{releaseResources}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{releaseResources()}{releaseResources()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::release\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_obxd_audio_processor_a27fdd5ee8c9ab8acf18b16a0479c8e0d}\label{class_obxd_audio_processor_a27fdd5ee8c9ab8acf18b16a0479c8e0d} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!restoreProgramSettings@{restoreProgramSettings}}
+\index{restoreProgramSettings@{restoreProgramSettings}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{restoreProgramSettings()}{restoreProgramSettings()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::restore\+Program\+Settings (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structfx_program}{fx\+Program}} \texorpdfstring{$\ast$}{*}const}]{prog }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_a27fdd5ee8c9ab8acf18b16a0479c8e0d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a9fd892e0358f2813df590d75f893b3db}\label{class_obxd_audio_processor_a9fd892e0358f2813df590d75f893b3db} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!saveBank@{saveBank}}
+\index{saveBank@{saveBank}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{saveBank()}{saveBank()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::save\+Bank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a9fd892e0358f2813df590d75f893b3db_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a8d88b3014e34e512900892fc20f00941}\label{class_obxd_audio_processor_a8d88b3014e34e512900892fc20f00941} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!saveBank@{saveBank}}
+\index{saveBank@{saveBank}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{saveBank()}{saveBank()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::save\+Bank (\begin{DoxyParamCaption}\item[{const File \&}]{fxb\+File }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a8d88b3014e34e512900892fc20f00941_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a8fce9c64ca8a7d7c496f35931cb0bf38}\label{class_obxd_audio_processor_a8fce9c64ca8a7d7c496f35931cb0bf38} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!saveFXBFile@{saveFXBFile}}
+\index{saveFXBFile@{saveFXBFile}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{saveFXBFile()}{saveFXBFile()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::save\+FXBFile (\begin{DoxyParamCaption}\item[{const File \&}]{fxb\+File }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_obxd_audio_processor_a8fce9c64ca8a7d7c496f35931cb0bf38_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_aebc6e5ea681d4e428221ef8337e1fe3c}\label{class_obxd_audio_processor_aebc6e5ea681d4e428221ef8337e1fe3c} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!saveFXPFile@{saveFXPFile}}
+\index{saveFXPFile@{saveFXPFile}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{saveFXPFile()}{saveFXPFile()}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::save\+FXPFile (\begin{DoxyParamCaption}\item[{const File \&}]{fxp\+File }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_aebc6e5ea681d4e428221ef8337e1fe3c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a9499e42ea46a7543a32e1c063347f2be}\label{class_obxd_audio_processor_a9499e42ea46a7543a32e1c063347f2be} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!savePreset@{savePreset}}
+\index{savePreset@{savePreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{savePreset()}{savePreset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::save\+Preset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_obxd_audio_processor_a9499e42ea46a7543a32e1c063347f2be_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a97b8f234677abd9accfbe55c6491af70}\label{class_obxd_audio_processor_a97b8f234677abd9accfbe55c6491af70} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!savePreset@{savePreset}}
+\index{savePreset@{savePreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{savePreset()}{savePreset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::save\+Preset (\begin{DoxyParamCaption}\item[{const File \&}]{fxp\+File }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a97b8f234677abd9accfbe55c6491af70_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a93bea430b69b982a5164b8394c6ea3ed}\label{class_obxd_audio_processor_a93bea430b69b982a5164b8394c6ea3ed} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!scanAndUpdateBanks@{scanAndUpdateBanks}}
+\index{scanAndUpdateBanks@{scanAndUpdateBanks}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{scanAndUpdateBanks()}{scanAndUpdateBanks()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::scan\+And\+Update\+Banks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a93bea430b69b982a5164b8394c6ea3ed_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a791ed521ed86fdca227775afb9892565}\label{class_obxd_audio_processor_a791ed521ed86fdca227775afb9892565} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!scanAndUpdateSkins@{scanAndUpdateSkins}}
+\index{scanAndUpdateSkins@{scanAndUpdateSkins}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{scanAndUpdateSkins()}{scanAndUpdateSkins()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::scan\+And\+Update\+Skins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a791ed521ed86fdca227775afb9892565_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a28883bba26c42a8879bcd98cfc0918b1}\label{class_obxd_audio_processor_a28883bba26c42a8879bcd98cfc0918b1} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!serializePreset@{serializePreset}}
+\index{serializePreset@{serializePreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{serializePreset()}{serializePreset()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::serialize\+Preset (\begin{DoxyParamCaption}\item[{Memory\+Block \&}]{memory\+Block }\end{DoxyParamCaption})}
+
+Serialize the current Preset, just like the save\+FXPFile function, but keeps the data in memory instead of writing it to a file. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a28883bba26c42a8879bcd98cfc0918b1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a2294109462c3163e3ac21b5c17689c44}\label{class_obxd_audio_processor_a2294109462c3163e3ac21b5c17689c44} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setCurrentProgram@{setCurrentProgram}}
+\index{setCurrentProgram@{setCurrentProgram}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setCurrentProgram()}{setCurrentProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Current\+Program (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_a2294109462c3163e3ac21b5c17689c44_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a1aa9c3f42ef531068caf6ccf4ad7383c}\label{class_obxd_audio_processor_a1aa9c3f42ef531068caf6ccf4ad7383c} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setCurrentProgram@{setCurrentProgram}}
+\index{setCurrentProgram@{setCurrentProgram}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setCurrentProgram()}{setCurrentProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Current\+Program (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{update\+Host }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_a1aa9c3f42ef531068caf6ccf4ad7383c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a0fd96de98e48ef5da9bacd1e83302336}\label{class_obxd_audio_processor_a0fd96de98e48ef5da9bacd1e83302336} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setCurrentProgramStateInformation@{setCurrentProgramStateInformation}}
+\index{setCurrentProgramStateInformation@{setCurrentProgramStateInformation}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setCurrentProgramStateInformation()}{setCurrentProgramStateInformation()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Current\+Program\+State\+Information (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{int}]{size\+In\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_a0fd96de98e48ef5da9bacd1e83302336_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_a3c686b25ab87462742577bae4083b7fa}\label{class_obxd_audio_processor_a3c686b25ab87462742577bae4083b7fa} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setCurrentSkinFolder@{setCurrentSkinFolder}}
+\index{setCurrentSkinFolder@{setCurrentSkinFolder}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setCurrentSkinFolder()}{setCurrentSkinFolder()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Current\+Skin\+Folder (\begin{DoxyParamCaption}\item[{const String \&}]{folder\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_obxd_audio_processor_ade695873cba742ce40ccd80719ca5ba9}\label{class_obxd_audio_processor_ade695873cba742ce40ccd80719ca5ba9} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setEngineParameterValue@{setEngineParameterValue}}
+\index{setEngineParameterValue@{setEngineParameterValue}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setEngineParameterValue()}{setEngineParameterValue()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Engine\+Parameter\+Value (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{float}]{new\+Value,  }\item[{bool}]{notify\+To\+Host = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_obxd_audio_processor_a66365b13ac77873107834742453798f4}\label{class_obxd_audio_processor_a66365b13ac77873107834742453798f4} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setGuiSize@{setGuiSize}}
+\index{setGuiSize@{setGuiSize}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setGuiSize()}{setGuiSize()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Gui\+Size (\begin{DoxyParamCaption}\item[{const int}]{gui\+\_\+size }\end{DoxyParamCaption})}
+
+\Hypertarget{class_obxd_audio_processor_a6d9c02053f6440dc602aa4d63782eb2f}\label{class_obxd_audio_processor_a6d9c02053f6440dc602aa4d63782eb2f} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setShowPresetBar@{setShowPresetBar}}
+\index{setShowPresetBar@{setShowPresetBar}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setShowPresetBar()}{setShowPresetBar()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Show\+Preset\+Bar (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_audio_processor_a662f65e9aef6f057c058f08b43ed67b3}\label{class_obxd_audio_processor_a662f65e9aef6f057c058f08b43ed67b3} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setStateInformation@{setStateInformation}}
+\index{setStateInformation@{setStateInformation}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setStateInformation()}{setStateInformation()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+State\+Information (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{int}]{size\+In\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_obxd_audio_processor_a662f65e9aef6f057c058f08b43ed67b3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_audio_processor_ad8b3463839110c8a79cd1a23230ea908}\label{class_obxd_audio_processor_ad8b3463839110c8a79cd1a23230ea908} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!setTooltipBehavior@{setTooltipBehavior}}
+\index{setTooltipBehavior@{setTooltipBehavior}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{setTooltipBehavior()}{setTooltipBehavior()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::set\+Tooltip\+Behavior (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}}}]{tooltip }\end{DoxyParamCaption})}
+
+\Hypertarget{class_obxd_audio_processor_a8a410d69d76cc301b1e6ac509d2af887}\label{class_obxd_audio_processor_a8a410d69d76cc301b1e6ac509d2af887} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!updateConfig@{updateConfig}}
+\index{updateConfig@{updateConfig}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{updateConfig()}{updateConfig()}}
+{\footnotesize\ttfamily void Obxd\+Audio\+Processor\+::update\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_audio_processor_a8a410d69d76cc301b1e6ac509d2af887_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_obxd_audio_processor_a11a612061e28376a3e9f2754dbd1d616}\label{class_obxd_audio_processor_a11a612061e28376a3e9f2754dbd1d616} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!apvtState@{apvtState}}
+\index{apvtState@{apvtState}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{apvtState}{apvtState}}
+{\footnotesize\ttfamily Audio\+Processor\+Value\+Tree\+State Obxd\+Audio\+Processor\+::apvt\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a6e06dc2b9bf958dd25be737deab02620}\label{class_obxd_audio_processor_a6e06dc2b9bf958dd25be737deab02620} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!bankFiles@{bankFiles}}
+\index{bankFiles@{bankFiles}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{bankFiles}{bankFiles}}
+{\footnotesize\ttfamily Array$<$File$>$ Obxd\+Audio\+Processor\+::bank\+Files\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a06a54cb52fa1ef776cdfc6335a2fa7ca}\label{class_obxd_audio_processor_a06a54cb52fa1ef776cdfc6335a2fa7ca} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!bindings@{bindings}}
+\index{bindings@{bindings}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{bindings}{bindings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_midi_map}{Midi\+Map}} Obxd\+Audio\+Processor\+::bindings}
+
+\Hypertarget{class_obxd_audio_processor_a72ebd5c0b916f7d6bf06472a122d3f0c}\label{class_obxd_audio_processor_a72ebd5c0b916f7d6bf06472a122d3f0c} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!config@{config}}
+\index{config@{config}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$Properties\+File$>$ Obxd\+Audio\+Processor\+::config\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a829a87b2fc01d3309d2452eb6eb886fa}\label{class_obxd_audio_processor_a829a87b2fc01d3309d2452eb6eb886fa} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!configLock@{configLock}}
+\index{configLock@{configLock}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{configLock}{configLock}}
+{\footnotesize\ttfamily Inter\+Process\+Lock Obxd\+Audio\+Processor\+::config\+Lock\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a2d75fc2f089b2fdbe23e0d8ac1d426f6}\label{class_obxd_audio_processor_a2d75fc2f089b2fdbe23e0d8ac1d426f6} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!currentBank@{currentBank}}
+\index{currentBank@{currentBank}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{currentBank}{currentBank}}
+{\footnotesize\ttfamily String Obxd\+Audio\+Processor\+::current\+Bank}
+
+\Hypertarget{class_obxd_audio_processor_a63d0ec023ca846d88282cea2c97386c4}\label{class_obxd_audio_processor_a63d0ec023ca846d88282cea2c97386c4} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!currentBankFile@{currentBankFile}}
+\index{currentBankFile@{currentBankFile}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{currentBankFile}{currentBankFile}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::current\+Bank\+File}
+
+\Hypertarget{class_obxd_audio_processor_a947ced94feff1095ceea260bcd500d9a}\label{class_obxd_audio_processor_a947ced94feff1095ceea260bcd500d9a} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!currentMidiPath@{currentMidiPath}}
+\index{currentMidiPath@{currentMidiPath}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{currentMidiPath}{currentMidiPath}}
+{\footnotesize\ttfamily String Obxd\+Audio\+Processor\+::current\+Midi\+Path}
+
+\Hypertarget{class_obxd_audio_processor_a251769a0a0e262b400703bffecb7d8dd}\label{class_obxd_audio_processor_a251769a0a0e262b400703bffecb7d8dd} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!currentPreset@{currentPreset}}
+\index{currentPreset@{currentPreset}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{currentPreset}{currentPreset}}
+{\footnotesize\ttfamily String Obxd\+Audio\+Processor\+::current\+Preset}
+
+\Hypertarget{class_obxd_audio_processor_aae5dec01580c5017c26b60330242f9f1}\label{class_obxd_audio_processor_aae5dec01580c5017c26b60330242f9f1} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!currentPresetFile@{currentPresetFile}}
+\index{currentPresetFile@{currentPresetFile}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{currentPresetFile}{currentPresetFile}}
+{\footnotesize\ttfamily File Obxd\+Audio\+Processor\+::current\+Preset\+File}
+
+\Hypertarget{class_obxd_audio_processor_a14607a9f3c484e60909f4d282210195c}\label{class_obxd_audio_processor_a14607a9f3c484e60909f4d282210195c} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!currentSkin@{currentSkin}}
+\index{currentSkin@{currentSkin}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{currentSkin}{currentSkin}}
+{\footnotesize\ttfamily String Obxd\+Audio\+Processor\+::current\+Skin}
+
+\Hypertarget{class_obxd_audio_processor_a30b77550da1da2c32a2ba53aa14827cd}\label{class_obxd_audio_processor_a30b77550da1da2c32a2ba53aa14827cd} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!gui\_size@{gui\_size}}
+\index{gui\_size@{gui\_size}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{gui\_size}{gui\_size}}
+{\footnotesize\ttfamily int Obxd\+Audio\+Processor\+::gui\+\_\+size}
+
+\Hypertarget{class_obxd_audio_processor_a0f35b49da7d1f302a7550f62d49994c4}\label{class_obxd_audio_processor_a0f35b49da7d1f302a7550f62d49994c4} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!hasMidiMessage@{hasMidiMessage}}
+\index{hasMidiMessage@{hasMidiMessage}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{hasMidiMessage}{hasMidiMessage}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::has\+Midi\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a1fc81b322e869c2e807b98f824dca81d}\label{class_obxd_audio_processor_a1fc81b322e869c2e807b98f824dca81d} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!isHostAutomatedChange@{isHostAutomatedChange}}
+\index{isHostAutomatedChange@{isHostAutomatedChange}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{isHostAutomatedChange}{isHostAutomatedChange}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::is\+Host\+Automated\+Change\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_ad5b2bc841a2380e13daeeb770bdf16ba}\label{class_obxd_audio_processor_ad5b2bc841a2380e13daeeb770bdf16ba} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!lastMovedController@{lastMovedController}}
+\index{lastMovedController@{lastMovedController}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{lastMovedController}{lastMovedController}}
+{\footnotesize\ttfamily int Obxd\+Audio\+Processor\+::last\+Moved\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a6380641a80e2f35b7252d8730c61d50a}\label{class_obxd_audio_processor_a6380641a80e2f35b7252d8730c61d50a} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!lastUsedParameter@{lastUsedParameter}}
+\index{lastUsedParameter@{lastUsedParameter}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{lastUsedParameter}{lastUsedParameter}}
+{\footnotesize\ttfamily int Obxd\+Audio\+Processor\+::last\+Used\+Parameter\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_aaaa50435b99f0eaac37e1b2b7d4d1cc3}\label{class_obxd_audio_processor_aaaa50435b99f0eaac37e1b2b7d4d1cc3} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!midiControlledParamSet@{midiControlledParamSet}}
+\index{midiControlledParamSet@{midiControlledParamSet}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{midiControlledParamSet}{midiControlledParamSet}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::midi\+Controlled\+Param\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a9c0efd622e7423c4d7b8800abf5f9c09}\label{class_obxd_audio_processor_a9c0efd622e7423c4d7b8800abf5f9c09} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!midiEventPos@{midiEventPos}}
+\index{midiEventPos@{midiEventPos}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{midiEventPos}{midiEventPos}}
+{\footnotesize\ttfamily int Obxd\+Audio\+Processor\+::midi\+Event\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_afc1796fe54dce620167208dc27e6df9f}\label{class_obxd_audio_processor_afc1796fe54dce620167208dc27e6df9f} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!midiMsg@{midiMsg}}
+\index{midiMsg@{midiMsg}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{midiMsg}{midiMsg}}
+{\footnotesize\ttfamily Midi\+Message\texorpdfstring{$\ast$}{*} Obxd\+Audio\+Processor\+::midi\+Msg\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a87ca3b3f8dbe70340a949c3fabafb66a}\label{class_obxd_audio_processor_a87ca3b3f8dbe70340a949c3fabafb66a} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!nextMidi@{nextMidi}}
+\index{nextMidi@{nextMidi}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{nextMidi}{nextMidi}}
+{\footnotesize\ttfamily Midi\+Message\texorpdfstring{$\ast$}{*} Obxd\+Audio\+Processor\+::next\+Midi\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a70fb35661848ab3a9c606b70190bb621}\label{class_obxd_audio_processor_a70fb35661848ab3a9c606b70190bb621} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!physicalPixelScaleFactor@{physicalPixelScaleFactor}}
+\index{physicalPixelScaleFactor@{physicalPixelScaleFactor}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{physicalPixelScaleFactor}{physicalPixelScaleFactor}}
+{\footnotesize\ttfamily float Obxd\+Audio\+Processor\+::physical\+Pixel\+Scale\+Factor}
+
+\Hypertarget{class_obxd_audio_processor_a50804a54b929b247b8cbe1fe773a0b5b}\label{class_obxd_audio_processor_a50804a54b929b247b8cbe1fe773a0b5b} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!programs@{programs}}
+\index{programs@{programs}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{programs}{programs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obxd_bank}{Obxd\+Bank}} Obxd\+Audio\+Processor\+::programs\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a794fc30e99a2b25d2fcf22767d299683}\label{class_obxd_audio_processor_a794fc30e99a2b25d2fcf22767d299683} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!showPresetBar@{showPresetBar}}
+\index{showPresetBar@{showPresetBar}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{showPresetBar}{showPresetBar}}
+{\footnotesize\ttfamily bool Obxd\+Audio\+Processor\+::show\+Preset\+Bar = false}
+
+\Hypertarget{class_obxd_audio_processor_a77215dca1339137fe10bcd9584b4ff00}\label{class_obxd_audio_processor_a77215dca1339137fe10bcd9584b4ff00} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!skinFiles@{skinFiles}}
+\index{skinFiles@{skinFiles}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{skinFiles}{skinFiles}}
+{\footnotesize\ttfamily Array$<$File$>$ Obxd\+Audio\+Processor\+::skin\+Files\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_af4f6d5787fe0e7d101e75159a4806d33}\label{class_obxd_audio_processor_af4f6d5787fe0e7d101e75159a4806d33} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!synth@{synth}}
+\index{synth@{synth}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{synth}{synth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_synth_engine}{Synth\+Engine}} Obxd\+Audio\+Processor\+::synth\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a4799099d43d7acfe45328b15d2d27f6f}\label{class_obxd_audio_processor_a4799099d43d7acfe45328b15d2d27f6f} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!tooltipBehavior@{tooltipBehavior}}
+\index{tooltipBehavior@{tooltipBehavior}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{tooltipBehavior}{tooltipBehavior}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}} Obxd\+Audio\+Processor\+::tooltip\+Behavior\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_audio_processor_a7f8107f83b27c229eddc0a8d1a1e45aa}\label{class_obxd_audio_processor_a7f8107f83b27c229eddc0a8d1a1e45aa} 
+\index{ObxdAudioProcessor@{ObxdAudioProcessor}!undoManager@{undoManager}}
+\index{undoManager@{undoManager}!ObxdAudioProcessor@{ObxdAudioProcessor}}
+\doxysubsubsection{\texorpdfstring{undoManager}{undoManager}}
+{\footnotesize\ttfamily Undo\+Manager Obxd\+Audio\+Processor\+::undo\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_plugin_processor_8h}{Plugin\+Processor.\+h}}\item 
+Source/\mbox{\hyperlink{_plugin_processor_8cpp}{Plugin\+Processor.\+cpp}}\end{DoxyCompactItemize}

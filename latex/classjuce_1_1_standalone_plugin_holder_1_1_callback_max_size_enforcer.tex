@@ -1,0 +1,131 @@
+\doxysection{juce\+::Standalone\+Plugin\+Holder\+::Callback\+Max\+Size\+Enforcer Class Reference}
+\hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer}{}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer}\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+
+
+Inheritance diagram for juce\+::Standalone\+Plugin\+Holder\+::Callback\+Max\+Size\+Enforcer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for juce\+::Standalone\+Plugin\+Holder\+::Callback\+Max\+Size\+Enforcer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_1_1_get_channel_with_offset}{Get\+Channel\+With\+Offset}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad78735c75f16f446176f6e7075ed25c9}{Callback\+Max\+Size\+Enforcer}} (Audio\+IODevice\+Callback \&callback\+In)
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad1161e08da5ee83e286d79fc10362672}{audio\+Device\+About\+To\+Start}} (Audio\+IODevice \texorpdfstring{$\ast$}{*}device) override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_afb825eeecce1e838fbd5df389e5ab47d}{audio\+Device\+IOCallback\+With\+Context}} (const float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}input\+Channel\+Data, int num\+Input\+Channels, float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}output\+Channel\+Data, int num\+Output\+Channels, int num\+Samples, const Audio\+IODevice\+Callback\+Context \&context) override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a053feff9fb19696a14c260fb801ddf5c}{audio\+Device\+Stopped}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Ptr , typename Vector $>$ }\\void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a43bacc2f39171be44cda21a74ec1d2a6}{init\+Channel\+Pointers}} (Ptr \&\&source, Vector \&\&target, int offset)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+IODevice\+Callback \& \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187}{inner}}
+\item 
+int \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a4cb63ae7120bd4e40b417b2ee7129fc6}{maximum\+Size}} = 0
+\item 
+std\+::vector$<$ const float \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}{stored\+Input\+Channels}}
+\item 
+std\+::vector$<$ float \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}{stored\+Output\+Channels}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad78735c75f16f446176f6e7075ed25c9}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad78735c75f16f446176f6e7075ed25c9} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!CallbackMaxSizeEnforcer@{CallbackMaxSizeEnforcer}}
+\index{CallbackMaxSizeEnforcer@{CallbackMaxSizeEnforcer}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{CallbackMaxSizeEnforcer()}{CallbackMaxSizeEnforcer()}}
+{\footnotesize\ttfamily juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::\+Callback\+Max\+Size\+Enforcer (\begin{DoxyParamCaption}\item[{Audio\+IODevice\+Callback \&}]{callback\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad1161e08da5ee83e286d79fc10362672}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad1161e08da5ee83e286d79fc10362672} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!audioDeviceAboutToStart@{audioDeviceAboutToStart}}
+\index{audioDeviceAboutToStart@{audioDeviceAboutToStart}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{audioDeviceAboutToStart()}{audioDeviceAboutToStart()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::audio\+Device\+About\+To\+Start (\begin{DoxyParamCaption}\item[{Audio\+IODevice \texorpdfstring{$\ast$}{*}}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_afb825eeecce1e838fbd5df389e5ab47d}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_afb825eeecce1e838fbd5df389e5ab47d} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!audioDeviceIOCallbackWithContext@{audioDeviceIOCallbackWithContext}}
+\index{audioDeviceIOCallbackWithContext@{audioDeviceIOCallbackWithContext}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{audioDeviceIOCallbackWithContext()}{audioDeviceIOCallbackWithContext()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::audio\+Device\+IOCallback\+With\+Context (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{input\+Channel\+Data,  }\item[{int}]{num\+Input\+Channels,  }\item[{float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{output\+Channel\+Data,  }\item[{int}]{num\+Output\+Channels,  }\item[{int}]{num\+Samples,  }\item[{const Audio\+IODevice\+Callback\+Context \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_afb825eeecce1e838fbd5df389e5ab47d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a053feff9fb19696a14c260fb801ddf5c}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a053feff9fb19696a14c260fb801ddf5c} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!audioDeviceStopped@{audioDeviceStopped}}
+\index{audioDeviceStopped@{audioDeviceStopped}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{audioDeviceStopped()}{audioDeviceStopped()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::audio\+Device\+Stopped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a43bacc2f39171be44cda21a74ec1d2a6}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a43bacc2f39171be44cda21a74ec1d2a6} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!initChannelPointers@{initChannelPointers}}
+\index{initChannelPointers@{initChannelPointers}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{initChannelPointers()}{initChannelPointers()}}
+{\footnotesize\ttfamily template$<$typename Ptr , typename Vector $>$ \\
+void juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::init\+Channel\+Pointers (\begin{DoxyParamCaption}\item[{Ptr \&\&}]{source,  }\item[{Vector \&\&}]{target,  }\item[{int}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!inner@{inner}}
+\index{inner@{inner}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{inner}{inner}}
+{\footnotesize\ttfamily Audio\+IODevice\+Callback\& juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::inner\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a4cb63ae7120bd4e40b417b2ee7129fc6}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a4cb63ae7120bd4e40b417b2ee7129fc6} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!maximumSize@{maximumSize}}
+\index{maximumSize@{maximumSize}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{maximumSize}{maximumSize}}
+{\footnotesize\ttfamily int juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::maximum\+Size = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!storedInputChannels@{storedInputChannels}}
+\index{storedInputChannels@{storedInputChannels}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{storedInputChannels}{storedInputChannels}}
+{\footnotesize\ttfamily std\+::vector$<$const float\texorpdfstring{$\ast$}{*}$>$ juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::stored\+Input\+Channels\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}\label{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b} 
+\index{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}!storedOutputChannels@{storedOutputChannels}}
+\index{storedOutputChannels@{storedOutputChannels}!juce::StandalonePluginHolder::CallbackMaxSizeEnforcer@{juce::StandalonePluginHolder::CallbackMaxSizeEnforcer}}
+\doxysubsubsection{\texorpdfstring{storedOutputChannels}{storedOutputChannels}}
+{\footnotesize\ttfamily std\+::vector$<$float\texorpdfstring{$\ast$}{*}$>$ juce\+::\+Standalone\+Plugin\+Holder\+::\+Callback\+Max\+Size\+Enforcer\+::stored\+Output\+Channels\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Modules/juce\+\_\+audio\+\_\+plugin\+\_\+client/\+Standalone/\mbox{\hyperlink{juce___standalone_filter_window_8h}{juce\+\_\+\+Standalone\+Filter\+Window.\+h}}\end{DoxyCompactItemize}

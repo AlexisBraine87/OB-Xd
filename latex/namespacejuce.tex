@@ -1,0 +1,84 @@
+\doxysection{juce Namespace Reference}
+\hypertarget{namespacejuce}{}\label{namespacejuce}\index{juce@{juce}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjuce_1_1_custom_mouse_cursor_info}{Custom\+Mouse\+Cursor\+Info}}
+\item 
+class \mbox{\hyperlink{classjuce_1_1mac_pasteboard}{mac\+Pasteboard}}
+\item 
+class \mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{Standalone\+Filter\+Window}}
+\item 
+class \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{Standalone\+Plugin\+Holder}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacejuce_a817b68fe0868d562c4e65e04d0308112}{juce\+\_\+are\+There\+Any\+Always\+On\+Top\+Windows}} ()
+\item 
+bool \mbox{\hyperlink{namespacejuce_a3753e5c701e88d306a4b61c34c49415a}{is\+Embedded\+In\+Foreground\+Process}} (Component \texorpdfstring{$\ast$}{*}c)
+\item 
+static bool \mbox{\hyperlink{namespacejuce_af3eb432200eb2c2794fe3878d9e38c5a}{is\+Foreground\+Or\+Embedded\+Process}} (Component \texorpdfstring{$\ast$}{*}view\+Component)
+\item 
+bool \mbox{\hyperlink{namespacejuce_ac60d6ad3a4ae93d882f223fbb5e99831}{is\+Window\+On\+Current\+Virtual\+Desktop}} (void \texorpdfstring{$\ast$}{*})
+\item 
+{\footnotesize template$<$typename Member\+Fn $>$ }\\static const Accessibility\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacejuce_ab6632f937997cce908e9e30633d862d5}{get\+Enclosing\+Handler\+With\+Interface}} (const Accessibility\+Handler \texorpdfstring{$\ast$}{*}handler, Member\+Fn fn)
+\item 
+void \mbox{\hyperlink{namespacejuce_a5245af2f8664ea9983d2569b3f9da384}{notify\+Accessibility\+Event\+Internal}} (const Accessibility\+Handler \&, Internal\+Accessibility\+Event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacejuce_ab6632f937997cce908e9e30633d862d5}\label{namespacejuce_ab6632f937997cce908e9e30633d862d5} 
+\index{juce@{juce}!getEnclosingHandlerWithInterface@{getEnclosingHandlerWithInterface}}
+\index{getEnclosingHandlerWithInterface@{getEnclosingHandlerWithInterface}!juce@{juce}}
+\doxysubsubsection{\texorpdfstring{getEnclosingHandlerWithInterface()}{getEnclosingHandlerWithInterface()}}
+{\footnotesize\ttfamily template$<$typename Member\+Fn $>$ \\
+static const Accessibility\+Handler \texorpdfstring{$\ast$}{*} juce\+::get\+Enclosing\+Handler\+With\+Interface (\begin{DoxyParamCaption}\item[{const Accessibility\+Handler \texorpdfstring{$\ast$}{*}}]{handler,  }\item[{Member\+Fn}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{namespacejuce_ab6632f937997cce908e9e30633d862d5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacejuce_a3753e5c701e88d306a4b61c34c49415a}\label{namespacejuce_a3753e5c701e88d306a4b61c34c49415a} 
+\index{juce@{juce}!isEmbeddedInForegroundProcess@{isEmbeddedInForegroundProcess}}
+\index{isEmbeddedInForegroundProcess@{isEmbeddedInForegroundProcess}!juce@{juce}}
+\doxysubsubsection{\texorpdfstring{isEmbeddedInForegroundProcess()}{isEmbeddedInForegroundProcess()}}
+{\footnotesize\ttfamily bool juce\+::is\+Embedded\+In\+Foreground\+Process (\begin{DoxyParamCaption}\item[{Component \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacejuce_af3eb432200eb2c2794fe3878d9e38c5a}\label{namespacejuce_af3eb432200eb2c2794fe3878d9e38c5a} 
+\index{juce@{juce}!isForegroundOrEmbeddedProcess@{isForegroundOrEmbeddedProcess}}
+\index{isForegroundOrEmbeddedProcess@{isForegroundOrEmbeddedProcess}!juce@{juce}}
+\doxysubsubsection{\texorpdfstring{isForegroundOrEmbeddedProcess()}{isForegroundOrEmbeddedProcess()}}
+{\footnotesize\ttfamily static bool juce\+::is\+Foreground\+Or\+Embedded\+Process (\begin{DoxyParamCaption}\item[{Component \texorpdfstring{$\ast$}{*}}]{view\+Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejuce_af3eb432200eb2c2794fe3878d9e38c5a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacejuce_ac60d6ad3a4ae93d882f223fbb5e99831}\label{namespacejuce_ac60d6ad3a4ae93d882f223fbb5e99831} 
+\index{juce@{juce}!isWindowOnCurrentVirtualDesktop@{isWindowOnCurrentVirtualDesktop}}
+\index{isWindowOnCurrentVirtualDesktop@{isWindowOnCurrentVirtualDesktop}!juce@{juce}}
+\doxysubsubsection{\texorpdfstring{isWindowOnCurrentVirtualDesktop()}{isWindowOnCurrentVirtualDesktop()}}
+{\footnotesize\ttfamily bool juce\+::is\+Window\+On\+Current\+Virtual\+Desktop (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacejuce_a817b68fe0868d562c4e65e04d0308112}\label{namespacejuce_a817b68fe0868d562c4e65e04d0308112} 
+\index{juce@{juce}!juce\_areThereAnyAlwaysOnTopWindows@{juce\_areThereAnyAlwaysOnTopWindows}}
+\index{juce\_areThereAnyAlwaysOnTopWindows@{juce\_areThereAnyAlwaysOnTopWindows}!juce@{juce}}
+\doxysubsubsection{\texorpdfstring{juce\_areThereAnyAlwaysOnTopWindows()}{juce\_areThereAnyAlwaysOnTopWindows()}}
+{\footnotesize\ttfamily bool juce\+::juce\+\_\+are\+There\+Any\+Always\+On\+Top\+Windows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacejuce_a5245af2f8664ea9983d2569b3f9da384}\label{namespacejuce_a5245af2f8664ea9983d2569b3f9da384} 
+\index{juce@{juce}!notifyAccessibilityEventInternal@{notifyAccessibilityEventInternal}}
+\index{notifyAccessibilityEventInternal@{notifyAccessibilityEventInternal}!juce@{juce}}
+\doxysubsubsection{\texorpdfstring{notifyAccessibilityEventInternal()}{notifyAccessibilityEventInternal()}}
+{\footnotesize\ttfamily void juce\+::notify\+Accessibility\+Event\+Internal (\begin{DoxyParamCaption}\item[{const Accessibility\+Handler \&}]{,  }\item[{Internal\+Accessibility\+Event}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,357 @@
+\doxysection{juce\+\_\+gui\+\_\+basics.\+h}
+\hypertarget{juce__gui__basics_8h_source}{}\label{juce__gui__basics_8h_source}\index{Modules/juce\_gui\_basics/juce\_gui\_basics.h@{Modules/juce\_gui\_basics/juce\_gui\_basics.h}}
+\mbox{\hyperlink{juce__gui__basics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ the\ JUCE\ library.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ Copyright\ (c)\ 2022\ -\/\ Raw\ Material\ Software\ Limited}}
+\DoxyCodeLine{00006\ \textcolor{comment}{}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ JUCE\ is\ an\ open\ source\ library\ subject\ to\ commercial\ or\ open-\/source}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ licensing.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ By\ using\ JUCE,\ you\ agree\ to\ the\ terms\ of\ both\ the\ JUCE\ 7\ End-\/User\ License}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ Agreement\ and\ JUCE\ Privacy\ Policy.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ End\ User\ License\ Agreement:\ www.juce.com/juce-\/7-\/licence}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ Privacy\ Policy:\ www.juce.com/juce-\/privacy-\/policy}}
+\DoxyCodeLine{00015\ \textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ Or:\ You\ may\ also\ use\ this\ code\ under\ the\ terms\ of\ the\ GPL\ v3\ (see}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ www.gnu.org/licenses).}}
+\DoxyCodeLine{00018\ \textcolor{comment}{}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ JUCE\ IS\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ ANY\ WARRANTY,\ AND\ ALL\ WARRANTIES,\ WHETHER}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ EXPRESSED\ OR\ IMPLIED,\ INCLUDING\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ PURPOSE,\ ARE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ DISCLAIMED.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ The\ block\ below\ describes\ the\ properties\ of\ this\ module,\ and\ is\ read\ by}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ the\ Projucer\ to\ automatically\ generate\ project\ code\ that\ uses\ it.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ For\ details\ about\ the\ syntax\ and\ how\ to\ create\ or\ use\ a\ module,\ see\ the}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ JUCE\ Module\ Format.md\ file.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ BEGIN\_JUCE\_MODULE\_DECLARATION}}
+\DoxyCodeLine{00035\ \textcolor{comment}{}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ ID:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ juce\_gui\_basics}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ vendor:\ \ \ \ \ \ \ \ \ \ \ \ \ juce}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ version:\ \ \ \ \ \ \ \ \ \ \ \ 7.0.2}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ name:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ JUCE\ GUI\ core\ classes}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ description:\ \ \ \ \ \ \ \ Basic\ user-\/interface\ components\ and\ related\ classes.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ website:\ \ \ \ \ \ \ \ \ \ \ \ http://www.juce.com/juce}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ license:\ \ \ \ \ \ \ \ \ \ \ \ GPL/Commercial}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ minimumCppStandard:\ 14}}
+\DoxyCodeLine{00044\ \textcolor{comment}{}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ dependencies:\ \ \ \ \ \ \ juce\_graphics\ juce\_data\_structures}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ OSXFrameworks:\ \ \ \ \ \ Cocoa\ QuartzCore}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ WeakOSXFrameworks:\ \ Metal\ MetalKit}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ iOSFrameworks:\ \ \ \ \ \ CoreServices\ UIKit}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ WeakiOSFrameworks:\ \ Metal\ MetalKit}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ mingwLibs:\ \ \ \ \ \ \ \ \ \ dxgi}}
+\DoxyCodeLine{00051\ \textcolor{comment}{}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ END\_JUCE\_MODULE\_DECLARATION}}
+\DoxyCodeLine{00053\ \textcolor{comment}{}}
+\DoxyCodeLine{00054\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ JUCE\_GUI\_BASICS\_H\_INCLUDED}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ <juce\_graphics/juce\_graphics.h>}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ <juce\_data\_structures/juce\_data\_structures.h>}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#ifndef\ JUCE\_ENABLE\_REPAINT\_DEBUGGING}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\ \#define\ JUCE\_ENABLE\_REPAINT\_DEBUGGING\ 0}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#ifndef\ JUCE\_USE\_XRANDR}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \#define\ JUCE\_USE\_XRANDR\ 1}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#ifndef\ JUCE\_USE\_XINERAMA}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\ \#define\ JUCE\_USE\_XINERAMA\ 1}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#ifndef\ JUCE\_USE\_XSHM}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\ \#define\ JUCE\_USE\_XSHM\ 1}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#ifndef\ JUCE\_USE\_XRENDER}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\ \#define\ JUCE\_USE\_XRENDER\ 0}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#ifndef\ JUCE\_USE\_XCURSOR}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\ \#define\ JUCE\_USE\_XCURSOR\ 1}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#ifndef\ JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \#define\ JUCE\_WIN\_PER\_MONITOR\_DPI\_AWARE\ 1}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00125\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacejuce}{juce}}}
+\DoxyCodeLine{00126\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{class\ }Component;}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{class\ }LookAndFeel;}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{class\ }MouseInputSource;}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{class\ }MouseInputSourceInternal;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{class\ }ComponentPeer;}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{class\ }MouseEvent;}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{struct\ }MouseWheelDetails;}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{struct\ }PenDetails;}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{class\ }ToggleButton;}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{class\ }TextButton;}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{class\ }AlertWindow;}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{class\ }TextLayout;}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{class\ }ScrollBar;}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{class\ }ComboBox;}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{class\ }Button;}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keyword}{class\ }FilenameComponent;}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{class\ }ResizableWindow;}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keyword}{class\ }MenuBarComponent;}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keyword}{class\ }GlyphArrangement;}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{class\ }TableHeaderComponent;}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{class\ }Toolbar;}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{class\ }PopupMenu;}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{class\ }ProgressBar;}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{class\ }FileBrowserComponent;}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{class\ }DirectoryContentsDisplayComponent;}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{class\ }FilePreviewComponent;}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{class\ }CallOutBox;}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{class\ }Drawable;}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{class\ }DrawablePath;}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{class\ }DrawableComposite;}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{class\ }CaretComponent;}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{class\ }KeyPressMappingSet;}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{class\ }ApplicationCommandManagerListener;}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{class\ }DrawableButton;}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{class\ }Displays;}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{class\ }AccessibilityHandler;}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{class\ }KeyboardFocusTraverser;}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{class\ }PointerState;}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{class\ }FlexBox;}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{class\ }Grid;}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{class\ }FocusOutline;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\ \ \ \#if\ JUCE\_MAC\ ||\ JUCE\_WINDOWS\ ||\ JUCE\_LINUX}}
+\DoxyCodeLine{00171\ \ \ \ \ Image\ createSnapshotOfNativeWindow\ (\textcolor{keywordtype}{void}*\ nativeWindowHandle);}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\ \ \ \#endif}}
+\DoxyCodeLine{00173\ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_MouseCursor.h"{}}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_MouseListener.h"{}}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_ModifierKeys.h"{}}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_MouseInputSource.h"{}}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_MouseEvent.h"{}}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_KeyPress.h"{}}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_KeyListener.h"{}}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#include\ "{}components/juce\_ComponentTraverser.h"{}}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#include\ "{}components/juce\_FocusTraverser.h"{}}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#include\ "{}components/juce\_ModalComponentManager.h"{}}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#include\ "{}components/juce\_ComponentListener.h"{}}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#include\ "{}components/juce\_CachedComponentImage.h"{}}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#include\ "{}components/juce\_Component.h"{}}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ComponentAnimator.h"{}}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#include\ "{}desktop/juce\_Desktop.h"{}}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#include\ "{}desktop/juce\_Displays.h"{}}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ComponentBoundsConstrainer.h"{}}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_ComponentDragger.h"{}}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_DragAndDropTarget.h"{}}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_DragAndDropContainer.h"{}}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_FileDragAndDropTarget.h"{}}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_SelectedItemSet.h"{}}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_MouseInactivityDetector.h"{}}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_TextDragAndDropTarget.h"{}}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_TooltipClient.h"{}}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_CaretComponent.h"{}}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_KeyboardFocusTraverser.h"{}}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_SystemClipboard.h"{}}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_TextEditorKeyMapper.h"{}}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#include\ "{}keyboard/juce\_TextInputTarget.h"{}}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#include\ "{}commands/juce\_ApplicationCommandID.h"{}}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#include\ "{}commands/juce\_ApplicationCommandInfo.h"{}}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#include\ "{}commands/juce\_ApplicationCommandTarget.h"{}}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#include\ "{}commands/juce\_ApplicationCommandManager.h"{}}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#include\ "{}commands/juce\_KeyPressMappingSet.h"{}}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_Button.h"{}}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_ArrowButton.h"{}}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_DrawableButton.h"{}}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_HyperlinkButton.h"{}}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_ImageButton.h"{}}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_ShapeButton.h"{}}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_TextButton.h"{}}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_ToggleButton.h"{}}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_AnimatedPosition.h"{}}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_AnimatedPositionBehaviours.h"{}}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ComponentBuilder.h"{}}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ComponentMovementWatcher.h"{}}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ConcertinaPanel.h"{}}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_GroupComponent.h"{}}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ResizableBorderComponent.h"{}}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ResizableCornerComponent.h"{}}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ResizableEdgeComponent.h"{}}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_ScrollBar.h"{}}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_StretchableLayoutManager.h"{}}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_StretchableLayoutResizerBar.h"{}}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_StretchableObjectResizer.h"{}}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_TabbedButtonBar.h"{}}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_TabbedComponent.h"{}}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_Viewport.h"{}}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#include\ "{}menus/juce\_PopupMenu.h"{}}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#include\ "{}menus/juce\_MenuBarModel.h"{}}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#include\ "{}menus/juce\_MenuBarComponent.h"{}}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#include\ "{}positioning/juce\_RelativeCoordinate.h"{}}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#include\ "{}positioning/juce\_MarkerList.h"{}}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#include\ "{}positioning/juce\_RelativePoint.h"{}}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#include\ "{}positioning/juce\_RelativeRectangle.h"{}}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#include\ "{}positioning/juce\_RelativeCoordinatePositioner.h"{}}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#include\ "{}positioning/juce\_RelativeParallelogram.h"{}}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#include\ "{}positioning/juce\_RelativePointPath.h"{}}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#include\ "{}drawables/juce\_Drawable.h"{}}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#include\ "{}drawables/juce\_DrawableShape.h"{}}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#include\ "{}drawables/juce\_DrawableComposite.h"{}}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#include\ "{}drawables/juce\_DrawableImage.h"{}}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#include\ "{}drawables/juce\_DrawablePath.h"{}}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#include\ "{}drawables/juce\_DrawableRectangle.h"{}}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#include\ "{}drawables/juce\_DrawableText.h"{}}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_TextEditor.h"{}}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_Label.h"{}}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_ComboBox.h"{}}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_ImageComponent.h"{}}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_ListBox.h"{}}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_ProgressBar.h"{}}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_Slider.h"{}}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_TableHeaderComponent.h"{}}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_TableListBox.h"{}}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_Toolbar.h"{}}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_ToolbarItemComponent.h"{}}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_ToolbarItemFactory.h"{}}}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_ToolbarItemPalette.h"{}}}
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\#include\ "{}menus/juce\_BurgerMenuComponent.h"{}}}
+\DoxyCodeLine{00265\ \textcolor{preprocessor}{\#include\ "{}buttons/juce\_ToolbarButton.h"{}}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#include\ "{}misc/juce\_DropShadower.h"{}}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#include\ "{}misc/juce\_FocusOutline.h"{}}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#include\ "{}misc/juce\_JUCESplashScreen.h"{}}}
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\#include\ "{}widgets/juce\_TreeView.h"{}}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_TopLevelWindow.h"{}}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_MessageBoxOptions.h"{}}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_AlertWindow.h"{}}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_CallOutBox.h"{}}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_ComponentPeer.h"{}}}
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_ResizableWindow.h"{}}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_DocumentWindow.h"{}}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_DialogWindow.h"{}}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_NativeMessageBox.h"{}}}
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_ThreadWithProgressWindow.h"{}}}
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#include\ "{}windows/juce\_TooltipWindow.h"{}}}
+\DoxyCodeLine{00281\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_MultiDocumentPanel.h"{}}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_SidePanel.h"{}}}
+\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FileBrowserListener.h"{}}}
+\DoxyCodeLine{00284\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_DirectoryContentsList.h"{}}}
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_DirectoryContentsDisplayComponent.h"{}}}
+\DoxyCodeLine{00286\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FileBrowserComponent.h"{}}}
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FileChooser.h"{}}}
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FileChooserDialogBox.h"{}}}
+\DoxyCodeLine{00289\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FileListComponent.h"{}}}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FilenameComponent.h"{}}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FilePreviewComponent.h"{}}}
+\DoxyCodeLine{00292\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FileSearchPathListComponent.h"{}}}
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_FileTreeComponent.h"{}}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_ImagePreviewComponent.h"{}}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#include\ "{}filebrowser/juce\_ContentSharer.h"{}}}
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_PropertyComponent.h"{}}}
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_BooleanPropertyComponent.h"{}}}
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_ButtonPropertyComponent.h"{}}}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_ChoicePropertyComponent.h"{}}}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_PropertyPanel.h"{}}}
+\DoxyCodeLine{00301\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_SliderPropertyComponent.h"{}}}
+\DoxyCodeLine{00302\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_TextPropertyComponent.h"{}}}
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\#include\ "{}properties/juce\_MultiChoicePropertyComponent.h"{}}}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\#include\ "{}application/juce\_Application.h"{}}}
+\DoxyCodeLine{00305\ \textcolor{preprocessor}{\#include\ "{}misc/juce\_BubbleComponent.h"{}}}
+\DoxyCodeLine{00306\ \textcolor{preprocessor}{\#include\ "{}lookandfeel/juce\_LookAndFeel.h"{}}}
+\DoxyCodeLine{00307\ \textcolor{preprocessor}{\#include\ "{}lookandfeel/juce\_LookAndFeel\_V2.h"{}}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#include\ "{}lookandfeel/juce\_LookAndFeel\_V1.h"{}}}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\#include\ "{}lookandfeel/juce\_LookAndFeel\_V3.h"{}}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#include\ "{}lookandfeel/juce\_LookAndFeel\_V4.h"{}}}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\#include\ "{}mouse/juce\_LassoComponent.h"{}}}
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#include\ "{}accessibility/interfaces/juce\_AccessibilityCellInterface.h"{}}}
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#include\ "{}accessibility/interfaces/juce\_AccessibilityTableInterface.h"{}}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#include\ "{}accessibility/interfaces/juce\_AccessibilityTextInterface.h"{}}}
+\DoxyCodeLine{00315\ \textcolor{preprocessor}{\#include\ "{}accessibility/interfaces/juce\_AccessibilityValueInterface.h"{}}}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#include\ "{}accessibility/enums/juce\_AccessibilityActions.h"{}}}
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#include\ "{}accessibility/enums/juce\_AccessibilityEvent.h"{}}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#include\ "{}accessibility/enums/juce\_AccessibilityRole.h"{}}}
+\DoxyCodeLine{00319\ \textcolor{preprocessor}{\#include\ "{}accessibility/juce\_AccessibilityState.h"{}}}
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#include\ "{}accessibility/juce\_AccessibilityHandler.h"{}}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#if\ JUCE\_LINUX\ ||\ JUCE\_BSD}}
+\DoxyCodeLine{00323\ \textcolor{preprocessor}{\ \#if\ JUCE\_GUI\_BASICS\_INCLUDE\_XHEADERS}}
+\DoxyCodeLine{00324\ \ \ \textcolor{comment}{//\ If\ you're\ missing\ these\ headers,\ you\ need\ to\ install\ the\ libx11-\/dev\ package}}
+\DoxyCodeLine{00325\ \textcolor{preprocessor}{\ \ \#include\ <X11/Xlib.h>}}
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\ \ \#include\ <X11/Xatom.h>}}
+\DoxyCodeLine{00327\ \textcolor{preprocessor}{\ \ \#include\ <X11/Xresource.h>}}
+\DoxyCodeLine{00328\ \textcolor{preprocessor}{\ \ \#include\ <X11/Xutil.h>}}
+\DoxyCodeLine{00329\ \textcolor{preprocessor}{\ \ \#include\ <X11/Xmd.h>}}
+\DoxyCodeLine{00330\ \textcolor{preprocessor}{\ \ \#include\ <X11/keysym.h>}}
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\ \ \#include\ <X11/XKBlib.h>}}
+\DoxyCodeLine{00332\ \textcolor{preprocessor}{\ \ \#include\ <X11/cursorfont.h>}}
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\ \ \#include\ <unistd.h>}}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\ \ \#if\ JUCE\_USE\_XRANDR}}
+\DoxyCodeLine{00336\ \ \ \ \textcolor{comment}{//\ If\ you're\ missing\ this\ header,\ you\ need\ to\ install\ the\ libxrandr-\/dev\ package}}
+\DoxyCodeLine{00337\ \textcolor{preprocessor}{\ \ \ \#include\ <X11/extensions/Xrandr.h>}}
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \textcolor{preprocessor}{\ \ \#if\ JUCE\_USE\_XINERAMA}}
+\DoxyCodeLine{00341\ \ \ \ \textcolor{comment}{//\ If\ you're\ missing\ this\ header,\ you\ need\ to\ install\ the\ libxinerama-\/dev\ package}}
+\DoxyCodeLine{00342\ \textcolor{preprocessor}{\ \ \ \#include\ <X11/extensions/Xinerama.h>}}
+\DoxyCodeLine{00343\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\ \ \#if\ JUCE\_USE\_XSHM}}
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\ \ \ \#include\ <X11/extensions/XShm.h>}}
+\DoxyCodeLine{00347\ \textcolor{preprocessor}{\ \ \ \#include\ <sys/shm.h>}}
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\ \ \ \#include\ <sys/ipc.h>}}
+\DoxyCodeLine{00349\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\ \ \#if\ JUCE\_USE\_XRENDER}}
+\DoxyCodeLine{00352\ \ \ \ \textcolor{comment}{//\ If\ you're\ missing\ these\ headers,\ you\ need\ to\ install\ the\ libxrender-\/dev\ and\ libxcomposite-\/dev\ packages}}
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\ \ \ \#include\ <X11/extensions/Xrender.h>}}
+\DoxyCodeLine{00354\ \textcolor{preprocessor}{\ \ \ \#include\ <X11/extensions/Xcomposite.h>}}
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \textcolor{preprocessor}{\ \ \#if\ JUCE\_USE\_XCURSOR}}
+\DoxyCodeLine{00358\ \ \ \ \textcolor{comment}{//\ If\ you're\ missing\ this\ header,\ you\ need\ to\ install\ the\ libxcursor-\/dev\ package}}
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\ \ \ \#include\ <X11/Xcursor/Xcursor.h>}}
+\DoxyCodeLine{00360\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \textcolor{preprocessor}{\ \ \#undef\ SIZEOF}}
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\ \ \#undef\ KeyPress}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \textcolor{preprocessor}{\ \ \#include\ "{}native/x11/juce\_linux\_XWindowSystem.h"{}}}
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\ \ \#include\ "{}native/x11/juce\_linux\_X11\_Symbols.h"{}}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\ \#endif}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\#if\ JUCE\_GUI\_BASICS\_INCLUDE\_SCOPED\_THREAD\_DPI\_AWARENESS\_SETTER\ \&\&\ JUCE\_WINDOWS}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\ \#include\ "{}native/juce\_win32\_ScopedThreadDPIAwarenessSetter.h"{}}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \textcolor{preprocessor}{\#if\ JUCE\_MAC}}
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\ \ \#include\ "{}\mbox{\hyperlink{mac__objectivec__interface_8h}{native/mac\_objectivec\_interface.h}}"{}}}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_FlexItem.h"{}}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_FlexBox.h"{}}}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_GridItem.h"{}}}
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#include\ "{}layout/juce\_Grid.h"{}}}
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\#include\ "{}native/juce\_ScopedDPIAwarenessDisabler.h"{}}}
+
+\end{DoxyCode}

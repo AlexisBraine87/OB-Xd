@@ -1,0 +1,74 @@
+\doxysection{Set\+Preset\+Name\+Window.\+h}
+\hypertarget{_set_preset_name_window_8h_source}{}\label{_set_preset_name_window_8h_source}\index{Source/Components/SetPresetNameWindow.h@{Source/Components/SetPresetNameWindow.h}}
+\mbox{\hyperlink{_set_preset_name_window_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ This\ is\ an\ automatically\ generated\ GUI\ class\ created\ by\ the\ Projucer!}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ Be\ careful\ when\ adding\ custom\ code\ to\ these\ files,\ as\ only\ the\ code\ within}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ the\ "{}//[xyz]"{}\ and\ "{}//[/xyz]"{}\ sections\ will\ be\ retained\ when\ the\ file\ is\ loaded}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ and\ re-\/saved.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ Created\ with\ Projucer\ version:\ 6.0.8}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ \textcolor{comment}{}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ The\ Projucer\ is\ part\ of\ the\ JUCE\ library.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ Copyright\ (c)\ 2020\ -\/\ Raw\ Material\ Software\ Limited.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//[Headers]\ \ \ \ \ -\/-\/\ You\ can\ add\ your\ own\ extra\ header\ files\ here\ -\/-\/}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <JuceHeader.h>}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//[/Headers]}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_set_preset_name_window}{SetPresetNameWindow}}\ \ :\ \textcolor{keyword}{public}\ juce::Component,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ juce::Button::Listener}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_set_preset_name_window_a8a6e335d93bd7e0e973531435900247e}{SetPresetNameWindow}}\ ();}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_set_preset_name_window_ab5514a6e0815c1dcfd425675df6657c5}{\string~SetPresetNameWindow}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//[UserMethods]\ \ \ \ \ -\/-\/\ You\ can\ add\ your\ own\ custom\ methods\ in\ this\ section.}}
+\DoxyCodeLine{00046\ \ \ \ \ std::function<void(\textcolor{keywordtype}{int},\ juce::String)>\ \mbox{\hyperlink{class_set_preset_name_window_a9e8497752db6b982637314847132a6e2}{callback}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_set_preset_name_window_a3fac8dde67fb893cc97ee62b355e3139}{setText}}(\textcolor{keyword}{const}\ String\ \&txt)\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_set_preset_name_window_a6f467d74561085f63b893aef0b7b4922}{nameTextEditor}}-\/>setText(txt);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_set_preset_name_window_a7eeab3c62ce65e7627cb14419a74a33a}{grabTextEditorFocus}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//[/UserMethods]}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_set_preset_name_window_a4f6cfdf69d8d75a393f43ddd90b58c53}{paint}}\ (juce::Graphics\&\ g)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_set_preset_name_window_aed3a68c01fe3cf4c4d85f86eb7cda100}{resized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_set_preset_name_window_ac5e54e6accab3646a4a0a9d5476a067f}{buttonClicked}}\ (juce::Button*\ buttonThatWasClicked)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//[UserVariables]\ \ \ -\/-\/\ You\ can\ add\ your\ own\ custom\ variables\ in\ this\ section.}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//[/UserVariables]}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00064\ \ \ \ \ std::unique\_ptr<juce::TextEditor>\ \mbox{\hyperlink{class_set_preset_name_window_a6f467d74561085f63b893aef0b7b4922}{nameTextEditor}};}
+\DoxyCodeLine{00065\ \ \ \ \ std::unique\_ptr<juce::TextButton>\ \mbox{\hyperlink{class_set_preset_name_window_ab26abe6f9234e37dc7336f58d995751c}{cancel}};}
+\DoxyCodeLine{00066\ \ \ \ \ std::unique\_ptr<juce::TextButton>\ \mbox{\hyperlink{class_set_preset_name_window_a26053b55a0de9db3e3e245ef5274854a}{Ok}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00070\ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR\ (\mbox{\hyperlink{class_set_preset_name_window}{SetPresetNameWindow}})}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//[EndFile]\ You\ can\ add\ extra\ defines\ here...}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//[/EndFile]}}
+\DoxyCodeLine{00075\ }
+
+\end{DoxyCode}

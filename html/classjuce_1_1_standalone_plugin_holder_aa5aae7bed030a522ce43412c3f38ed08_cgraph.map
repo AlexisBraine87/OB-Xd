@@ -1,0 +1,15 @@
+<map id="juce::StandalonePluginHolder::init" name="juce::StandalonePluginHolder::init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,198,111"/>
+<area shape="rect" id="Node000002" href="$classjuce_1_1_standalone_plugin_holder.html#a011acf019b1d26e411961b6503e32230" title=" " alt="" coords="246,5,438,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,68,249,48,250,53,179,73"/>
+<area shape="rect" id="Node000003" href="$classjuce_1_1_standalone_plugin_holder.html#af3777d659c5d376f34d7028ab1768f59" title=" " alt="" coords="246,71,438,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,88,230,88,230,94,198,94"/>
+<area shape="rect" id="Node000007" href="$classjuce_1_1_standalone_plugin_holder.html#a1e7c49f80ccce6c3920c645dbef051fd" title=" " alt="" coords="246,136,438,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="179,109,250,129,249,134,178,114"/>
+<area shape="rect" id="Node000004" href="$classjuce_1_1_standalone_plugin_holder.html#a69672ec60c6cb267cc6bdf149c356913" title=" " alt="" coords="486,71,678,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="438,88,470,88,470,94,438,94"/>
+<area shape="rect" id="Node000005" href="$classjuce_1_1_standalone_plugin_holder.html#af896cb23041ba3ea551cdd12f9ad73fe" title=" " alt="" coords="726,37,919,78"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="678,75,710,71,711,76,679,80"/>
+<area shape="rect" id="Node000006" href="$classjuce_1_1_standalone_plugin_holder.html#adb158cad4f547fa9836d4ea7025245a5" title=" " alt="" coords="726,103,919,143"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="679,101,711,105,710,111,678,106"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="ImageMenu" name="ImageMenu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="79,79,168,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,101,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,40,114,77,110,80,73,44"/>
+<area shape="rect" id="Node000003" href="$class_scalable_component.html" title=" " alt="" coords="125,5,264,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,44,137,80,134,77,170,40"/>
+</map>

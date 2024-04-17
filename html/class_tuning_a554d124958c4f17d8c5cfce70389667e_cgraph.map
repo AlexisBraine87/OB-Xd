@@ -1,0 +1,9 @@
+<map id="Tuning::hasMTSMaster" name="Tuning::hasMTSMaster">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,31"/>
+<area shape="rect" id="Node000002" href="$lib_m_t_s_client_8cpp.html#a3263194a12cb35a3542eb71c9cd35cb7" title=" " alt="" coords="211,5,331,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,16,195,16,195,21,163,21"/>
+<area shape="rect" id="Node000003" href="$struct_m_t_s_client.html#ab0eedb28326e7f0b3e504b8147e950aa" title=" " alt="" coords="379,5,531,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,16,364,16,364,21,332,21"/>
+<area shape="rect" id="Node000004" href="$structmtsclientglobal.html#af401a3eb85e104e74170fc0faac7c51d" title=" " alt="" coords="579,5,743,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,16,564,16,564,21,532,21"/>
+</map>

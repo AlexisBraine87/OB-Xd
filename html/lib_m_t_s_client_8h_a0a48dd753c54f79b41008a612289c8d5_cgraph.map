@@ -1,0 +1,12 @@
+<map id="MTS_ParseMIDIDataU" name="MTS_ParseMIDIDataU">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,31"/>
+<area shape="rect" id="Node000002" href="$struct_m_t_s_client.html#abab47d5b930efae34a1c96a1d30153d8" title=" " alt="" coords="211,5,391,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,16,195,16,195,21,163,21"/>
+<area shape="rect" id="Node000003" href="$struct_m_t_s_client.html#ad8df8aba8644831be6b67042e47133a4" title=" " alt="" coords="656,5,770,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="392,16,641,16,641,21,392,21"/>
+<area shape="rect" id="Node000005" href="$struct_m_t_s_client.html#ad61b91f646eff63ad6ff303764770ab3" title=" " alt="" coords="439,31,608,56"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="391,26,424,29,423,35,391,31"/>
+<area shape="rect" id="Node000004" href="$structmtsclientglobal.html#af401a3eb85e104e74170fc0faac7c51d" title=" " alt="" coords="818,5,981,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="770,16,802,16,802,21,770,21"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="608,30,641,25,641,30,609,35"/>
+</map>

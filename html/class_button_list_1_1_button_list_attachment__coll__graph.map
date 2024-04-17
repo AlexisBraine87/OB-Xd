@@ -1,0 +1,68 @@
+<map id="ButtonList::ButtonListAttachment" name="ButtonList::ButtonListAttachment">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2599,177,2813,203"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="2216,142,2434,183"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2449,169,2599,180,2598,185,2449,174"/>
+<area shape="rect" id="Node000003" href="$class_button_list.html" title=" " alt="" coords="2285,207,2365,232"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2380,213,2575,199,2598,197,2599,202,2575,204,2380,218"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="2054,181,2140,207"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="2156,198,2284,212,2284,218,2156,203"/>
+<area shape="rect" id="Node000005" href="$class_scalable_component.html" title=" " alt="" coords="2028,231,2166,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="2181,232,2284,221,2285,226,2182,237"/>
+<area shape="rect" id="Node000006" href="$class_obxd_audio_processor.html" title=" " alt="" coords="1775,231,1919,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1934,241,2027,241,2027,246,1934,246"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1511,97,1624,123"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1640,123,1670,133,1717,156,1762,182,1829,228,1826,232,1759,187,1714,161,1668,138,1638,128"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1466,147,1669,188"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="1662,190,1751,214,1799,228,1798,233,1750,219,1661,195"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1499,212,1636,238"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="1652,228,1775,236,1774,241,1651,233"/>
+<area shape="rect" id="Node000010" href="$class_synth_engine.html" title=" " alt="" coords="1520,261,1615,287"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="1630,267,1750,256,1774,253,1774,258,1751,261,1631,273"/>
+<area shape="rect" id="Node000011" href="$class_motherboard.html" title=" " alt="" coords="1193,185,1286,211"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1302,195,1372,203,1409,212,1444,225,1456,237,1468,248,1493,259,1520,266,1519,271,1492,264,1465,252,1453,241,1441,230,1407,217,1371,208,1302,200"/>
+<area shape="rect" id="Node000012" href="$class_voice_queue.html" title=" " alt="" coords="983,197,1076,223"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="1091,204,1192,198,1193,203,1091,209"/>
+<area shape="rect" id="Node000013" href="$class_obxd_voice.html" title=" " alt="" coords="806,197,892,223"/>
+<area shape="poly" id="edge31_Node000011_Node000013" title=" " alt="" coords="904,190,915,188,983,177,1036,173,1158,181,1193,186,1192,191,1158,186,1036,178,983,182,916,193,905,195"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="907,208,983,208,983,213,907,213"/>
+<area shape="rect" id="Node000014" href="$class_tuning.html" title=" " alt="" coords="604,55,664,80"/>
+<area shape="poly" id="edge29_Node000011_Node000014" title=" " alt="" coords="680,70,889,100,1024,126,1159,161,1212,182,1210,187,1157,166,1023,131,888,105,680,75"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="679,85,730,112,784,147,837,195,834,199,781,151,728,117,677,90"/>
+<area shape="rect" id="Node000015" href="$struct_m_t_s_client.html" title=" " alt="" coords="295,5,378,31"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="394,25,604,60,603,65,393,30"/>
+<area shape="rect" id="Node000016" href="$class_adsr_envelope.html" title=" " alt="" coords="583,149,685,175"/>
+<area shape="poly" id="edge15_Node000013_Node000016" title=" " alt="" coords="701,172,783,190,807,196,805,201,782,195,700,178"/>
+<area shape="rect" id="Node000017" href="$class_obxd_oscillator_b.html" title=" " alt="" coords="576,199,692,224"/>
+<area shape="poly" id="edge16_Node000013_Node000017" title=" " alt="" coords="708,208,806,208,806,213,708,214"/>
+<area shape="rect" id="Node000018" href="$class_delay_line.html" title=" " alt="" coords="5,203,160,228"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="128,194,179,177,235,164,317,148,383,137,414,136,448,139,484,148,526,163,539,174,551,185,576,197,574,201,547,190,536,177,524,167,483,153,447,145,414,142,383,143,318,153,236,169,181,182,130,199"/>
+<area shape="rect" id="Node000020" href="$class_saw_osc.html" title=" " alt="" coords="301,179,372,204"/>
+<area shape="poly" id="edge20_Node000020_Node000018" title=" " alt="" coords="175,204,300,192,300,197,176,209"/>
+<area shape="rect" id="Node000021" href="$class_pulse_osc.html" title=" " alt="" coords="297,229,376,255"/>
+<area shape="poly" id="edge22_Node000021_Node000018" title=" " alt="" coords="176,223,184,224,297,236,297,241,183,229,175,228"/>
+<area shape="rect" id="Node000022" href="$class_triangle_osc.html" title=" " alt="" coords="291,283,382,308"/>
+<area shape="poly" id="edge24_Node000022_Node000018" title=" " alt="" coords="135,231,236,265,291,281,290,286,235,270,134,236"/>
+<area shape="rect" id="Node000019" href="$class_delay_line_boolean.html" title=" " alt="" coords="236,336,437,362"/>
+<area shape="poly" id="edge18_Node000017_Node000019" title=" " alt="" coords="452,352,490,342,523,322,531,312,535,302,535,280,535,257,539,245,547,234,574,217,577,222,551,237,543,248,540,258,540,280,540,303,536,315,527,326,492,347,453,357"/>
+<area shape="poly" id="edge19_Node000017_Node000020" title=" " alt="" coords="387,192,576,205,575,210,387,198"/>
+<area shape="poly" id="edge21_Node000017_Node000021" title=" " alt="" coords="391,242,455,243,525,238,586,222,588,227,525,243,455,248,391,248"/>
+<area shape="poly" id="edge23_Node000017_Node000022" title=" " alt="" coords="398,303,429,304,462,301,494,293,523,279,532,270,535,259,538,246,547,233,574,219,577,223,551,238,543,248,540,260,537,272,527,284,496,299,462,306,429,309,397,308"/>
+<area shape="rect" id="Node000023" href="$class_filter.html" title=" " alt="" coords="609,248,659,274"/>
+<area shape="poly" id="edge25_Node000013_Node000023" title=" " alt="" coords="674,252,782,229,809,221,811,226,783,234,675,257"/>
+<area shape="rect" id="Node000024" href="$class_delay_line.html" title=" " alt="" coords="549,319,719,344"/>
+<area shape="poly" id="edge26_Node000013_Node000024" title=" " alt="" coords="733,311,781,289,799,274,816,256,838,222,843,225,820,259,803,278,784,293,735,316"/>
+<area shape="rect" id="Node000025" href="$class_ap_interpolator.html" title=" " alt="" coords="583,368,685,394"/>
+<area shape="poly" id="edge27_Node000013_Node000025" title=" " alt="" coords="700,368,742,353,781,328,803,303,820,274,841,223,846,225,825,276,807,306,784,333,745,358,701,373"/>
+<area shape="rect" id="Node000026" href="$class_decimator17.html" title=" " alt="" coords="982,247,1077,272"/>
+<area shape="poly" id="edge28_Node000011_Node000026" title=" " alt="" coords="1092,253,1157,239,1190,225,1217,209,1220,214,1192,230,1159,244,1093,258"/>
+<area shape="rect" id="Node000027" href="$class_lfo.html" title=" " alt="" coords="1010,308,1049,334"/>
+<area shape="poly" id="edge30_Node000011_Node000027" title=" " alt="" coords="1064,317,1111,309,1135,300,1156,287,1165,279,1169,269,1180,247,1219,210,1223,214,1184,250,1174,272,1169,282,1160,292,1137,305,1112,314,1065,322"/>
+<area shape="rect" id="Node000028" href="$class_param_smoother.html" title=" " alt="" coords="1182,261,1297,287"/>
+<area shape="poly" id="edge32_Node000010_Node000028" title=" " alt="" coords="1313,272,1520,272,1520,277,1313,277"/>
+<area shape="rect" id="Node000029" href="$class_obxd_bank.html" title=" " alt="" coords="1526,311,1609,336"/>
+<area shape="poly" id="edge33_Node000006_Node000029" title=" " alt="" coords="1623,312,1685,300,1750,283,1818,254,1820,259,1752,288,1686,305,1625,318"/>
+<area shape="rect" id="Node000030" href="$class_obxd_params.html" title=" " alt="" coords="1191,323,1288,348"/>
+<area shape="poly" id="edge34_Node000029_Node000030" title=" " alt="" coords="1304,331,1526,322,1526,328,1304,336"/>
+<area shape="rect" id="Node000031" href="$class_midi_map.html" title=" " alt="" coords="1532,360,1603,386"/>
+<area shape="poly" id="edge35_Node000006_Node000031" title=" " alt="" coords="1617,363,1682,347,1717,334,1749,319,1796,287,1831,255,1834,259,1799,291,1752,323,1719,339,1684,352,1619,368"/>
+</map>

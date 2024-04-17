@@ -1,0 +1,1108 @@
+\doxysection{Synth\+Engine Class Reference}
+\hypertarget{class_synth_engine}{}\label{class_synth_engine}\index{SynthEngine@{SynthEngine}}
+
+
+{\ttfamily \#include $<$Synth\+Engine.\+h$>$}
+
+
+
+Collaboration diagram for Synth\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_synth_engine_a03cef1704346aadc88b31efb5e5f6b03}{Synth\+Engine}} ()
+\item 
+\mbox{\hyperlink{class_synth_engine_a0d7582a7d0c4fa555d9d012d33b5bacd}{\texorpdfstring{$\sim$}{\string~}\+Synth\+Engine}} ()
+\item 
+void \mbox{\hyperlink{class_synth_engine_a225926f64dc14402f0b92b2489fe5733}{set\+Play\+Head}} (float bpm, float retr\+Pos)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a49ae4d678b95d7b76a901890c7be90a9}{set\+Sample\+Rate}} (float sr)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a8025bb297523bab338f6fa03dcc13dce}{process\+Sample}} (float \texorpdfstring{$\ast$}{*}left, float \texorpdfstring{$\ast$}{*}right)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a746ae95bc13c51c59db41f14e31400da}{all\+Notes\+Off}} ()
+\item 
+void \mbox{\hyperlink{class_synth_engine_ab8d7c381bdece0c36b2e42923888652e}{all\+Sound\+Off}} ()
+\item 
+void \mbox{\hyperlink{class_synth_engine_a363a81c1e9b5bf4b0968bc113443afc9}{sustain\+On}} ()
+\item 
+void \mbox{\hyperlink{class_synth_engine_a7094bdb84c9549f7a785a3b37128d8da}{sustain\+Off}} ()
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac0fd1cf39d027f3f10a15648e38bf5c9}{proc\+Lfo\+Sync}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a1014aab1a394df508dc587d38abbf006}{proc\+As\+Played\+Alloc}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a6e340f7d6def984168824b4f464feb07}{proc\+Note\+On}} (int note\+No, float velocity)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a22f5a21134732f98f1db0937cfffc28f}{proc\+Note\+Off}} (int note\+No)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a7850cc15cccc22238ddb3691326622ce}{proc\+Economy\+Mode}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a19dffa015963687a30c16cac19e16503}{proc\+Amp\+Velocity\+Amount}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ad4065c22b748e2531b41bb0809ed0d18}{proc\+Flt\+Velocity\+Amount}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a0bf333991b34eb79dc95c368e8bd7c17}{proc\+Mod\+Wheel}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a9ec1a840475181a4f734911bec8197f8}{proc\+Mod\+Wheel\+Smoothed}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a3e1e345acdcedd500ce4e936bd2b3762}{proc\+Mod\+Wheel\+Frequency}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a2c03ca16e86e1a6aa31ec5f180b1f745}{proc\+Pitch\+Wheel}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a1ab1dd3da1903f0ecca21af5a78dca69}{proc\+Pitch\+Wheel\+Smoothed}} (float val)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac231381a1067250da22ea0a999e277b0}{set\+Voice\+Count}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ae64102f88e1eaa79c878d9b130c89c46}{proc\+Pitch\+Wheel\+Amount}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a195242e3ac0db99bd9d57db2c0dfa774}{proc\+Pitch\+Wheel\+Osc2\+Only}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a2aa5396d48bbeb7992eaab0e34670906}{process\+Pan}} (float param, int idx)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a12cc8f398823e98d35cf78721a57d1b7}{process\+Tune}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac61a748879b5754c395d5bfda1350071}{process\+Legato\+Mode}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a92804809591af1a77636eb4593a4cc3c}{process\+Octave}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_addf29bc4cb60f4921ec426163766cf28}{process\+Filter\+Key\+Follow}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_aaf85455da3db083b0157322ad506cb95}{process\+Self\+Osc\+Push}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a1fe096c7d6922059d7e415dd73dd0ae3}{process\+Unison}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ae09bdf6cce3f7f314717944d8ca55956}{process\+Portamento}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a1095f4dad915543c2afcdafbb11fa36f}{process\+Volume}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a64a4333dd421723137bcdc36eef3100a}{process\+Lfo\+Frequency}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a36751d9689a6c973a3d671299e2bb15a}{process\+Lfo\+Sine}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_aa8e604ec4f81118ac1e60f83a722ff7d}{process\+Lfo\+Square}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a3109e3d7c1767ad2a7f35e270edfcae4}{process\+Lfo\+SH}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a1a90224268b120ff2b709955de1e6f21}{process\+Lfo\+Amt1}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac84194072bf4447dcbf8e6f03a2ead22}{process\+Lfo\+Osc1}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_adaee7598ab725254f60b929fe0ca44dd}{process\+Lfo\+Osc2}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_adfdbd2c7d6f034d7f7fde83d3b1b897a}{process\+Lfo\+Filter}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a56bfee6fffc5b8670d62de11bcc7a4b3}{process\+Lfo\+Pw1}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_abc6e62b8c7df0787bd6f23d112d67b26}{process\+Lfo\+Pw2}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac2132e0ef49def222c215e43f2975730}{process\+Lfo\+Amt2}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_af092185ca6d43ebb94352370fa5c531a}{process\+Detune}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a201702680bf32f4fd02ae793005dc956}{process\+Pulse\+Width}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a92492510cb111e4f3812e393979c67cc}{process\+Pw\+Env}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a3dde8de78eb0e78493a837cfcd52fa3a}{process\+Pw\+Ofs}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ae64d6e29ed2bfd18e97a4f13de37655b}{process\+Pw\+Env\+Both}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac0dca5901a366784ad42ec34d9c5005b}{process\+Invert\+Fenv}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a9bf9d6f89f65b3e0e64859d051f26849}{process\+Pitch\+Mod\+Both}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a9dc3331fb89da3da39cc7da80cb57e0e}{process\+Osc2\+Xmod}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a368ac9f9e808fd3b8a71691c6c62bad1}{process\+Envelope\+To\+Pitch}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac87bf41c3c95db36af41ee327c0062e8}{process\+Osc2\+Hard\+Sync}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a203d89fdcca613446dde6cb08497afcf}{process\+Osc1\+Pitch}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a08e09f7d82be5f525b3e9f07fb98fa96}{process\+Osc2\+Pitch}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a5dff48a2d2535b15d9b2020ad4f10d24}{process\+Pitch\+Quantization}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a98830a5d631326b31fa5e04d9f71eea3}{process\+Osc1\+Mix}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_aad9ab4a693e9bbca0d1f51282c8ad915}{process\+Osc2\+Mix}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a21c2dfd2021edf461313f1d7594e23a1}{process\+Noise\+Mix}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a8055e12ad5c73bad0f1958ccef43ae50}{process\+Brightness}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_aafbe748cda321b0420e223cbc00d1662}{process\+Osc2\+Det}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a691a5221c1ea39b5a4a281b4aac9b99f}{process\+Osc1\+Saw}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a24827d18df02d9267080e1b982172dfa}{process\+Osc1\+Pulse}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a564cc18923ed7bb637f0400611da672f}{process\+Osc2\+Saw}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ab49268237f63d95cab5424ee26d39bcf}{process\+Osc2\+Pulse}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a7867b598fb17edc19134c8f99123f82e}{process\+Cutoff}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_aaf717958f28a3861c6def6debd94d1d6}{process\+Cutoff\+Smoothed}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a54f6af4667b4cb07cce0059fb8d99fd2}{process\+Bandpass\+Sw}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a918d21baf9bdf22d2a49d9d6395a43b7}{process\+Resonance}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ad4ed8976fb53342b8a131c4614635dc5}{process\+Four\+Pole}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ab53c084a18f328086af817e59a92a14e}{process\+Multimode}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a5027eab842a5bc8080063d9bd3a7de49}{process\+Oversampling}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a4d2cf2db0f517dd4b587816da4fe8cf8}{process\+Filter\+Envelope\+Amt}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ae94f792b0169e938d495beb7dd1de510}{process\+Loudness\+Envelope\+Attack}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_aa7614e49407a5f3fc5a6c98bb6551236}{process\+Loudness\+Envelope\+Decay}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ab14a2d8b512c9a74a1072f4c4d0e2ecf}{process\+Loudness\+Envelope\+Release}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac9961a660f1a8a0ec3daf3324a2aec1a}{process\+Loudness\+Envelope\+Sustain}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_af29278c79e97890ecfab7a44a054f002}{process\+Filter\+Envelope\+Attack}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a017e8f8f58988aa3444513f69f97e7b1}{process\+Filter\+Envelope\+Decay}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_ac867efdb328e989b22af369a4f78360b}{process\+Filter\+Envelope\+Release}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a988a0d7b6e4f025346960b902f045535}{process\+Filter\+Envelope\+Sustain}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a595874d9a485cadeb4acf0264547b624}{process\+Envelope\+Detune}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_af900a4943c1d6319b053c4965a8342f6}{process\+Filter\+Detune}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_aa514b898c7517d83eff65d831bfa74f6}{process\+Portamento\+Detune}} (float param)
+\item 
+void \mbox{\hyperlink{class_synth_engine_a8159c5b981d11b30848c931ea48696eb}{process\+Loudness\+Detune}} (float param)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_motherboard}{Motherboard}} \mbox{\hyperlink{class_synth_engine_a3f5f1ccbbb3d916f2d3e25e10f3aece1}{synth}}
+\item 
+\mbox{\hyperlink{class_param_smoother}{Param\+Smoother}} \mbox{\hyperlink{class_synth_engine_aaa2e6373e44ac1ec45973afa616a64d9}{cutoff\+Smoother}}
+\item 
+\mbox{\hyperlink{class_param_smoother}{Param\+Smoother}} \mbox{\hyperlink{class_synth_engine_ac24d10f60c3088ba32d9470b33f79a53}{pitch\+Wheel\+Smoother}}
+\item 
+\mbox{\hyperlink{class_param_smoother}{Param\+Smoother}} \mbox{\hyperlink{class_synth_engine_af6b1ef8acd636ba0d054ea0e75d2d546}{mod\+Wheel\+Smoother}}
+\item 
+float \mbox{\hyperlink{class_synth_engine_aa4226b4cc6166105b6731227edcabaf7}{sample\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_synth_engine_a03cef1704346aadc88b31efb5e5f6b03}\label{class_synth_engine_a03cef1704346aadc88b31efb5e5f6b03} 
+\index{SynthEngine@{SynthEngine}!SynthEngine@{SynthEngine}}
+\index{SynthEngine@{SynthEngine}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{SynthEngine()}{SynthEngine()}}
+{\footnotesize\ttfamily Synth\+Engine\+::\+Synth\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a0d7582a7d0c4fa555d9d012d33b5bacd}\label{class_synth_engine_a0d7582a7d0c4fa555d9d012d33b5bacd} 
+\index{SynthEngine@{SynthEngine}!````~SynthEngine@{\texorpdfstring{$\sim$}{\string~}SynthEngine}}
+\index{````~SynthEngine@{\texorpdfstring{$\sim$}{\string~}SynthEngine}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SynthEngine()}{\string~SynthEngine()}}
+{\footnotesize\ttfamily Synth\+Engine\+::\texorpdfstring{$\sim$}{\string~}\+Synth\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_synth_engine_a746ae95bc13c51c59db41f14e31400da}\label{class_synth_engine_a746ae95bc13c51c59db41f14e31400da} 
+\index{SynthEngine@{SynthEngine}!allNotesOff@{allNotesOff}}
+\index{allNotesOff@{allNotesOff}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{allNotesOff()}{allNotesOff()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::all\+Notes\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a746ae95bc13c51c59db41f14e31400da_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ab8d7c381bdece0c36b2e42923888652e}\label{class_synth_engine_ab8d7c381bdece0c36b2e42923888652e} 
+\index{SynthEngine@{SynthEngine}!allSoundOff@{allSoundOff}}
+\index{allSoundOff@{allSoundOff}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{allSoundOff()}{allSoundOff()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::all\+Sound\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ab8d7c381bdece0c36b2e42923888652e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a19dffa015963687a30c16cac19e16503}\label{class_synth_engine_a19dffa015963687a30c16cac19e16503} 
+\index{SynthEngine@{SynthEngine}!procAmpVelocityAmount@{procAmpVelocityAmount}}
+\index{procAmpVelocityAmount@{procAmpVelocityAmount}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procAmpVelocityAmount()}{procAmpVelocityAmount()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Amp\+Velocity\+Amount (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a1014aab1a394df508dc587d38abbf006}\label{class_synth_engine_a1014aab1a394df508dc587d38abbf006} 
+\index{SynthEngine@{SynthEngine}!procAsPlayedAlloc@{procAsPlayedAlloc}}
+\index{procAsPlayedAlloc@{procAsPlayedAlloc}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procAsPlayedAlloc()}{procAsPlayedAlloc()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+As\+Played\+Alloc (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a7850cc15cccc22238ddb3691326622ce}\label{class_synth_engine_a7850cc15cccc22238ddb3691326622ce} 
+\index{SynthEngine@{SynthEngine}!procEconomyMode@{procEconomyMode}}
+\index{procEconomyMode@{procEconomyMode}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procEconomyMode()}{procEconomyMode()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Economy\+Mode (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a54f6af4667b4cb07cce0059fb8d99fd2}\label{class_synth_engine_a54f6af4667b4cb07cce0059fb8d99fd2} 
+\index{SynthEngine@{SynthEngine}!processBandpassSw@{processBandpassSw}}
+\index{processBandpassSw@{processBandpassSw}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processBandpassSw()}{processBandpassSw()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Bandpass\+Sw (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a8055e12ad5c73bad0f1958ccef43ae50}\label{class_synth_engine_a8055e12ad5c73bad0f1958ccef43ae50} 
+\index{SynthEngine@{SynthEngine}!processBrightness@{processBrightness}}
+\index{processBrightness@{processBrightness}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processBrightness()}{processBrightness()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Brightness (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a8055e12ad5c73bad0f1958ccef43ae50_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a7867b598fb17edc19134c8f99123f82e}\label{class_synth_engine_a7867b598fb17edc19134c8f99123f82e} 
+\index{SynthEngine@{SynthEngine}!processCutoff@{processCutoff}}
+\index{processCutoff@{processCutoff}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processCutoff()}{processCutoff()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Cutoff (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a7867b598fb17edc19134c8f99123f82e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_aaf717958f28a3861c6def6debd94d1d6}\label{class_synth_engine_aaf717958f28a3861c6def6debd94d1d6} 
+\index{SynthEngine@{SynthEngine}!processCutoffSmoothed@{processCutoffSmoothed}}
+\index{processCutoffSmoothed@{processCutoffSmoothed}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processCutoffSmoothed()}{processCutoffSmoothed()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Cutoff\+Smoothed (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_af092185ca6d43ebb94352370fa5c531a}\label{class_synth_engine_af092185ca6d43ebb94352370fa5c531a} 
+\index{SynthEngine@{SynthEngine}!processDetune@{processDetune}}
+\index{processDetune@{processDetune}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processDetune()}{processDetune()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Detune (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_synth_engine_af092185ca6d43ebb94352370fa5c531a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a595874d9a485cadeb4acf0264547b624}\label{class_synth_engine_a595874d9a485cadeb4acf0264547b624} 
+\index{SynthEngine@{SynthEngine}!processEnvelopeDetune@{processEnvelopeDetune}}
+\index{processEnvelopeDetune@{processEnvelopeDetune}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processEnvelopeDetune()}{processEnvelopeDetune()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Envelope\+Detune (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a595874d9a485cadeb4acf0264547b624_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a368ac9f9e808fd3b8a71691c6c62bad1}\label{class_synth_engine_a368ac9f9e808fd3b8a71691c6c62bad1} 
+\index{SynthEngine@{SynthEngine}!processEnvelopeToPitch@{processEnvelopeToPitch}}
+\index{processEnvelopeToPitch@{processEnvelopeToPitch}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processEnvelopeToPitch()}{processEnvelopeToPitch()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Envelope\+To\+Pitch (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_af900a4943c1d6319b053c4965a8342f6}\label{class_synth_engine_af900a4943c1d6319b053c4965a8342f6} 
+\index{SynthEngine@{SynthEngine}!processFilterDetune@{processFilterDetune}}
+\index{processFilterDetune@{processFilterDetune}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFilterDetune()}{processFilterDetune()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Filter\+Detune (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{class_synth_engine_af900a4943c1d6319b053c4965a8342f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a4d2cf2db0f517dd4b587816da4fe8cf8}\label{class_synth_engine_a4d2cf2db0f517dd4b587816da4fe8cf8} 
+\index{SynthEngine@{SynthEngine}!processFilterEnvelopeAmt@{processFilterEnvelopeAmt}}
+\index{processFilterEnvelopeAmt@{processFilterEnvelopeAmt}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFilterEnvelopeAmt()}{processFilterEnvelopeAmt()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Filter\+Envelope\+Amt (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{class_synth_engine_a4d2cf2db0f517dd4b587816da4fe8cf8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_af29278c79e97890ecfab7a44a054f002}\label{class_synth_engine_af29278c79e97890ecfab7a44a054f002} 
+\index{SynthEngine@{SynthEngine}!processFilterEnvelopeAttack@{processFilterEnvelopeAttack}}
+\index{processFilterEnvelopeAttack@{processFilterEnvelopeAttack}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFilterEnvelopeAttack()}{processFilterEnvelopeAttack()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Filter\+Envelope\+Attack (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_af29278c79e97890ecfab7a44a054f002_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a017e8f8f58988aa3444513f69f97e7b1}\label{class_synth_engine_a017e8f8f58988aa3444513f69f97e7b1} 
+\index{SynthEngine@{SynthEngine}!processFilterEnvelopeDecay@{processFilterEnvelopeDecay}}
+\index{processFilterEnvelopeDecay@{processFilterEnvelopeDecay}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFilterEnvelopeDecay()}{processFilterEnvelopeDecay()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Filter\+Envelope\+Decay (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a017e8f8f58988aa3444513f69f97e7b1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ac867efdb328e989b22af369a4f78360b}\label{class_synth_engine_ac867efdb328e989b22af369a4f78360b} 
+\index{SynthEngine@{SynthEngine}!processFilterEnvelopeRelease@{processFilterEnvelopeRelease}}
+\index{processFilterEnvelopeRelease@{processFilterEnvelopeRelease}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFilterEnvelopeRelease()}{processFilterEnvelopeRelease()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Filter\+Envelope\+Release (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ac867efdb328e989b22af369a4f78360b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a988a0d7b6e4f025346960b902f045535}\label{class_synth_engine_a988a0d7b6e4f025346960b902f045535} 
+\index{SynthEngine@{SynthEngine}!processFilterEnvelopeSustain@{processFilterEnvelopeSustain}}
+\index{processFilterEnvelopeSustain@{processFilterEnvelopeSustain}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFilterEnvelopeSustain()}{processFilterEnvelopeSustain()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Filter\+Envelope\+Sustain (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a988a0d7b6e4f025346960b902f045535_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_addf29bc4cb60f4921ec426163766cf28}\label{class_synth_engine_addf29bc4cb60f4921ec426163766cf28} 
+\index{SynthEngine@{SynthEngine}!processFilterKeyFollow@{processFilterKeyFollow}}
+\index{processFilterKeyFollow@{processFilterKeyFollow}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFilterKeyFollow()}{processFilterKeyFollow()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Filter\+Key\+Follow (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_ad4ed8976fb53342b8a131c4614635dc5}\label{class_synth_engine_ad4ed8976fb53342b8a131c4614635dc5} 
+\index{SynthEngine@{SynthEngine}!processFourPole@{processFourPole}}
+\index{processFourPole@{processFourPole}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processFourPole()}{processFourPole()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Four\+Pole (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_ac0dca5901a366784ad42ec34d9c5005b}\label{class_synth_engine_ac0dca5901a366784ad42ec34d9c5005b} 
+\index{SynthEngine@{SynthEngine}!processInvertFenv@{processInvertFenv}}
+\index{processInvertFenv@{processInvertFenv}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processInvertFenv()}{processInvertFenv()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Invert\+Fenv (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_ac61a748879b5754c395d5bfda1350071}\label{class_synth_engine_ac61a748879b5754c395d5bfda1350071} 
+\index{SynthEngine@{SynthEngine}!processLegatoMode@{processLegatoMode}}
+\index{processLegatoMode@{processLegatoMode}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLegatoMode()}{processLegatoMode()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Legato\+Mode (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a1a90224268b120ff2b709955de1e6f21}\label{class_synth_engine_a1a90224268b120ff2b709955de1e6f21} 
+\index{SynthEngine@{SynthEngine}!processLfoAmt1@{processLfoAmt1}}
+\index{processLfoAmt1@{processLfoAmt1}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoAmt1()}{processLfoAmt1()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Amt1 (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_synth_engine_a1a90224268b120ff2b709955de1e6f21_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ac2132e0ef49def222c215e43f2975730}\label{class_synth_engine_ac2132e0ef49def222c215e43f2975730} 
+\index{SynthEngine@{SynthEngine}!processLfoAmt2@{processLfoAmt2}}
+\index{processLfoAmt2@{processLfoAmt2}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoAmt2()}{processLfoAmt2()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Amt2 (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_synth_engine_ac2132e0ef49def222c215e43f2975730_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_adfdbd2c7d6f034d7f7fde83d3b1b897a}\label{class_synth_engine_adfdbd2c7d6f034d7f7fde83d3b1b897a} 
+\index{SynthEngine@{SynthEngine}!processLfoFilter@{processLfoFilter}}
+\index{processLfoFilter@{processLfoFilter}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoFilter()}{processLfoFilter()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Filter (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a64a4333dd421723137bcdc36eef3100a}\label{class_synth_engine_a64a4333dd421723137bcdc36eef3100a} 
+\index{SynthEngine@{SynthEngine}!processLfoFrequency@{processLfoFrequency}}
+\index{processLfoFrequency@{processLfoFrequency}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoFrequency()}{processLfoFrequency()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Frequency (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a64a4333dd421723137bcdc36eef3100a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ac84194072bf4447dcbf8e6f03a2ead22}\label{class_synth_engine_ac84194072bf4447dcbf8e6f03a2ead22} 
+\index{SynthEngine@{SynthEngine}!processLfoOsc1@{processLfoOsc1}}
+\index{processLfoOsc1@{processLfoOsc1}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoOsc1()}{processLfoOsc1()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Osc1 (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_adaee7598ab725254f60b929fe0ca44dd}\label{class_synth_engine_adaee7598ab725254f60b929fe0ca44dd} 
+\index{SynthEngine@{SynthEngine}!processLfoOsc2@{processLfoOsc2}}
+\index{processLfoOsc2@{processLfoOsc2}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoOsc2()}{processLfoOsc2()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Osc2 (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a56bfee6fffc5b8670d62de11bcc7a4b3}\label{class_synth_engine_a56bfee6fffc5b8670d62de11bcc7a4b3} 
+\index{SynthEngine@{SynthEngine}!processLfoPw1@{processLfoPw1}}
+\index{processLfoPw1@{processLfoPw1}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoPw1()}{processLfoPw1()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Pw1 (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_abc6e62b8c7df0787bd6f23d112d67b26}\label{class_synth_engine_abc6e62b8c7df0787bd6f23d112d67b26} 
+\index{SynthEngine@{SynthEngine}!processLfoPw2@{processLfoPw2}}
+\index{processLfoPw2@{processLfoPw2}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoPw2()}{processLfoPw2()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Pw2 (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a3109e3d7c1767ad2a7f35e270edfcae4}\label{class_synth_engine_a3109e3d7c1767ad2a7f35e270edfcae4} 
+\index{SynthEngine@{SynthEngine}!processLfoSH@{processLfoSH}}
+\index{processLfoSH@{processLfoSH}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoSH()}{processLfoSH()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+SH (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a36751d9689a6c973a3d671299e2bb15a}\label{class_synth_engine_a36751d9689a6c973a3d671299e2bb15a} 
+\index{SynthEngine@{SynthEngine}!processLfoSine@{processLfoSine}}
+\index{processLfoSine@{processLfoSine}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoSine()}{processLfoSine()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Sine (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_aa8e604ec4f81118ac1e60f83a722ff7d}\label{class_synth_engine_aa8e604ec4f81118ac1e60f83a722ff7d} 
+\index{SynthEngine@{SynthEngine}!processLfoSquare@{processLfoSquare}}
+\index{processLfoSquare@{processLfoSquare}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLfoSquare()}{processLfoSquare()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Lfo\+Square (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a8159c5b981d11b30848c931ea48696eb}\label{class_synth_engine_a8159c5b981d11b30848c931ea48696eb} 
+\index{SynthEngine@{SynthEngine}!processLoudnessDetune@{processLoudnessDetune}}
+\index{processLoudnessDetune@{processLoudnessDetune}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLoudnessDetune()}{processLoudnessDetune()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Loudness\+Detune (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_synth_engine_a8159c5b981d11b30848c931ea48696eb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ae94f792b0169e938d495beb7dd1de510}\label{class_synth_engine_ae94f792b0169e938d495beb7dd1de510} 
+\index{SynthEngine@{SynthEngine}!processLoudnessEnvelopeAttack@{processLoudnessEnvelopeAttack}}
+\index{processLoudnessEnvelopeAttack@{processLoudnessEnvelopeAttack}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLoudnessEnvelopeAttack()}{processLoudnessEnvelopeAttack()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Loudness\+Envelope\+Attack (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ae94f792b0169e938d495beb7dd1de510_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_aa7614e49407a5f3fc5a6c98bb6551236}\label{class_synth_engine_aa7614e49407a5f3fc5a6c98bb6551236} 
+\index{SynthEngine@{SynthEngine}!processLoudnessEnvelopeDecay@{processLoudnessEnvelopeDecay}}
+\index{processLoudnessEnvelopeDecay@{processLoudnessEnvelopeDecay}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLoudnessEnvelopeDecay()}{processLoudnessEnvelopeDecay()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Loudness\+Envelope\+Decay (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_aa7614e49407a5f3fc5a6c98bb6551236_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ab14a2d8b512c9a74a1072f4c4d0e2ecf}\label{class_synth_engine_ab14a2d8b512c9a74a1072f4c4d0e2ecf} 
+\index{SynthEngine@{SynthEngine}!processLoudnessEnvelopeRelease@{processLoudnessEnvelopeRelease}}
+\index{processLoudnessEnvelopeRelease@{processLoudnessEnvelopeRelease}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLoudnessEnvelopeRelease()}{processLoudnessEnvelopeRelease()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Loudness\+Envelope\+Release (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ab14a2d8b512c9a74a1072f4c4d0e2ecf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ac9961a660f1a8a0ec3daf3324a2aec1a}\label{class_synth_engine_ac9961a660f1a8a0ec3daf3324a2aec1a} 
+\index{SynthEngine@{SynthEngine}!processLoudnessEnvelopeSustain@{processLoudnessEnvelopeSustain}}
+\index{processLoudnessEnvelopeSustain@{processLoudnessEnvelopeSustain}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processLoudnessEnvelopeSustain()}{processLoudnessEnvelopeSustain()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Loudness\+Envelope\+Sustain (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ac9961a660f1a8a0ec3daf3324a2aec1a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ab53c084a18f328086af817e59a92a14e}\label{class_synth_engine_ab53c084a18f328086af817e59a92a14e} 
+\index{SynthEngine@{SynthEngine}!processMultimode@{processMultimode}}
+\index{processMultimode@{processMultimode}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processMultimode()}{processMultimode()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Multimode (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ab53c084a18f328086af817e59a92a14e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a21c2dfd2021edf461313f1d7594e23a1}\label{class_synth_engine_a21c2dfd2021edf461313f1d7594e23a1} 
+\index{SynthEngine@{SynthEngine}!processNoiseMix@{processNoiseMix}}
+\index{processNoiseMix@{processNoiseMix}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processNoiseMix()}{processNoiseMix()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Noise\+Mix (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_synth_engine_a21c2dfd2021edf461313f1d7594e23a1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a92804809591af1a77636eb4593a4cc3c}\label{class_synth_engine_a92804809591af1a77636eb4593a4cc3c} 
+\index{SynthEngine@{SynthEngine}!processOctave@{processOctave}}
+\index{processOctave@{processOctave}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOctave()}{processOctave()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Octave (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a98830a5d631326b31fa5e04d9f71eea3}\label{class_synth_engine_a98830a5d631326b31fa5e04d9f71eea3} 
+\index{SynthEngine@{SynthEngine}!processOsc1Mix@{processOsc1Mix}}
+\index{processOsc1Mix@{processOsc1Mix}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc1Mix()}{processOsc1Mix()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc1\+Mix (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a203d89fdcca613446dde6cb08497afcf}\label{class_synth_engine_a203d89fdcca613446dde6cb08497afcf} 
+\index{SynthEngine@{SynthEngine}!processOsc1Pitch@{processOsc1Pitch}}
+\index{processOsc1Pitch@{processOsc1Pitch}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc1Pitch()}{processOsc1Pitch()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc1\+Pitch (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a24827d18df02d9267080e1b982172dfa}\label{class_synth_engine_a24827d18df02d9267080e1b982172dfa} 
+\index{SynthEngine@{SynthEngine}!processOsc1Pulse@{processOsc1Pulse}}
+\index{processOsc1Pulse@{processOsc1Pulse}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc1Pulse()}{processOsc1Pulse()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc1\+Pulse (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a691a5221c1ea39b5a4a281b4aac9b99f}\label{class_synth_engine_a691a5221c1ea39b5a4a281b4aac9b99f} 
+\index{SynthEngine@{SynthEngine}!processOsc1Saw@{processOsc1Saw}}
+\index{processOsc1Saw@{processOsc1Saw}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc1Saw()}{processOsc1Saw()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc1\+Saw (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_aafbe748cda321b0420e223cbc00d1662}\label{class_synth_engine_aafbe748cda321b0420e223cbc00d1662} 
+\index{SynthEngine@{SynthEngine}!processOsc2Det@{processOsc2Det}}
+\index{processOsc2Det@{processOsc2Det}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc2Det()}{processOsc2Det()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc2\+Det (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_synth_engine_aafbe748cda321b0420e223cbc00d1662_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ac87bf41c3c95db36af41ee327c0062e8}\label{class_synth_engine_ac87bf41c3c95db36af41ee327c0062e8} 
+\index{SynthEngine@{SynthEngine}!processOsc2HardSync@{processOsc2HardSync}}
+\index{processOsc2HardSync@{processOsc2HardSync}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc2HardSync()}{processOsc2HardSync()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc2\+Hard\+Sync (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_aad9ab4a693e9bbca0d1f51282c8ad915}\label{class_synth_engine_aad9ab4a693e9bbca0d1f51282c8ad915} 
+\index{SynthEngine@{SynthEngine}!processOsc2Mix@{processOsc2Mix}}
+\index{processOsc2Mix@{processOsc2Mix}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc2Mix()}{processOsc2Mix()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc2\+Mix (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a08e09f7d82be5f525b3e9f07fb98fa96}\label{class_synth_engine_a08e09f7d82be5f525b3e9f07fb98fa96} 
+\index{SynthEngine@{SynthEngine}!processOsc2Pitch@{processOsc2Pitch}}
+\index{processOsc2Pitch@{processOsc2Pitch}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc2Pitch()}{processOsc2Pitch()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc2\+Pitch (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_ab49268237f63d95cab5424ee26d39bcf}\label{class_synth_engine_ab49268237f63d95cab5424ee26d39bcf} 
+\index{SynthEngine@{SynthEngine}!processOsc2Pulse@{processOsc2Pulse}}
+\index{processOsc2Pulse@{processOsc2Pulse}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc2Pulse()}{processOsc2Pulse()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc2\+Pulse (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a564cc18923ed7bb637f0400611da672f}\label{class_synth_engine_a564cc18923ed7bb637f0400611da672f} 
+\index{SynthEngine@{SynthEngine}!processOsc2Saw@{processOsc2Saw}}
+\index{processOsc2Saw@{processOsc2Saw}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc2Saw()}{processOsc2Saw()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc2\+Saw (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a9dc3331fb89da3da39cc7da80cb57e0e}\label{class_synth_engine_a9dc3331fb89da3da39cc7da80cb57e0e} 
+\index{SynthEngine@{SynthEngine}!processOsc2Xmod@{processOsc2Xmod}}
+\index{processOsc2Xmod@{processOsc2Xmod}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOsc2Xmod()}{processOsc2Xmod()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Osc2\+Xmod (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a5027eab842a5bc8080063d9bd3a7de49}\label{class_synth_engine_a5027eab842a5bc8080063d9bd3a7de49} 
+\index{SynthEngine@{SynthEngine}!processOversampling@{processOversampling}}
+\index{processOversampling@{processOversampling}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processOversampling()}{processOversampling()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Oversampling (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a5027eab842a5bc8080063d9bd3a7de49_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a2aa5396d48bbeb7992eaab0e34670906}\label{class_synth_engine_a2aa5396d48bbeb7992eaab0e34670906} 
+\index{SynthEngine@{SynthEngine}!processPan@{processPan}}
+\index{processPan@{processPan}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPan()}{processPan()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Pan (\begin{DoxyParamCaption}\item[{float}]{param,  }\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a9bf9d6f89f65b3e0e64859d051f26849}\label{class_synth_engine_a9bf9d6f89f65b3e0e64859d051f26849} 
+\index{SynthEngine@{SynthEngine}!processPitchModBoth@{processPitchModBoth}}
+\index{processPitchModBoth@{processPitchModBoth}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPitchModBoth()}{processPitchModBoth()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Pitch\+Mod\+Both (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a5dff48a2d2535b15d9b2020ad4f10d24}\label{class_synth_engine_a5dff48a2d2535b15d9b2020ad4f10d24} 
+\index{SynthEngine@{SynthEngine}!processPitchQuantization@{processPitchQuantization}}
+\index{processPitchQuantization@{processPitchQuantization}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPitchQuantization()}{processPitchQuantization()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Pitch\+Quantization (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_ae09bdf6cce3f7f314717944d8ca55956}\label{class_synth_engine_ae09bdf6cce3f7f314717944d8ca55956} 
+\index{SynthEngine@{SynthEngine}!processPortamento@{processPortamento}}
+\index{processPortamento@{processPortamento}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPortamento()}{processPortamento()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Portamento (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_synth_engine_ae09bdf6cce3f7f314717944d8ca55956_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_aa514b898c7517d83eff65d831bfa74f6}\label{class_synth_engine_aa514b898c7517d83eff65d831bfa74f6} 
+\index{SynthEngine@{SynthEngine}!processPortamentoDetune@{processPortamentoDetune}}
+\index{processPortamentoDetune@{processPortamentoDetune}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPortamentoDetune()}{processPortamentoDetune()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Portamento\+Detune (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_synth_engine_aa514b898c7517d83eff65d831bfa74f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a201702680bf32f4fd02ae793005dc956}\label{class_synth_engine_a201702680bf32f4fd02ae793005dc956} 
+\index{SynthEngine@{SynthEngine}!processPulseWidth@{processPulseWidth}}
+\index{processPulseWidth@{processPulseWidth}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPulseWidth()}{processPulseWidth()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Pulse\+Width (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_synth_engine_a201702680bf32f4fd02ae793005dc956_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a92492510cb111e4f3812e393979c67cc}\label{class_synth_engine_a92492510cb111e4f3812e393979c67cc} 
+\index{SynthEngine@{SynthEngine}!processPwEnv@{processPwEnv}}
+\index{processPwEnv@{processPwEnv}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPwEnv()}{processPwEnv()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Pw\+Env (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_synth_engine_a92492510cb111e4f3812e393979c67cc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ae64d6e29ed2bfd18e97a4f13de37655b}\label{class_synth_engine_ae64d6e29ed2bfd18e97a4f13de37655b} 
+\index{SynthEngine@{SynthEngine}!processPwEnvBoth@{processPwEnvBoth}}
+\index{processPwEnvBoth@{processPwEnvBoth}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPwEnvBoth()}{processPwEnvBoth()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Pw\+Env\+Both (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a3dde8de78eb0e78493a837cfcd52fa3a}\label{class_synth_engine_a3dde8de78eb0e78493a837cfcd52fa3a} 
+\index{SynthEngine@{SynthEngine}!processPwOfs@{processPwOfs}}
+\index{processPwOfs@{processPwOfs}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processPwOfs()}{processPwOfs()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Pw\+Ofs (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_synth_engine_a3dde8de78eb0e78493a837cfcd52fa3a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a918d21baf9bdf22d2a49d9d6395a43b7}\label{class_synth_engine_a918d21baf9bdf22d2a49d9d6395a43b7} 
+\index{SynthEngine@{SynthEngine}!processResonance@{processResonance}}
+\index{processResonance@{processResonance}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processResonance()}{processResonance()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Resonance (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a918d21baf9bdf22d2a49d9d6395a43b7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a8025bb297523bab338f6fa03dcc13dce}\label{class_synth_engine_a8025bb297523bab338f6fa03dcc13dce} 
+\index{SynthEngine@{SynthEngine}!processSample@{processSample}}
+\index{processSample@{processSample}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processSample()}{processSample()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Sample (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{left,  }\item[{float \texorpdfstring{$\ast$}{*}}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a8025bb297523bab338f6fa03dcc13dce_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_aaf85455da3db083b0157322ad506cb95}\label{class_synth_engine_aaf85455da3db083b0157322ad506cb95} 
+\index{SynthEngine@{SynthEngine}!processSelfOscPush@{processSelfOscPush}}
+\index{processSelfOscPush@{processSelfOscPush}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processSelfOscPush()}{processSelfOscPush()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Self\+Osc\+Push (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a12cc8f398823e98d35cf78721a57d1b7}\label{class_synth_engine_a12cc8f398823e98d35cf78721a57d1b7} 
+\index{SynthEngine@{SynthEngine}!processTune@{processTune}}
+\index{processTune@{processTune}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processTune()}{processTune()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Tune (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a1fe096c7d6922059d7e415dd73dd0ae3}\label{class_synth_engine_a1fe096c7d6922059d7e415dd73dd0ae3} 
+\index{SynthEngine@{SynthEngine}!processUnison@{processUnison}}
+\index{processUnison@{processUnison}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processUnison()}{processUnison()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Unison (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a1095f4dad915543c2afcdafbb11fa36f}\label{class_synth_engine_a1095f4dad915543c2afcdafbb11fa36f} 
+\index{SynthEngine@{SynthEngine}!processVolume@{processVolume}}
+\index{processVolume@{processVolume}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{processVolume()}{processVolume()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::process\+Volume (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_synth_engine_a1095f4dad915543c2afcdafbb11fa36f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ad4065c22b748e2531b41bb0809ed0d18}\label{class_synth_engine_ad4065c22b748e2531b41bb0809ed0d18} 
+\index{SynthEngine@{SynthEngine}!procFltVelocityAmount@{procFltVelocityAmount}}
+\index{procFltVelocityAmount@{procFltVelocityAmount}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procFltVelocityAmount()}{procFltVelocityAmount()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Flt\+Velocity\+Amount (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_ac0fd1cf39d027f3f10a15648e38bf5c9}\label{class_synth_engine_ac0fd1cf39d027f3f10a15648e38bf5c9} 
+\index{SynthEngine@{SynthEngine}!procLfoSync@{procLfoSync}}
+\index{procLfoSync@{procLfoSync}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procLfoSync()}{procLfoSync()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Lfo\+Sync (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ac0fd1cf39d027f3f10a15648e38bf5c9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a0bf333991b34eb79dc95c368e8bd7c17}\label{class_synth_engine_a0bf333991b34eb79dc95c368e8bd7c17} 
+\index{SynthEngine@{SynthEngine}!procModWheel@{procModWheel}}
+\index{procModWheel@{procModWheel}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procModWheel()}{procModWheel()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Mod\+Wheel (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a0bf333991b34eb79dc95c368e8bd7c17_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a3e1e345acdcedd500ce4e936bd2b3762}\label{class_synth_engine_a3e1e345acdcedd500ce4e936bd2b3762} 
+\index{SynthEngine@{SynthEngine}!procModWheelFrequency@{procModWheelFrequency}}
+\index{procModWheelFrequency@{procModWheelFrequency}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procModWheelFrequency()}{procModWheelFrequency()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Mod\+Wheel\+Frequency (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a3e1e345acdcedd500ce4e936bd2b3762_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a9ec1a840475181a4f734911bec8197f8}\label{class_synth_engine_a9ec1a840475181a4f734911bec8197f8} 
+\index{SynthEngine@{SynthEngine}!procModWheelSmoothed@{procModWheelSmoothed}}
+\index{procModWheelSmoothed@{procModWheelSmoothed}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procModWheelSmoothed()}{procModWheelSmoothed()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Mod\+Wheel\+Smoothed (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a22f5a21134732f98f1db0937cfffc28f}\label{class_synth_engine_a22f5a21134732f98f1db0937cfffc28f} 
+\index{SynthEngine@{SynthEngine}!procNoteOff@{procNoteOff}}
+\index{procNoteOff@{procNoteOff}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procNoteOff()}{procNoteOff()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Note\+Off (\begin{DoxyParamCaption}\item[{int}]{note\+No }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a22f5a21134732f98f1db0937cfffc28f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a6e340f7d6def984168824b4f464feb07}\label{class_synth_engine_a6e340f7d6def984168824b4f464feb07} 
+\index{SynthEngine@{SynthEngine}!procNoteOn@{procNoteOn}}
+\index{procNoteOn@{procNoteOn}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procNoteOn()}{procNoteOn()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Note\+On (\begin{DoxyParamCaption}\item[{int}]{note\+No,  }\item[{float}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a6e340f7d6def984168824b4f464feb07_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a2c03ca16e86e1a6aa31ec5f180b1f745}\label{class_synth_engine_a2c03ca16e86e1a6aa31ec5f180b1f745} 
+\index{SynthEngine@{SynthEngine}!procPitchWheel@{procPitchWheel}}
+\index{procPitchWheel@{procPitchWheel}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procPitchWheel()}{procPitchWheel()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Pitch\+Wheel (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a2c03ca16e86e1a6aa31ec5f180b1f745_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ae64102f88e1eaa79c878d9b130c89c46}\label{class_synth_engine_ae64102f88e1eaa79c878d9b130c89c46} 
+\index{SynthEngine@{SynthEngine}!procPitchWheelAmount@{procPitchWheelAmount}}
+\index{procPitchWheelAmount@{procPitchWheelAmount}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procPitchWheelAmount()}{procPitchWheelAmount()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Pitch\+Wheel\+Amount (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a195242e3ac0db99bd9d57db2c0dfa774}\label{class_synth_engine_a195242e3ac0db99bd9d57db2c0dfa774} 
+\index{SynthEngine@{SynthEngine}!procPitchWheelOsc2Only@{procPitchWheelOsc2Only}}
+\index{procPitchWheelOsc2Only@{procPitchWheelOsc2Only}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procPitchWheelOsc2Only()}{procPitchWheelOsc2Only()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Pitch\+Wheel\+Osc2\+Only (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a1ab1dd3da1903f0ecca21af5a78dca69}\label{class_synth_engine_a1ab1dd3da1903f0ecca21af5a78dca69} 
+\index{SynthEngine@{SynthEngine}!procPitchWheelSmoothed@{procPitchWheelSmoothed}}
+\index{procPitchWheelSmoothed@{procPitchWheelSmoothed}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{procPitchWheelSmoothed()}{procPitchWheelSmoothed()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::proc\+Pitch\+Wheel\+Smoothed (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_synth_engine_a225926f64dc14402f0b92b2489fe5733}\label{class_synth_engine_a225926f64dc14402f0b92b2489fe5733} 
+\index{SynthEngine@{SynthEngine}!setPlayHead@{setPlayHead}}
+\index{setPlayHead@{setPlayHead}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{setPlayHead()}{setPlayHead()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::set\+Play\+Head (\begin{DoxyParamCaption}\item[{float}]{bpm,  }\item[{float}]{retr\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a225926f64dc14402f0b92b2489fe5733_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a49ae4d678b95d7b76a901890c7be90a9}\label{class_synth_engine_a49ae4d678b95d7b76a901890c7be90a9} 
+\index{SynthEngine@{SynthEngine}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a49ae4d678b95d7b76a901890c7be90a9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_ac231381a1067250da22ea0a999e277b0}\label{class_synth_engine_ac231381a1067250da22ea0a999e277b0} 
+\index{SynthEngine@{SynthEngine}!setVoiceCount@{setVoiceCount}}
+\index{setVoiceCount@{setVoiceCount}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{setVoiceCount()}{setVoiceCount()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::set\+Voice\+Count (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_ac231381a1067250da22ea0a999e277b0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a7094bdb84c9549f7a785a3b37128d8da}\label{class_synth_engine_a7094bdb84c9549f7a785a3b37128d8da} 
+\index{SynthEngine@{SynthEngine}!sustainOff@{sustainOff}}
+\index{sustainOff@{sustainOff}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{sustainOff()}{sustainOff()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::sustain\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a7094bdb84c9549f7a785a3b37128d8da_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_synth_engine_a363a81c1e9b5bf4b0968bc113443afc9}\label{class_synth_engine_a363a81c1e9b5bf4b0968bc113443afc9} 
+\index{SynthEngine@{SynthEngine}!sustainOn@{sustainOn}}
+\index{sustainOn@{sustainOn}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{sustainOn()}{sustainOn()}}
+{\footnotesize\ttfamily void Synth\+Engine\+::sustain\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synth_engine_a363a81c1e9b5bf4b0968bc113443afc9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_synth_engine_aaa2e6373e44ac1ec45973afa616a64d9}\label{class_synth_engine_aaa2e6373e44ac1ec45973afa616a64d9} 
+\index{SynthEngine@{SynthEngine}!cutoffSmoother@{cutoffSmoother}}
+\index{cutoffSmoother@{cutoffSmoother}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{cutoffSmoother}{cutoffSmoother}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_param_smoother}{Param\+Smoother}} Synth\+Engine\+::cutoff\+Smoother\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_synth_engine_af6b1ef8acd636ba0d054ea0e75d2d546}\label{class_synth_engine_af6b1ef8acd636ba0d054ea0e75d2d546} 
+\index{SynthEngine@{SynthEngine}!modWheelSmoother@{modWheelSmoother}}
+\index{modWheelSmoother@{modWheelSmoother}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{modWheelSmoother}{modWheelSmoother}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_param_smoother}{Param\+Smoother}} Synth\+Engine\+::mod\+Wheel\+Smoother\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_synth_engine_ac24d10f60c3088ba32d9470b33f79a53}\label{class_synth_engine_ac24d10f60c3088ba32d9470b33f79a53} 
+\index{SynthEngine@{SynthEngine}!pitchWheelSmoother@{pitchWheelSmoother}}
+\index{pitchWheelSmoother@{pitchWheelSmoother}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{pitchWheelSmoother}{pitchWheelSmoother}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_param_smoother}{Param\+Smoother}} Synth\+Engine\+::pitch\+Wheel\+Smoother\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_synth_engine_aa4226b4cc6166105b6731227edcabaf7}\label{class_synth_engine_aa4226b4cc6166105b6731227edcabaf7} 
+\index{SynthEngine@{SynthEngine}!sampleRate@{sampleRate}}
+\index{sampleRate@{sampleRate}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{sampleRate}{sampleRate}}
+{\footnotesize\ttfamily float Synth\+Engine\+::sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_synth_engine_a3f5f1ccbbb3d916f2d3e25e10f3aece1}\label{class_synth_engine_a3f5f1ccbbb3d916f2d3e25e10f3aece1} 
+\index{SynthEngine@{SynthEngine}!synth@{synth}}
+\index{synth@{synth}!SynthEngine@{SynthEngine}}
+\doxysubsubsection{\texorpdfstring{synth}{synth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_motherboard}{Motherboard}} Synth\+Engine\+::synth\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_synth_engine_8h}{Synth\+Engine.\+h}}\end{DoxyCompactItemize}

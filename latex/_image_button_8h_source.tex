@@ -1,0 +1,93 @@
+\doxysection{Image\+Button.\+h}
+\hypertarget{_image_button_8h_source}{}\label{_image_button_8h_source}\index{Source/Gui/ImageButton.h@{Source/Gui/ImageButton.h}}
+\mbox{\hyperlink{_image_button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ {\ucr}\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}../Source/Engine/SynthEngine.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_image_menu}{ImageMenu}}\ :\ \textcolor{keyword}{public}\ ImageButton,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ juce::String\ \mbox{\hyperlink{class_image_menu_a0138d9f863325f6e5882f5bdfc5482c5}{img\_name}};}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_image_menu_ace1e751688537c4cff5165667511ebcb}{ImageMenu}}(juce::String\ nameImg,\ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}*\ owner\_)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ :\ \ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}(owner\_),\ \mbox{\hyperlink{class_image_menu_a0138d9f863325f6e5882f5bdfc5482c5}{img\_name}}(nameImg)}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_image_menu_afd08b1d572a3b9811a17ad0eddaad903}{scaleFactorChanged}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ setOpaque(\textcolor{keyword}{false});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_image_menu_afd08b1d572a3b9811a17ad0eddaad903}{scaleFactorChanged}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}}\ =\ \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{getScaleFactor}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{isHighResolutionDisplay}}\ =\ \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{getIsHighResolutionDisplay}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ Image\ normalImage\ =\ \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{getScaledImageFromCache}}(\mbox{\hyperlink{class_image_menu_a0138d9f863325f6e5882f5bdfc5482c5}{img\_name}},\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}},\ \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{isHighResolutionDisplay}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ Image\ downImage\ =\ \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{getScaledImageFromCache}}(\mbox{\hyperlink{class_image_menu_a0138d9f863325f6e5882f5bdfc5482c5}{img\_name}},\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}},\ \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{isHighResolutionDisplay}});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ resizeButtonNowToFitThisImage\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ rescaleImagesWhenButtonSizeChanges\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ preserveImageProportions\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ false,}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true,}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true,}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ image,}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0f,\ //\ menu\ transparency}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Colour(),}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ image,}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0f,\ //\ menu\ hover\ transparency}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Colour(),}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ image,}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.3f,\ //\ menu\ click\ transparency}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Colour());}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ setImages(resizeButtonNowToFitThisImage,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rescaleImagesWhenButtonSizeChanges,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ preserveImageProportions,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ normalImage,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0f,\ \textcolor{comment}{//\ menu\ transparency}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Colour(),}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ normalImage,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0f,\ \textcolor{comment}{//\ menu\ hover\ transparency}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Colour(),}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ downImage,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.3f,\ \textcolor{comment}{//\ menu\ click\ transparency}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Colour());}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ repaint();}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00087\ \};}
+
+\end{DoxyCode}

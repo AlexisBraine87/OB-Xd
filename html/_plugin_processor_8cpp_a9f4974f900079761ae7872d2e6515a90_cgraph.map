@@ -1,0 +1,9 @@
+<map id="createParameterLayout" name="createParameterLayout">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,162,75"/>
+<area shape="rect" id="Node000002" href="$class_obxd_audio_processor.html#a79d31ca6a08527372417d349a02471ed" title=" " alt="" coords="228,5,387,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,46,212,38,213,43,163,52"/>
+<area shape="rect" id="Node000003" href="$class_obxd_audio_processor.html#a7cf65eb58c98597a3d8209f241a65642" title=" " alt="" coords="210,70,405,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,72,195,77,194,82,162,77"/>
+<area shape="rect" id="Node000004" href="$_audio_utils_8h.html#a86c573cb84544ddad4fd2dd6d1b2104e" title=" " alt="" coords="453,85,505,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="406,95,437,95,437,100,406,100"/>
+</map>

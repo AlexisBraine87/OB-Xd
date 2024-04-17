@@ -1,0 +1,92 @@
+\doxysection{Voice\+Queue Class Reference}
+\hypertarget{class_voice_queue}{}\label{class_voice_queue}\index{VoiceQueue@{VoiceQueue}}
+
+
+{\ttfamily \#include $<$Voice\+Queue.\+h$>$}
+
+
+
+Collaboration diagram for Voice\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_voice_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_voice_queue_ab3336f7e7ae81aec4bfdd1b205089bf6}{Voice\+Queue}} ()
+\item 
+\mbox{\hyperlink{class_voice_queue_ab688a7226db43172cb1b0c2f55a59802}{Voice\+Queue}} (int voice\+Count, \mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \texorpdfstring{$\ast$}{*}voices\+Reference)
+\item 
+\mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_voice_queue_ae3a08fc2751ab423cd8f52e7b1166142}{get\+Next}} ()
+\item 
+void \mbox{\hyperlink{class_voice_queue_aa8fb429906bd14725d4035aecc2ddc04}{re\+Init}} (int voice\+Count)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_voice_queue_ad2477a77e6a3767abad1c6e9ce54338c}{voices}}
+\item 
+int \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}
+\item 
+int \mbox{\hyperlink{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}{total}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_voice_queue_ab3336f7e7ae81aec4bfdd1b205089bf6}\label{class_voice_queue_ab3336f7e7ae81aec4bfdd1b205089bf6} 
+\index{VoiceQueue@{VoiceQueue}!VoiceQueue@{VoiceQueue}}
+\index{VoiceQueue@{VoiceQueue}!VoiceQueue@{VoiceQueue}}
+\doxysubsubsection{\texorpdfstring{VoiceQueue()}{VoiceQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Voice\+Queue\+::\+Voice\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_voice_queue_ab688a7226db43172cb1b0c2f55a59802}\label{class_voice_queue_ab688a7226db43172cb1b0c2f55a59802} 
+\index{VoiceQueue@{VoiceQueue}!VoiceQueue@{VoiceQueue}}
+\index{VoiceQueue@{VoiceQueue}!VoiceQueue@{VoiceQueue}}
+\doxysubsubsection{\texorpdfstring{VoiceQueue()}{VoiceQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Voice\+Queue\+::\+Voice\+Queue (\begin{DoxyParamCaption}\item[{int}]{voice\+Count,  }\item[{\mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \texorpdfstring{$\ast$}{*}}]{voices\+Reference }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_voice_queue_ae3a08fc2751ab423cd8f52e7b1166142}\label{class_voice_queue_ae3a08fc2751ab423cd8f52e7b1166142} 
+\index{VoiceQueue@{VoiceQueue}!getNext@{getNext}}
+\index{getNext@{getNext}!VoiceQueue@{VoiceQueue}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \texorpdfstring{$\ast$}{*} Voice\+Queue\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_voice_queue_aa8fb429906bd14725d4035aecc2ddc04}\label{class_voice_queue_aa8fb429906bd14725d4035aecc2ddc04} 
+\index{VoiceQueue@{VoiceQueue}!reInit@{reInit}}
+\index{reInit@{reInit}!VoiceQueue@{VoiceQueue}}
+\doxysubsubsection{\texorpdfstring{reInit()}{reInit()}}
+{\footnotesize\ttfamily void Voice\+Queue\+::re\+Init (\begin{DoxyParamCaption}\item[{int}]{voice\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}\label{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f} 
+\index{VoiceQueue@{VoiceQueue}!idx@{idx}}
+\index{idx@{idx}!VoiceQueue@{VoiceQueue}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily int Voice\+Queue\+::idx\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}\label{class_voice_queue_a63846d0f8681e0b59666d197da3297e0} 
+\index{VoiceQueue@{VoiceQueue}!total@{total}}
+\index{total@{total}!VoiceQueue@{VoiceQueue}}
+\doxysubsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily int Voice\+Queue\+::total\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_voice_queue_ad2477a77e6a3767abad1c6e9ce54338c}\label{class_voice_queue_ad2477a77e6a3767abad1c6e9ce54338c} 
+\index{VoiceQueue@{VoiceQueue}!voices@{voices}}
+\index{voices@{voices}!VoiceQueue@{VoiceQueue}}
+\doxysubsubsection{\texorpdfstring{voices}{voices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}}\texorpdfstring{$\ast$}{*} Voice\+Queue\+::voices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_voice_queue_8h}{Voice\+Queue.\+h}}\end{DoxyCompactItemize}

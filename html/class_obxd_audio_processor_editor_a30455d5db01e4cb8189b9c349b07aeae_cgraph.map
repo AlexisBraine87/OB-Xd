@@ -1,0 +1,23 @@
+<map id="ObxdAudioProcessorEditor::scaleFactorChanged" name="ObxdAudioProcessorEditor::scaleFactorChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,184,209"/>
+<area shape="rect" id="Node000002" href="$class_scalable_component.html#ad50b7cfc6a69d37ac7f0f1bdea7b12e8" title=" " alt="" coords="232,37,415,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,165,169,127,230,89,244,82,246,87,233,93,172,132,122,170"/>
+<area shape="rect" id="Node000007" href="$class_scalable_component.html#ae23f6266007c204094dd7698a16ebab0" title=" " alt="" coords="250,103,397,143"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="167,165,235,145,236,151,169,170"/>
+<area shape="rect" id="Node000008" href="$class_obxd_audio_processor.html#af2ea050c8265c290e394af436418e76c" title=" " alt="" coords="251,168,396,209"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="184,186,235,186,235,191,184,191"/>
+<area shape="rect" id="Node000009" href="$class_obxd_audio_processor_editor.html#a18022ae1d7a1e675fda1a6adb02ba3a6" title=" " alt="" coords="234,233,413,274"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="169,207,236,226,234,231,167,212"/>
+<area shape="rect" id="Node000010" href="$class_scalable_component.html#acb484fedaaf5d1c063d615ccf972660e" title=" " alt="" coords="250,299,397,339"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="122,207,172,245,233,283,246,290,244,295,230,288,169,249,119,211"/>
+<area shape="rect" id="Node000003" href="$class_obxd_audio_processor.html#aa68bb4f73b273dc03ce3481709e88c92" title=" " alt="" coords="463,5,615,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,41,447,37,448,42,415,47"/>
+<area shape="rect" id="Node000006" href="$class_scalable_component.html#ab746359e4aacae97810d592b04d22b3e" title=" " alt="" coords="466,71,612,111"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="415,69,451,75,450,80,415,74"/>
+<area shape="rect" id="Node000004" href="$class_obxd_audio_processor.html#afa7832080a1d323dfd9d41ad9eb540b4" title=" " alt="" coords="663,5,808,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="616,23,648,23,648,28,616,28"/>
+<area shape="rect" id="Node000005" href="$class_obxd_audio_processor.html#a7729e32681fdeee946d73a5e6da05812" title=" " alt="" coords="856,5,1000,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="808,23,840,23,840,28,808,28"/>
+<area shape="rect" id="Node000011" href="$class_scalable_component.html#a48382f38a6930447c622f1cb7b894e0e" title=" " alt="" coords="466,299,612,339"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="397,316,450,316,450,322,397,322"/>
+</map>

@@ -1,0 +1,234 @@
+\doxysection{Adsr\+Envelope Class Reference}
+\hypertarget{class_adsr_envelope}{}\label{class_adsr_envelope}\index{AdsrEnvelope@{AdsrEnvelope}}
+
+
+{\ttfamily \#include $<$Adsr\+Envelope.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_adsr_envelope_afe081aaf772de3286e63780f7b598ee7}{Adsr\+Envelope}} ()
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_a03b02aa0d8e43714bc3cc58283a21819}{Reset\+Envelope\+State}} ()
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_a111b7fc835536000f5fb86eccdd53147}{set\+Sample\+Rate}} (float sr)
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_a74126f9fb44efe59a14c2ea1c06b7249}{set\+Unique\+Deriviance}} (float der)
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_a2a6ba5bcb5d1b80e1e724bbc0db6d40f}{set\+Attack}} (float atk)
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_a44976ed74cca7deab505c7acd52062ac}{set\+Decay}} (float dec)
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_af133fb1ff5da1e1f29a095380b94044b}{set\+Sustain}} (float sust)
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_aaec1b9c371a2c5404985f6514ffe9cff}{set\+Release}} (float rel)
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_a122ceb958ef130eb1d5c1e2c25e0fcd6}{trigger\+Attack}} ()
+\item 
+void \mbox{\hyperlink{class_adsr_envelope_ad34d2d7ac4ff869b511153090dc78298}{trigger\+Release}} ()
+\item 
+bool \mbox{\hyperlink{class_adsr_envelope_a7c0b7a099c3af0bd9f14fa0292339a5d}{is\+Active}} ()
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a92ce5a68436a9fb5fd91fd9845eb06e6}{process\+Sample}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a00d1303df02c0b29287eb70376ea25d5}{Value}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a9588f628b55901216bc3ed5b839585a3}{attack}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a12dc94825090854d54645c34d84fd370}{decay}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_ada6ec779a5a112ecbff2b14973430804}{sustain}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_ab3af15c22077ce10ae1a21442f9243b8}{release}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a9f85ea82058be08c4238275fb01e769b}{ua}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_aef8473e784bd1ef5b955f1c45aa83dce}{ud}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a83501b67b33d53bfa7837a8ecc44dffa}{us}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a072c43ae02e85b18b4e2fd1440d8a58c}{ur}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_a6e05ee001ced6ff590c47f18fb1aa68b}{coef}}
+\item 
+int \mbox{\hyperlink{class_adsr_envelope_a74fff38cfefdd7585e75a1681a885965}{state}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_aa595d9ed2e6e2ec9648bea34c2b40b92}{Sample\+Rate}}
+\item 
+float \mbox{\hyperlink{class_adsr_envelope_acfb6d80313450f3974a36489402291e4}{uf}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_adsr_envelope_afe081aaf772de3286e63780f7b598ee7}\label{class_adsr_envelope_afe081aaf772de3286e63780f7b598ee7} 
+\index{AdsrEnvelope@{AdsrEnvelope}!AdsrEnvelope@{AdsrEnvelope}}
+\index{AdsrEnvelope@{AdsrEnvelope}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{AdsrEnvelope()}{AdsrEnvelope()}}
+{\footnotesize\ttfamily Adsr\+Envelope\+::\+Adsr\+Envelope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_adsr_envelope_a7c0b7a099c3af0bd9f14fa0292339a5d}\label{class_adsr_envelope_a7c0b7a099c3af0bd9f14fa0292339a5d} 
+\index{AdsrEnvelope@{AdsrEnvelope}!isActive@{isActive}}
+\index{isActive@{isActive}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily bool Adsr\+Envelope\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_a92ce5a68436a9fb5fd91fd9845eb06e6}\label{class_adsr_envelope_a92ce5a68436a9fb5fd91fd9845eb06e6} 
+\index{AdsrEnvelope@{AdsrEnvelope}!processSample@{processSample}}
+\index{processSample@{processSample}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{processSample()}{processSample()}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::process\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_a03b02aa0d8e43714bc3cc58283a21819}\label{class_adsr_envelope_a03b02aa0d8e43714bc3cc58283a21819} 
+\index{AdsrEnvelope@{AdsrEnvelope}!ResetEnvelopeState@{ResetEnvelopeState}}
+\index{ResetEnvelopeState@{ResetEnvelopeState}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{ResetEnvelopeState()}{ResetEnvelopeState()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::\+Reset\+Envelope\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_a2a6ba5bcb5d1b80e1e724bbc0db6d40f}\label{class_adsr_envelope_a2a6ba5bcb5d1b80e1e724bbc0db6d40f} 
+\index{AdsrEnvelope@{AdsrEnvelope}!setAttack@{setAttack}}
+\index{setAttack@{setAttack}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{setAttack()}{setAttack()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::set\+Attack (\begin{DoxyParamCaption}\item[{float}]{atk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_a44976ed74cca7deab505c7acd52062ac}\label{class_adsr_envelope_a44976ed74cca7deab505c7acd52062ac} 
+\index{AdsrEnvelope@{AdsrEnvelope}!setDecay@{setDecay}}
+\index{setDecay@{setDecay}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{setDecay()}{setDecay()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::set\+Decay (\begin{DoxyParamCaption}\item[{float}]{dec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_aaec1b9c371a2c5404985f6514ffe9cff}\label{class_adsr_envelope_aaec1b9c371a2c5404985f6514ffe9cff} 
+\index{AdsrEnvelope@{AdsrEnvelope}!setRelease@{setRelease}}
+\index{setRelease@{setRelease}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{setRelease()}{setRelease()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::set\+Release (\begin{DoxyParamCaption}\item[{float}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_a111b7fc835536000f5fb86eccdd53147}\label{class_adsr_envelope_a111b7fc835536000f5fb86eccdd53147} 
+\index{AdsrEnvelope@{AdsrEnvelope}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_af133fb1ff5da1e1f29a095380b94044b}\label{class_adsr_envelope_af133fb1ff5da1e1f29a095380b94044b} 
+\index{AdsrEnvelope@{AdsrEnvelope}!setSustain@{setSustain}}
+\index{setSustain@{setSustain}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{setSustain()}{setSustain()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::set\+Sustain (\begin{DoxyParamCaption}\item[{float}]{sust }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_a74126f9fb44efe59a14c2ea1c06b7249}\label{class_adsr_envelope_a74126f9fb44efe59a14c2ea1c06b7249} 
+\index{AdsrEnvelope@{AdsrEnvelope}!setUniqueDeriviance@{setUniqueDeriviance}}
+\index{setUniqueDeriviance@{setUniqueDeriviance}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{setUniqueDeriviance()}{setUniqueDeriviance()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::set\+Unique\+Deriviance (\begin{DoxyParamCaption}\item[{float}]{der }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_adsr_envelope_a74126f9fb44efe59a14c2ea1c06b7249_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_adsr_envelope_a122ceb958ef130eb1d5c1e2c25e0fcd6}\label{class_adsr_envelope_a122ceb958ef130eb1d5c1e2c25e0fcd6} 
+\index{AdsrEnvelope@{AdsrEnvelope}!triggerAttack@{triggerAttack}}
+\index{triggerAttack@{triggerAttack}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{triggerAttack()}{triggerAttack()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::trigger\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_adsr_envelope_ad34d2d7ac4ff869b511153090dc78298}\label{class_adsr_envelope_ad34d2d7ac4ff869b511153090dc78298} 
+\index{AdsrEnvelope@{AdsrEnvelope}!triggerRelease@{triggerRelease}}
+\index{triggerRelease@{triggerRelease}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{triggerRelease()}{triggerRelease()}}
+{\footnotesize\ttfamily void Adsr\+Envelope\+::trigger\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_adsr_envelope_a9588f628b55901216bc3ed5b839585a3}\label{class_adsr_envelope_a9588f628b55901216bc3ed5b839585a3} 
+\index{AdsrEnvelope@{AdsrEnvelope}!attack@{attack}}
+\index{attack@{attack}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{attack}{attack}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::attack\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_a6e05ee001ced6ff590c47f18fb1aa68b}\label{class_adsr_envelope_a6e05ee001ced6ff590c47f18fb1aa68b} 
+\index{AdsrEnvelope@{AdsrEnvelope}!coef@{coef}}
+\index{coef@{coef}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{coef}{coef}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::coef\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_a12dc94825090854d54645c34d84fd370}\label{class_adsr_envelope_a12dc94825090854d54645c34d84fd370} 
+\index{AdsrEnvelope@{AdsrEnvelope}!decay@{decay}}
+\index{decay@{decay}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{decay}{decay}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::decay\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_ab3af15c22077ce10ae1a21442f9243b8}\label{class_adsr_envelope_ab3af15c22077ce10ae1a21442f9243b8} 
+\index{AdsrEnvelope@{AdsrEnvelope}!release@{release}}
+\index{release@{release}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{release}{release}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::release\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_aa595d9ed2e6e2ec9648bea34c2b40b92}\label{class_adsr_envelope_aa595d9ed2e6e2ec9648bea34c2b40b92} 
+\index{AdsrEnvelope@{AdsrEnvelope}!SampleRate@{SampleRate}}
+\index{SampleRate@{SampleRate}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{SampleRate}{SampleRate}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::\+Sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_a74fff38cfefdd7585e75a1681a885965}\label{class_adsr_envelope_a74fff38cfefdd7585e75a1681a885965} 
+\index{AdsrEnvelope@{AdsrEnvelope}!state@{state}}
+\index{state@{state}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily int Adsr\+Envelope\+::state\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_ada6ec779a5a112ecbff2b14973430804}\label{class_adsr_envelope_ada6ec779a5a112ecbff2b14973430804} 
+\index{AdsrEnvelope@{AdsrEnvelope}!sustain@{sustain}}
+\index{sustain@{sustain}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{sustain}{sustain}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::sustain\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_a9f85ea82058be08c4238275fb01e769b}\label{class_adsr_envelope_a9f85ea82058be08c4238275fb01e769b} 
+\index{AdsrEnvelope@{AdsrEnvelope}!ua@{ua}}
+\index{ua@{ua}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{ua}{ua}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::ua\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_aef8473e784bd1ef5b955f1c45aa83dce}\label{class_adsr_envelope_aef8473e784bd1ef5b955f1c45aa83dce} 
+\index{AdsrEnvelope@{AdsrEnvelope}!ud@{ud}}
+\index{ud@{ud}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{ud}{ud}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::ud\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_acfb6d80313450f3974a36489402291e4}\label{class_adsr_envelope_acfb6d80313450f3974a36489402291e4} 
+\index{AdsrEnvelope@{AdsrEnvelope}!uf@{uf}}
+\index{uf@{uf}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{uf}{uf}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::uf\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_a072c43ae02e85b18b4e2fd1440d8a58c}\label{class_adsr_envelope_a072c43ae02e85b18b4e2fd1440d8a58c} 
+\index{AdsrEnvelope@{AdsrEnvelope}!ur@{ur}}
+\index{ur@{ur}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{ur}{ur}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::ur\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_a83501b67b33d53bfa7837a8ecc44dffa}\label{class_adsr_envelope_a83501b67b33d53bfa7837a8ecc44dffa} 
+\index{AdsrEnvelope@{AdsrEnvelope}!us@{us}}
+\index{us@{us}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{us}{us}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::us\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_adsr_envelope_a00d1303df02c0b29287eb70376ea25d5}\label{class_adsr_envelope_a00d1303df02c0b29287eb70376ea25d5} 
+\index{AdsrEnvelope@{AdsrEnvelope}!Value@{Value}}
+\index{Value@{Value}!AdsrEnvelope@{AdsrEnvelope}}
+\doxysubsubsection{\texorpdfstring{Value}{Value}}
+{\footnotesize\ttfamily float Adsr\+Envelope\+::\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_adsr_envelope_8h}{Adsr\+Envelope.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,206 @@
+\doxysection{Source/\+MTS/lib\+MTSClient.h File Reference}
+\hypertarget{lib_m_t_s_client_8h}{}\label{lib_m_t_s_client_8h}\index{Source/MTS/libMTSClient.h@{Source/MTS/libMTSClient.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct MTSClient \mbox{\hyperlink{lib_m_t_s_client_8h_aea35facc127c2b92e5fd6833b499fd98}{MTSClient}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8h_a76696080794280bbac195d9e85096510}{MTS\+\_\+\+Register\+Client}} ()
+\item 
+void \mbox{\hyperlink{lib_m_t_s_client_8h_a3af54a5bee1acde3499e1a08264ac93c}{MTS\+\_\+\+Deregister\+Client}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client)
+\item 
+bool \mbox{\hyperlink{lib_m_t_s_client_8h_abcaf5eea0108c36cddb853e7d0ae2f78}{MTS\+\_\+\+Has\+Master}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client)
+\item 
+bool \mbox{\hyperlink{lib_m_t_s_client_8h_a90d7026c44cb7cf9a60d80f3ab61451f}{MTS\+\_\+\+Should\+Filter\+Note}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, char midinote, char midichannel)
+\item 
+double \mbox{\hyperlink{lib_m_t_s_client_8h_a1d179450b17b9d19708d529c5fac2500}{MTS\+\_\+\+Note\+To\+Frequency}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, char midinote, char midichannel)
+\item 
+double \mbox{\hyperlink{lib_m_t_s_client_8h_aa37e2a6ba4bb17df13f82897ab6f10fd}{MTS\+\_\+\+Retuning\+In\+Semitones}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, char midinote, char midichannel)
+\item 
+double \mbox{\hyperlink{lib_m_t_s_client_8h_a4d8e741b05fd6d30639e3327cce1c451}{MTS\+\_\+\+Retuning\+As\+Ratio}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, char midinote, char midichannel)
+\item 
+char \mbox{\hyperlink{lib_m_t_s_client_8h_affa0f376c8bbdcd2fef4912b7bfc490d}{MTS\+\_\+\+Frequency\+To\+Note}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, double freq, char midichannel)
+\item 
+char \mbox{\hyperlink{lib_m_t_s_client_8h_a2f6e360663515d82df301028c6dc6e99}{MTS\+\_\+\+Frequency\+To\+Note\+And\+Channel}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, double freq, char \texorpdfstring{$\ast$}{*}midichannel)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8h_a62d775e2a60fdfeb385ced43e84e050b}{MTS\+\_\+\+Get\+Scale\+Name}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client)
+\item 
+void \mbox{\hyperlink{lib_m_t_s_client_8h_a0a48dd753c54f79b41008a612289c8d5}{MTS\+\_\+\+Parse\+MIDIDataU}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, const unsigned char \texorpdfstring{$\ast$}{*}buffer, int len)
+\item 
+void \mbox{\hyperlink{lib_m_t_s_client_8h_a78fa23bfd59b1fe01598e1defa0cde20}{MTS\+\_\+\+Parse\+MIDIData}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}client, const char \texorpdfstring{$\ast$}{*}buffer, int len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{lib_m_t_s_client_8h_aea35facc127c2b92e5fd6833b499fd98}\label{lib_m_t_s_client_8h_aea35facc127c2b92e5fd6833b499fd98} 
+\index{libMTSClient.h@{libMTSClient.h}!MTSClient@{MTSClient}}
+\index{MTSClient@{MTSClient}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTSClient}{MTSClient}}
+{\footnotesize\ttfamily typedef struct MTSClient MTSClient}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lib_m_t_s_client_8h_a3af54a5bee1acde3499e1a08264ac93c}\label{lib_m_t_s_client_8h_a3af54a5bee1acde3499e1a08264ac93c} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_DeregisterClient@{MTS\_DeregisterClient}}
+\index{MTS\_DeregisterClient@{MTS\_DeregisterClient}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_DeregisterClient()}{MTS\_DeregisterClient()}}
+{\footnotesize\ttfamily void MTS\+\_\+\+Deregister\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{lib_m_t_s_client_8h_affa0f376c8bbdcd2fef4912b7bfc490d}\label{lib_m_t_s_client_8h_affa0f376c8bbdcd2fef4912b7bfc490d} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_FrequencyToNote@{MTS\_FrequencyToNote}}
+\index{MTS\_FrequencyToNote@{MTS\_FrequencyToNote}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_FrequencyToNote()}{MTS\_FrequencyToNote()}}
+{\footnotesize\ttfamily char MTS\+\_\+\+Frequency\+To\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{double}]{freq,  }\item[{char}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_affa0f376c8bbdcd2fef4912b7bfc490d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_a2f6e360663515d82df301028c6dc6e99}\label{lib_m_t_s_client_8h_a2f6e360663515d82df301028c6dc6e99} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_FrequencyToNoteAndChannel@{MTS\_FrequencyToNoteAndChannel}}
+\index{MTS\_FrequencyToNoteAndChannel@{MTS\_FrequencyToNoteAndChannel}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_FrequencyToNoteAndChannel()}{MTS\_FrequencyToNoteAndChannel()}}
+{\footnotesize\ttfamily char MTS\+\_\+\+Frequency\+To\+Note\+And\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{double}]{freq,  }\item[{char \texorpdfstring{$\ast$}{*}}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_a2f6e360663515d82df301028c6dc6e99_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_a62d775e2a60fdfeb385ced43e84e050b}\label{lib_m_t_s_client_8h_a62d775e2a60fdfeb385ced43e84e050b} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_GetScaleName@{MTS\_GetScaleName}}
+\index{MTS\_GetScaleName@{MTS\_GetScaleName}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_GetScaleName()}{MTS\_GetScaleName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} MTS\+\_\+\+Get\+Scale\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_a62d775e2a60fdfeb385ced43e84e050b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_abcaf5eea0108c36cddb853e7d0ae2f78}\label{lib_m_t_s_client_8h_abcaf5eea0108c36cddb853e7d0ae2f78} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_HasMaster@{MTS\_HasMaster}}
+\index{MTS\_HasMaster@{MTS\_HasMaster}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_HasMaster()}{MTS\_HasMaster()}}
+{\footnotesize\ttfamily bool MTS\+\_\+\+Has\+Master (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_abcaf5eea0108c36cddb853e7d0ae2f78_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_a1d179450b17b9d19708d529c5fac2500}\label{lib_m_t_s_client_8h_a1d179450b17b9d19708d529c5fac2500} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_NoteToFrequency@{MTS\_NoteToFrequency}}
+\index{MTS\_NoteToFrequency@{MTS\_NoteToFrequency}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_NoteToFrequency()}{MTS\_NoteToFrequency()}}
+{\footnotesize\ttfamily double MTS\+\_\+\+Note\+To\+Frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_a1d179450b17b9d19708d529c5fac2500_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_a78fa23bfd59b1fe01598e1defa0cde20}\label{lib_m_t_s_client_8h_a78fa23bfd59b1fe01598e1defa0cde20} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_ParseMIDIData@{MTS\_ParseMIDIData}}
+\index{MTS\_ParseMIDIData@{MTS\_ParseMIDIData}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_ParseMIDIData()}{MTS\_ParseMIDIData()}}
+{\footnotesize\ttfamily void MTS\+\_\+\+Parse\+MIDIData (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_a78fa23bfd59b1fe01598e1defa0cde20_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_a0a48dd753c54f79b41008a612289c8d5}\label{lib_m_t_s_client_8h_a0a48dd753c54f79b41008a612289c8d5} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_ParseMIDIDataU@{MTS\_ParseMIDIDataU}}
+\index{MTS\_ParseMIDIDataU@{MTS\_ParseMIDIDataU}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_ParseMIDIDataU()}{MTS\_ParseMIDIDataU()}}
+{\footnotesize\ttfamily void MTS\+\_\+\+Parse\+MIDIDataU (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_a0a48dd753c54f79b41008a612289c8d5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_a76696080794280bbac195d9e85096510}\label{lib_m_t_s_client_8h_a76696080794280bbac195d9e85096510} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_RegisterClient@{MTS\_RegisterClient}}
+\index{MTS\_RegisterClient@{MTS\_RegisterClient}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_RegisterClient()}{MTS\_RegisterClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*} MTS\+\_\+\+Register\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{lib_m_t_s_client_8h_a4d8e741b05fd6d30639e3327cce1c451}\label{lib_m_t_s_client_8h_a4d8e741b05fd6d30639e3327cce1c451} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_RetuningAsRatio@{MTS\_RetuningAsRatio}}
+\index{MTS\_RetuningAsRatio@{MTS\_RetuningAsRatio}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_RetuningAsRatio()}{MTS\_RetuningAsRatio()}}
+{\footnotesize\ttfamily double MTS\+\_\+\+Retuning\+As\+Ratio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_a4d8e741b05fd6d30639e3327cce1c451_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_aa37e2a6ba4bb17df13f82897ab6f10fd}\label{lib_m_t_s_client_8h_aa37e2a6ba4bb17df13f82897ab6f10fd} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_RetuningInSemitones@{MTS\_RetuningInSemitones}}
+\index{MTS\_RetuningInSemitones@{MTS\_RetuningInSemitones}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_RetuningInSemitones()}{MTS\_RetuningInSemitones()}}
+{\footnotesize\ttfamily double MTS\+\_\+\+Retuning\+In\+Semitones (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_aa37e2a6ba4bb17df13f82897ab6f10fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8h_a90d7026c44cb7cf9a60d80f3ab61451f}\label{lib_m_t_s_client_8h_a90d7026c44cb7cf9a60d80f3ab61451f} 
+\index{libMTSClient.h@{libMTSClient.h}!MTS\_ShouldFilterNote@{MTS\_ShouldFilterNote}}
+\index{MTS\_ShouldFilterNote@{MTS\_ShouldFilterNote}!libMTSClient.h@{libMTSClient.h}}
+\doxysubsubsection{\texorpdfstring{MTS\_ShouldFilterNote()}{MTS\_ShouldFilterNote()}}
+{\footnotesize\ttfamily bool MTS\+\_\+\+Should\+Filter\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{client,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8h_a90d7026c44cb7cf9a60d80f3ab61451f_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,11 @@
+<map id="ObxdAudioProcessor::saveFXPFile" name="ObxdAudioProcessor::saveFXPFile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,77,150,117"/>
+<area shape="rect" id="Node000002" href="$_plugin_processor_8h.html#a12504fea2e3d9ad72459a1c7c77073fa" title=" " alt="" coords="278,5,353,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,74,197,40,262,24,263,29,199,45,119,78"/>
+<area shape="rect" id="Node000003" href="$_plugin_processor_8h.html#a6656d80a5749bf87ac4e3d86794d4d1d" title=" " alt="" coords="279,55,352,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,85,264,71,265,76,150,91"/>
+<area shape="rect" id="Node000004" href="$class_obxd_audio_processor.html#a2c0237c5a6eab45d48f4dcab57963393" title=" " alt="" coords="198,105,433,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,103,183,107,182,112,150,108"/>
+<area shape="rect" id="Node000005" href="$class_obxd_audio_processor.html#a643479df65fed8ed62fe2d3dab34c6a7" title=" " alt="" coords="243,170,388,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="117,115,199,154,229,165,227,170,197,159,114,120"/>
+</map>

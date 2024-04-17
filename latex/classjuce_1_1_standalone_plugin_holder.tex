@@ -1,0 +1,527 @@
+\doxysection{juce\+::Standalone\+Plugin\+Holder Class Reference}
+\hypertarget{classjuce_1_1_standalone_plugin_holder}{}\label{classjuce_1_1_standalone_plugin_holder}\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+
+
+{\ttfamily \#include $<$juce\+\_\+\+Standalone\+Filter\+Window.\+h$>$}
+
+
+
+Inheritance diagram for juce\+::Standalone\+Plugin\+Holder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for juce\+::Standalone\+Plugin\+Holder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer}{Callback\+Max\+Size\+Enforcer}}
+\item 
+struct \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Plugin\+In\+Outs}}
+\item 
+class \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component}{Settings\+Component}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_afe37b7ee5c0e1b2b2604c1e21077472f}{Standalone\+Plugin\+Holder}} (Property\+Set \texorpdfstring{$\ast$}{*}settings\+To\+Use, bool take\+Ownership\+Of\+Settings=true, const String \&preferred\+Default\+Device\+Name=String(), const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}preferred\+Setup\+Options=nullptr, const Array$<$ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Plugin\+In\+Outs}} $>$ \&channels=Array$<$ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Plugin\+In\+Outs}} $>$(), bool should\+Auto\+Open\+Midi\+Devices=true)
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa5aae7bed030a522ce43412c3f38ed08}{init}} (bool enable\+Audio\+Input, const String \&preferred\+Default\+Device\+Name)
+\item 
+\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a07796aaccb18a3a0aad44797b4007bd7}{\texorpdfstring{$\sim$}{\string~}\+Standalone\+Plugin\+Holder}} () override
+\item 
+virtual void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a01c2c46967e1339ee39177744bfe3337}{create\+Plugin}} ()
+\item 
+virtual void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a792f24fef2d467bf9fabe1cd600ca1cd}{delete\+Plugin}} ()
+\item 
+int \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_af896cb23041ba3ea551cdd12f9ad73fe}{get\+Num\+Input\+Channels}} () const
+\item 
+int \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adb158cad4f547fa9836d4ea7025245a5}{get\+Num\+Output\+Channels}} () const
+\item 
+Value \& \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a76e89d6dd227b1b4a70485bce33b06e5}{get\+Mute\+Input\+Value}} ()
+\item 
+bool \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aedd2c26c38d5c774ccb02bb7919d6dde}{get\+Processor\+Has\+Potential\+Feedback\+Loop}} () const
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a92dc39cccba1b3cd0028f5a3fd72579c}{value\+Changed}} (Value \&value) override
+\item 
+File \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6916dfee9dca2b4e5ea5f22a37c74fc3}{get\+Last\+File}} () const
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad87b70a1be5c29b2824dfe99776f926f}{set\+Last\+File}} (const File\+Chooser \&fc)
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa950137559934707a902a050e3b1fa86}{ask\+User\+To\+Save\+State}} (const String \&file\+Suffix=String())
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a90ea431b62bf47b5f6cae13b35520576}{ask\+User\+To\+Load\+State}} (const String \&file\+Suffix=String())
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1e7c49f80ccce6c3920c645dbef051fd}{start\+Playing}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a4d099bd36c88e91d51f83c0ee6d6a21c}{stop\+Playing}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a93aa79fde505e462ba85f926ef2b0968}{show\+Audio\+Settings\+Dialog}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a15b1e3761176da1fd1c743a4f6b644d4}{save\+Audio\+Device\+State}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a69672ec60c6cb267cc6bdf149c356913}{reload\+Audio\+Device\+State}} (bool enable\+Audio\+Input, const String \&preferred\+Default\+Device\+Name, const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}preferred\+Setup\+Options)
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a56379ea9654ece067ea635318ac10389}{save\+Plugin\+State}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a011acf019b1d26e411961b6503e32230}{reload\+Plugin\+State}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a4d427e8b1082c880be89355df814ed37}{switch\+To\+Host\+Application}} ()
+\item 
+bool \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ab8921b678d9ac859cfc5aaedbef8c8e9}{is\+Inter\+App\+Audio\+Connected}} ()
+\item 
+Image \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a19f84e357e1e3c6c6bf9d6d6bddd7a2d}{get\+IAAHost\+Icon}} (int size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa7425af2361f491329215e65b0ac91fb}{get\+File\+Patterns}} (const String \&file\+Suffix)
+\item 
+static \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{Standalone\+Plugin\+Holder}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ab4efaf01764a7d3f36ceae65542a1bf9}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Optional\+Scoped\+Pointer$<$ Property\+Set $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}
+\item 
+std\+::unique\+\_\+ptr$<$ Audio\+Processor $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}
+\item 
+Audio\+Device\+Manager \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{device\+Manager}}
+\item 
+Audio\+Processor\+Player \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}
+\item 
+Array$<$ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Plugin\+In\+Outs}} $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channel\+Configuration}}
+\item 
+bool \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85b92cc5b4ee85e576167ba6fea4fe47}{processor\+Has\+Potential\+Feedback\+Loop}} = true
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a191eeef936907b8eeb82c5a41af69f9e}{mute\+Input}} \{ true \}
+\item 
+Value \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{should\+Mute\+Input}}
+\item 
+Audio\+Buffer$<$ float $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}{empty\+Buffer}}
+\item 
+bool \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5cd0c63a20cba1ef1a71e84b411eaf69}{auto\+Open\+Midi\+Devices}}
+\item 
+std\+::unique\+\_\+ptr$<$ Audio\+Device\+Manager\+::\+Audio\+Device\+Setup $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa0b47b6e8c528ea14587de8553e4bf6b}{options}}
+\item 
+Array$<$ Midi\+Device\+Info $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747}{last\+Midi\+Devices}}
+\item 
+std\+::unique\+\_\+ptr$<$ File\+Chooser $>$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d}{state\+File\+Chooser}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a75da9df65fdf4d050ac8aabe10a3019f}{audio\+Device\+IOCallback\+With\+Context}} (const float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}input\+Channel\+Data, int num\+Input\+Channels, float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}output\+Channel\+Data, int num\+Output\+Channels, int num\+Samples, const Audio\+IODevice\+Callback\+Context \&context) override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a567258e942893295bf7ad454227be5cf}{audio\+Device\+About\+To\+Start}} (Audio\+IODevice \texorpdfstring{$\ast$}{*}device) override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae369629ab08b046000a64bfea367c32b}{audio\+Device\+Stopped}} () override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_af3777d659c5d376f34d7028ab1768f59}{setup\+Audio\+Devices}} (bool enable\+Audio\+Input, const String \&preferred\+Default\+Device\+Name, const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}preferred\+Setup\+Options)
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa790078a4e166bc59c431f79d290d733}{shut\+Down\+Audio\+Devices}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abe272b8ab9dce61bf47be6f803094e73}{timer\+Callback}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer}{Callback\+Max\+Size\+Enforcer}} \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_afc7560359e3f647244abce214e9892ce}{max\+Size\+Enforcer}} \{ \texorpdfstring{$\ast$}{*}this \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An object that creates and plays a standalone instance of an Audio\+Processor.
+
+The object will create your processor using the same \doxylink{_plugin_processor_8cpp_a6a42963b424a437ac872809903afa10e}{create\+Plugin\+Filter()} function that the other plugin wrappers use, and will run it through the computer\textquotesingle{}s audio/\+MIDI devices using Audio\+Device\+Manager and Audio\+Processor\+Player.
+
+@tags\{Audio\} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_afe37b7ee5c0e1b2b2604c1e21077472f}\label{classjuce_1_1_standalone_plugin_holder_afe37b7ee5c0e1b2b2604c1e21077472f} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!StandalonePluginHolder@{StandalonePluginHolder}}
+\index{StandalonePluginHolder@{StandalonePluginHolder}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{StandalonePluginHolder()}{StandalonePluginHolder()}}
+{\footnotesize\ttfamily juce\+::\+Standalone\+Plugin\+Holder\+::\+Standalone\+Plugin\+Holder (\begin{DoxyParamCaption}\item[{Property\+Set \texorpdfstring{$\ast$}{*}}]{settings\+To\+Use,  }\item[{bool}]{take\+Ownership\+Of\+Settings = {\ttfamily true},  }\item[{const String \&}]{preferred\+Default\+Device\+Name = {\ttfamily String()},  }\item[{const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}}]{preferred\+Setup\+Options = {\ttfamily nullptr},  }\item[{const Array$<$ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Plugin\+In\+Outs}} $>$ \&}]{channels = {\ttfamily Array$<$\mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Plugin\+In\+Outs}}$>$()},  }\item[{bool}]{should\+Auto\+Open\+Midi\+Devices = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates an instance of the default plugin.
+
+The settings object can be a Property\+Set that the class should use to store its settings -\/ the take\+Ownership\+Of\+Settings indicates whether this object will delete the settings automatically when no longer needed. The settings can also be nullptr.
+
+A default device name can be passed in.
+
+Preferably a complete setup options object can be used, which takes precedence over the preferred\+Default\+Device\+Name and allows you to select the input \& output device names, sample rate, buffer size etc.
+
+In all instances, the settings\+To\+Use will take precedence over the "{}preferred"{} options if not null. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_afe37b7ee5c0e1b2b2604c1e21077472f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a07796aaccb18a3a0aad44797b4007bd7}\label{classjuce_1_1_standalone_plugin_holder_a07796aaccb18a3a0aad44797b4007bd7} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!````~StandalonePluginHolder@{\texorpdfstring{$\sim$}{\string~}StandalonePluginHolder}}
+\index{````~StandalonePluginHolder@{\texorpdfstring{$\sim$}{\string~}StandalonePluginHolder}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StandalonePluginHolder()}{\string~StandalonePluginHolder()}}
+{\footnotesize\ttfamily juce\+::\+Standalone\+Plugin\+Holder\+::\texorpdfstring{$\sim$}{\string~}\+Standalone\+Plugin\+Holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_a07796aaccb18a3a0aad44797b4007bd7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a90ea431b62bf47b5f6cae13b35520576}\label{classjuce_1_1_standalone_plugin_holder_a90ea431b62bf47b5f6cae13b35520576} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!askUserToLoadState@{askUserToLoadState}}
+\index{askUserToLoadState@{askUserToLoadState}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{askUserToLoadState()}{askUserToLoadState()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::ask\+User\+To\+Load\+State (\begin{DoxyParamCaption}\item[{const String \&}]{file\+Suffix = {\ttfamily String()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pops up a dialog letting the user re-\/load the processor\textquotesingle{}s state from a file. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_a90ea431b62bf47b5f6cae13b35520576_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_aa950137559934707a902a050e3b1fa86}\label{classjuce_1_1_standalone_plugin_holder_aa950137559934707a902a050e3b1fa86} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!askUserToSaveState@{askUserToSaveState}}
+\index{askUserToSaveState@{askUserToSaveState}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{askUserToSaveState()}{askUserToSaveState()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::ask\+User\+To\+Save\+State (\begin{DoxyParamCaption}\item[{const String \&}]{file\+Suffix = {\ttfamily String()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pops up a dialog letting the user save the processor\textquotesingle{}s state to a file. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_aa950137559934707a902a050e3b1fa86_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a567258e942893295bf7ad454227be5cf}\label{classjuce_1_1_standalone_plugin_holder_a567258e942893295bf7ad454227be5cf} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!audioDeviceAboutToStart@{audioDeviceAboutToStart}}
+\index{audioDeviceAboutToStart@{audioDeviceAboutToStart}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{audioDeviceAboutToStart()}{audioDeviceAboutToStart()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::audio\+Device\+About\+To\+Start (\begin{DoxyParamCaption}\item[{Audio\+IODevice \texorpdfstring{$\ast$}{*}}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a75da9df65fdf4d050ac8aabe10a3019f}\label{classjuce_1_1_standalone_plugin_holder_a75da9df65fdf4d050ac8aabe10a3019f} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!audioDeviceIOCallbackWithContext@{audioDeviceIOCallbackWithContext}}
+\index{audioDeviceIOCallbackWithContext@{audioDeviceIOCallbackWithContext}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{audioDeviceIOCallbackWithContext()}{audioDeviceIOCallbackWithContext()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::audio\+Device\+IOCallback\+With\+Context (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{input\+Channel\+Data,  }\item[{int}]{num\+Input\+Channels,  }\item[{float \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{output\+Channel\+Data,  }\item[{int}]{num\+Output\+Channels,  }\item[{int}]{num\+Samples,  }\item[{const Audio\+IODevice\+Callback\+Context \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_ae369629ab08b046000a64bfea367c32b}\label{classjuce_1_1_standalone_plugin_holder_ae369629ab08b046000a64bfea367c32b} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!audioDeviceStopped@{audioDeviceStopped}}
+\index{audioDeviceStopped@{audioDeviceStopped}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{audioDeviceStopped()}{audioDeviceStopped()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::audio\+Device\+Stopped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a01c2c46967e1339ee39177744bfe3337}\label{classjuce_1_1_standalone_plugin_holder_a01c2c46967e1339ee39177744bfe3337} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!createPlugin@{createPlugin}}
+\index{createPlugin@{createPlugin}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{createPlugin()}{createPlugin()}}
+{\footnotesize\ttfamily virtual void juce\+::\+Standalone\+Plugin\+Holder\+::create\+Plugin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_a01c2c46967e1339ee39177744bfe3337_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a792f24fef2d467bf9fabe1cd600ca1cd}\label{classjuce_1_1_standalone_plugin_holder_a792f24fef2d467bf9fabe1cd600ca1cd} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!deletePlugin@{deletePlugin}}
+\index{deletePlugin@{deletePlugin}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{deletePlugin()}{deletePlugin()}}
+{\footnotesize\ttfamily virtual void juce\+::\+Standalone\+Plugin\+Holder\+::delete\+Plugin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_a792f24fef2d467bf9fabe1cd600ca1cd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_aa7425af2361f491329215e65b0ac91fb}\label{classjuce_1_1_standalone_plugin_holder_aa7425af2361f491329215e65b0ac91fb} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getFilePatterns@{getFilePatterns}}
+\index{getFilePatterns@{getFilePatterns}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getFilePatterns()}{getFilePatterns()}}
+{\footnotesize\ttfamily static String juce\+::\+Standalone\+Plugin\+Holder\+::get\+File\+Patterns (\begin{DoxyParamCaption}\item[{const String \&}]{file\+Suffix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a19f84e357e1e3c6c6bf9d6d6bddd7a2d}\label{classjuce_1_1_standalone_plugin_holder_a19f84e357e1e3c6c6bf9d6d6bddd7a2d} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getIAAHostIcon@{getIAAHostIcon}}
+\index{getIAAHostIcon@{getIAAHostIcon}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getIAAHostIcon()}{getIAAHostIcon()}}
+{\footnotesize\ttfamily Image juce\+::\+Standalone\+Plugin\+Holder\+::get\+IAAHost\+Icon (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_ab4efaf01764a7d3f36ceae65542a1bf9}\label{classjuce_1_1_standalone_plugin_holder_ab4efaf01764a7d3f36ceae65542a1bf9} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{Standalone\+Plugin\+Holder}} \texorpdfstring{$\ast$}{*} juce\+::\+Standalone\+Plugin\+Holder\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a6916dfee9dca2b4e5ea5f22a37c74fc3}\label{classjuce_1_1_standalone_plugin_holder_a6916dfee9dca2b4e5ea5f22a37c74fc3} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getLastFile@{getLastFile}}
+\index{getLastFile@{getLastFile}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getLastFile()}{getLastFile()}}
+{\footnotesize\ttfamily File juce\+::\+Standalone\+Plugin\+Holder\+::get\+Last\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a76e89d6dd227b1b4a70485bce33b06e5}\label{classjuce_1_1_standalone_plugin_holder_a76e89d6dd227b1b4a70485bce33b06e5} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getMuteInputValue@{getMuteInputValue}}
+\index{getMuteInputValue@{getMuteInputValue}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getMuteInputValue()}{getMuteInputValue()}}
+{\footnotesize\ttfamily Value \& juce\+::\+Standalone\+Plugin\+Holder\+::get\+Mute\+Input\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_af896cb23041ba3ea551cdd12f9ad73fe}\label{classjuce_1_1_standalone_plugin_holder_af896cb23041ba3ea551cdd12f9ad73fe} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getNumInputChannels@{getNumInputChannels}}
+\index{getNumInputChannels@{getNumInputChannels}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getNumInputChannels()}{getNumInputChannels()}}
+{\footnotesize\ttfamily int juce\+::\+Standalone\+Plugin\+Holder\+::get\+Num\+Input\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_adb158cad4f547fa9836d4ea7025245a5}\label{classjuce_1_1_standalone_plugin_holder_adb158cad4f547fa9836d4ea7025245a5} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getNumOutputChannels@{getNumOutputChannels}}
+\index{getNumOutputChannels@{getNumOutputChannels}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getNumOutputChannels()}{getNumOutputChannels()}}
+{\footnotesize\ttfamily int juce\+::\+Standalone\+Plugin\+Holder\+::get\+Num\+Output\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_aedd2c26c38d5c774ccb02bb7919d6dde}\label{classjuce_1_1_standalone_plugin_holder_aedd2c26c38d5c774ccb02bb7919d6dde} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!getProcessorHasPotentialFeedbackLoop@{getProcessorHasPotentialFeedbackLoop}}
+\index{getProcessorHasPotentialFeedbackLoop@{getProcessorHasPotentialFeedbackLoop}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{getProcessorHasPotentialFeedbackLoop()}{getProcessorHasPotentialFeedbackLoop()}}
+{\footnotesize\ttfamily bool juce\+::\+Standalone\+Plugin\+Holder\+::get\+Processor\+Has\+Potential\+Feedback\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_aa5aae7bed030a522ce43412c3f38ed08}\label{classjuce_1_1_standalone_plugin_holder_aa5aae7bed030a522ce43412c3f38ed08} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!init@{init}}
+\index{init@{init}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::init (\begin{DoxyParamCaption}\item[{bool}]{enable\+Audio\+Input,  }\item[{const String \&}]{preferred\+Default\+Device\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_aa5aae7bed030a522ce43412c3f38ed08_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_ab8921b678d9ac859cfc5aaedbef8c8e9}\label{classjuce_1_1_standalone_plugin_holder_ab8921b678d9ac859cfc5aaedbef8c8e9} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!isInterAppAudioConnected@{isInterAppAudioConnected}}
+\index{isInterAppAudioConnected@{isInterAppAudioConnected}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{isInterAppAudioConnected()}{isInterAppAudioConnected()}}
+{\footnotesize\ttfamily bool juce\+::\+Standalone\+Plugin\+Holder\+::is\+Inter\+App\+Audio\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a69672ec60c6cb267cc6bdf149c356913}\label{classjuce_1_1_standalone_plugin_holder_a69672ec60c6cb267cc6bdf149c356913} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!reloadAudioDeviceState@{reloadAudioDeviceState}}
+\index{reloadAudioDeviceState@{reloadAudioDeviceState}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{reloadAudioDeviceState()}{reloadAudioDeviceState()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::reload\+Audio\+Device\+State (\begin{DoxyParamCaption}\item[{bool}]{enable\+Audio\+Input,  }\item[{const String \&}]{preferred\+Default\+Device\+Name,  }\item[{const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}}]{preferred\+Setup\+Options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_a69672ec60c6cb267cc6bdf149c356913_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a011acf019b1d26e411961b6503e32230}\label{classjuce_1_1_standalone_plugin_holder_a011acf019b1d26e411961b6503e32230} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!reloadPluginState@{reloadPluginState}}
+\index{reloadPluginState@{reloadPluginState}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{reloadPluginState()}{reloadPluginState()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::reload\+Plugin\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a15b1e3761176da1fd1c743a4f6b644d4}\label{classjuce_1_1_standalone_plugin_holder_a15b1e3761176da1fd1c743a4f6b644d4} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!saveAudioDeviceState@{saveAudioDeviceState}}
+\index{saveAudioDeviceState@{saveAudioDeviceState}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{saveAudioDeviceState()}{saveAudioDeviceState()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::save\+Audio\+Device\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a56379ea9654ece067ea635318ac10389}\label{classjuce_1_1_standalone_plugin_holder_a56379ea9654ece067ea635318ac10389} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!savePluginState@{savePluginState}}
+\index{savePluginState@{savePluginState}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{savePluginState()}{savePluginState()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::save\+Plugin\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_ad87b70a1be5c29b2824dfe99776f926f}\label{classjuce_1_1_standalone_plugin_holder_ad87b70a1be5c29b2824dfe99776f926f} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!setLastFile@{setLastFile}}
+\index{setLastFile@{setLastFile}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{setLastFile()}{setLastFile()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::set\+Last\+File (\begin{DoxyParamCaption}\item[{const File\+Chooser \&}]{fc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_af3777d659c5d376f34d7028ab1768f59}\label{classjuce_1_1_standalone_plugin_holder_af3777d659c5d376f34d7028ab1768f59} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!setupAudioDevices@{setupAudioDevices}}
+\index{setupAudioDevices@{setupAudioDevices}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{setupAudioDevices()}{setupAudioDevices()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::setup\+Audio\+Devices (\begin{DoxyParamCaption}\item[{bool}]{enable\+Audio\+Input,  }\item[{const String \&}]{preferred\+Default\+Device\+Name,  }\item[{const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}}]{preferred\+Setup\+Options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_af3777d659c5d376f34d7028ab1768f59_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a93aa79fde505e462ba85f926ef2b0968}\label{classjuce_1_1_standalone_plugin_holder_a93aa79fde505e462ba85f926ef2b0968} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!showAudioSettingsDialog@{showAudioSettingsDialog}}
+\index{showAudioSettingsDialog@{showAudioSettingsDialog}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{showAudioSettingsDialog()}{showAudioSettingsDialog()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::show\+Audio\+Settings\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Shows an audio properties dialog box modally. \Hypertarget{classjuce_1_1_standalone_plugin_holder_aa790078a4e166bc59c431f79d290d733}\label{classjuce_1_1_standalone_plugin_holder_aa790078a4e166bc59c431f79d290d733} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!shutDownAudioDevices@{shutDownAudioDevices}}
+\index{shutDownAudioDevices@{shutDownAudioDevices}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{shutDownAudioDevices()}{shutDownAudioDevices()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::shut\+Down\+Audio\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_plugin_holder_aa790078a4e166bc59c431f79d290d733_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a1e7c49f80ccce6c3920c645dbef051fd}\label{classjuce_1_1_standalone_plugin_holder_a1e7c49f80ccce6c3920c645dbef051fd} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!startPlaying@{startPlaying}}
+\index{startPlaying@{startPlaying}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{startPlaying()}{startPlaying()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::start\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a4d099bd36c88e91d51f83c0ee6d6a21c}\label{classjuce_1_1_standalone_plugin_holder_a4d099bd36c88e91d51f83c0ee6d6a21c} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!stopPlaying@{stopPlaying}}
+\index{stopPlaying@{stopPlaying}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{stopPlaying()}{stopPlaying()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::stop\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a4d427e8b1082c880be89355df814ed37}\label{classjuce_1_1_standalone_plugin_holder_a4d427e8b1082c880be89355df814ed37} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!switchToHostApplication@{switchToHostApplication}}
+\index{switchToHostApplication@{switchToHostApplication}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{switchToHostApplication()}{switchToHostApplication()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::switch\+To\+Host\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_abe272b8ab9dce61bf47be6f803094e73}\label{classjuce_1_1_standalone_plugin_holder_abe272b8ab9dce61bf47be6f803094e73} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!timerCallback@{timerCallback}}
+\index{timerCallback@{timerCallback}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{timerCallback()}{timerCallback()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::timer\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a92dc39cccba1b3cd0028f5a3fd72579c}\label{classjuce_1_1_standalone_plugin_holder_a92dc39cccba1b3cd0028f5a3fd72579c} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!valueChanged@{valueChanged}}
+\index{valueChanged@{valueChanged}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{valueChanged()}{valueChanged()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Plugin\+Holder\+::value\+Changed (\begin{DoxyParamCaption}\item[{Value \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a5cd0c63a20cba1ef1a71e84b411eaf69}\label{classjuce_1_1_standalone_plugin_holder_a5cd0c63a20cba1ef1a71e84b411eaf69} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!autoOpenMidiDevices@{autoOpenMidiDevices}}
+\index{autoOpenMidiDevices@{autoOpenMidiDevices}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{autoOpenMidiDevices}{autoOpenMidiDevices}}
+{\footnotesize\ttfamily bool juce\+::\+Standalone\+Plugin\+Holder\+::auto\+Open\+Midi\+Devices}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}\label{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!channelConfiguration@{channelConfiguration}}
+\index{channelConfiguration@{channelConfiguration}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{channelConfiguration}{channelConfiguration}}
+{\footnotesize\ttfamily Array$<$\mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Plugin\+In\+Outs}}$>$ juce\+::\+Standalone\+Plugin\+Holder\+::channel\+Configuration}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}\label{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!deviceManager@{deviceManager}}
+\index{deviceManager@{deviceManager}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{deviceManager}{deviceManager}}
+{\footnotesize\ttfamily Audio\+Device\+Manager juce\+::\+Standalone\+Plugin\+Holder\+::device\+Manager}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}\label{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!emptyBuffer@{emptyBuffer}}
+\index{emptyBuffer@{emptyBuffer}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{emptyBuffer}{emptyBuffer}}
+{\footnotesize\ttfamily Audio\+Buffer$<$float$>$ juce\+::\+Standalone\+Plugin\+Holder\+::empty\+Buffer}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747}\label{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!lastMidiDevices@{lastMidiDevices}}
+\index{lastMidiDevices@{lastMidiDevices}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{lastMidiDevices}{lastMidiDevices}}
+{\footnotesize\ttfamily Array$<$Midi\+Device\+Info$>$ juce\+::\+Standalone\+Plugin\+Holder\+::last\+Midi\+Devices}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_afc7560359e3f647244abce214e9892ce}\label{classjuce_1_1_standalone_plugin_holder_afc7560359e3f647244abce214e9892ce} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!maxSizeEnforcer@{maxSizeEnforcer}}
+\index{maxSizeEnforcer@{maxSizeEnforcer}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{maxSizeEnforcer}{maxSizeEnforcer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer}{Callback\+Max\+Size\+Enforcer}} juce\+::\+Standalone\+Plugin\+Holder\+::max\+Size\+Enforcer \{ \texorpdfstring{$\ast$}{*}this \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a191eeef936907b8eeb82c5a41af69f9e}\label{classjuce_1_1_standalone_plugin_holder_a191eeef936907b8eeb82c5a41af69f9e} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!muteInput@{muteInput}}
+\index{muteInput@{muteInput}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{muteInput}{muteInput}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ juce\+::\+Standalone\+Plugin\+Holder\+::mute\+Input \{ true \}}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_aa0b47b6e8c528ea14587de8553e4bf6b}\label{classjuce_1_1_standalone_plugin_holder_aa0b47b6e8c528ea14587de8553e4bf6b} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!options@{options}}
+\index{options@{options}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$Audio\+Device\+Manager\+::\+Audio\+Device\+Setup$>$ juce\+::\+Standalone\+Plugin\+Holder\+::options}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}\label{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!player@{player}}
+\index{player@{player}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily Audio\+Processor\+Player juce\+::\+Standalone\+Plugin\+Holder\+::player}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}\label{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!processor@{processor}}
+\index{processor@{processor}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{processor}{processor}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$Audio\+Processor$>$ juce\+::\+Standalone\+Plugin\+Holder\+::processor}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a85b92cc5b4ee85e576167ba6fea4fe47}\label{classjuce_1_1_standalone_plugin_holder_a85b92cc5b4ee85e576167ba6fea4fe47} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!processorHasPotentialFeedbackLoop@{processorHasPotentialFeedbackLoop}}
+\index{processorHasPotentialFeedbackLoop@{processorHasPotentialFeedbackLoop}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{processorHasPotentialFeedbackLoop}{processorHasPotentialFeedbackLoop}}
+{\footnotesize\ttfamily bool juce\+::\+Standalone\+Plugin\+Holder\+::processor\+Has\+Potential\+Feedback\+Loop = true}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}\label{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!settings@{settings}}
+\index{settings@{settings}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily Optional\+Scoped\+Pointer$<$Property\+Set$>$ juce\+::\+Standalone\+Plugin\+Holder\+::settings}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}\label{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!shouldMuteInput@{shouldMuteInput}}
+\index{shouldMuteInput@{shouldMuteInput}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{shouldMuteInput}{shouldMuteInput}}
+{\footnotesize\ttfamily Value juce\+::\+Standalone\+Plugin\+Holder\+::should\+Mute\+Input}
+
+\Hypertarget{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d}\label{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d} 
+\index{juce::StandalonePluginHolder@{juce::StandalonePluginHolder}!stateFileChooser@{stateFileChooser}}
+\index{stateFileChooser@{stateFileChooser}!juce::StandalonePluginHolder@{juce::StandalonePluginHolder}}
+\doxysubsubsection{\texorpdfstring{stateFileChooser}{stateFileChooser}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$File\+Chooser$>$ juce\+::\+Standalone\+Plugin\+Holder\+::state\+File\+Chooser}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Modules/juce\+\_\+audio\+\_\+plugin\+\_\+client/\+Standalone/\mbox{\hyperlink{juce___standalone_filter_window_8h}{juce\+\_\+\+Standalone\+Filter\+Window.\+h}}\end{DoxyCompactItemize}

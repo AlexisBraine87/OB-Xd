@@ -1,0 +1,204 @@
+\doxysection{Saw\+Osc Class Reference}
+\hypertarget{class_saw_osc}{}\label{class_saw_osc}\index{SawOsc@{SawOsc}}
+
+
+{\ttfamily \#include $<$Saw\+Osc.\+h$>$}
+
+
+
+Collaboration diagram for Saw\+Osc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_saw_osc__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_saw_osc_a9f28d813beb0a94f9bb3c6e04da902b9}{Saw\+Osc}} ()
+\item 
+\mbox{\hyperlink{class_saw_osc_a61dc576a48650b82861fce15434d31ca}{\texorpdfstring{$\sim$}{\string~}\+Saw\+Osc}} ()
+\item 
+void \mbox{\hyperlink{class_saw_osc_a7472180eae72c431af58cc0c302030a9}{set\+Decimation}} ()
+\item 
+void \mbox{\hyperlink{class_saw_osc_a5e6ec728cb30236b6accf605e6b95f52}{remove\+Decimation}} ()
+\item 
+float \mbox{\hyperlink{class_saw_osc_a3a83adbfb8cd26cfa51125acc165b694}{alias\+Reduction}} ()
+\item 
+void \mbox{\hyperlink{class_saw_osc_ab2931f313b93c160a51c5f49e5b7a637}{process\+Master}} (float x, float delta)
+\item 
+float \mbox{\hyperlink{class_saw_osc_a776d973da77edae2592e41b9acdcf243}{get\+Value}} (float x)
+\item 
+float \mbox{\hyperlink{class_saw_osc_a80cddcfc62b29d99c8335224aadc2011}{get\+Value\+Fast}} (float x)
+\item 
+void \mbox{\hyperlink{class_saw_osc_a75dcbb86f38492358b12dc5ec8fbdb08}{process\+Slave}} (float x, float delta, bool hard\+Sync\+Reset, float hard\+Sync\+Frac)
+\item 
+void \mbox{\hyperlink{class_saw_osc_a5a5aa2e22a44aea115c7ae2de26ef91e}{mix\+In\+Impulse\+Center}} (float \texorpdfstring{$\ast$}{*}buf, int \&bpos, float offset, float scale)
+\item 
+float \mbox{\hyperlink{class_saw_osc_ac2c9998d1ad20bac8790432efaf57cef}{get\+Next\+Blep}} (float \texorpdfstring{$\ast$}{*}buf, int \&bpos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_saw_osc_a490840e6f052f170345b3c535674a200}{del1}}
+\item 
+float \mbox{\hyperlink{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}{buffer1}} \mbox{[}\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{class_saw_osc_a9dc1bf9dab40991dae62d72e489b0920}{hsam}}
+\item 
+const int \mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}}
+\item 
+float const  \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blep\+PTR}}
+\item 
+int \mbox{\hyperlink{class_saw_osc_adea169e9d0128898b824c05b0d64525a}{b\+P1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_saw_osc_a9f28d813beb0a94f9bb3c6e04da902b9}\label{class_saw_osc_a9f28d813beb0a94f9bb3c6e04da902b9} 
+\index{SawOsc@{SawOsc}!SawOsc@{SawOsc}}
+\index{SawOsc@{SawOsc}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{SawOsc()}{SawOsc()}}
+{\footnotesize\ttfamily Saw\+Osc\+::\+Saw\+Osc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_saw_osc_a61dc576a48650b82861fce15434d31ca}\label{class_saw_osc_a61dc576a48650b82861fce15434d31ca} 
+\index{SawOsc@{SawOsc}!````~SawOsc@{\texorpdfstring{$\sim$}{\string~}SawOsc}}
+\index{````~SawOsc@{\texorpdfstring{$\sim$}{\string~}SawOsc}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SawOsc()}{\string~SawOsc()}}
+{\footnotesize\ttfamily Saw\+Osc\+::\texorpdfstring{$\sim$}{\string~}\+Saw\+Osc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_saw_osc_a3a83adbfb8cd26cfa51125acc165b694}\label{class_saw_osc_a3a83adbfb8cd26cfa51125acc165b694} 
+\index{SawOsc@{SawOsc}!aliasReduction@{aliasReduction}}
+\index{aliasReduction@{aliasReduction}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{aliasReduction()}{aliasReduction()}}
+{\footnotesize\ttfamily float Saw\+Osc\+::alias\+Reduction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_saw_osc_a3a83adbfb8cd26cfa51125acc165b694_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_saw_osc_ac2c9998d1ad20bac8790432efaf57cef}\label{class_saw_osc_ac2c9998d1ad20bac8790432efaf57cef} 
+\index{SawOsc@{SawOsc}!getNextBlep@{getNextBlep}}
+\index{getNextBlep@{getNextBlep}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{getNextBlep()}{getNextBlep()}}
+{\footnotesize\ttfamily float Saw\+Osc\+::get\+Next\+Blep (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int \&}]{bpos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_saw_osc_a776d973da77edae2592e41b9acdcf243}\label{class_saw_osc_a776d973da77edae2592e41b9acdcf243} 
+\index{SawOsc@{SawOsc}!getValue@{getValue}}
+\index{getValue@{getValue}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily float Saw\+Osc\+::get\+Value (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_saw_osc_a776d973da77edae2592e41b9acdcf243_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_saw_osc_a80cddcfc62b29d99c8335224aadc2011}\label{class_saw_osc_a80cddcfc62b29d99c8335224aadc2011} 
+\index{SawOsc@{SawOsc}!getValueFast@{getValueFast}}
+\index{getValueFast@{getValueFast}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{getValueFast()}{getValueFast()}}
+{\footnotesize\ttfamily float Saw\+Osc\+::get\+Value\+Fast (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_saw_osc_a5a5aa2e22a44aea115c7ae2de26ef91e}\label{class_saw_osc_a5a5aa2e22a44aea115c7ae2de26ef91e} 
+\index{SawOsc@{SawOsc}!mixInImpulseCenter@{mixInImpulseCenter}}
+\index{mixInImpulseCenter@{mixInImpulseCenter}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{mixInImpulseCenter()}{mixInImpulseCenter()}}
+{\footnotesize\ttfamily void Saw\+Osc\+::mix\+In\+Impulse\+Center (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int \&}]{bpos,  }\item[{float}]{offset,  }\item[{float}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_saw_osc_ab2931f313b93c160a51c5f49e5b7a637}\label{class_saw_osc_ab2931f313b93c160a51c5f49e5b7a637} 
+\index{SawOsc@{SawOsc}!processMaster@{processMaster}}
+\index{processMaster@{processMaster}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{processMaster()}{processMaster()}}
+{\footnotesize\ttfamily void Saw\+Osc\+::process\+Master (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_saw_osc_ab2931f313b93c160a51c5f49e5b7a637_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_saw_osc_a75dcbb86f38492358b12dc5ec8fbdb08}\label{class_saw_osc_a75dcbb86f38492358b12dc5ec8fbdb08} 
+\index{SawOsc@{SawOsc}!processSlave@{processSlave}}
+\index{processSlave@{processSlave}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{processSlave()}{processSlave()}}
+{\footnotesize\ttfamily void Saw\+Osc\+::process\+Slave (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{delta,  }\item[{bool}]{hard\+Sync\+Reset,  }\item[{float}]{hard\+Sync\+Frac }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_saw_osc_a75dcbb86f38492358b12dc5ec8fbdb08_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_saw_osc_a5e6ec728cb30236b6accf605e6b95f52}\label{class_saw_osc_a5e6ec728cb30236b6accf605e6b95f52} 
+\index{SawOsc@{SawOsc}!removeDecimation@{removeDecimation}}
+\index{removeDecimation@{removeDecimation}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{removeDecimation()}{removeDecimation()}}
+{\footnotesize\ttfamily void Saw\+Osc\+::remove\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_saw_osc_a7472180eae72c431af58cc0c302030a9}\label{class_saw_osc_a7472180eae72c431af58cc0c302030a9} 
+\index{SawOsc@{SawOsc}!setDecimation@{setDecimation}}
+\index{setDecimation@{setDecimation}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{setDecimation()}{setDecimation()}}
+{\footnotesize\ttfamily void Saw\+Osc\+::set\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}\label{class_saw_osc_a9c51911c6c74498d885f5603f6405b63} 
+\index{SawOsc@{SawOsc}!blepPTR@{blepPTR}}
+\index{blepPTR@{blepPTR}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{blepPTR}{blepPTR}}
+{\footnotesize\ttfamily float const\texorpdfstring{$\ast$}{*} Saw\+Osc\+::blep\+PTR\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_saw_osc_adea169e9d0128898b824c05b0d64525a}\label{class_saw_osc_adea169e9d0128898b824c05b0d64525a} 
+\index{SawOsc@{SawOsc}!bP1@{bP1}}
+\index{bP1@{bP1}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{bP1}{bP1}}
+{\footnotesize\ttfamily int Saw\+Osc\+::b\+P1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}\label{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550} 
+\index{SawOsc@{SawOsc}!buffer1@{buffer1}}
+\index{buffer1@{buffer1}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{buffer1}{buffer1}}
+{\footnotesize\ttfamily float Saw\+Osc\+::buffer1\mbox{[}\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_saw_osc_a490840e6f052f170345b3c535674a200}\label{class_saw_osc_a490840e6f052f170345b3c535674a200} 
+\index{SawOsc@{SawOsc}!del1@{del1}}
+\index{del1@{del1}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{del1}{del1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Saw\+Osc\+::del1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_saw_osc_a9dc1bf9dab40991dae62d72e489b0920}\label{class_saw_osc_a9dc1bf9dab40991dae62d72e489b0920} 
+\index{SawOsc@{SawOsc}!hsam@{hsam}}
+\index{hsam@{hsam}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{hsam}{hsam}}
+{\footnotesize\ttfamily const int Saw\+Osc\+::hsam\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}\label{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3} 
+\index{SawOsc@{SawOsc}!n@{n}}
+\index{n@{n}!SawOsc@{SawOsc}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily const int Saw\+Osc\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_saw_osc_8h}{Saw\+Osc.\+h}}\end{DoxyCompactItemize}

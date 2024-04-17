@@ -1,0 +1,105 @@
+\doxysection{Custom\+Look\+And\+Feel Class Reference}
+\hypertarget{class_custom_look_and_feel}{}\label{class_custom_look_and_feel}\index{CustomLookAndFeel@{CustomLookAndFeel}}
+
+
+{\ttfamily \#include $<$Scale\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Custom\+Look\+And\+Feel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_custom_look_and_feel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Custom\+Look\+And\+Feel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_custom_look_and_feel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_custom_look_and_feel_a31378f200a5733a4fae3f8d7d82400ec}{Custom\+Look\+And\+Feel}} (\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner\+\_\+)
+\item 
+Popup\+Menu\+::\+Options \mbox{\hyperlink{class_custom_look_and_feel_a8fe8f80c5eee91652feaf14e5dd19628}{get\+Options\+For\+Combo\+Box\+Popup\+Menu}} (Combo\+Box \&box, Label \&label) override
+\item 
+Font \mbox{\hyperlink{class_custom_look_and_feel_aaa328c8fe3a9f9620d14214201c9fe9d}{get\+Popup\+Menu\+Font}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5}{\texorpdfstring{$\sim$}{\string~}\+Scalable\+Component}} ()
+\item 
+int \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{get\+Scale\+Int}} ()
+\item 
+void \mbox{\hyperlink{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e}{set\+Scale\+Factor}} (float new\+Scale\+Factor, bool new\+Is\+High\+Resolution\+Display)
+\item 
+float \mbox{\hyperlink{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc}{get\+Scale\+Image}} ()
+\item 
+float \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{get\+Scale\+Factor}} () const
+\item 
+bool \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{get\+Is\+High\+Resolution\+Display}} () const
+\item 
+virtual void \mbox{\hyperlink{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e}{scale\+Factor\+Changed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4}{Scalable\+Component}} (\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner\+\_\+)
+\item 
+Image \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{get\+Scaled\+Image\+From\+Cache}} (const String \&image\+Name, float \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scale\+Factor}}, bool \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{is\+High\+Resolution\+Display}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_custom_look_and_feel_a31378f200a5733a4fae3f8d7d82400ec}\label{class_custom_look_and_feel_a31378f200a5733a4fae3f8d7d82400ec} 
+\index{CustomLookAndFeel@{CustomLookAndFeel}!CustomLookAndFeel@{CustomLookAndFeel}}
+\index{CustomLookAndFeel@{CustomLookAndFeel}!CustomLookAndFeel@{CustomLookAndFeel}}
+\doxysubsubsection{\texorpdfstring{CustomLookAndFeel()}{CustomLookAndFeel()}}
+{\footnotesize\ttfamily Custom\+Look\+And\+Feel\+::\+Custom\+Look\+And\+Feel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}}]{owner\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_custom_look_and_feel_a8fe8f80c5eee91652feaf14e5dd19628}\label{class_custom_look_and_feel_a8fe8f80c5eee91652feaf14e5dd19628} 
+\index{CustomLookAndFeel@{CustomLookAndFeel}!getOptionsForComboBoxPopupMenu@{getOptionsForComboBoxPopupMenu}}
+\index{getOptionsForComboBoxPopupMenu@{getOptionsForComboBoxPopupMenu}!CustomLookAndFeel@{CustomLookAndFeel}}
+\doxysubsubsection{\texorpdfstring{getOptionsForComboBoxPopupMenu()}{getOptionsForComboBoxPopupMenu()}}
+{\footnotesize\ttfamily Popup\+Menu\+::\+Options Custom\+Look\+And\+Feel\+::get\+Options\+For\+Combo\+Box\+Popup\+Menu (\begin{DoxyParamCaption}\item[{Combo\+Box \&}]{box,  }\item[{Label \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_custom_look_and_feel_a8fe8f80c5eee91652feaf14e5dd19628_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_custom_look_and_feel_aaa328c8fe3a9f9620d14214201c9fe9d}\label{class_custom_look_and_feel_aaa328c8fe3a9f9620d14214201c9fe9d} 
+\index{CustomLookAndFeel@{CustomLookAndFeel}!getPopupMenuFont@{getPopupMenuFont}}
+\index{getPopupMenuFont@{getPopupMenuFont}!CustomLookAndFeel@{CustomLookAndFeel}}
+\doxysubsubsection{\texorpdfstring{getPopupMenuFont()}{getPopupMenuFont()}}
+{\footnotesize\ttfamily Font Custom\+Look\+And\+Feel\+::get\+Popup\+Menu\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_custom_look_and_feel_aaa328c8fe3a9f9620d14214201c9fe9d_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Components/\mbox{\hyperlink{_scale_component_8h}{Scale\+Component.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="PresetBar::update" name="PresetBar::update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,46,132,72"/>
+<area shape="rect" id="Node000002" href="$class_obxd_audio_processor_editor.html#a214da18157c26d5569ed5832b16e3916" title=" " alt="" coords="180,39,358,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,56,164,56,164,62,132,62"/>
+<area shape="rect" id="Node000003" href="$class_obxd_audio_processor.html#aea6cd11054bf8df131c4d4c072a8e313" title=" " alt="" coords="406,5,550,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="358,42,390,37,391,42,359,47"/>
+<area shape="rect" id="Node000004" href="$class_obxd_audio_processor.html#a72cda5b4bc253be485d89cc9e633dfc6" title=" " alt="" coords="406,71,550,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="359,70,391,75,390,80,358,75"/>
+</map>

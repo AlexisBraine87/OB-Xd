@@ -1,0 +1,7 @@
+<map id="juce::StandaloneFilterWindow::DecoratorConstrainer::checkBounds" name="juce::StandaloneFilterWindow::DecoratorConstrainer::checkBounds">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,41,246,82"/>
+<area shape="rect" id="Node000002" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#aa09220b14d4b9557dd91e7868334ef12" title=" " alt="" coords="294,5,560,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,45,278,41,278,46,246,50"/>
+<area shape="rect" id="Node000003" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#aafa7a08abbc3850b7ac429a4017257a0" title=" " alt="" coords="312,70,542,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="246,73,296,79,296,85,246,79"/>
+</map>

@@ -1,0 +1,273 @@
+\doxysection{Knob Class Reference}
+\hypertarget{class_knob}{}\label{class_knob}\index{Knob@{Knob}}
+
+
+{\ttfamily \#include $<$Knob.\+h$>$}
+
+
+
+Inheritance diagram for Knob\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_knob__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Knob\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_knob__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_knob_1_1_knob_attachment}{Knob\+Attachment}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_knob_a4eafcbb3785fdda2895c76434018f3ce}{Knob}} (juce\+::\+String name, int \mbox{\hyperlink{class_knob_a72d9650bfcbc0b4c088e4cc946577677}{fh}}, \mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner\+\_\+)
+\item 
+\mbox{\hyperlink{class_knob_a8b061711ecd0109e6244e3ce8b99f8c4}{\texorpdfstring{$\sim$}{\string~}\+Knob}} () override
+\item 
+void \mbox{\hyperlink{class_knob_adfcbbe8b41fff33f47dfd7ae2a0059a8}{scale\+Factor\+Changed}} () override
+\item 
+void \mbox{\hyperlink{class_knob_a641ec2a7caf09a04acdcd97bbc4d2c95}{mouse\+Down}} (const Mouse\+Event \&event) override
+\item 
+void \mbox{\hyperlink{class_knob_a921febd9d038898b0180fc76c72aaefd}{mouse\+Drag}} (const Mouse\+Event \&event) override
+\item 
+void \mbox{\hyperlink{class_knob_acb8a5156869f481b1b7306bcedeef8ae}{set\+Parameter}} (Audio\+Processor\+Parameter \texorpdfstring{$\ast$}{*}p)
+\item 
+void \mbox{\hyperlink{class_knob_aa300f05166099cbe56825dbef7fb3cfa}{paint}} (Graphics \&g) override
+\item 
+void \mbox{\hyperlink{class_knob_a730d6dc583e1b4b9231770664d3dc40e}{reset\+On\+Shift\+Click}} (bool value, const String \&identifier)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5}{\texorpdfstring{$\sim$}{\string~}\+Scalable\+Component}} ()
+\item 
+int \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{get\+Scale\+Int}} ()
+\item 
+void \mbox{\hyperlink{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e}{set\+Scale\+Factor}} (float new\+Scale\+Factor, bool new\+Is\+High\+Resolution\+Display)
+\item 
+float \mbox{\hyperlink{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc}{get\+Scale\+Image}} ()
+\item 
+float \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{get\+Scale\+Factor}} () const
+\item 
+bool \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{get\+Is\+High\+Resolution\+Display}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ double(double)$>$ \mbox{\hyperlink{class_knob_aa169323e14391329cc4dba04de77dbd7}{shift\+Drag\+Callback}}
+\item 
+std\+::function$<$ double(double)$>$ \mbox{\hyperlink{class_knob_a96ef927225d33fa4fc3440f46683fa90}{alt\+Drag\+Callback}}
+\item 
+std\+::function$<$ double(double)$>$ \mbox{\hyperlink{class_knob_a328112858b7a5ca191f693d0cad3f655}{alternative\+Value\+Map\+Callback}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+juce\+::\+String \mbox{\hyperlink{class_knob_aee69595aa70b6dffe988ba42a5784cb1}{img\+\_\+name}}
+\item 
+Image \mbox{\hyperlink{class_knob_a7e9c862c9a3d460b035f358e93dfeef7}{kni}}
+\item 
+int \mbox{\hyperlink{class_knob_a72d9650bfcbc0b4c088e4cc946577677}{fh}}
+\item 
+int \mbox{\hyperlink{class_knob_a37b10841f822790090fbc40f854b288a}{num\+Fr}}
+\item 
+int \mbox{\hyperlink{class_knob_acc93c09c5ba43d02fef607f46ba3e13d}{w2}}
+\item 
+int \mbox{\hyperlink{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf}{h2}}
+\item 
+bool \mbox{\hyperlink{class_knob_a53ec12691ab9bab9addb5dbcb3a74f89}{should\+Reset\+On\+Shift\+Click}} \{ false \}
+\item 
+String \mbox{\hyperlink{class_knob_a228de9b78d16d912183d554d347cfb5b}{reset\+Action\+Message}} \{\}
+\item 
+Audio\+Processor\+Parameter \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_knob_a6d960947d182bf2f2501e2807fe0f452}{parameter}} \{nullptr\}
+\item 
+\mbox{\hyperlink{class_knob_look_and_feel}{Knob\+Look\+And\+Feel}} \mbox{\hyperlink{class_knob_a73c154f825e073a007329031ef21c3db}{look\+And\+Feel}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4}{Scalable\+Component}} (\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner\+\_\+)
+\item 
+Image \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{get\+Scaled\+Image\+From\+Cache}} (const String \&image\+Name, float \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scale\+Factor}}, bool \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{is\+High\+Resolution\+Display}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_knob_a4eafcbb3785fdda2895c76434018f3ce}\label{class_knob_a4eafcbb3785fdda2895c76434018f3ce} 
+\index{Knob@{Knob}!Knob@{Knob}}
+\index{Knob@{Knob}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{Knob()}{Knob()}}
+{\footnotesize\ttfamily Knob\+::\+Knob (\begin{DoxyParamCaption}\item[{juce\+::\+String}]{name,  }\item[{int}]{fh,  }\item[{\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}}]{owner\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_knob_a4eafcbb3785fdda2895c76434018f3ce_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_knob_a8b061711ecd0109e6244e3ce8b99f8c4}\label{class_knob_a8b061711ecd0109e6244e3ce8b99f8c4} 
+\index{Knob@{Knob}!````~Knob@{\texorpdfstring{$\sim$}{\string~}Knob}}
+\index{````~Knob@{\texorpdfstring{$\sim$}{\string~}Knob}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Knob()}{\string~Knob()}}
+{\footnotesize\ttfamily Knob\+::\texorpdfstring{$\sim$}{\string~}\+Knob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_knob_a641ec2a7caf09a04acdcd97bbc4d2c95}\label{class_knob_a641ec2a7caf09a04acdcd97bbc4d2c95} 
+\index{Knob@{Knob}!mouseDown@{mouseDown}}
+\index{mouseDown@{mouseDown}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{mouseDown()}{mouseDown()}}
+{\footnotesize\ttfamily void Knob\+::mouse\+Down (\begin{DoxyParamCaption}\item[{const Mouse\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class_knob_a921febd9d038898b0180fc76c72aaefd}\label{class_knob_a921febd9d038898b0180fc76c72aaefd} 
+\index{Knob@{Knob}!mouseDrag@{mouseDrag}}
+\index{mouseDrag@{mouseDrag}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{mouseDrag()}{mouseDrag()}}
+{\footnotesize\ttfamily void Knob\+::mouse\+Drag (\begin{DoxyParamCaption}\item[{const Mouse\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class_knob_aa300f05166099cbe56825dbef7fb3cfa}\label{class_knob_aa300f05166099cbe56825dbef7fb3cfa} 
+\index{Knob@{Knob}!paint@{paint}}
+\index{paint@{paint}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Knob\+::paint (\begin{DoxyParamCaption}\item[{Graphics \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_knob_aa300f05166099cbe56825dbef7fb3cfa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_knob_a730d6dc583e1b4b9231770664d3dc40e}\label{class_knob_a730d6dc583e1b4b9231770664d3dc40e} 
+\index{Knob@{Knob}!resetOnShiftClick@{resetOnShiftClick}}
+\index{resetOnShiftClick@{resetOnShiftClick}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{resetOnShiftClick()}{resetOnShiftClick()}}
+{\footnotesize\ttfamily void Knob\+::reset\+On\+Shift\+Click (\begin{DoxyParamCaption}\item[{bool}]{value,  }\item[{const String \&}]{identifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_knob_adfcbbe8b41fff33f47dfd7ae2a0059a8}\label{class_knob_adfcbbe8b41fff33f47dfd7ae2a0059a8} 
+\index{Knob@{Knob}!scaleFactorChanged@{scaleFactorChanged}}
+\index{scaleFactorChanged@{scaleFactorChanged}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{scaleFactorChanged()}{scaleFactorChanged()}}
+{\footnotesize\ttfamily void Knob\+::scale\+Factor\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e}{Scalable\+Component}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_knob_adfcbbe8b41fff33f47dfd7ae2a0059a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_knob_acb8a5156869f481b1b7306bcedeef8ae}\label{class_knob_acb8a5156869f481b1b7306bcedeef8ae} 
+\index{Knob@{Knob}!setParameter@{setParameter}}
+\index{setParameter@{setParameter}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{setParameter()}{setParameter()}}
+{\footnotesize\ttfamily void Knob\+::set\+Parameter (\begin{DoxyParamCaption}\item[{Audio\+Processor\+Parameter \texorpdfstring{$\ast$}{*}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_knob_a96ef927225d33fa4fc3440f46683fa90}\label{class_knob_a96ef927225d33fa4fc3440f46683fa90} 
+\index{Knob@{Knob}!altDragCallback@{altDragCallback}}
+\index{altDragCallback@{altDragCallback}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{altDragCallback}{altDragCallback}}
+{\footnotesize\ttfamily std\+::function$<$double(double)$>$ Knob\+::alt\+Drag\+Callback}
+
+\Hypertarget{class_knob_a328112858b7a5ca191f693d0cad3f655}\label{class_knob_a328112858b7a5ca191f693d0cad3f655} 
+\index{Knob@{Knob}!alternativeValueMapCallback@{alternativeValueMapCallback}}
+\index{alternativeValueMapCallback@{alternativeValueMapCallback}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{alternativeValueMapCallback}{alternativeValueMapCallback}}
+{\footnotesize\ttfamily std\+::function$<$double(double)$>$ Knob\+::alternative\+Value\+Map\+Callback}
+
+\Hypertarget{class_knob_a72d9650bfcbc0b4c088e4cc946577677}\label{class_knob_a72d9650bfcbc0b4c088e4cc946577677} 
+\index{Knob@{Knob}!fh@{fh}}
+\index{fh@{fh}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{fh}{fh}}
+{\footnotesize\ttfamily int Knob\+::fh\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf}\label{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf} 
+\index{Knob@{Knob}!h2@{h2}}
+\index{h2@{h2}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{h2}{h2}}
+{\footnotesize\ttfamily int Knob\+::h2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_aee69595aa70b6dffe988ba42a5784cb1}\label{class_knob_aee69595aa70b6dffe988ba42a5784cb1} 
+\index{Knob@{Knob}!img\_name@{img\_name}}
+\index{img\_name@{img\_name}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{img\_name}{img\_name}}
+{\footnotesize\ttfamily juce\+::\+String Knob\+::img\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_a7e9c862c9a3d460b035f358e93dfeef7}\label{class_knob_a7e9c862c9a3d460b035f358e93dfeef7} 
+\index{Knob@{Knob}!kni@{kni}}
+\index{kni@{kni}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{kni}{kni}}
+{\footnotesize\ttfamily Image Knob\+::kni\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_a73c154f825e073a007329031ef21c3db}\label{class_knob_a73c154f825e073a007329031ef21c3db} 
+\index{Knob@{Knob}!lookAndFeel@{lookAndFeel}}
+\index{lookAndFeel@{lookAndFeel}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{lookAndFeel}{lookAndFeel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_knob_look_and_feel}{Knob\+Look\+And\+Feel}} Knob\+::look\+And\+Feel\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_a37b10841f822790090fbc40f854b288a}\label{class_knob_a37b10841f822790090fbc40f854b288a} 
+\index{Knob@{Knob}!numFr@{numFr}}
+\index{numFr@{numFr}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{numFr}{numFr}}
+{\footnotesize\ttfamily int Knob\+::num\+Fr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_a6d960947d182bf2f2501e2807fe0f452}\label{class_knob_a6d960947d182bf2f2501e2807fe0f452} 
+\index{Knob@{Knob}!parameter@{parameter}}
+\index{parameter@{parameter}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{parameter}{parameter}}
+{\footnotesize\ttfamily Audio\+Processor\+Parameter\texorpdfstring{$\ast$}{*} Knob\+::parameter \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_a228de9b78d16d912183d554d347cfb5b}\label{class_knob_a228de9b78d16d912183d554d347cfb5b} 
+\index{Knob@{Knob}!resetActionMessage@{resetActionMessage}}
+\index{resetActionMessage@{resetActionMessage}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{resetActionMessage}{resetActionMessage}}
+{\footnotesize\ttfamily String Knob\+::reset\+Action\+Message \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_aa169323e14391329cc4dba04de77dbd7}\label{class_knob_aa169323e14391329cc4dba04de77dbd7} 
+\index{Knob@{Knob}!shiftDragCallback@{shiftDragCallback}}
+\index{shiftDragCallback@{shiftDragCallback}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{shiftDragCallback}{shiftDragCallback}}
+{\footnotesize\ttfamily std\+::function$<$double(double)$>$ Knob\+::shift\+Drag\+Callback}
+
+\Hypertarget{class_knob_a53ec12691ab9bab9addb5dbcb3a74f89}\label{class_knob_a53ec12691ab9bab9addb5dbcb3a74f89} 
+\index{Knob@{Knob}!shouldResetOnShiftClick@{shouldResetOnShiftClick}}
+\index{shouldResetOnShiftClick@{shouldResetOnShiftClick}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{shouldResetOnShiftClick}{shouldResetOnShiftClick}}
+{\footnotesize\ttfamily bool Knob\+::should\+Reset\+On\+Shift\+Click \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_knob_acc93c09c5ba43d02fef607f46ba3e13d}\label{class_knob_acc93c09c5ba43d02fef607f46ba3e13d} 
+\index{Knob@{Knob}!w2@{w2}}
+\index{w2@{w2}!Knob@{Knob}}
+\doxysubsubsection{\texorpdfstring{w2}{w2}}
+{\footnotesize\ttfamily int Knob\+::w2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Gui/\mbox{\hyperlink{_knob_8h}{Knob.\+h}}\end{DoxyCompactItemize}

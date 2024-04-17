@@ -1,0 +1,302 @@
+\doxysection{Source/\+MTS/lib\+MTSClient.cpp File Reference}
+\hypertarget{lib_m_t_s_client_8cpp}{}\label{lib_m_t_s_client_8cpp}\index{Source/MTS/libMTSClient.cpp@{Source/MTS/libMTSClient.cpp}}
+{\ttfamily \#include "{}lib\+MTSClient.\+h"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+Include dependency graph for lib\+MTSClient.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{lib_m_t_s_client_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmtsclientglobal}{mtsclientglobal}}
+\item 
+struct \mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_a003a337657c912bdea1c3371466e5f4c}{mts\+\_\+void}}) (void)
+\item 
+typedef bool(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_a810704ff4088358bdcddb86ee2eef48e}{mts\+\_\+bool}}) (void)
+\item 
+typedef bool(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_a7c0503d73cfd5700ac78f81ce9755f78}{mts\+\_\+bcc}}) (char, char)
+\item 
+typedef const double \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_ac99ae656087266f11c3ad1f199e58db6}{mts\+\_\+cd}}) (void)
+\item 
+typedef const double \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_aac80c02d563c2327ef3fd064b4324b58}{mts\+\_\+cdc}}) (char)
+\item 
+typedef bool(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_a6aaf04d6e3b13f495b95d69eb47cc429}{mts\+\_\+bc}}) (char)
+\item 
+typedef const char \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_abecfeceef2e486a54b079f1f3911d0e3}{mts\+\_\+pcc}}) (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char \mbox{\hyperlink{lib_m_t_s_client_8cpp_a3cbe506bb19746bfa0e49828c0a75d9b}{freq\+To\+Note\+ET}} (double freq)
+\item 
+\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_a76696080794280bbac195d9e85096510}{MTS\+\_\+\+Register\+Client}} ()
+\item 
+void \mbox{\hyperlink{lib_m_t_s_client_8cpp_a0c9b6dec8535e7220dc0f357c49faca5}{MTS\+\_\+\+Deregister\+Client}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c)
+\item 
+bool \mbox{\hyperlink{lib_m_t_s_client_8cpp_a3263194a12cb35a3542eb71c9cd35cb7}{MTS\+\_\+\+Has\+Master}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c)
+\item 
+bool \mbox{\hyperlink{lib_m_t_s_client_8cpp_a96f4fbd471b64a496e98a023829769f7}{MTS\+\_\+\+Should\+Filter\+Note}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, char midinote, char midichannel)
+\item 
+double \mbox{\hyperlink{lib_m_t_s_client_8cpp_a891f974b40b27ab41707a964346121f9}{MTS\+\_\+\+Note\+To\+Frequency}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, char midinote, char midichannel)
+\item 
+double \mbox{\hyperlink{lib_m_t_s_client_8cpp_a1b4502ea863eb9369fe10569a3897d67}{MTS\+\_\+\+Retuning\+As\+Ratio}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, char midinote, char midichannel)
+\item 
+double \mbox{\hyperlink{lib_m_t_s_client_8cpp_a43b1c598fda0c61ac4c5338faa92d201}{MTS\+\_\+\+Retuning\+In\+Semitones}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, char midinote, char midichannel)
+\item 
+char \mbox{\hyperlink{lib_m_t_s_client_8cpp_a5bd7c27bc3f006fc1d64082f34fb94d8}{MTS\+\_\+\+Frequency\+To\+Note}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, double freq, char midichannel)
+\item 
+char \mbox{\hyperlink{lib_m_t_s_client_8cpp_a151ff788c14e06e658456167ad679f92}{MTS\+\_\+\+Frequency\+To\+Note\+And\+Channel}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, double freq, char \texorpdfstring{$\ast$}{*}midichannel)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lib_m_t_s_client_8cpp_a49497ca200e2ca58b9b630212a45a3cb}{MTS\+\_\+\+Get\+Scale\+Name}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c)
+\item 
+void \mbox{\hyperlink{lib_m_t_s_client_8cpp_a82dfa34e35aedda26a63bca05847d5fc}{MTS\+\_\+\+Parse\+MIDIDataU}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, const unsigned char \texorpdfstring{$\ast$}{*}buffer, int len)
+\item 
+void \mbox{\hyperlink{lib_m_t_s_client_8cpp_a5c569afdadb911d4bc4483a5af030052}{MTS\+\_\+\+Parse\+MIDIData}} (\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}c, const char \texorpdfstring{$\ast$}{*}buffer, int len)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const double \mbox{\hyperlink{lib_m_t_s_client_8cpp_a703f4fc93e5a57058ce6ba2ba196918d}{ln2}} =0.\+693147180559945309417
+\item 
+static const double \mbox{\hyperlink{lib_m_t_s_client_8cpp_a2c1776fc46438dbf7d498d2b5d406db0}{ratio\+To\+Semitones}} =17.\+31234049066756088832
+\item 
+static \mbox{\hyperlink{structmtsclientglobal}{mtsclientglobal}} \mbox{\hyperlink{lib_m_t_s_client_8cpp_a5cf68de0f54f994efbc1803e7d7b96ae}{global}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{lib_m_t_s_client_8cpp_a6aaf04d6e3b13f495b95d69eb47cc429}\label{lib_m_t_s_client_8cpp_a6aaf04d6e3b13f495b95d69eb47cc429} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!mts\_bc@{mts\_bc}}
+\index{mts\_bc@{mts\_bc}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{mts\_bc}{mts\_bc}}
+{\footnotesize\ttfamily typedef bool(\texorpdfstring{$\ast$}{*} mts\+\_\+bc) (char)}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a7c0503d73cfd5700ac78f81ce9755f78}\label{lib_m_t_s_client_8cpp_a7c0503d73cfd5700ac78f81ce9755f78} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!mts\_bcc@{mts\_bcc}}
+\index{mts\_bcc@{mts\_bcc}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{mts\_bcc}{mts\_bcc}}
+{\footnotesize\ttfamily typedef bool(\texorpdfstring{$\ast$}{*} mts\+\_\+bcc) (char, char)}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a810704ff4088358bdcddb86ee2eef48e}\label{lib_m_t_s_client_8cpp_a810704ff4088358bdcddb86ee2eef48e} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!mts\_bool@{mts\_bool}}
+\index{mts\_bool@{mts\_bool}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{mts\_bool}{mts\_bool}}
+{\footnotesize\ttfamily typedef bool(\texorpdfstring{$\ast$}{*} mts\+\_\+bool) (void)}
+
+\Hypertarget{lib_m_t_s_client_8cpp_ac99ae656087266f11c3ad1f199e58db6}\label{lib_m_t_s_client_8cpp_ac99ae656087266f11c3ad1f199e58db6} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!mts\_cd@{mts\_cd}}
+\index{mts\_cd@{mts\_cd}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{mts\_cd}{mts\_cd}}
+{\footnotesize\ttfamily typedef const double \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} mts\+\_\+cd) (void)}
+
+\Hypertarget{lib_m_t_s_client_8cpp_aac80c02d563c2327ef3fd064b4324b58}\label{lib_m_t_s_client_8cpp_aac80c02d563c2327ef3fd064b4324b58} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!mts\_cdc@{mts\_cdc}}
+\index{mts\_cdc@{mts\_cdc}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{mts\_cdc}{mts\_cdc}}
+{\footnotesize\ttfamily typedef const double \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} mts\+\_\+cdc) (char)}
+
+\Hypertarget{lib_m_t_s_client_8cpp_abecfeceef2e486a54b079f1f3911d0e3}\label{lib_m_t_s_client_8cpp_abecfeceef2e486a54b079f1f3911d0e3} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!mts\_pcc@{mts\_pcc}}
+\index{mts\_pcc@{mts\_pcc}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{mts\_pcc}{mts\_pcc}}
+{\footnotesize\ttfamily typedef const char \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} mts\+\_\+pcc) (void)}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a003a337657c912bdea1c3371466e5f4c}\label{lib_m_t_s_client_8cpp_a003a337657c912bdea1c3371466e5f4c} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!mts\_void@{mts\_void}}
+\index{mts\_void@{mts\_void}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{mts\_void}{mts\_void}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} mts\+\_\+void) (void)}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lib_m_t_s_client_8cpp_a3cbe506bb19746bfa0e49828c0a75d9b}\label{lib_m_t_s_client_8cpp_a3cbe506bb19746bfa0e49828c0a75d9b} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!freqToNoteET@{freqToNoteET}}
+\index{freqToNoteET@{freqToNoteET}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{freqToNoteET()}{freqToNoteET()}}
+{\footnotesize\ttfamily static char freq\+To\+Note\+ET (\begin{DoxyParamCaption}\item[{double}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a0c9b6dec8535e7220dc0f357c49faca5}\label{lib_m_t_s_client_8cpp_a0c9b6dec8535e7220dc0f357c49faca5} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_DeregisterClient@{MTS\_DeregisterClient}}
+\index{MTS\_DeregisterClient@{MTS\_DeregisterClient}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_DeregisterClient()}{MTS\_DeregisterClient()}}
+{\footnotesize\ttfamily void MTS\+\_\+\+Deregister\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a5bd7c27bc3f006fc1d64082f34fb94d8}\label{lib_m_t_s_client_8cpp_a5bd7c27bc3f006fc1d64082f34fb94d8} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_FrequencyToNote@{MTS\_FrequencyToNote}}
+\index{MTS\_FrequencyToNote@{MTS\_FrequencyToNote}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_FrequencyToNote()}{MTS\_FrequencyToNote()}}
+{\footnotesize\ttfamily char MTS\+\_\+\+Frequency\+To\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{double}]{freq,  }\item[{char}]{midichannel }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a5bd7c27bc3f006fc1d64082f34fb94d8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a151ff788c14e06e658456167ad679f92}\label{lib_m_t_s_client_8cpp_a151ff788c14e06e658456167ad679f92} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_FrequencyToNoteAndChannel@{MTS\_FrequencyToNoteAndChannel}}
+\index{MTS\_FrequencyToNoteAndChannel@{MTS\_FrequencyToNoteAndChannel}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_FrequencyToNoteAndChannel()}{MTS\_FrequencyToNoteAndChannel()}}
+{\footnotesize\ttfamily char MTS\+\_\+\+Frequency\+To\+Note\+And\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{double}]{freq,  }\item[{char \texorpdfstring{$\ast$}{*}}]{midichannel }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a151ff788c14e06e658456167ad679f92_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a49497ca200e2ca58b9b630212a45a3cb}\label{lib_m_t_s_client_8cpp_a49497ca200e2ca58b9b630212a45a3cb} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_GetScaleName@{MTS\_GetScaleName}}
+\index{MTS\_GetScaleName@{MTS\_GetScaleName}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_GetScaleName()}{MTS\_GetScaleName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} MTS\+\_\+\+Get\+Scale\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a49497ca200e2ca58b9b630212a45a3cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a3263194a12cb35a3542eb71c9cd35cb7}\label{lib_m_t_s_client_8cpp_a3263194a12cb35a3542eb71c9cd35cb7} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_HasMaster@{MTS\_HasMaster}}
+\index{MTS\_HasMaster@{MTS\_HasMaster}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_HasMaster()}{MTS\_HasMaster()}}
+{\footnotesize\ttfamily bool MTS\+\_\+\+Has\+Master (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a3263194a12cb35a3542eb71c9cd35cb7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a891f974b40b27ab41707a964346121f9}\label{lib_m_t_s_client_8cpp_a891f974b40b27ab41707a964346121f9} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_NoteToFrequency@{MTS\_NoteToFrequency}}
+\index{MTS\_NoteToFrequency@{MTS\_NoteToFrequency}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_NoteToFrequency()}{MTS\_NoteToFrequency()}}
+{\footnotesize\ttfamily double MTS\+\_\+\+Note\+To\+Frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a891f974b40b27ab41707a964346121f9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a5c569afdadb911d4bc4483a5af030052}\label{lib_m_t_s_client_8cpp_a5c569afdadb911d4bc4483a5af030052} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_ParseMIDIData@{MTS\_ParseMIDIData}}
+\index{MTS\_ParseMIDIData@{MTS\_ParseMIDIData}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_ParseMIDIData()}{MTS\_ParseMIDIData()}}
+{\footnotesize\ttfamily void MTS\+\_\+\+Parse\+MIDIData (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a5c569afdadb911d4bc4483a5af030052_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a82dfa34e35aedda26a63bca05847d5fc}\label{lib_m_t_s_client_8cpp_a82dfa34e35aedda26a63bca05847d5fc} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_ParseMIDIDataU@{MTS\_ParseMIDIDataU}}
+\index{MTS\_ParseMIDIDataU@{MTS\_ParseMIDIDataU}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_ParseMIDIDataU()}{MTS\_ParseMIDIDataU()}}
+{\footnotesize\ttfamily void MTS\+\_\+\+Parse\+MIDIDataU (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a82dfa34e35aedda26a63bca05847d5fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a76696080794280bbac195d9e85096510}\label{lib_m_t_s_client_8cpp_a76696080794280bbac195d9e85096510} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_RegisterClient@{MTS\_RegisterClient}}
+\index{MTS\_RegisterClient@{MTS\_RegisterClient}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_RegisterClient()}{MTS\_RegisterClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*} MTS\+\_\+\+Register\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a1b4502ea863eb9369fe10569a3897d67}\label{lib_m_t_s_client_8cpp_a1b4502ea863eb9369fe10569a3897d67} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_RetuningAsRatio@{MTS\_RetuningAsRatio}}
+\index{MTS\_RetuningAsRatio@{MTS\_RetuningAsRatio}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_RetuningAsRatio()}{MTS\_RetuningAsRatio()}}
+{\footnotesize\ttfamily double MTS\+\_\+\+Retuning\+As\+Ratio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a1b4502ea863eb9369fe10569a3897d67_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a43b1c598fda0c61ac4c5338faa92d201}\label{lib_m_t_s_client_8cpp_a43b1c598fda0c61ac4c5338faa92d201} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_RetuningInSemitones@{MTS\_RetuningInSemitones}}
+\index{MTS\_RetuningInSemitones@{MTS\_RetuningInSemitones}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_RetuningInSemitones()}{MTS\_RetuningInSemitones()}}
+{\footnotesize\ttfamily double MTS\+\_\+\+Retuning\+In\+Semitones (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a43b1c598fda0c61ac4c5338faa92d201_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lib_m_t_s_client_8cpp_a96f4fbd471b64a496e98a023829769f7}\label{lib_m_t_s_client_8cpp_a96f4fbd471b64a496e98a023829769f7} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!MTS\_ShouldFilterNote@{MTS\_ShouldFilterNote}}
+\index{MTS\_ShouldFilterNote@{MTS\_ShouldFilterNote}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{MTS\_ShouldFilterNote()}{MTS\_ShouldFilterNote()}}
+{\footnotesize\ttfamily bool MTS\+\_\+\+Should\+Filter\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*}}]{c,  }\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_m_t_s_client_8cpp_a96f4fbd471b64a496e98a023829769f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{lib_m_t_s_client_8cpp_a5cf68de0f54f994efbc1803e7d7b96ae}\label{lib_m_t_s_client_8cpp_a5cf68de0f54f994efbc1803e7d7b96ae} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!global@{global}}
+\index{global@{global}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{global}{global}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmtsclientglobal}{mtsclientglobal}} global\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a703f4fc93e5a57058ce6ba2ba196918d}\label{lib_m_t_s_client_8cpp_a703f4fc93e5a57058ce6ba2ba196918d} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!ln2@{ln2}}
+\index{ln2@{ln2}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{ln2}{ln2}}
+{\footnotesize\ttfamily const double ln2 =0.\+693147180559945309417\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{lib_m_t_s_client_8cpp_a2c1776fc46438dbf7d498d2b5d406db0}\label{lib_m_t_s_client_8cpp_a2c1776fc46438dbf7d498d2b5d406db0} 
+\index{libMTSClient.cpp@{libMTSClient.cpp}!ratioToSemitones@{ratioToSemitones}}
+\index{ratioToSemitones@{ratioToSemitones}!libMTSClient.cpp@{libMTSClient.cpp}}
+\doxysubsubsection{\texorpdfstring{ratioToSemitones}{ratioToSemitones}}
+{\footnotesize\ttfamily const double ratio\+To\+Semitones =17.\+31234049066756088832\hspace{0.3cm}{\ttfamily [static]}}
+

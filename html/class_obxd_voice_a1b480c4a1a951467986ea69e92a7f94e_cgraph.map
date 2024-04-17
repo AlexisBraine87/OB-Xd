@@ -1,0 +1,13 @@
+<map id="ObxdVoice::setEnvDer" name="ObxdVoice::setEnvDer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,161,106"/>
+<area shape="rect" id="Node000002" href="$class_adsr_envelope.html#a74126f9fb44efe59a14c2ea1c06b7249" title=" " alt="" coords="209,80,440,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,90,193,90,193,96,161,96"/>
+<area shape="rect" id="Node000003" href="$class_adsr_envelope.html#a2a6ba5bcb5d1b80e1e724bbc0db6d40f" title=" " alt="" coords="493,5,659,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,77,487,40,510,33,511,38,489,45,368,82"/>
+<area shape="rect" id="Node000004" href="$class_adsr_envelope.html#a44976ed74cca7deab505c7acd52062ac" title=" " alt="" coords="493,55,659,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="440,79,477,75,478,80,441,84"/>
+<area shape="rect" id="Node000005" href="$class_adsr_envelope.html#aaec1b9c371a2c5404985f6514ffe9cff" title=" " alt="" coords="488,104,664,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="441,101,473,104,472,110,440,107"/>
+<area shape="rect" id="Node000006" href="$class_adsr_envelope.html#af133fb1ff5da1e1f29a095380b94044b" title=" " alt="" coords="490,153,662,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="370,104,489,140,511,146,510,151,487,145,368,109"/>
+</map>

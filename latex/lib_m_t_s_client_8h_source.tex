@@ -1,0 +1,167 @@
+\doxysection{lib\+MTSClient.\+h}
+\hypertarget{lib_m_t_s_client_8h_source}{}\label{lib_m_t_s_client_8h_source}\index{Source/MTS/libMTSClient.h@{Source/MTS/libMTSClient.h}}
+\mbox{\hyperlink{lib_m_t_s_client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{Copyright\ (C)\ 2021\ by\ ODDSound\ Ltd.\ info@oddsound.com}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{Permission\ to\ use,\ copy,\ modify,\ and/or\ distribute\ this\ software\ for\ any\ purpose\ with\ or\ without\ fee\ is\ hereby\ granted.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{}\ AND\ THE\ AUTHOR\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THIS\ SOFTWARE\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS.\ IN\ NO\ EVENT\ SHALL\ THE\ AUTHOR\ BE\ LIABLE\ FOR\ ANY\ SPECIAL,\ DIRECT,\ INDIRECT,\ OR\ CONSEQUENTIAL\ DAMAGES\ OR\ ANY\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE\ OF}}
+\DoxyCodeLine{00007\ \textcolor{comment}{THIS\ SOFTWARE.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ libMTSClient\_h}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ libMTSClient\_h}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ Steps\ for\ using\ the\ MTS-\/ESP\ client\ API\ to\ add\ microtuning\ support\ to\ a\ plug-\/in.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ Steps\ 1\ and\ 2\ are\ required,\ however\ it\ is\ recommended\ to\ include\ further\ steps\ when}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \ integrating:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ 1.\ REQUIRED:\ Register\ and\ de-\/register\ a\ plug-\/in\ instance\ as\ a\ client\ with\ MTS-\/ESP.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \ On\ startup\ in\ the\ plug-\/in\ constructor\ call:}}
+\DoxyCodeLine{00025\ \textcolor{comment}{}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ MTSClient\ *client\ =\ MTS\_RegisterClient();}}
+\DoxyCodeLine{00027\ \textcolor{comment}{}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ Store\ the\ returned\ MTSClient\ pointer\ to\ supply\ when\ calling\ other\ MTS-\/ESP\ client\ API}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ functions.\ On\ shutdown\ in\ the\ plug-\/in\ destructor\ call:}}
+\DoxyCodeLine{00030\ \textcolor{comment}{}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ MTS\_DeregisterClient(client);}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ 2.\ REQUIRED:\ Query\ retuning\ when\ a\ note-\/on\ message\ is\ received\ and\ adjust\ tuning\ accordingly.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ When\ given\ a\ note\ call:}}
+\DoxyCodeLine{00036\ \textcolor{comment}{}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ double\ freq\ =\ MTS\_NoteToFrequency(client,\ midinote,\ midichannel);}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ OR}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ double\ retune\_semitones\ =\ MTS\_RetuningInSemitones(client,\ midinote,\ midichannel);}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ OR}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ double\ retune\_ratio\ =\ MTS\_RetuningAsRatio(client,\ midinote,\ midichannel);}}
+\DoxyCodeLine{00042\ \textcolor{comment}{}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ MIDI\ channel\ arguments\ should\ use\ the\ range\ [0,15]\ however\ if\ you\ don’t\ know\ the\ MIDI}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ channel,\ use\ -\/1\ (see\ step\ 6\ for\ more\ on\ MIDI\ channels).}}
+\DoxyCodeLine{00045\ \textcolor{comment}{}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ 3.\ RECOMMENDED:\ Continuously\ query\ retuning\ whilst\ a\ note\ is\ held,\ allowing\ tuning\ to\ change}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ along\ the\ flight\ of\ a\ note.\ Do\ this\ if\ you\ can\ and\ as\ often\ as\ possible,\ ideally\ at\ the\ same}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ time\ as\ processing\ any\ other\ pitch\ modulation\ sources\ (envelopes,\ MIDI\ controllers,\ LFOs\ etc.).}}
+\DoxyCodeLine{00050\ \textcolor{comment}{}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ 4.\ RECOMMENDED:\ Provide\ an\ option\ to\ the\ user\ to\ select\ whether\ tuning\ is\ queried\ at\ note-\/on}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ only,\ as\ in\ step\ 2,\ or\ continuously,\ as\ in\ step\ 3.\ There\ are\ creative\ and\ practical}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ advantages\ to\ both,\ depending\ on\ the\ use\ case,\ and\ offering\ an\ option\ to\ the\ user\ will}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ provide\ the\ most\ useful\ MTS-\/ESP\ integration.\ If\ not\ offering\ such\ an\ option,\ continuous}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ retuning\ should\ be\ preferred\ over\ note-\/on\ only\ retuning.}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ 5.\ RECOMMENDED:\ Query\ whether\ a\ note\ should\ be\ sounded\ when\ a\ note-\/on\ message\ is\ received.}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ The\ Scala\ .kbm\ keyboard\ mapping\ format\ allows\ for\ MIDI\ keys\ to\ be\ unmapped\ i.e.\ no\ frequency}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ is\ specified\ for\ them,\ and\ the\ MTS-\/ESP\ library\ supports\ this\ too.\ You\ can\ query\ whether\ a\ note}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ is\ unmapped\ and\ should\ be\ ignored\ with:}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ bool\ should\_ignore\_note\ =\ MTS\_ShouldFilterNote(client,\ midinote,\ midichannel);}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ If\ this\ returns\ true,\ ignore\ the\ note-\/on\ and\ don’t\ play\ anything.\ Calling\ this\ function\ is}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ recommended\ but\ optional\ and\ a\ valid\ value\ for\ frequency/retuning\ will\ be\ returned\ for\ an}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ unmapped\ note.\ MIDI\ channel\ arguments\ should\ use\ the\ range\ [0,15]\ however\ if\ you\ don’t}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ know\ the\ MIDI\ channel,\ use\ -\/1.}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ 6.\ RECOMMENDED:\ Always\ supply\ a\ MIDI\ channel\ when\ querying\ retuning\ or\ note\ filtering.\ Doing}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ so\ allows\ your\ plug-\/in\ to\ multi-\/channel\ tuning\ tables,\ useful\ for\ microtonal\ MIDI\ controllers}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ with\ more\ than\ 128\ keys\ or\ working\ with\ large\ scales.\ Even\ if\ multi-\/channel\ tables\ are\ not}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ in\ use,\ a\ master\ may\ still\ make\ use\ of\ channel-\/specific\ note\ filtering\ for\ functions\ such\ as}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ key\ switches\ to\ change\ tunings.\ If\ your\ plug-\/in\ supports\ MPE\ and\ has\ a\ switch\ for\ enabling\ MPE}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ support,\ it\ is\ recommended\ to\ NOT\ supply\ a\ MIDI\ channel\ if\ MPE\ is\ enabled.}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ \ 7.\ RECOMMENDED:\ If\ you\ are\ adding\ MTS-\/ESP\ support\ to\ a\ plug-\/in\ that\ already\ has\ some\ kind}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ \ of\ microtuning\ support,\ e.g.\ loading\ .scl\ or\ .tun\ files,\ let\ the\ local\ tuning\ automatically}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ \ override\ MTS-\/ESP,\ or\ provide\ an\ option\ for\ MTS-\/ESP\ retuning\ to\ be\ explicitly\ disabled.}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \ This\ affords\ a\ user\ the\ option\ to\ use\ a\ different\ tuning\ to\ the\ global\ MTS-\/ESP\ table}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ \ for\ a\ specific\ plug-\/in\ instance.}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ \ 8.\ OPTIONAL:\ Add\ support\ for\ MIDI\ Tuning\ Standard\ (or\ MTS,\ from\ the\ MIDI\ specification)\ SysEx}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ \ messages\ to\ your\ plug-\/in.\ When\ not\ connected\ to\ an\ MTS-\/ESP\ master\ plug-\/in,\ these\ can\ be\ used}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ to\ retune\ it\ instead,\ providing\ microtuing\ support\ even\ when\ MTS-\/ESP\ is\ not\ in\ use.}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ \ When\ a\ SysEx\ message\ is\ received,\ call:}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ MTS\_ParseMIDIData(client,\ buffer,\ len);\ //\ if\ buffer\ is\ signed\ char\ *}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ \ OR}}
+\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ MTS\_ParseMIDIDataU(client,\ buffer,\ len);\ //\ if\ buffer\ is\ unsigned\ char\ *}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ \ These\ will\ update\ a\ local\ tuning\ table\ which\ is\ used\ when\ querying\ retuning\ as\ in\ steps\ 2}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ \ and\ 3.}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ 9.\ OPTIONAL:\ If\ you\ want\ to\ display\ to\ the\ user\ whether\ the\ plug-\/in\ is\ "{}connnected"{}\ to\ an}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ MTS-\/ESP\ master\ plug-\/in,\ call:}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ bool\ has\_master\ =\ MTS\_HasMaster(client);}}
+\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ 10:\ OPTIONAL:\ It\ is\ possible\ to\ query\ the\ name\ of\ the\ current\ scale.\ This\ function\ is\ necessarily}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ \ supplied\ for\ the\ case\ where\ a\ client\ is\ sending\ MTS\ SysEx\ messages,\ however\ it\ can\ be\ used}}
+\DoxyCodeLine{00108\ \textcolor{comment}{\ \ \ \ \ to\ display\ the\ current\ scale\ name\ to\ the\ user\ on\ your\ UI\ too:}}
+\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ \ \ \ \ \ const\ char\ *name\ =\ MTS\_GetScaleName(client);}}
+\DoxyCodeLine{00111\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00112\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00113\ \textcolor{comment}{\ \ \ \ \ 11:\ EXTRAS:\ Helper\ functions\ are\ available\ which\ return\ the\ MIDI\ note\ whose\ pitch\ is\ nearest}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ \ \ \ \ a\ given\ frequency.\ The\ MIDI\ note\ returned\ is\ guaranteed\ to\ be\ mapped.\ If\ you\ intend\ to}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\ \ \ \ \ generate\ a\ note-\/on\ message\ using\ the\ returned\ note\ number,\ you\ may\ already\ know\ which\ MIDI}}
+\DoxyCodeLine{00116\ \textcolor{comment}{\ \ \ \ \ channel\ it\ will\ be\ sent\ on,\ in\ which\ case\ you\ must\ specify\ this\ in\ the\ call,\ else\ the\ client}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ \ library\ can\ prescribe\ a\ channel\ for\ you.\ This\ is\ done\ so\ that\ multi-\/channel\ mapping}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ \ and\ note\ filtering\ can\ be\ respected.\ See\ below\ for\ further\ details.}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00120\ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ Opaque\ datatype\ for\ MTSClient.}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ \mbox{\hyperlink{struct_m_t_s_client}{MTSClient}};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//\ Register/deregister\ as\ a\ client.\ Call\ from\ the\ plugin\ constructor\ and\ destructor.}}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{lib_m_t_s_client_8h_a76696080794280bbac195d9e85096510}{MTS\_RegisterClient}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lib_m_t_s_client_8h_a3af54a5bee1acde3499e1a08264ac93c}{MTS\_DeregisterClient}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}});}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ client\ is\ currently\ connected\ to\ a\ master\ plugin.}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{lib_m_t_s_client_8h_abcaf5eea0108c36cddb853e7d0ae2f78}{MTS\_HasMaster}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}});}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ Returns\ true\ if\ note\ should\ not\ be\ played.\ MIDI\ channel\ argument\ should\ be\ included\ if\ possible\ (0-\/15),\ else\ set\ to\ -\/1.}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{lib_m_t_s_client_8h_a90d7026c44cb7cf9a60d80f3ab61451f}{MTS\_ShouldFilterNote}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midinote}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}});}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ Retuning\ a\ midi\ note.\ Pick\ the\ version\ that\ makes\ your\ life\ easiest!\ MIDI\ channel\ argument\ should\ be\ included\ if\ possible\ (0-\/15),\ else\ set\ to\ -\/1.}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{lib_m_t_s_client_8h_a1d179450b17b9d19708d529c5fac2500}{MTS\_NoteToFrequency}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midinote}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}});}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{lib_m_t_s_client_8h_aa37e2a6ba4bb17df13f82897ab6f10fd}{MTS\_RetuningInSemitones}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midinote}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}});}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{lib_m_t_s_client_8h_a4d8e741b05fd6d30639e3327cce1c451}{MTS\_RetuningAsRatio}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midinote}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}});}
+\DoxyCodeLine{00138\ \ \ \ \ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ MTS\_FrequencyToNote()\ is\ a\ helper\ function\ returning\ the\ note\ number\ whose\ pitch\ is\ closest\ to\ the\ supplied\ frequency.\ Two\ versions\ are\ provided:}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ The\ first\ is\ for\ the\ simplest\ case:\ supply\ a\ frequency\ and\ get\ a\ note\ number\ back.}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ If\ you\ intend\ to\ use\ the\ returned\ note\ number\ to\ generate\ a\ note-\/on\ message\ on\ a\ specific,\ pre-\/determined\ MIDI\ channel,\ set\ the\ midichannel\ argument\ to\ the\ destination\ channel\ (0-\/15),\ else\ set\ to\ -\/1.}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ If\ a\ MIDI\ channel\ is\ supplied,\ the\ corresponding\ multi-\/channel\ tuning\ table\ will\ be\ queried\ if\ in\ use,\ else\ multi-\/channel\ tables\ are\ ignored.}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{lib_m_t_s_client_8h_affa0f376c8bbdcd2fef4912b7bfc490d}{MTS\_FrequencyToNote}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{freq}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}});}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//\ Use\ the\ second\ version\ if\ you\ intend\ to\ use\ the\ returned\ note\ number\ to\ generate\ a\ note-\/on\ message\ and\ where\ you\ have\ the\ possibility\ to\ send\ it\ on\ any\ MIDI\ channel.}}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ The\ midichannel\ argument\ is\ a\ pointer\ to\ a\ char\ which\ will\ receive\ the\ MIDI\ channel\ on\ which\ the\ note\ message\ should\ be\ sent\ (0-\/15).}}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//\ Multi-\/channel\ tuning\ tables\ are\ queried\ if\ in\ use.}}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{lib_m_t_s_client_8h_a2f6e360663515d82df301028c6dc6e99}{MTS\_FrequencyToNoteAndChannel}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{freq}},\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}});}
+\DoxyCodeLine{00148\ \ \ \ \ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//\ Returns\ the\ name\ of\ the\ current\ scale.}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{lib_m_t_s_client_8h_a62d775e2a60fdfeb385ced43e84e050b}{MTS\_GetScaleName}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}});}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//\ Parse\ incoming\ MIDI\ data\ to\ update\ local\ retuning.\ All\ formats\ of\ MTS\ sysex\ message\ accepted.}}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lib_m_t_s_client_8h_a0a48dd753c54f79b41008a612289c8d5}{MTS\_ParseMIDIDataU}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{buffer}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{len}});}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lib_m_t_s_client_8h_a78fa23bfd59b1fe01598e1defa0cde20}{MTS\_ParseMIDIData}}(\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{client}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{buffer}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{len}});}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00161\ }
+
+\end{DoxyCode}

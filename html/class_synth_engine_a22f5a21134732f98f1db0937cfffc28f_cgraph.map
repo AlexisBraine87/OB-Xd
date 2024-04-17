@@ -1,0 +1,21 @@
+<map id="SynthEngine::procNoteOff" name="SynthEngine::procNoteOff">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,180,80"/>
+<area shape="rect" id="Node000002" href="$class_motherboard.html#a4ac4ef6b754f8d1782febc13e6284d02" title=" " alt="" coords="228,55,393,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,65,212,65,212,70,180,70"/>
+<area shape="rect" id="Node000003" href="$class_voice_queue.html#ae3a08fc2751ab423cd8f52e7b1166142" title=" " alt="" coords="441,5,587,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,51,443,33,444,38,367,57"/>
+<area shape="rect" id="Node000004" href="$class_obxd_voice.html#abcad3a5f43b4bbf50edc805536af74cb" title=" " alt="" coords="445,55,584,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="393,65,429,65,429,70,393,70"/>
+<area shape="rect" id="Node000006" href="$class_obxd_voice.html#a25ec8af99c861e8007703aeb4f56bbc5" title=" " alt="" coords="445,116,583,142"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="357,78,455,108,454,114,355,84"/>
+<area shape="rect" id="Node000005" href="$class_adsr_envelope.html#ad34d2d7ac4ff869b511153090dc78298" title=" " alt="" coords="635,41,830,67"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="584,61,619,58,620,64,584,66"/>
+<area shape="rect" id="Node000007" href="$class_delay_line.html#aca48117d2839ca09fa08c03a852cb4a5" title=" " alt="" coords="662,91,803,116"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="583,118,647,111,647,116,584,123"/>
+<area shape="rect" id="Node000008" href="$class_obxd_voice.html#a9127c134994520c9a8b367344c2554ed" title=" " alt="" coords="641,140,824,166"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="584,134,626,138,626,144,583,139"/>
+<area shape="rect" id="Node000010" href="$class_adsr_envelope.html#a122ceb958ef130eb1d5c1e2c25e0fcd6" title=" " alt="" coords="640,189,825,215"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="546,140,636,176,658,182,657,187,634,181,544,145"/>
+<area shape="rect" id="Node000009" href="$class_adsr_envelope.html#a03b02aa0d8e43714bc3cc58283a21819" title=" " alt="" coords="878,133,1077,173"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="824,150,862,150,862,156,824,156"/>
+</map>

@@ -1,0 +1,291 @@
+\doxysection{juce\+::Standalone\+Filter\+Window Class Reference}
+\hypertarget{classjuce_1_1_standalone_filter_window}{}\label{classjuce_1_1_standalone_filter_window}\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+
+
+{\ttfamily \#include $<$juce\+\_\+\+Standalone\+Filter\+Window.\+h$>$}
+
+
+
+Inheritance diagram for juce\+::Standalone\+Filter\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_filter_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for juce\+::Standalone\+Filter\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_filter_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer}{Decorator\+Constrainer}}
+\item 
+class \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component}{Main\+Content\+Component}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Standalone\+Plugin\+Holder\+::\+Plugin\+In\+Outs}} \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a9a3669019210fd5d86ab142ce71c3047}{Plugin\+In\+Outs}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_aafff1d5c76b1b984a4c9f4ba5d3912e0}{Standalone\+Filter\+Window}} (const String \&title, Colour background\+Colour, Property\+Set \texorpdfstring{$\ast$}{*}settings\+To\+Use, bool take\+Ownership\+Of\+Settings, const String \&preferred\+Default\+Device\+Name=String(), const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}preferred\+Setup\+Options=nullptr, const Array$<$ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a9a3669019210fd5d86ab142ce71c3047}{Plugin\+In\+Outs}} $>$ \&constrain\+To\+Configuration=\{\}, bool auto\+Open\+Midi\+Devices=true)
+\item 
+\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a758f9c87895f4985cf87831188a53800}{\texorpdfstring{$\sim$}{\string~}\+Standalone\+Filter\+Window}} () override
+\item 
+Audio\+Processor \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7}{get\+Audio\+Processor}} () const noexcept
+\item 
+Audio\+Device\+Manager \& \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a1771b810390219bbddcfa76a2ef4ed02}{get\+Device\+Manager}} () const noexcept
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a723ad1efa22bf8bbe4c2204fd5313147}{reset\+To\+Default\+State}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a6f4787cebfeef150bfd78c1f870a4295}{close\+Button\+Pressed}} () override
+\item 
+String\+Array \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a154b7e5ec28511d23f0e697ae39c2693}{get\+Menu\+Bar\+Names}} () override
+\item 
+Popup\+Menu \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a936e646e0df8512716a1726cbc849d8e}{get\+Menu\+For\+Index}} (int top\+Level\+Menu\+Index, const String \&menu\+Name) override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab59c9627ccc97ea623c6e3e8d3e11dae}{menu\+Item\+Selected}} (int menu\+Item\+ID, int top\+Level\+Menu\+Index) override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a5aba43a9369d5fc4c4e426ee605b1d8e}{menu\+Bar\+Activated}} (bool is\+Active) override
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a5bd5ceb67858726cda211e20b009fa2a}{handle\+Menu\+Result}} (int result)
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a53b844013f29be730127b58f5d37f3eb}{resized}} () override
+\item 
+virtual \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{Standalone\+Plugin\+Holder}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_aa2d1b7b78992b46e8469cea5e4f1ae21}{get\+Plugin\+Holder}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a9d6ab9d3e0a3a77461ccd3cc965b2bb5}{menu\+Callback}} (int result, \mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{Standalone\+Filter\+Window}} \texorpdfstring{$\ast$}{*}button)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{Standalone\+Plugin\+Holder}} $>$ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{plugin\+Holder}}
+\item 
+Menu\+Bar\+Component \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a1fe1e2a483fb5ecedea9b6bf1bcd4ed0}{menu\+Bar}}
+\item 
+Popup\+Menu \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ad7cc7e673e3021e5f501589e0c541c1c}{menu}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b}{update\+Content}} ()
+\item 
+void \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ac0480fb9b100c8d9603b5b47e184c8b8}{button\+Clicked}} (Button \texorpdfstring{$\ast$}{*}) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Text\+Button \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}{options\+Button}}
+\item 
+\mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer}{Decorator\+Constrainer}} \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a55ec4e0944c13ae0196ed4d59b2f0042}{decorator\+Constrainer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that can be used to run a simple standalone application containing your filter.
+
+Just create one of these objects in your JUCEApplication\+Base\+::initialise() method, and let it do its work. It will create your filter object using the same \doxylink{_plugin_processor_8cpp_a6a42963b424a437ac872809903afa10e}{create\+Plugin\+Filter()} function that the other plugin wrappers use.
+
+@tags\{Audio\} 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classjuce_1_1_standalone_filter_window_a9a3669019210fd5d86ab142ce71c3047}\label{classjuce_1_1_standalone_filter_window_a9a3669019210fd5d86ab142ce71c3047} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!PluginInOuts@{PluginInOuts}}
+\index{PluginInOuts@{PluginInOuts}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{PluginInOuts}{PluginInOuts}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{Standalone\+Plugin\+Holder\+::\+Plugin\+In\+Outs}} \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a9a3669019210fd5d86ab142ce71c3047}{juce\+::\+Standalone\+Filter\+Window\+::\+Plugin\+In\+Outs}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classjuce_1_1_standalone_filter_window_aafff1d5c76b1b984a4c9f4ba5d3912e0}\label{classjuce_1_1_standalone_filter_window_aafff1d5c76b1b984a4c9f4ba5d3912e0} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!StandaloneFilterWindow@{StandaloneFilterWindow}}
+\index{StandaloneFilterWindow@{StandaloneFilterWindow}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{StandaloneFilterWindow()}{StandaloneFilterWindow()}}
+{\footnotesize\ttfamily juce\+::\+Standalone\+Filter\+Window\+::\+Standalone\+Filter\+Window (\begin{DoxyParamCaption}\item[{const String \&}]{title,  }\item[{Colour}]{background\+Colour,  }\item[{Property\+Set \texorpdfstring{$\ast$}{*}}]{settings\+To\+Use,  }\item[{bool}]{take\+Ownership\+Of\+Settings,  }\item[{const String \&}]{preferred\+Default\+Device\+Name = {\ttfamily String()},  }\item[{const Audio\+Device\+Manager\+::\+Audio\+Device\+Setup \texorpdfstring{$\ast$}{*}}]{preferred\+Setup\+Options = {\ttfamily nullptr},  }\item[{const Array$<$ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a9a3669019210fd5d86ab142ce71c3047}{Plugin\+In\+Outs}} $>$ \&}]{constrain\+To\+Configuration = {\ttfamily \{\}},  }\item[{bool}]{auto\+Open\+Midi\+Devices = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a window with a given title and colour. The settings object can be a Property\+Set that the class should use to store its settings (it can also be null). If take\+Ownership\+Of\+Settings is true, then the settings object will be owned and deleted by this object. \Hypertarget{classjuce_1_1_standalone_filter_window_a758f9c87895f4985cf87831188a53800}\label{classjuce_1_1_standalone_filter_window_a758f9c87895f4985cf87831188a53800} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!````~StandaloneFilterWindow@{\texorpdfstring{$\sim$}{\string~}StandaloneFilterWindow}}
+\index{````~StandaloneFilterWindow@{\texorpdfstring{$\sim$}{\string~}StandaloneFilterWindow}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StandaloneFilterWindow()}{\string~StandaloneFilterWindow()}}
+{\footnotesize\ttfamily juce\+::\+Standalone\+Filter\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Standalone\+Filter\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classjuce_1_1_standalone_filter_window_ac0480fb9b100c8d9603b5b47e184c8b8}\label{classjuce_1_1_standalone_filter_window_ac0480fb9b100c8d9603b5b47e184c8b8} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!buttonClicked@{buttonClicked}}
+\index{buttonClicked@{buttonClicked}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{buttonClicked()}{buttonClicked()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::button\+Clicked (\begin{DoxyParamCaption}\item[{Button \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a6f4787cebfeef150bfd78c1f870a4295}\label{classjuce_1_1_standalone_filter_window_a6f4787cebfeef150bfd78c1f870a4295} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!closeButtonPressed@{closeButtonPressed}}
+\index{closeButtonPressed@{closeButtonPressed}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{closeButtonPressed()}{closeButtonPressed()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::close\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7}\label{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!getAudioProcessor@{getAudioProcessor}}
+\index{getAudioProcessor@{getAudioProcessor}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{getAudioProcessor()}{getAudioProcessor()}}
+{\footnotesize\ttfamily Audio\+Processor \texorpdfstring{$\ast$}{*} juce\+::\+Standalone\+Filter\+Window\+::get\+Audio\+Processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a1771b810390219bbddcfa76a2ef4ed02}\label{classjuce_1_1_standalone_filter_window_a1771b810390219bbddcfa76a2ef4ed02} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!getDeviceManager@{getDeviceManager}}
+\index{getDeviceManager@{getDeviceManager}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{getDeviceManager()}{getDeviceManager()}}
+{\footnotesize\ttfamily Audio\+Device\+Manager \& juce\+::\+Standalone\+Filter\+Window\+::get\+Device\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a154b7e5ec28511d23f0e697ae39c2693}\label{classjuce_1_1_standalone_filter_window_a154b7e5ec28511d23f0e697ae39c2693} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!getMenuBarNames@{getMenuBarNames}}
+\index{getMenuBarNames@{getMenuBarNames}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{getMenuBarNames()}{getMenuBarNames()}}
+{\footnotesize\ttfamily String\+Array juce\+::\+Standalone\+Filter\+Window\+::get\+Menu\+Bar\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a936e646e0df8512716a1726cbc849d8e}\label{classjuce_1_1_standalone_filter_window_a936e646e0df8512716a1726cbc849d8e} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!getMenuForIndex@{getMenuForIndex}}
+\index{getMenuForIndex@{getMenuForIndex}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{getMenuForIndex()}{getMenuForIndex()}}
+{\footnotesize\ttfamily Popup\+Menu juce\+::\+Standalone\+Filter\+Window\+::get\+Menu\+For\+Index (\begin{DoxyParamCaption}\item[{int}]{top\+Level\+Menu\+Index,  }\item[{const String \&}]{menu\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_aa2d1b7b78992b46e8469cea5e4f1ae21}\label{classjuce_1_1_standalone_filter_window_aa2d1b7b78992b46e8469cea5e4f1ae21} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!getPluginHolder@{getPluginHolder}}
+\index{getPluginHolder@{getPluginHolder}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{getPluginHolder()}{getPluginHolder()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{Standalone\+Plugin\+Holder}} \texorpdfstring{$\ast$}{*} juce\+::\+Standalone\+Filter\+Window\+::get\+Plugin\+Holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a5bd5ceb67858726cda211e20b009fa2a}\label{classjuce_1_1_standalone_filter_window_a5bd5ceb67858726cda211e20b009fa2a} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!handleMenuResult@{handleMenuResult}}
+\index{handleMenuResult@{handleMenuResult}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{handleMenuResult()}{handleMenuResult()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::handle\+Menu\+Result (\begin{DoxyParamCaption}\item[{int}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_filter_window_a5bd5ceb67858726cda211e20b009fa2a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_filter_window_a5aba43a9369d5fc4c4e426ee605b1d8e}\label{classjuce_1_1_standalone_filter_window_a5aba43a9369d5fc4c4e426ee605b1d8e} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!menuBarActivated@{menuBarActivated}}
+\index{menuBarActivated@{menuBarActivated}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{menuBarActivated()}{menuBarActivated()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::menu\+Bar\+Activated (\begin{DoxyParamCaption}\item[{bool}]{is\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a9d6ab9d3e0a3a77461ccd3cc965b2bb5}\label{classjuce_1_1_standalone_filter_window_a9d6ab9d3e0a3a77461ccd3cc965b2bb5} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!menuCallback@{menuCallback}}
+\index{menuCallback@{menuCallback}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{menuCallback()}{menuCallback()}}
+{\footnotesize\ttfamily static void juce\+::\+Standalone\+Filter\+Window\+::menu\+Callback (\begin{DoxyParamCaption}\item[{int}]{result,  }\item[{\mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{Standalone\+Filter\+Window}} \texorpdfstring{$\ast$}{*}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_filter_window_a9d6ab9d3e0a3a77461ccd3cc965b2bb5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_filter_window_ab59c9627ccc97ea623c6e3e8d3e11dae}\label{classjuce_1_1_standalone_filter_window_ab59c9627ccc97ea623c6e3e8d3e11dae} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!menuItemSelected@{menuItemSelected}}
+\index{menuItemSelected@{menuItemSelected}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{menuItemSelected()}{menuItemSelected()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::menu\+Item\+Selected (\begin{DoxyParamCaption}\item[{int}]{menu\+Item\+ID,  }\item[{int}]{top\+Level\+Menu\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_filter_window_ab59c9627ccc97ea623c6e3e8d3e11dae_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_filter_window_a723ad1efa22bf8bbe4c2204fd5313147}\label{classjuce_1_1_standalone_filter_window_a723ad1efa22bf8bbe4c2204fd5313147} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!resetToDefaultState@{resetToDefaultState}}
+\index{resetToDefaultState@{resetToDefaultState}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{resetToDefaultState()}{resetToDefaultState()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::reset\+To\+Default\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deletes and re-\/creates the plugin, resetting it to its default state. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_filter_window_a723ad1efa22bf8bbe4c2204fd5313147_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classjuce_1_1_standalone_filter_window_a53b844013f29be730127b58f5d37f3eb}\label{classjuce_1_1_standalone_filter_window_a53b844013f29be730127b58f5d37f3eb} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!resized@{resized}}
+\index{resized@{resized}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{resized()}{resized()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::resized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b}\label{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!updateContent@{updateContent}}
+\index{updateContent@{updateContent}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{updateContent()}{updateContent()}}
+{\footnotesize\ttfamily void juce\+::\+Standalone\+Filter\+Window\+::update\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classjuce_1_1_standalone_filter_window_a55ec4e0944c13ae0196ed4d59b2f0042}\label{classjuce_1_1_standalone_filter_window_a55ec4e0944c13ae0196ed4d59b2f0042} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!decoratorConstrainer@{decoratorConstrainer}}
+\index{decoratorConstrainer@{decoratorConstrainer}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{decoratorConstrainer}{decoratorConstrainer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer}{Decorator\+Constrainer}} juce\+::\+Standalone\+Filter\+Window\+::decorator\+Constrainer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_ad7cc7e673e3021e5f501589e0c541c1c}\label{classjuce_1_1_standalone_filter_window_ad7cc7e673e3021e5f501589e0c541c1c} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!menu@{menu}}
+\index{menu@{menu}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily Popup\+Menu juce\+::\+Standalone\+Filter\+Window\+::menu}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a1fe1e2a483fb5ecedea9b6bf1bcd4ed0}\label{classjuce_1_1_standalone_filter_window_a1fe1e2a483fb5ecedea9b6bf1bcd4ed0} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!menuBar@{menuBar}}
+\index{menuBar@{menuBar}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{menuBar}{menuBar}}
+{\footnotesize\ttfamily Menu\+Bar\+Component juce\+::\+Standalone\+Filter\+Window\+::menu\+Bar}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}\label{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!optionsButton@{optionsButton}}
+\index{optionsButton@{optionsButton}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{optionsButton}{optionsButton}}
+{\footnotesize\ttfamily Text\+Button juce\+::\+Standalone\+Filter\+Window\+::options\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}\label{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef} 
+\index{juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}!pluginHolder@{pluginHolder}}
+\index{pluginHolder@{pluginHolder}!juce::StandaloneFilterWindow@{juce::StandaloneFilterWindow}}
+\doxysubsubsection{\texorpdfstring{pluginHolder}{pluginHolder}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{Standalone\+Plugin\+Holder}}$>$ juce\+::\+Standalone\+Filter\+Window\+::plugin\+Holder}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Modules/juce\+\_\+audio\+\_\+plugin\+\_\+client/\+Standalone/\mbox{\hyperlink{juce___standalone_filter_window_8h}{juce\+\_\+\+Standalone\+Filter\+Window.\+h}}\end{DoxyCompactItemize}

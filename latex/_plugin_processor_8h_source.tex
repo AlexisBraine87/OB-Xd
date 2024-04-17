@@ -1,0 +1,283 @@
+\doxysection{Plugin\+Processor.\+h}
+\hypertarget{_plugin_processor_8h_source}{}\label{_plugin_processor_8h_source}\index{Source/PluginProcessor.h@{Source/PluginProcessor.h}}
+\mbox{\hyperlink{_plugin_processor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ ©\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ PLUGINPROCESSOR\_H\_INCLUDED}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ PLUGINPROCESSOR\_H\_INCLUDED}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}../JuceLibraryCode/JuceHeader.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_synth_engine_8h}{Engine/SynthEngine.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\#include\ <stack>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{midi_map_8h}{Engine/midiMap.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_obxd_bank_8h}{Engine/ObxdBank.h}}"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_plugin_processor_8h_a58bd9a06919191498462996534cf41e1}{fxbVersionNum}}\ =\ 1;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfx_program}{fxProgram}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_a29240f9cd302b66f64c593b5cec551c3}{chunkMagic}};\ \ \ \ \textcolor{comment}{//\ 'CcnK'}}
+\DoxyCodeLine{00040\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_a2079469f00da0351072b404b3dac2da8}{byteSize}};\ \ \ \ \ \ \textcolor{comment}{//\ of\ this\ chunk,\ excl.\ magic\ +\ byteSize}}
+\DoxyCodeLine{00041\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_ae75ca9d531cee7035b534c55142e792c}{fxMagic}};\ \ \ \ \ \ \ \textcolor{comment}{//\ 'FxCk'}}
+\DoxyCodeLine{00042\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_ab39ddd617a62cee7f7745a98db81d4f3}{version}};}
+\DoxyCodeLine{00043\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_a5b714f63325cd8c746bb280a3afbad67}{fxID}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fx\ unique\ id}}
+\DoxyCodeLine{00044\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_a0e62527fa3638eb083bc3621a2755312}{fxVersion}};}
+\DoxyCodeLine{00045\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_acf2ee79103010a0c9910b27d9081ffc7}{numParams}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structfx_program_ae711ec22c0fa3c0be650b7bbc404e60c}{prgName}}[28];}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structfx_program_ab8ba2f65a6874564ddabf3baa006ea66}{params}}[1];\ \ \ \ \ \ \ \ \textcolor{comment}{//\ variable\ no.\ of\ parameters}}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfx_set}{fxSet}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_set_a483faa7ae35211d4b5de43fe8e95c527}{chunkMagic}};\ \ \ \ \textcolor{comment}{//\ 'CcnK'}}
+\DoxyCodeLine{00053\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_set_a28c6f4a9deaf4450fa2f092438700312}{byteSize}};\ \ \ \ \ \ \textcolor{comment}{//\ of\ this\ chunk,\ excl.\ magic\ +\ byteSize}}
+\DoxyCodeLine{00054\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_set_a419d8def8a865074810f5985d8bb21e3}{fxMagic}};\ \ \ \ \ \ \ \textcolor{comment}{//\ 'FxBk'}}
+\DoxyCodeLine{00055\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_set_a0649cb2f6303a6abceae577648650027}{version}};}
+\DoxyCodeLine{00056\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_set_a22c9b9d35f6a9884b44cd98291cd8785}{fxID}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fx\ unique\ id}}
+\DoxyCodeLine{00057\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_set_ab22469f619fda4f4ed76fe03efa847b7}{fxVersion}};}
+\DoxyCodeLine{00058\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_set_ada22cbea37393ab481f13c4c1d584522}{numPrograms}};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structfx_set_a4ad80d617334bdd376a1edb295678e69}{future}}[128];}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{structfx_program}{fxProgram}}\ \mbox{\hyperlink{structfx_set_ad0472fa4cd217ca806e9c51da0346fde}{programs}}[1];\ \ \textcolor{comment}{//\ variable\ no.\ of\ programs}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfx_chunk_set}{fxChunkSet}}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_a98d53d7aa874d78124e397da801ffe1b}{chunkMagic}};\ \ \ \ \textcolor{comment}{//\ 'CcnK'}}
+\DoxyCodeLine{00066\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_af77769d11edf0541faa0e242cd73f07b}{byteSize}};\ \ \ \ \ \ \textcolor{comment}{//\ of\ this\ chunk,\ excl.\ magic\ +\ byteSize}}
+\DoxyCodeLine{00067\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_a0e95fb1edcb7801505111c3b22965220}{fxMagic}};\ \ \ \ \ \ \ \textcolor{comment}{//\ 'FxCh',\ 'FPCh',\ or\ 'FBCh'}}
+\DoxyCodeLine{00068\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_a5a3bdf5463857164f3e24292af5c37fb}{version}};}
+\DoxyCodeLine{00069\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_a7883a43e002a9489da80e87da1b19029}{fxID}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fx\ unique\ id}}
+\DoxyCodeLine{00070\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_a34860297263255809e0d3d554c7fe6be}{fxVersion}};}
+\DoxyCodeLine{00071\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_acd9a7f70428faab38ef08446e123c375}{numPrograms}};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structfx_chunk_set_a3c4e33a919aa973b45fdf39b00456c2b}{future}}[128];}
+\DoxyCodeLine{00073\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_chunk_set_ab8e848f226b7eef551086b90637be5a3}{chunkSize}};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structfx_chunk_set_af2adaa7ac8dba41bf2dbf8a6d7288e7d}{chunk}}[8];\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ variable}}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfx_program_set}{fxProgramSet}}}
+\DoxyCodeLine{00078\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_a5154fbb3d73f2d0764126bb7fa9cb122}{chunkMagic}};\ \ \ \ \textcolor{comment}{//\ 'CcnK'}}
+\DoxyCodeLine{00080\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_ae9da0e05d135948e3bd5f518a52ec9dc}{byteSize}};\ \ \ \ \ \ \textcolor{comment}{//\ of\ this\ chunk,\ excl.\ magic\ +\ byteSize}}
+\DoxyCodeLine{00081\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_abc5e9d9c832168748bfacb1faa28a750}{fxMagic}};\ \ \ \ \ \ \ \textcolor{comment}{//\ 'FxCh',\ 'FPCh',\ or\ 'FBCh'}}
+\DoxyCodeLine{00082\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_a7827cbd2329a8fc00759493876f1dd99}{version}};}
+\DoxyCodeLine{00083\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_ad4526f600284270aca50d876cd4430e1}{fxID}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fx\ unique\ id}}
+\DoxyCodeLine{00084\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_a32c44de37ae14a22831b8d2b78ad0ad6}{fxVersion}};}
+\DoxyCodeLine{00085\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_ad2bf5a9c1d2397ae366ec4ccec2e7114}{numPrograms}};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structfx_program_set_a5d9b6bee0ce8e6f1d8839256a62125f8}{name}}[28];}
+\DoxyCodeLine{00087\ \ \ \ \ int32\ \mbox{\hyperlink{structfx_program_set_a77e1e2ce26692f1aeaea4c73ad599af8}{chunkSize}};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structfx_program_set_a3362ba298eef97220847b73f074b7103}{chunk}}[8];\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ variable}}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ Compares\ a\ magic\ value\ in\ either\ endianness.}}
+\DoxyCodeLine{00092\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_plugin_processor_8h_ac902551f2559b275302d13ab59a72e1d}{compareMagic}}\ (int32\ magic,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name)\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00093\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{return}\ magic\ ==\ (int32)\ ByteOrder::littleEndianInt\ (name)}
+\DoxyCodeLine{00095\ \ \ \ \ ||\ magic\ ==\ (int32)\ ByteOrder::bigEndianInt\ (name);}
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int32\ \mbox{\hyperlink{_plugin_processor_8h_a12504fea2e3d9ad72459a1c7c77073fa}{fxbName}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name)\ \textcolor{keyword}{noexcept}\ \ \ \{\ \textcolor{keywordflow}{return}\ (int32)\ ByteOrder::littleEndianInt\ (name);\ \}}
+\DoxyCodeLine{00099\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int32\ \mbox{\hyperlink{_plugin_processor_8h_a6656d80a5749bf87ac4e3d86794d4d1d}{fxbSwap}}\ (\textcolor{keyword}{const}\ int32\ x)\ \textcolor{keyword}{noexcept}\ \ \ \{\ \textcolor{keywordflow}{return}\ (int32)\ ByteOrder::swapIfLittleEndian\ ((uint32)\ x);\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_plugin_processor_8h_ad6d1d7da578d96e7dd719b2f1788df5d}{fxbSwapFloat}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ x)\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00102\ \{}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#ifdef\ JUCE\_LITTLE\_ENDIAN}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{union\ }\{\ uint32\ asInt;\ \textcolor{keywordtype}{float}\ asFloat;\ \}\ n;}
+\DoxyCodeLine{00105\ \ \ \ \ n.asFloat\ =\ x;}
+\DoxyCodeLine{00106\ \ \ \ \ n.asInt\ =\ ByteOrder::swap\ (n.asInt);}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{return}\ n.asFloat;}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{return}\ x;}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}}}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7abcfaccebf745acfd5e75351095a5394a}{Disable}}\ =\ 0,}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7a7d919eba63e049fd35156f65852afcce}{StandardDisplay}},}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7add79bcc9fa0cc9843c7d5ef72bf5228d}{FullDisplay}}}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00122\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\ \ :\ \textcolor{keyword}{public}\ AudioProcessor,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AudioProcessorValueTreeState::Listener,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ChangeBroadcaster}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_a6f71097c970a7384a197b749ed0439c7}{ObxdAudioProcessor}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_aa1c9556363ed15f9b7d88fa57e7b94cd}{\string~ObxdAudioProcessor}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a106e8a8df3c94df8565bf54ff5c389b0}{prepareToPlay}}\ (\textcolor{keywordtype}{double}\ sampleRate,\ \textcolor{keywordtype}{int}\ samplesPerBlock)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_ae007c37f866260347961bd940ca0d7e9}{releaseResources}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_afb60f9e0314bd26049c930cce61b2990}{processBlock}}\ (AudioSampleBuffer\&\ buffer,\ MidiBuffer\&\ midiMessages)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00138\ \ \ \ \ AudioProcessorEditor*\ \mbox{\hyperlink{class_obxd_audio_processor_a6b3e41a33d987f2077a554ec6315fd7e}{createEditor}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a4f980880384fe2295da6546e54ff8c85}{hasEditor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00140\ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a3d15fa88270557f9e22d1312d8691dba}{processMidiPerSample}}\ (MidiBuffer::Iterator*\ iter,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ samplePos);}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_ad24624e82137cf86eb7862a63a7a314b}{getNextEvent}}\ (MidiBuffer::Iterator*\ iter,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ samplePos);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_afc5e82462ccae91ff5be9ec20f185384}{initAllParams}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a762661cecce1421e62f6ee508f0e55bf}{initMidi}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{class_obxd_audio_processor_a5eab4689cc73367a38607d70b0907ee0}{getInputChannelName}}\ (\textcolor{keywordtype}{int}\ channelIndex)\ \textcolor{keyword}{const\ override};\ \ \textcolor{comment}{//\ WATCH\ OUT!}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{class_obxd_audio_processor_af37d52081d7a11d4d0542158649652d1}{getOutputChannelName}}\ (\textcolor{keywordtype}{int}\ channelIndex)\ \textcolor{keyword}{const\ override};\ \ \textcolor{comment}{//\ WATCH\ OUT!}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_afc7001c07d88e0de90bafea577063865}{isInputChannelStereoPair}}\ (\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const\ override};\ \ \textcolor{comment}{//\ WATCH\ OUT!}}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_abec7fe75f6b0888c3582b2617c921c23}{isOutputChannelStereoPair}}\ (\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const\ override};\ \ \textcolor{comment}{//\ WATCH\ OUT!}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a89d2a474766ce86a57028841e79d47be}{acceptsMidi}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_ad54d9f1e0e006ea627f2f6749bb0dc20}{producesMidi}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_obxd_audio_processor_a0a34facb813573716a40bebd1bdc7471}{getTailLengthSeconds}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{class_obxd_audio_processor_ae583d581017e9b9505dc9bba3712d14b}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_a643479df65fed8ed62fe2d3dab34c6a7}{getNumPrograms}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_aea6cd11054bf8df131c4d4c072a8e313}{getCurrentProgram}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a2294109462c3163e3ac21b5c17689c44}{setCurrentProgram}}\ (\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a2294109462c3163e3ac21b5c17689c44}{setCurrentProgram}}\ (\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{bool}\ updateHost);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{class_obxd_audio_processor_a72cda5b4bc253be485d89cc9e633dfc6}{getProgramName}}\ (\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a238223fbcf0bb5e50a2e755465859ee5}{changeProgramName}}\ (\textcolor{keywordtype}{int}\ index,\ \textcolor{keyword}{const}\ String\&\ newName)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a7dbb6b4d1fdaae0aab7ee447e0ffa537}{getStateInformation}}\ (MemoryBlock\&\ destData)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a662f65e9aef6f057c058f08b43ed67b3}{setStateInformation}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ data,\ \textcolor{keywordtype}{int}\ sizeInBytes)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a0fd96de98e48ef5da9bacd1e83302336}{setCurrentProgramStateInformation}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ data,\textcolor{keywordtype}{int}\ sizeInBytes)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a2c0237c5a6eab45d48f4dcab57963393}{getCurrentProgramStateInformation}}\ (MemoryBlock\&\ destData)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a93bea430b69b982a5164b8394c6ea3ed}{scanAndUpdateBanks}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a791ed521ed86fdca227775afb9892565}{scanAndUpdateSkins}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{const}\ Array<File>\&\ \mbox{\hyperlink{class_obxd_audio_processor_a9fb77e44bdd316517acb778a1ca38223}{getBankFiles}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{const}\ Array<File>\&\ \mbox{\hyperlink{class_obxd_audio_processor_a0b4ceb91700d5fe06a19fc82fb0e4f0e}{getSkinFiles}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a4ef270f3b7531f7dba5c272325cf8325}{deleteBank}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_ad649212bb19571f1b101d7a57220d882}{loadPreset}}(\textcolor{keyword}{const}\ File\&\ fxpFile);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a9499e42ea46a7543a32e1c063347f2be}{savePreset}}(\textcolor{keyword}{const}\ File\&\ fxpFile);}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a28883bba26c42a8879bcd98cfc0918b1}{serializePreset}}(MemoryBlock\&\ memoryBlock);\ \ \ \ \ \ \textcolor{comment}{//\ Copy\ the\ current\ Preset\ into\ a\ MemoryBlock}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a71fbd384b378cd37f63514365f350485}{changePresetName}}(\textcolor{keyword}{const}\ String\ \&name);}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a3686a6554436e849aac07fd38b0520da}{newPreset}}(\textcolor{keyword}{const}\ String\ \&name);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a416c6684b848cf7fcf5b68f51f9b8537}{deletePreset}}();}
+\DoxyCodeLine{00184\ \ \ \ \ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a737a23b63352ef5626617c87ebf319df}{loadFromFXPFile}}(\textcolor{keyword}{const}\ File\&\ fxbFile);}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a41c4088bf197e58b4f22e71f66b893d4}{loadFromFXBFile}}(\textcolor{keyword}{const}\ File\&\ fxbFile);}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_ae22d8d445e7878a7fbe69362c5c4fb30}{isMemoryBlockAPreset}}(\textcolor{keyword}{const}\ MemoryBlock\&\ memoryBlock);}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_afe598d5320ecc0b50f61b39a8d2d58bc}{loadFromMemoryBlock}}(MemoryBlock\&\ memoryBlock);}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a8fce9c64ca8a7d7c496f35931cb0bf38}{saveFXBFile}}(\textcolor{keyword}{const}\ File\&\ fxbFile);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_aebc6e5ea681d4e428221ef8337e1fe3c}{saveFXPFile}}(\textcolor{keyword}{const}\ File\&\ fxpFile);}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a9fd892e0358f2813df590d75f893b3db}{saveBank}}(\textcolor{keyword}{const}\ File\&\ fxbFile);}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a27fdd5ee8c9ab8acf18b16a0479c8e0d}{restoreProgramSettings}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structfx_program}{fxProgram}}*\ \textcolor{keyword}{const}\ prog);}
+\DoxyCodeLine{00193\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_a209d2b8f128ff3aadd5bba85177d5fb5}{getCurrentBankFile}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{class_midi_map}{MidiMap}}\ \&\mbox{\hyperlink{class_obxd_audio_processor_add421bc612cecd418635212d83b5dddd}{getMidiMap}}()\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_obxd_audio_processor_a06a54cb52fa1ef776cdfc6335a2fa7ca}{bindings}};\ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_obxd_bank}{ObxdBank}}\&\ \mbox{\hyperlink{class_obxd_audio_processor_aa152a836adfe36d92a7f17e53873a38e}{getPrograms}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_obxd_audio_processor_a50804a54b929b247b8cbe1fe773a0b5b}{programs}};\ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00200\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_a7729e32681fdeee946d73a5e6da05812}{getDocumentFolder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00201\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_afa7832080a1d323dfd9d41ad9eb540b4}{getSkinFolder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00202\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_a93423a7ae2ffd74863cad1c486231c91}{getPresetsFolder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00203\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_ac5bbf49741d6caccb5fdf99554e5d7df}{getBanksFolder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00204\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_aa31dd6071b5e54c9553d76034eef2149}{getMidiFolder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00205\ \ \ \ \ }
+\DoxyCodeLine{00206\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_aa68bb4f73b273dc03ce3481709e88c92}{getCurrentSkinFolder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a3c686b25ab87462742577bae4083b7fa}{setCurrentSkinFolder}}(\textcolor{keyword}{const}\ String\&\ folderName);}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a66365b13ac77873107834742453798f4}{setGuiSize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_a30b77550da1da2c32a2ba53aa14827cd}{gui\_size}});}
+\DoxyCodeLine{00209\ \ \ \ \ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}}\ \mbox{\hyperlink{class_obxd_audio_processor_a686938c34e201f94aac124c7a31acd63}{getTooltipBehavior}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_ad8b3463839110c8a79cd1a23230ea908}{setTooltipBehavior}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}}\ tooltip);}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{class_obxd_audio_processor_a79d31ca6a08527372417d349a02471ed}{getEngineParameterId}}\ (\textcolor{keywordtype}{size\_t});}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{class_obxd_audio_processor_a7cf65eb58c98597a3d8209f241a65642}{getTrueParameterValueFromNormalizedRange}}(\textcolor{keywordtype}{size\_t},\ \textcolor{keywordtype}{float}\ normalizedValue);}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_a8af639155db68a7c289fc20f716d9cf2}{getParameterIndexFromId}}\ (String);}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_ade695873cba742ce40ccd80719ca5ba9}{setEngineParameterValue}}\ (\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{float},\ \textcolor{keywordtype}{bool}\ notifyToHost=\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_ae7e67b15cd51139e63311865fefbebf8}{parameterChanged}}\ (\textcolor{keyword}{const}\ String\&,\ \textcolor{keywordtype}{float})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00218\ \ \ \ \ AudioProcessorValueTreeState\&\ \mbox{\hyperlink{class_obxd_audio_processor_a016ece6dab1ba0523ec6f1bcb7d55610}{getPluginState}}();}
+\DoxyCodeLine{00219\ \ \ \ \ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_af2ea050c8265c290e394af436418e76c}{getShowPresetBar}}()\{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_obxd_audio_processor_a794fc30e99a2b25d2fcf22767d299683}{showPresetBar}};}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ \ \ \ \ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a6d9c02053f6440dc602aa4d63782eb2f}{setShowPresetBar}}(\textcolor{keywordtype}{bool}\ val)\{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_obxd_audio_processor_a794fc30e99a2b25d2fcf22767d299683}{showPresetBar}}\ =\ val;}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_a72ebd5c0b916f7d6bf06472a122d3f0c}{config}}-\/>setValue(\textcolor{stringliteral}{"{}presetnavigation"{}},\ this-\/>\mbox{\hyperlink{class_obxd_audio_processor_a794fc30e99a2b25d2fcf22767d299683}{showPresetBar}});}
+\DoxyCodeLine{00227\ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a1fc81b322e869c2e807b98f824dca81d}{isHostAutomatedChange}};}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_ad5b2bc841a2380e13daeeb770bdf16ba}{lastMovedController}};}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_a6380641a80e2f35b7252d8730c61d50a}{lastUsedParameter}};}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ MidiMessage*\ \mbox{\hyperlink{class_obxd_audio_processor_a87ca3b3f8dbe70340a949c3fabafb66a}{nextMidi}};}
+\DoxyCodeLine{00236\ \ \ \ \ MidiMessage*\ \mbox{\hyperlink{class_obxd_audio_processor_afc1796fe54dce620167208dc27e6df9f}{midiMsg}};}
+\DoxyCodeLine{00237\ \ \ \ \ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_aaaa50435b99f0eaac37e1b2b7d4d1cc3}{midiControlledParamSet}};}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a0f35b49da7d1f302a7550f62d49994c4}{hasMidiMessage}};}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_a9c0efd622e7423c4d7b8800abf5f9c09}{midiEventPos}};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \mbox{\hyperlink{class_synth_engine}{SynthEngine}}\ \mbox{\hyperlink{class_obxd_audio_processor_af4f6d5787fe0e7d101e75159a4806d33}{synth}};}
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{class_obxd_bank}{ObxdBank}}\ \mbox{\hyperlink{class_obxd_audio_processor_a50804a54b929b247b8cbe1fe773a0b5b}{programs}};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ }
+\DoxyCodeLine{00247\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_audio_processor_a70fb35661848ab3a9c606b70190bb621}{physicalPixelScaleFactor}};}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_a30b77550da1da2c32a2ba53aa14827cd}{gui\_size}};}
+\DoxyCodeLine{00250\ \ \ \ \ String\ \mbox{\hyperlink{class_obxd_audio_processor_a14607a9f3c484e60909f4d282210195c}{currentSkin}};}
+\DoxyCodeLine{00251\ \ \ \ \ String\ \mbox{\hyperlink{class_obxd_audio_processor_a2d75fc2f089b2fdbe23e0d8ac1d426f6}{currentBank}};}
+\DoxyCodeLine{00252\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_a63d0ec023ca846d88282cea2c97386c4}{currentBankFile}};}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a9fd892e0358f2813df590d75f893b3db}{saveBank}}();}
+\DoxyCodeLine{00254\ \ \ \ \ }
+\DoxyCodeLine{00255\ \ \ \ \ String\ \mbox{\hyperlink{class_obxd_audio_processor_a947ced94feff1095ceea260bcd500d9a}{currentMidiPath}};}
+\DoxyCodeLine{00256\ \ \ \ \ String\ \mbox{\hyperlink{class_obxd_audio_processor_a251769a0a0e262b400703bffecb7d8dd}{currentPreset}};}
+\DoxyCodeLine{00257\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_aae5dec01580c5017c26b60330242f9f1}{currentPresetFile}};}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a9499e42ea46a7543a32e1c063347f2be}{savePreset}}();}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{class_midi_map}{MidiMap}}\ \mbox{\hyperlink{class_obxd_audio_processor_a06a54cb52fa1ef776cdfc6335a2fa7ca}{bindings}};}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_a794fc30e99a2b25d2fcf22767d299683}{showPresetBar}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00261\ \ \ \ \ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_a8a410d69d76cc301b1e6ac509d2af887}{updateConfig}}();}
+\DoxyCodeLine{00263\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00264\ \ \ \ \ Array<File>\ \mbox{\hyperlink{class_obxd_audio_processor_a6e06dc2b9bf958dd25be737deab02620}{bankFiles}};}
+\DoxyCodeLine{00265\ \ \ \ \ Array<File>\ \mbox{\hyperlink{class_obxd_audio_processor_a77215dca1339137fe10bcd9584b4ff00}{skinFiles}};}
+\DoxyCodeLine{00266\ \ \ \ \ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}}\ \mbox{\hyperlink{class_obxd_audio_processor_a4799099d43d7acfe45328b15d2d27f6f}{tooltipBehavior}};}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ std::unique\_ptr<PropertiesFile>\ \mbox{\hyperlink{class_obxd_audio_processor_a72ebd5c0b916f7d6bf06472a122d3f0c}{config}};}
+\DoxyCodeLine{00269\ \ \ \ \ InterProcessLock\ \mbox{\hyperlink{class_obxd_audio_processor_a829a87b2fc01d3309d2452eb6eb886fa}{configLock}};}
+\DoxyCodeLine{00270\ \ \ \ \ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00272\ \ \ \ \ AudioProcessorValueTreeState\ \mbox{\hyperlink{class_obxd_audio_processor_a11a612061e28376a3e9f2754dbd1d616}{apvtState}};}
+\DoxyCodeLine{00273\ \ \ \ \ UndoManager\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_a7f8107f83b27c229eddc0a8d1a1e45aa}{undoManager}};}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00276\ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR\ (\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}})}
+\DoxyCodeLine{00277\ \};}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ PLUGINPROCESSOR\_H\_INCLUDED}}
+
+\end{DoxyCode}

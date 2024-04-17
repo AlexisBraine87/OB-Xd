@@ -1,0 +1,316 @@
+\doxysection{Plugin\+Editor.\+h}
+\hypertarget{_plugin_editor_8h_source}{}\label{_plugin_editor_8h_source}\index{Source/PluginEditor.h@{Source/PluginEditor.h}}
+\mbox{\hyperlink{_plugin_editor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ This\ file\ was\ auto-\/generated\ by\ the\ Introjucer!}}
+\DoxyCodeLine{00006\ \textcolor{comment}{}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ It\ contains\ the\ basic\ startup\ code\ for\ a\ Juce\ application.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00010\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ PLUGINEDITOR\_H\_INCLUDED}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ PLUGINEDITOR\_H\_INCLUDED}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../JuceLibraryCode/JuceHeader.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_plugin_processor_8h}{PluginProcessor.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_knob_8h}{Gui/Knob.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tooglable_button_8h}{Gui/TooglableButton.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_button_list_8h}{Gui/ButtonList.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_set_preset_name_window_8h}{Components/SetPresetNameWindow.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_preset_bar_8h}{Components/PresetBar.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_scale_component_8h}{Components/ScaleComponent.h}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ff}{KeyPressCommandIDs}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffada106b534d93d526cc8b0f00cbcbf7ae}{buttonNextProgram}}\ =\ 1,}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa1bde10d7fb3849c9765b0254454f42ed}{buttonPrevProgram}},}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa2650f1d6a9b7067207c61dcfaa15a412}{buttonPadNextProgram}},}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffafc9796ee5352c66596820ea8fae7634b}{buttonPadPrevProgram}},}
+\DoxyCodeLine{00029\ \ \ \ }
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3}{MenuAction}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a94740273f4260406fffc4a312e1b6c01}{Cancel}}\ =\ 0,}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3acb05b59c21f135fef34cb734e363090c}{ToggleMidiKeyboard}},}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a876915a60b68861f9d10e1700487be24}{ImportPreset}},}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a425396a573f21dfde5d32e3bf5101fa9}{ImportBank}},}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a3bc54321980bbd706f1e3abd21cc5ee8}{ExportBank}},}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a7742364b2e881f079ae4b082e2ec7bff}{ExportPreset}},}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a73a7f990b989810ca61c60e570f53880}{SavePreset}},}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a561e88eea12268d8b127f1b62fbbf0f3}{NewPreset}},}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a0436854bd7c2b88e7680c5ed8f4cdf9a}{RenamePreset}},}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a9e99407fc2c0ec2a5a4cbbab3489e7e7}{DeletePreset}},}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a93980bde5b6bcbab12e22d24237460b1}{DeleteBank}},}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a4153f93739ace3b08635fa221baf0b18}{ShowBanks}},}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a6e18cb997393fc7759e4dd8c12256a53}{CopyPreset}},}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a28dcd4ef651235373a3bba3b44936810}{PastePreset}},}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3ac774d8dc1a8dffb9cf31414de29c3bca}{LoadBank}}\ \textcolor{comment}{//\ LoadBank\ must\ be\ the\ last\ enum\ value}}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor_editor}{ObxdAudioProcessorEditor}}\ \ :\ \textcolor{keyword}{public}\ AudioProcessorEditor}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ public\ AudioProcessorListener}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ AsyncUpdater}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ ChangeListener}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ public\ Slider::Listener}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ Button::Listener}
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ public\ ComboBox::Listener}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ ActionListener}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ ApplicationCommandTarget}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ Timer}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ FileDragAndDropTarget}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_a4391b95bb4556b004e21775a56cc145b}{ObxdAudioProcessorEditor}}(\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\&\ ownerFilter);}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_a84c236b1dd5d33da9deeae346aad16b5}{\string~ObxdAudioProcessorEditor}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aeac5137c4f7cb2ae2126b3d9de322192}{isInterestedInFileDrag}}(\textcolor{keyword}{const}\ StringArray\&\ files)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a11b828553bb9a010ca806645da2fd802}{filesDropped}}(\textcolor{keyword}{const}\ StringArray\&\ files,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a30455d5db01e4cb8189b9c349b07aeae}{scaleFactorChanged}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a0576b2550dcff1abc2b528006f3dff35}{mouseUp}}\ (\textcolor{keyword}{const}\ MouseEvent\&\ e)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aed19781de75606225f1eb579e46b98f3}{paint}}\ (Graphics\&\ g)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00078\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ac00a4c5b1e9fce195544faa4f43f712b}{updateFromHost}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ac61db379a336418f53807f28a4f899d8}{handleAsyncUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ \ \ \ \ String\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a214da18157c26d5569ed5832b16e3916}{getCurrentProgramName}}()\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a3aa6b27c0afc0ad02954d240a6bf90b2}{processor}}.\mbox{\hyperlink{class_obxd_audio_processor_a72cda5b4bc253be485d89cc9e633dfc6}{getProgramName}}(\mbox{\hyperlink{class_obxd_audio_processor_editor_a3aa6b27c0afc0ad02954d240a6bf90b2}{processor}}.\mbox{\hyperlink{class_obxd_audio_processor_aea6cd11054bf8df131c4d4c072a8e313}{getCurrentProgram}}());}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aa4fdd443dd3c56991765cd34d97158b7}{updatePresetBar}}(\textcolor{keywordtype}{bool}\ resize=\textcolor{keyword}{true});}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a34441916f39cd39c29d920e0900aae0d}{changeListenerCallback}}\ (ChangeBroadcaster*\ source)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a7ff4f590d50905a31db78b440b86909c}{buttonClicked}}\ (Button\ *)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//bool\ keyPressed(const\ KeyPress\ \&\ press)\ override;}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_af8a1fa6eb1e87803116b693d4d8a77d4}{timerCallback}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_ae8e5eeb164109d6faab13c7719cc56b4}{countTimer}}\ ++;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_obxd_audio_processor_editor_ae8e5eeb164109d6faab13c7719cc56b4}{countTimer}}\ ==\ 4\ \&\&\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a6cf1cc03c08b7f73e6b7fa3dfcac5011}{needNotifytoHost}})\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_ae8e5eeb164109d6faab13c7719cc56b4}{countTimer}}\ =\ 0;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_a6cf1cc03c08b7f73e6b7fa3dfcac5011}{needNotifytoHost}}=\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_a3aa6b27c0afc0ad02954d240a6bf90b2}{processor}}.updateHostDisplay();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_abc2be0a50f5c64586a806c19bfec5379}{countTimerForLed}}++;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_obxd_audio_processor_editor_a441199a77ce20ee344c65b63a144349a}{midiUnlearnButton}}\ \&\&\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a441199a77ce20ee344c65b63a144349a}{midiUnlearnButton}}-\/>getToggleState()\ \&\&\ \mbox{\hyperlink{class_obxd_audio_processor_editor_abc2be0a50f5c64586a806c19bfec5379}{countTimerForLed}}\ >\ 3)\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_a441199a77ce20ee344c65b63a144349a}{midiUnlearnButton}}-\/>setToggleState(\textcolor{keyword}{false},\ NotificationType::sendNotification);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_abc2be0a50f5c64586a806c19bfec5379}{countTimerForLed}}\ =\ 0;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ ApplicationCommandTarget*\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ae51080107cbd4f13c6a8cb3872a064b7}{getNextCommandTarget}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00106\ \ \ \ \ \};}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a4242b8f449bbcafa999b83564bdb2edc}{getAllCommands}}\ (Array<CommandID>\&\ commands)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ Array<CommandID>\ ids\ \{\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffada106b534d93d526cc8b0f00cbcbf7ae}{KeyPressCommandIDs::buttonNextProgram}},\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa1bde10d7fb3849c9765b0254454f42ed}{KeyPressCommandIDs::buttonPrevProgram}},}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa2650f1d6a9b7067207c61dcfaa15a412}{KeyPressCommandIDs::buttonPadNextProgram}},\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffafc9796ee5352c66596820ea8fae7634b}{KeyPressCommandIDs::buttonPadPrevProgram}}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ commands.addArray\ (ids);}
+\DoxyCodeLine{00113\ \ \ \ \ \};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a64aba9a89ed6503485a4d2cf1c43d131}{getCommandInfo}}\ (CommandID\ commandID,\ ApplicationCommandInfo\&\ result)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (commandID)}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffada106b534d93d526cc8b0f00cbcbf7ae}{KeyPressCommandIDs::buttonNextProgram}}:}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setInfo\ (\textcolor{stringliteral}{"{}Move\ up"{}},\ \textcolor{stringliteral}{"{}Move\ the\ button\ +\ "{}},\ \textcolor{stringliteral}{"{}Button"{}},\ 0);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.addDefaultKeypress\ (\textcolor{charliteral}{'+'},\ 0);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setActive\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa1bde10d7fb3849c9765b0254454f42ed}{KeyPressCommandIDs::buttonPrevProgram}}:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setInfo\ (\textcolor{stringliteral}{"{}Move\ right"{}},\ \textcolor{stringliteral}{"{}Move\ the\ button\ -\/\ "{}},\ \textcolor{stringliteral}{"{}Button"{}},\ 0);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.addDefaultKeypress\ (\textcolor{charliteral}{'-\/'},\ 0);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setActive\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa2650f1d6a9b7067207c61dcfaa15a412}{KeyPressCommandIDs::buttonPadNextProgram}}:}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setInfo\ (\textcolor{stringliteral}{"{}Move\ down"{}},\ \textcolor{stringliteral}{"{}Move\ the\ button\ Pad\ +\ "{}},\ \textcolor{stringliteral}{"{}Button"{}},\ 0);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.addDefaultKeypress\ (KeyPress::numberPadAdd,\ 0);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setActive\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffafc9796ee5352c66596820ea8fae7634b}{KeyPressCommandIDs::buttonPadPrevProgram}}:}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setInfo\ (\textcolor{stringliteral}{"{}Move\ left"{}},\ \textcolor{stringliteral}{"{}Move\ the\ button\ Pad\ -\/"{}},\ \textcolor{stringliteral}{"{}Button"{}},\ 0);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.addDefaultKeypress\ (KeyPress::numberPadSubtract,\ 0);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.setActive\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \};}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a8cde91fd00b45dac12a9aac8e4367321}{perform}}\ (\textcolor{keyword}{const}\ InvocationInfo\&\ info)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (info.commandID)}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffada106b534d93d526cc8b0f00cbcbf7ae}{KeyPressCommandIDs::buttonNextProgram}}:}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa2650f1d6a9b7067207c61dcfaa15a412}{KeyPressCommandIDs::buttonPadNextProgram}}:}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_a28090b9f771fdf9f8fcfcaea13c790b8}{nextProgram}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ grabKeyboardFocus();}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa1bde10d7fb3849c9765b0254454f42ed}{KeyPressCommandIDs::buttonPrevProgram}}:}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffafc9796ee5352c66596820ea8fae7634b}{KeyPressCommandIDs::buttonPadPrevProgram}}:}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_af5c7c1fb73206f0248097e0142154d69}{prevProgram}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ grabKeyboardFocus();}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00160\ \ \ \ \ \};\textcolor{comment}{/*}}
+\DoxyCodeLine{00161\ \textcolor{comment}{\ \ \ \ bool\ keyPressed\ (const\ KeyPress\&\ key,}}
+\DoxyCodeLine{00162\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component*\ originatingComponent)\ override\ \{}}
+\DoxyCodeLine{00163\ \textcolor{comment}{\ \ \ \ \ \ \ \ DBG("{}-\/-\/-\/\ "{}\ <<\ key.getKeyCode());}}
+\DoxyCodeLine{00164\ \textcolor{comment}{\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00165\ \textcolor{comment}{\ \ \ \ \};*/}}
+\DoxyCodeLine{00166\ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a28090b9f771fdf9f8fcfcaea13c790b8}{nextProgram}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_af5c7c1fb73206f0248097e0142154d69}{prevProgram}}();}
+\DoxyCodeLine{00169\ \ \ \ \ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a13c2435cbe0ac3aed3e25fbb2f059a06}{MenuActionCallback}}(\textcolor{keywordtype}{int}\ action);}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a14248d86dacd30c33118d26c818602dd}{deleteBank}}();}
+\DoxyCodeLine{00172\ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a24e22234d028f811d8dfb84b861d903b}{resized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00174\ \ \ \ \ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a18022ae1d7a1e675fda1a6adb02ba3a6}{isHighResolutionDisplay}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00176\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a3aa6b27c0afc0ad02954d240a6bf90b2}{processor}}.\mbox{\hyperlink{class_obxd_audio_processor_a70fb35661848ab3a9c606b70190bb621}{physicalPixelScaleFactor}}\ >\ 1.0;}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_abad2c0662c53ee9b041390909a731cea}{actionListenerCallback}}(\textcolor{keyword}{const}\ String\&\ message)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00180\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00181\ \ \ \ \ Rectangle<int>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ae932dd06002476728942a160395a2c71}{transformBounds}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{class_knob}{Knob}}*\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ae89041917395f16f4ed5169444f792b6}{addKnob}}\ (\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ d,\ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\&\ filter,\ \textcolor{keywordtype}{int}\ parameter,\ String\ name,\ \textcolor{keywordtype}{float}\ defval);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ab4877d06ad3cb92c99ecc45a7fcdd535}{placeLabel}}\ (\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ String\ text);}
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{class_tooglable_button}{TooglableButton}}*\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a607a00a888d0e0a1c36bbd1ab85f7fd6}{addButton}}\ (\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\&\ filter,\ \textcolor{keywordtype}{int}\ parameter,\ String\ name);}
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{class_button_list}{ButtonList}}*\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a9ab5bd5f948222184cb438947d31b223}{addList}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\&\ filter,\ \textcolor{keywordtype}{int}\ parameter,\ String\ name,\ String\ nameImg);}
+\DoxyCodeLine{00186\ \ \ \ \ ImageButton*\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aea94627552b5f1671afe941c3489bef7}{addMenuButton}}\ (\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ d,\ String\ nameImg);}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a24a1847a557cb9fd2ece7722afa5a8ca}{createMenu}}\ ();}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aa838f5b5e8f41879e7ea57523a39b5fc}{createMidi}}(\textcolor{keywordtype}{int},\ PopupMenu\ \&);}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aa0a4e092fe76806e78312ac727867c87}{resultFromMenu}}\ (\textcolor{keyword}{const}\ Point<int>);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ae852808b94f6b8dbab159611df43e24e}{clean}}();}
+\DoxyCodeLine{00191\ \ \ \ \ }
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a3ef05fd93fc26f472fa22b2d0e087f97}{rebuildComponents}}\ (\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\&);}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_af59be737a89b44d8d6ec4eb9fcba4843}{loadSkin}}(\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\&);}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00196\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\&\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a3aa6b27c0afc0ad02954d240a6bf90b2}{processor}};}
+\DoxyCodeLine{00198\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//\ images}}
+\DoxyCodeLine{00200\ \ \ \ \ Image\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a010a89b50c1e7e97b396a409ff634228}{backgroundImage}};}
+\DoxyCodeLine{00201\ \ \ \ \ std::map<String,\ Component*>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a61739911b7e3f06dc7c391b2624c8659}{mappingComps}};}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00203\ \ \ \ \ \mbox{\hyperlink{class_knob}{Knob}}*\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a4f4764e3c915072845e42391c3f5278e}{cutoffKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00204\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a60857b65f4218e6ce0662ab74efe4fb2}{resonanceKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00205\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a558070c47182a043d49fb072a9135a2f}{osc1PitchKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00206\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a781ce329334aa2ec0ac62c5ac7d5f7c6}{osc2PitchKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00207\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_ae451d529131af0a7c3432be8a9e17b64}{osc2DetuneKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00208\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_acc125d861dbfd1cc74ecce0c5c36eb7f}{volumeKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00209\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a42a9af0c81fe42f70fff4a670fe7ea34}{portamentoKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00210\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_ab5f290d1cbbb8dc617f3e1bd81e8bab6}{voiceDetuneKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00211\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a4ab7d1d3b8e880ca7cc1f71b20d30ec9}{filterEnvelopeAmtKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00212\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_aaf4678a6e9725c1525376873f2e0199c}{pulseWidthKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00213\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a10e74c16630cf23c0eb5795b7365d5e1}{xmodKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00214\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_af4e539548d84b61236f52712823bee6b}{multimodeKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00215\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_ab9b7aa095ebbdf7c6aa61a64fc92e546}{attackKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00216\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_aa2bdd9c757f48aab4c220984b6e273ad}{decayKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00217\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a61d40714c6f4c36443d6d80626ab308c}{sustainKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00218\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a6879ad63b1ac782d9e5a290ccee9b77a}{releaseKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00219\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_aca8f3f53e8e1709a4caf5415ce4dcb80}{fattackKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00220\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_abbe62cddbfbf227f8110bcba342d6197}{fdecayKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00221\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_aa7b761c2a2f5e79938d85468ff8f430d}{fsustainKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00222\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a56abfbb53a497c225e87a9a6d40f9ec6}{freleaseKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00223\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a6c57dc6652d25e5c5b251858e95c3073}{osc1MixKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00224\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a2b992e73c0461e390dccc6603af19aae}{osc2MixKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00225\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a0643971c479275a1e89bfa44c28bec8b}{noiseMixKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00226\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a9667c6fc46c36a4eb6ac6794f3f03324}{filterDetuneKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00227\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a308e33626c08861ed7dd0bfd676f59e9}{envelopeDetuneKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00228\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_ab557459342f2a5e301eb243444f6bc51}{portamentoDetuneKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00229\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a88ccc2759135113ec2add1ad7b0ccab1}{tuneKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00230\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_aa721c2f01ca7032c975382f13a08d2a8}{lfoFrequencyKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00231\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a842019bff0083e71d3b4bf4498c40c71}{lfoAmt1Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00232\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a15643e2cee4644ca551d32a7b984a7da}{lfoAmt2Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00233\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_adef992618a611578877ad185b0b8780b}{pan1Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00234\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a401f15936b455b8021a3594e794f7fd3}{pan2Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00235\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a9e4bf4373b48bbdd47f726b0d2bd2dde}{pan3Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00236\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a3ba3ad214758b589e95a877055a2ae10}{pan4Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00237\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_af2da02bfee33dcf9231ea24f404ab622}{pan5Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00238\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a47299d9432aa6964a9456b6e2fb6a0c1}{pan6Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00239\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a07ae4c9e56e5147fa704f403c2f6dd0a}{pan7Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00240\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a7d475a754be2fd92fba8a017189bffcd}{pan8Knob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00241\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a40b251cb4e9624a5bc2a74944b5b7a89}{brightnessKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00242\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_ad02595c93ada061a21ef089e8d4d88ae}{envPitchModKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00243\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a23d87574368bd81e5d101d85bff7989c}{bendLfoRateKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00244\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a909de28dd452f0c5e88b9c0b7af83fd7}{veloAmpEnvKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00245\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_afa62a04109562834b1dc332a16bcfc35}{veloFltEnvKnob}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00246\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_abf124ae3b3f6f773c5b7f5231ba13e0f}{transposeKnob}}=\textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \mbox{\hyperlink{class_tooglable_button}{TooglableButton}}*\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a9c7bb2c6952f78e7015cb08cac0d7808}{hardSyncButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00249\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_af2e57b4eb09a63c58b996c55c6031dcd}{osc1SawButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00250\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a8a9526b13fa0572207413cc8e123a0bb}{osc2SawButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00251\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a0600bab213ce3f5754d5757aa0f7344e}{osc1PulButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00252\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a7c6e4979bb7f4a32631161f95d3276a5}{osc2PulButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00253\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a66e1ccaf2984497c864d0da741c76d07}{filterKeyFollowButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00254\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a51c1a45e1dc76315e2918655a3bfe535}{unisonButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00255\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_af6f357112ec3f812c9ac3fe5d4a5dd99}{pitchQuantButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00256\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_aee9c64ea8330242c84174644e6d679c9}{filterHQButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00257\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a65eca66d6e4720a3f4f2d9e1433238ae}{filterBPBlendButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00258\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a01c6de58676b1f6f2a786110bc355b3f}{lfoSinButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00259\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a8e532339ce17cefda43a430f253a0612}{lfoSquareButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00260\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a8664a41e758a7585bb321d49f46ebf67}{lfoSHButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00261\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_afe82a7ff6d86c0e08f9b03b5e6d708e4}{lfoOsc1Button}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00262\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a53ee00658f2ef66b5920a35272b3345a}{lfoOsc2Button}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00263\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a9760dc2b8c6897cd776a84b4ac61bb71}{lfoFilterButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00264\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a267035f0bbf108ef1d2afa394c555150}{lfoPwm1Button}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00265\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a242d06a9fff06e662e67cff60cb2f837}{lfoPwm2Button}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00266\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a883dcb3a3d17defcbc572caf491af15f}{bendRangeButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00267\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a22b0c39fe2db9670a87b90438c65d713}{bendOsc2OnlyButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00268\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a51f921735d764a02781fa5b0241a73b7}{fourPoleButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00269\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a0704d440b9fed113d7431e2ce56b3ed7}{asPlayedAllocButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00270\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a35956e11c2fca27e4c54571ea56f2e23}{midiLearnButton}}=\textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00271\ \ \ \ \ *\mbox{\hyperlink{class_obxd_audio_processor_editor_a441199a77ce20ee344c65b63a144349a}{midiUnlearnButton}}=\textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ std::unique\_ptr<ButtonList>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aeec7c4cdc480f9e2e1ac93e67838dc1c}{voiceSwitch}},\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a0a3ed0ee5b9b4e41a4b263f815272688}{legatoSwitch}};}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ File\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a576401dd56eb558ecf54e98f4a34163b}{skinFolder}};}
+\DoxyCodeLine{00276\ \ \ \ \ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00278\ \ \ \ \ OwnedArray<Knob::KnobAttachment>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_ad16989c84b72fc8a0cdf648583cbdd5c}{knobAttachments}};}
+\DoxyCodeLine{00279\ \ \ \ \ OwnedArray<AudioProcessorValueTreeState::ButtonAttachment>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ab5c14639663a6fb39d71cae274326a31}{toggleAttachments}};}
+\DoxyCodeLine{00280\ \ \ \ \ OwnedArray<ButtonList::ButtonListAttachment>\ \ \mbox{\hyperlink{class_obxd_audio_processor_editor_a1f829927fec30a5b79146e63ce45fc1f}{buttonListAttachments}};}
+\DoxyCodeLine{00281\ \ \ \ \ }
+\DoxyCodeLine{00282\ \ \ \ \ OwnedArray<ImageButton>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aff249f7c7f10255b0718b76e8cc8a7ce}{imageButtons}};}
+\DoxyCodeLine{00283\ \ \ \ \ }
+\DoxyCodeLine{00284\ \ \ \ \ OwnedArray<PopupMenu>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a81345bb02ab4b33b397a4df3b89bd41f}{popupMenus}};}
+\DoxyCodeLine{00285\ \ \ \ \ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a670f7c29f6ba2897d6c99b15cd5a9b07}{notLoadSkin}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a3581a40e56a69c3b9628fe09bdc516f4}{progStart}};}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a0b16c0e2559976853af0448a38801953}{bankStart}};}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a38126ba066c975b41bc046f23c5c586b}{skinStart}};}
+\DoxyCodeLine{00290\ \ \ \ \ }
+\DoxyCodeLine{00291\ \ \ \ \ Array<File>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a0d93232e63055318f3112fe8d2055a1a}{skins}};}
+\DoxyCodeLine{00292\ \ \ \ \ Array<File>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a70df595e15be8690eea63f77c39ab6fa}{banks}};}
+\DoxyCodeLine{00293\ \ \ \ \ std::unique\_ptr<SetPresetNameWindow>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a2ed70f9bc98b59ec6caf97f866d51c5e}{setPresetNameWindow}};}
+\DoxyCodeLine{00294\ \ \ \ \ std::unique\_ptr<PresetBar>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ad972ba8939b16435012c466af4062c17}{presetBar}};}
+\DoxyCodeLine{00295\ \ \ \ \ std::unique\_ptr<FileChooser>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a2455498ecbfcab547775ec2875969183}{fileChooser}};}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{comment}{//\ Command\ manager}}
+\DoxyCodeLine{00297\ \ \ \ \ ApplicationCommandManager\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a56f2e5b06a5734997ca3e453a09b0a24}{commandManager}};}
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_ae8e5eeb164109d6faab13c7719cc56b4}{countTimer}}\ =0;}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a6cf1cc03c08b7f73e6b7fa3dfcac5011}{needNotifytoHost}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ Array<String>\ \mbox{\hyperlink{class_obxd_audio_processor_editor_a527c1f4b29a7295b2309bfb6be28074a}{midiFiles}};}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_afcc17a4f7f4dc330f82faeec17b359ce}{menuMidiNum}};}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_aab7a87cbefe73ba59f6137f39ee85e53}{menuScaleNum}};}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_audio_processor_editor_abc2be0a50f5c64586a806c19bfec5379}{countTimerForLed}}\ =\ 0;}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_obxd_audio_processor_editor_1_1_action}{Action}}}
+\DoxyCodeLine{00307\ \ \ \ \ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{struct_obxd_audio_processor_editor_1_1_action_a141831c2207f93b169a9d4da4422b9af}{panReset}};}
+\DoxyCodeLine{00309\ \ \ \ \ \};}
+\DoxyCodeLine{00310\ \};}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ PLUGINEDITOR\_H\_INCLUDED}}
+
+\end{DoxyCode}

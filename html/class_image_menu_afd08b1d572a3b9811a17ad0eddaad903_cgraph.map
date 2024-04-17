@@ -1,0 +1,17 @@
+<map id="ImageMenu::scaleFactorChanged" name="ImageMenu::scaleFactorChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,223,104"/>
+<area shape="rect" id="Node000002" href="$class_scalable_component.html#a81361cc705be0667e508476827d2cbe6" title=" " alt="" coords="271,5,454,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,75,267,48,268,53,166,80"/>
+<area shape="rect" id="Node000003" href="$class_scalable_component.html#ad50b7cfc6a69d37ac7f0f1bdea7b12e8" title=" " alt="" coords="271,71,454,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,88,255,88,255,94,223,94"/>
+<area shape="rect" id="Node000008" href="$class_scalable_component.html#ae23f6266007c204094dd7698a16ebab0" title=" " alt="" coords="289,136,436,177"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="166,102,275,131,273,136,165,107"/>
+<area shape="rect" id="Node000004" href="$class_obxd_audio_processor.html#aa68bb4f73b273dc03ce3481709e88c92" title=" " alt="" coords="502,39,654,79"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="454,75,486,70,487,75,454,80"/>
+<area shape="rect" id="Node000007" href="$class_scalable_component.html#ab746359e4aacae97810d592b04d22b3e" title=" " alt="" coords="505,104,651,145"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="454,103,490,108,489,113,454,108"/>
+<area shape="rect" id="Node000005" href="$class_obxd_audio_processor.html#afa7832080a1d323dfd9d41ad9eb540b4" title=" " alt="" coords="702,39,847,79"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="655,56,687,56,687,62,655,62"/>
+<area shape="rect" id="Node000006" href="$class_obxd_audio_processor.html#a7729e32681fdeee946d73a5e6da05812" title=" " alt="" coords="895,39,1039,79"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="847,56,879,56,879,62,847,62"/>
+</map>

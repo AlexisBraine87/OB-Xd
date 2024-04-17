@@ -1,0 +1,35 @@
+<map id="Motherboard::setSampleRate" name="Motherboard::setSampleRate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,179,197,204"/>
+<area shape="rect" id="Node000002" href="$class_motherboard.html#a75b5415cb6fde12502d876edffd33529" title=" " alt="" coords="245,179,436,204"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,189,229,189,229,194,197,194"/>
+<area shape="rect" id="Node000012" href="$class_lfo.html#ae71a394188ebe2d93ee7bc847bde7411" title=" " alt="" coords="507,129,644,155"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="169,175,244,164,374,151,491,143,492,148,375,156,245,169,170,181"/>
+<area shape="rect" id="Node000013" href="$class_obxd_voice.html#aa2f9a9aa1e1fba3d298071acc822a7f5" title=" " alt="" coords="484,229,667,255"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="171,202,245,214,360,226,468,234,468,239,360,231,244,219,170,208"/>
+<area shape="rect" id="Node000003" href="$class_obxd_voice.html#a8acc694533ce65c64379902322784dab" title=" " alt="" coords="510,179,641,204"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="437,189,494,189,494,194,437,194"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="405,175,496,156,497,161,406,181"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="404,202,499,223,497,228,403,208"/>
+<area shape="rect" id="Node000004" href="$class_obxd_oscillator_b.html#a27399beedd764603188b74a90503c4c5" title=" " alt="" coords="715,179,949,204"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="642,189,700,189,700,194,642,194"/>
+<area shape="rect" id="Node000008" href="$class_obxd_oscillator_b.html#ae3164a17b91b0f9232cf848e10e3673e" title=" " alt="" coords="728,80,936,106"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="633,176,666,165,733,138,791,110,793,115,735,143,668,170,634,181"/>
+<area shape="rect" id="Node000005" href="$class_pulse_osc.html#adfae2869d363edeea8acc818281fdced" title=" " alt="" coords="1003,153,1199,179"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="949,178,987,174,988,179,950,183"/>
+<area shape="rect" id="Node000006" href="$class_saw_osc.html#a5e6ec728cb30236b6accf605e6b95f52" title=" " alt="" coords="1007,203,1195,228"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="950,199,992,203,991,208,949,205"/>
+<area shape="rect" id="Node000007" href="$class_triangle_osc.html#acaf1dea4fe9fe1a6c211ca6455a3050c" title=" " alt="" coords="997,252,1205,278"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="913,202,950,213,974,226,998,238,1017,245,1015,250,996,243,971,230,948,218,912,207"/>
+<area shape="rect" id="Node000009" href="$class_pulse_osc.html#a61366fcb106d20c2ffc5687f46103417" title=" " alt="" coords="1016,5,1186,31"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="873,77,996,40,1023,33,1025,38,997,45,874,82"/>
+<area shape="rect" id="Node000010" href="$class_saw_osc.html#a7472180eae72c431af58cc0c302030a9" title=" " alt="" coords="1019,55,1183,80"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="936,80,1003,74,1004,79,937,86"/>
+<area shape="rect" id="Node000011" href="$class_triangle_osc.html#aaa238a0e69e98a68c935738aac54ef08" title=" " alt="" coords="1009,104,1193,130"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="937,99,994,105,994,110,936,105"/>
+<area shape="rect" id="Node000014" href="$class_adsr_envelope.html#a111b7fc835536000f5fb86eccdd53147" title=" " alt="" coords="732,327,932,352"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="599,253,651,283,716,313,737,320,735,325,714,318,649,288,596,258"/>
+<area shape="rect" id="Node000015" href="$class_filter.html#a63645acc79f1944479c40dcfff722b41" title=" " alt="" coords="758,228,906,254"/>
+<area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="668,239,742,239,742,244,668,244"/>
+<area shape="rect" id="Node000016" href="$class_obxd_oscillator_b.html#a2180c5d1fa9a5fe5635be4a18c04f56e" title=" " alt="" coords="725,277,939,303"/>
+<area shape="poly" id="edge15_Node000013_Node000016" title=" " alt="" coords="649,253,745,271,744,276,648,258"/>
+</map>

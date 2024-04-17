@@ -1,0 +1,212 @@
+\doxysection{Pulse\+Osc Class Reference}
+\hypertarget{class_pulse_osc}{}\label{class_pulse_osc}\index{PulseOsc@{PulseOsc}}
+
+
+{\ttfamily \#include $<$Pulse\+Osc.\+h$>$}
+
+
+
+Collaboration diagram for Pulse\+Osc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_pulse_osc__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pulse_osc_a9ce7a21d4555df83ebd9937e212ce6af}{Pulse\+Osc}} ()
+\item 
+\mbox{\hyperlink{class_pulse_osc_a49a6575e996a8574cd3aee616ff0dfc3}{\texorpdfstring{$\sim$}{\string~}\+Pulse\+Osc}} ()
+\item 
+void \mbox{\hyperlink{class_pulse_osc_a61366fcb106d20c2ffc5687f46103417}{set\+Decimation}} ()
+\item 
+void \mbox{\hyperlink{class_pulse_osc_adfae2869d363edeea8acc818281fdced}{remove\+Decimation}} ()
+\item 
+float \mbox{\hyperlink{class_pulse_osc_a5720dff8cb08a16048369bd07cdf2539}{alias\+Reduction}} ()
+\item 
+void \mbox{\hyperlink{class_pulse_osc_a3084b7fda0c453465c0e3437a33d3476}{process\+Master}} (float x, float delta, float pulse\+Width, float pulse\+Width\+Was)
+\item 
+float \mbox{\hyperlink{class_pulse_osc_ada005e1cc061378afce4a00a0367410d}{get\+Value}} (float x, float pulse\+Width)
+\item 
+float \mbox{\hyperlink{class_pulse_osc_a15318344ccfbea9e1cbc302b9fa1ee3a}{get\+Value\+Fast}} (float x, float pulse\+Width)
+\item 
+void \mbox{\hyperlink{class_pulse_osc_a1c52b2b0f6fd0dc001cfaf126bfac5a6}{process\+Slave}} (float x, float delta, bool hard\+Sync\+Reset, float hard\+Sync\+Frac, float pulse\+Width, float pulse\+Width\+Was)
+\item 
+void \mbox{\hyperlink{class_pulse_osc_ae10bcbf794f65a06e4833e7cf2c26046}{mix\+In\+Impulse\+Center}} (float \texorpdfstring{$\ast$}{*}buf, int \&bpos, float offset, float scale)
+\item 
+float \mbox{\hyperlink{class_pulse_osc_abda421edc9e2a188362fec9d174254e0}{get\+Next\+Blep}} (float \texorpdfstring{$\ast$}{*}buf, int \&bpos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_pulse_osc_a643a87ab7b3c7181d61c0260968bd5e4}{del1}}
+\item 
+bool \mbox{\hyperlink{class_pulse_osc_ad5c4ff2c36fd5eb6342c627220555703}{pw1t}}
+\item 
+float \mbox{\hyperlink{class_pulse_osc_a4c7298fd866ea74b4f1d5b565e4ad634}{buffer1}} \mbox{[}\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{class_pulse_osc_a10d90f4cef08a0f2dde2cb48bf4c178c}{hsam}}
+\item 
+const int \mbox{\hyperlink{class_pulse_osc_acc27ae6bace14f40aeb5d0e338200f16}{n}}
+\item 
+float const  \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_pulse_osc_aebc08ae63f65c32f06f3ebf143bd20ee}{blep\+PTR}}
+\item 
+int \mbox{\hyperlink{class_pulse_osc_a0870aab76402771b6d3453dd9ee9a750}{b\+P1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pulse_osc_a9ce7a21d4555df83ebd9937e212ce6af}\label{class_pulse_osc_a9ce7a21d4555df83ebd9937e212ce6af} 
+\index{PulseOsc@{PulseOsc}!PulseOsc@{PulseOsc}}
+\index{PulseOsc@{PulseOsc}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{PulseOsc()}{PulseOsc()}}
+{\footnotesize\ttfamily Pulse\+Osc\+::\+Pulse\+Osc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pulse_osc_a49a6575e996a8574cd3aee616ff0dfc3}\label{class_pulse_osc_a49a6575e996a8574cd3aee616ff0dfc3} 
+\index{PulseOsc@{PulseOsc}!````~PulseOsc@{\texorpdfstring{$\sim$}{\string~}PulseOsc}}
+\index{````~PulseOsc@{\texorpdfstring{$\sim$}{\string~}PulseOsc}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PulseOsc()}{\string~PulseOsc()}}
+{\footnotesize\ttfamily Pulse\+Osc\+::\texorpdfstring{$\sim$}{\string~}\+Pulse\+Osc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pulse_osc_a5720dff8cb08a16048369bd07cdf2539}\label{class_pulse_osc_a5720dff8cb08a16048369bd07cdf2539} 
+\index{PulseOsc@{PulseOsc}!aliasReduction@{aliasReduction}}
+\index{aliasReduction@{aliasReduction}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{aliasReduction()}{aliasReduction()}}
+{\footnotesize\ttfamily float Pulse\+Osc\+::alias\+Reduction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pulse_osc_a5720dff8cb08a16048369bd07cdf2539_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pulse_osc_abda421edc9e2a188362fec9d174254e0}\label{class_pulse_osc_abda421edc9e2a188362fec9d174254e0} 
+\index{PulseOsc@{PulseOsc}!getNextBlep@{getNextBlep}}
+\index{getNextBlep@{getNextBlep}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{getNextBlep()}{getNextBlep()}}
+{\footnotesize\ttfamily float Pulse\+Osc\+::get\+Next\+Blep (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int \&}]{bpos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pulse_osc_ada005e1cc061378afce4a00a0367410d}\label{class_pulse_osc_ada005e1cc061378afce4a00a0367410d} 
+\index{PulseOsc@{PulseOsc}!getValue@{getValue}}
+\index{getValue@{getValue}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily float Pulse\+Osc\+::get\+Value (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{pulse\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_pulse_osc_ada005e1cc061378afce4a00a0367410d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pulse_osc_a15318344ccfbea9e1cbc302b9fa1ee3a}\label{class_pulse_osc_a15318344ccfbea9e1cbc302b9fa1ee3a} 
+\index{PulseOsc@{PulseOsc}!getValueFast@{getValueFast}}
+\index{getValueFast@{getValueFast}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{getValueFast()}{getValueFast()}}
+{\footnotesize\ttfamily float Pulse\+Osc\+::get\+Value\+Fast (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{pulse\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pulse_osc_ae10bcbf794f65a06e4833e7cf2c26046}\label{class_pulse_osc_ae10bcbf794f65a06e4833e7cf2c26046} 
+\index{PulseOsc@{PulseOsc}!mixInImpulseCenter@{mixInImpulseCenter}}
+\index{mixInImpulseCenter@{mixInImpulseCenter}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{mixInImpulseCenter()}{mixInImpulseCenter()}}
+{\footnotesize\ttfamily void Pulse\+Osc\+::mix\+In\+Impulse\+Center (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int \&}]{bpos,  }\item[{float}]{offset,  }\item[{float}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pulse_osc_a3084b7fda0c453465c0e3437a33d3476}\label{class_pulse_osc_a3084b7fda0c453465c0e3437a33d3476} 
+\index{PulseOsc@{PulseOsc}!processMaster@{processMaster}}
+\index{processMaster@{processMaster}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{processMaster()}{processMaster()}}
+{\footnotesize\ttfamily void Pulse\+Osc\+::process\+Master (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{delta,  }\item[{float}]{pulse\+Width,  }\item[{float}]{pulse\+Width\+Was }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pulse_osc_a3084b7fda0c453465c0e3437a33d3476_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pulse_osc_a1c52b2b0f6fd0dc001cfaf126bfac5a6}\label{class_pulse_osc_a1c52b2b0f6fd0dc001cfaf126bfac5a6} 
+\index{PulseOsc@{PulseOsc}!processSlave@{processSlave}}
+\index{processSlave@{processSlave}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{processSlave()}{processSlave()}}
+{\footnotesize\ttfamily void Pulse\+Osc\+::process\+Slave (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{delta,  }\item[{bool}]{hard\+Sync\+Reset,  }\item[{float}]{hard\+Sync\+Frac,  }\item[{float}]{pulse\+Width,  }\item[{float}]{pulse\+Width\+Was }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pulse_osc_a1c52b2b0f6fd0dc001cfaf126bfac5a6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pulse_osc_adfae2869d363edeea8acc818281fdced}\label{class_pulse_osc_adfae2869d363edeea8acc818281fdced} 
+\index{PulseOsc@{PulseOsc}!removeDecimation@{removeDecimation}}
+\index{removeDecimation@{removeDecimation}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{removeDecimation()}{removeDecimation()}}
+{\footnotesize\ttfamily void Pulse\+Osc\+::remove\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pulse_osc_a61366fcb106d20c2ffc5687f46103417}\label{class_pulse_osc_a61366fcb106d20c2ffc5687f46103417} 
+\index{PulseOsc@{PulseOsc}!setDecimation@{setDecimation}}
+\index{setDecimation@{setDecimation}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{setDecimation()}{setDecimation()}}
+{\footnotesize\ttfamily void Pulse\+Osc\+::set\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_pulse_osc_aebc08ae63f65c32f06f3ebf143bd20ee}\label{class_pulse_osc_aebc08ae63f65c32f06f3ebf143bd20ee} 
+\index{PulseOsc@{PulseOsc}!blepPTR@{blepPTR}}
+\index{blepPTR@{blepPTR}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{blepPTR}{blepPTR}}
+{\footnotesize\ttfamily float const\texorpdfstring{$\ast$}{*} Pulse\+Osc\+::blep\+PTR\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pulse_osc_a0870aab76402771b6d3453dd9ee9a750}\label{class_pulse_osc_a0870aab76402771b6d3453dd9ee9a750} 
+\index{PulseOsc@{PulseOsc}!bP1@{bP1}}
+\index{bP1@{bP1}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{bP1}{bP1}}
+{\footnotesize\ttfamily int Pulse\+Osc\+::b\+P1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pulse_osc_a4c7298fd866ea74b4f1d5b565e4ad634}\label{class_pulse_osc_a4c7298fd866ea74b4f1d5b565e4ad634} 
+\index{PulseOsc@{PulseOsc}!buffer1@{buffer1}}
+\index{buffer1@{buffer1}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{buffer1}{buffer1}}
+{\footnotesize\ttfamily float Pulse\+Osc\+::buffer1\mbox{[}\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pulse_osc_a643a87ab7b3c7181d61c0260968bd5e4}\label{class_pulse_osc_a643a87ab7b3c7181d61c0260968bd5e4} 
+\index{PulseOsc@{PulseOsc}!del1@{del1}}
+\index{del1@{del1}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{del1}{del1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Pulse\+Osc\+::del1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pulse_osc_a10d90f4cef08a0f2dde2cb48bf4c178c}\label{class_pulse_osc_a10d90f4cef08a0f2dde2cb48bf4c178c} 
+\index{PulseOsc@{PulseOsc}!hsam@{hsam}}
+\index{hsam@{hsam}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{hsam}{hsam}}
+{\footnotesize\ttfamily const int Pulse\+Osc\+::hsam\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pulse_osc_acc27ae6bace14f40aeb5d0e338200f16}\label{class_pulse_osc_acc27ae6bace14f40aeb5d0e338200f16} 
+\index{PulseOsc@{PulseOsc}!n@{n}}
+\index{n@{n}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily const int Pulse\+Osc\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pulse_osc_ad5c4ff2c36fd5eb6342c627220555703}\label{class_pulse_osc_ad5c4ff2c36fd5eb6342c627220555703} 
+\index{PulseOsc@{PulseOsc}!pw1t@{pw1t}}
+\index{pw1t@{pw1t}!PulseOsc@{PulseOsc}}
+\doxysubsubsection{\texorpdfstring{pw1t}{pw1t}}
+{\footnotesize\ttfamily bool Pulse\+Osc\+::pw1t\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_pulse_osc_8h}{Pulse\+Osc.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,19 @@
+<map id="ImageMenu::ImageMenu" name="ImageMenu::ImageMenu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,171,104"/>
+<area shape="rect" id="Node000002" href="$class_image_menu.html#afd08b1d572a3b9811a17ad0eddaad903" title=" " alt="" coords="219,78,436,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,88,203,88,203,94,171,94"/>
+<area shape="rect" id="Node000003" href="$class_scalable_component.html#a81361cc705be0667e508476827d2cbe6" title=" " alt="" coords="484,5,667,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="378,75,480,48,482,53,380,80"/>
+<area shape="rect" id="Node000004" href="$class_scalable_component.html#ad50b7cfc6a69d37ac7f0f1bdea7b12e8" title=" " alt="" coords="484,71,667,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="436,88,468,88,468,94,436,94"/>
+<area shape="rect" id="Node000009" href="$class_scalable_component.html#ae23f6266007c204094dd7698a16ebab0" title=" " alt="" coords="503,136,649,177"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="380,102,488,131,487,136,378,107"/>
+<area shape="rect" id="Node000005" href="$class_obxd_audio_processor.html#aa68bb4f73b273dc03ce3481709e88c92" title=" " alt="" coords="715,39,868,79"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="667,75,700,70,700,75,668,80"/>
+<area shape="rect" id="Node000008" href="$class_scalable_component.html#ab746359e4aacae97810d592b04d22b3e" title=" " alt="" coords="718,104,865,145"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="668,103,703,108,702,113,667,108"/>
+<area shape="rect" id="Node000006" href="$class_obxd_audio_processor.html#afa7832080a1d323dfd9d41ad9eb540b4" title=" " alt="" coords="916,39,1060,79"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="868,56,900,56,900,62,868,62"/>
+<area shape="rect" id="Node000007" href="$class_obxd_audio_processor.html#a7729e32681fdeee946d73a5e6da05812" title=" " alt="" coords="1108,39,1252,79"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1060,56,1093,56,1093,62,1060,62"/>
+</map>

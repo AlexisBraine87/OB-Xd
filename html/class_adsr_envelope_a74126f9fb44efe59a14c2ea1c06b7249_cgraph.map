@@ -1,0 +1,11 @@
+<map id="AdsrEnvelope::setUniqueDeriviance" name="AdsrEnvelope::setUniqueDeriviance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,237,106"/>
+<area shape="rect" id="Node000002" href="$class_adsr_envelope.html#a2a6ba5bcb5d1b80e1e724bbc0db6d40f" title=" " alt="" coords="290,5,456,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,77,284,40,307,33,308,38,285,45,165,82"/>
+<area shape="rect" id="Node000003" href="$class_adsr_envelope.html#a44976ed74cca7deab505c7acd52062ac" title=" " alt="" coords="290,55,456,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,79,274,75,274,80,237,84"/>
+<area shape="rect" id="Node000004" href="$class_adsr_envelope.html#aaec1b9c371a2c5404985f6514ffe9cff" title=" " alt="" coords="285,104,461,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,101,269,104,269,110,237,107"/>
+<area shape="rect" id="Node000005" href="$class_adsr_envelope.html#af133fb1ff5da1e1f29a095380b94044b" title=" " alt="" coords="287,153,459,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="166,104,285,140,308,146,307,151,284,145,165,109"/>
+</map>

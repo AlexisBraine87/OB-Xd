@@ -1,0 +1,32 @@
+<map id="VoiceQueue" name="VoiceQueue">
+<area shape="rect" id="Node000001" title=" " alt="" coords="982,237,1074,263"/>
+<area shape="rect" id="Node000002" href="$class_obxd_voice.html" title=" " alt="" coords="806,237,892,263"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="907,248,981,248,981,253,907,253"/>
+<area shape="rect" id="Node000003" href="$class_tuning.html" title=" " alt="" coords="604,20,664,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="664,54,720,107,784,171,839,235,835,239,780,175,716,111,660,58"/>
+<area shape="rect" id="Node000004" href="$struct_m_t_s_client.html" title=" " alt="" coords="295,5,378,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="393,18,604,29,603,34,393,24"/>
+<area shape="rect" id="Node000005" href="$class_adsr_envelope.html" title=" " alt="" coords="583,165,685,191"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="701,192,783,218,821,234,819,239,781,223,700,197"/>
+<area shape="rect" id="Node000006" href="$class_obxd_oscillator_b.html" title=" " alt="" coords="576,215,692,240"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="708,233,806,243,805,248,708,238"/>
+<area shape="rect" id="Node000007" href="$class_delay_line.html" title=" " alt="" coords="5,203,160,228"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="128,194,179,177,235,164,318,147,385,134,417,132,451,136,486,146,526,165,536,174,540,184,543,193,551,201,577,215,575,219,547,206,539,196,535,186,532,177,524,170,484,151,449,141,417,137,386,139,319,152,236,169,181,182,130,199"/>
+<area shape="rect" id="Node000009" href="$class_saw_osc.html" title=" " alt="" coords="301,179,372,204"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="175,204,300,192,300,197,176,209"/>
+<area shape="rect" id="Node000010" href="$class_pulse_osc.html" title=" " alt="" coords="297,229,376,255"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="176,223,184,224,297,236,297,241,183,229,175,228"/>
+<area shape="rect" id="Node000011" href="$class_triangle_osc.html" title=" " alt="" coords="291,283,382,308"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="135,231,236,265,291,281,290,286,235,270,134,236"/>
+<area shape="rect" id="Node000008" href="$class_delay_line_boolean.html" title=" " alt="" coords="236,336,437,362"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="451,347,490,336,523,317,533,302,535,285,536,267,547,250,574,234,577,238,551,253,541,269,540,286,538,303,527,320,492,341,453,352"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="388,193,525,208,576,215,575,220,525,213,388,198"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="391,240,525,238,576,233,576,238,525,243,391,246"/>
+<area shape="poly" id="edge12_Node000006_Node000011" title=" " alt="" coords="398,299,461,295,493,288,524,277,531,271,535,264,547,249,574,237,577,242,551,254,539,267,535,274,526,281,495,293,461,301,398,304"/>
+<area shape="rect" id="Node000012" href="$class_filter.html" title=" " alt="" coords="609,264,659,290"/>
+<area shape="poly" id="edge14_Node000002_Node000012" title=" " alt="" coords="674,272,782,261,806,257,806,262,783,266,675,277"/>
+<area shape="rect" id="Node000013" href="$class_delay_line.html" title=" " alt="" coords="549,336,719,362"/>
+<area shape="poly" id="edge15_Node000002_Node000013" title=" " alt="" coords="733,335,781,317,814,290,837,261,841,265,818,294,784,321,735,340"/>
+<area shape="rect" id="Node000014" href="$class_ap_interpolator.html" title=" " alt="" coords="583,385,685,411"/>
+<area shape="poly" id="edge16_Node000002_Node000014" title=" " alt="" coords="700,387,742,374,781,352,802,331,819,307,840,262,845,265,824,310,806,335,784,357,744,379,701,392"/>
+</map>

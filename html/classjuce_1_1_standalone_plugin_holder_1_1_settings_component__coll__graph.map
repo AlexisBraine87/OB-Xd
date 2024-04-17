@@ -1,0 +1,16 @@
+<map id="juce::StandalonePluginHolder::SettingsComponent" name="juce::StandalonePluginHolder::SettingsComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="839,38,1031,78"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="595,21,716,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="732,38,839,47,838,53,731,43"/>
+<area shape="rect" id="Node000003" href="$classjuce_1_1_standalone_plugin_holder.html" title=" " alt="" coords="559,71,752,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="767,71,838,64,838,70,768,76"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,13,166,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,9,260,4,350,4,445,15,492,26,536,41,549,49,561,57,590,68,588,73,558,62,546,54,534,46,490,31,444,21,350,10,260,9,182,15"/>
+<area shape="rect" id="Node000007" href="$classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer.html" title=" " alt="" coords="215,34,407,74"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="181,35,215,40,214,45,181,41"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="284,99,338,124"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="354,105,559,89,559,94,354,111"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="258,148,365,174"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="379,143,594,94,595,100,381,148"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="423,61,559,73,559,78,423,66"/>
+</map>

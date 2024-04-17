@@ -1,0 +1,202 @@
+\doxysection{Preset\+Bar Class Reference}
+\hypertarget{class_preset_bar}{}\label{class_preset_bar}\index{PresetBar@{PresetBar}}
+
+
+{\ttfamily \#include $<$Preset\+Bar.\+h$>$}
+
+
+
+Inheritance diagram for Preset\+Bar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_preset_bar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Preset\+Bar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_preset_bar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_preset_bar_abe66666e022116a514a3af24c34d07a2}{Preset\+Bar}} (\mbox{\hyperlink{class_obxd_audio_processor_editor}{Obxd\+Audio\+Processor\+Editor}} \&gui)
+\item 
+\mbox{\hyperlink{class_preset_bar_a64f57e42a16c1666a40d5a2967f00f4f}{\texorpdfstring{$\sim$}{\string~}\+Preset\+Bar}} () override
+\item 
+void \mbox{\hyperlink{class_preset_bar_a5880d0f793fb75660cf46ccca4b3e3d3}{timer\+Callback}} () override
+\item 
+void \mbox{\hyperlink{class_preset_bar_a4b7a2bde492e526d35e4d8e539b4fe80}{update}} ()
+\item 
+void \mbox{\hyperlink{class_preset_bar_af3904b8ae7b35793404241dd33d57607}{paint}} (juce\+::\+Graphics \&g) override
+\item 
+void \mbox{\hyperlink{class_preset_bar_a07c119b651b8f7cd5fece0e695eee182}{resized}} () override
+\item 
+void \mbox{\hyperlink{class_preset_bar_aa5b562d417e91ed7a752e1802e7f00f9}{button\+Clicked}} (juce\+::\+Button \texorpdfstring{$\ast$}{*}button\+That\+Was\+Clicked) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(juce\+::\+Point$<$ int $>$ \&pos) \mbox{\hyperlink{class_preset_bar_af9bfecd6dccfa500afd37231fbcbb752}{left\+Clicked}} )
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_preset_bar_a8b99a1ff21fbc4505bc3c24855af1576}{presetnavigation\+\_\+svg}} = (const char\texorpdfstring{$\ast$}{*}) \mbox{\hyperlink{_preset_bar_8cpp_ab66f965c236517e2b4dff717bedf9299}{resource\+\_\+\+Preset\+Bar\+\_\+presetnavigation\+\_\+svg}}
+\item 
+static const int \mbox{\hyperlink{class_preset_bar_a764c9398a2b0dd500f2830262e3af6ea}{presetnavigation\+\_\+svg\+Size}} = 2078
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obxd_audio_processor_editor}{Obxd\+Audio\+Processor\+Editor}} \& \mbox{\hyperlink{class_preset_bar_a3df12acf23fe22571ad041e6a8f2a18a}{editor}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_custom_label}{Custom\+Label}} $>$ \mbox{\hyperlink{class_preset_bar_a767b4c5e733a402c01f6e1927daa63bf}{preset\+Name\+Lb}}
+\item 
+std\+::unique\+\_\+ptr$<$ juce\+::\+Image\+Button $>$ \mbox{\hyperlink{class_preset_bar_a07cc3c392ade2687bb5fd634b187915d}{previous\+Btn}}
+\item 
+std\+::unique\+\_\+ptr$<$ juce\+::\+Image\+Button $>$ \mbox{\hyperlink{class_preset_bar_a299791bbd2f8157f9a0312d5aee1855e}{next\+Btn}}
+\item 
+std\+::unique\+\_\+ptr$<$ juce\+::\+Drawable $>$ \mbox{\hyperlink{class_preset_bar_ad43d8b94239cb96a98152555180a6c40}{drawable1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{[}Comments\mbox{]} An auto-\/generated component, created by the Projucer.
+
+Describe your class and how it works here! \mbox{[}/\+Comments\mbox{]} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_preset_bar_abe66666e022116a514a3af24c34d07a2}\label{class_preset_bar_abe66666e022116a514a3af24c34d07a2} 
+\index{PresetBar@{PresetBar}!PresetBar@{PresetBar}}
+\index{PresetBar@{PresetBar}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{PresetBar()}{PresetBar()}}
+{\footnotesize\ttfamily Preset\+Bar\+::\+Preset\+Bar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_obxd_audio_processor_editor}{Obxd\+Audio\+Processor\+Editor}} \&}]{gui }\end{DoxyParamCaption})}
+
+\Hypertarget{class_preset_bar_a64f57e42a16c1666a40d5a2967f00f4f}\label{class_preset_bar_a64f57e42a16c1666a40d5a2967f00f4f} 
+\index{PresetBar@{PresetBar}!````~PresetBar@{\texorpdfstring{$\sim$}{\string~}PresetBar}}
+\index{````~PresetBar@{\texorpdfstring{$\sim$}{\string~}PresetBar}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PresetBar()}{\string~PresetBar()}}
+{\footnotesize\ttfamily Preset\+Bar\+::\texorpdfstring{$\sim$}{\string~}\+Preset\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_preset_bar_aa5b562d417e91ed7a752e1802e7f00f9}\label{class_preset_bar_aa5b562d417e91ed7a752e1802e7f00f9} 
+\index{PresetBar@{PresetBar}!buttonClicked@{buttonClicked}}
+\index{buttonClicked@{buttonClicked}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{buttonClicked()}{buttonClicked()}}
+{\footnotesize\ttfamily void Preset\+Bar\+::button\+Clicked (\begin{DoxyParamCaption}\item[{juce\+::\+Button \texorpdfstring{$\ast$}{*}}]{button\+That\+Was\+Clicked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_preset_bar_aa5b562d417e91ed7a752e1802e7f00f9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_preset_bar_af3904b8ae7b35793404241dd33d57607}\label{class_preset_bar_af3904b8ae7b35793404241dd33d57607} 
+\index{PresetBar@{PresetBar}!paint@{paint}}
+\index{paint@{paint}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Preset\+Bar\+::paint (\begin{DoxyParamCaption}\item[{juce\+::\+Graphics \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_preset_bar_a07c119b651b8f7cd5fece0e695eee182}\label{class_preset_bar_a07c119b651b8f7cd5fece0e695eee182} 
+\index{PresetBar@{PresetBar}!resized@{resized}}
+\index{resized@{resized}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{resized()}{resized()}}
+{\footnotesize\ttfamily void Preset\+Bar\+::resized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_preset_bar_a5880d0f793fb75660cf46ccca4b3e3d3}\label{class_preset_bar_a5880d0f793fb75660cf46ccca4b3e3d3} 
+\index{PresetBar@{PresetBar}!timerCallback@{timerCallback}}
+\index{timerCallback@{timerCallback}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{timerCallback()}{timerCallback()}}
+{\footnotesize\ttfamily void Preset\+Bar\+::timer\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_preset_bar_a5880d0f793fb75660cf46ccca4b3e3d3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_preset_bar_a4b7a2bde492e526d35e4d8e539b4fe80}\label{class_preset_bar_a4b7a2bde492e526d35e4d8e539b4fe80} 
+\index{PresetBar@{PresetBar}!update@{update}}
+\index{update@{update}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Preset\+Bar\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_preset_bar_a4b7a2bde492e526d35e4d8e539b4fe80_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_preset_bar_ad43d8b94239cb96a98152555180a6c40}\label{class_preset_bar_ad43d8b94239cb96a98152555180a6c40} 
+\index{PresetBar@{PresetBar}!drawable1@{drawable1}}
+\index{drawable1@{drawable1}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{drawable1}{drawable1}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$juce\+::\+Drawable$>$ Preset\+Bar\+::drawable1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_preset_bar_a3df12acf23fe22571ad041e6a8f2a18a}\label{class_preset_bar_a3df12acf23fe22571ad041e6a8f2a18a} 
+\index{PresetBar@{PresetBar}!editor@{editor}}
+\index{editor@{editor}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{editor}{editor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obxd_audio_processor_editor}{Obxd\+Audio\+Processor\+Editor}}\& Preset\+Bar\+::editor\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_preset_bar_af9bfecd6dccfa500afd37231fbcbb752}\label{class_preset_bar_af9bfecd6dccfa500afd37231fbcbb752} 
+\index{PresetBar@{PresetBar}!leftClicked@{leftClicked}}
+\index{leftClicked@{leftClicked}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{leftClicked}{leftClicked}}
+{\footnotesize\ttfamily std\+::function$<$void(juce\+::\+Point$<$int$>$ \&pos) Preset\+Bar\+::left\+Clicked) }
+
+\Hypertarget{class_preset_bar_a299791bbd2f8157f9a0312d5aee1855e}\label{class_preset_bar_a299791bbd2f8157f9a0312d5aee1855e} 
+\index{PresetBar@{PresetBar}!nextBtn@{nextBtn}}
+\index{nextBtn@{nextBtn}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{nextBtn}{nextBtn}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$juce\+::\+Image\+Button$>$ Preset\+Bar\+::next\+Btn\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_preset_bar_a767b4c5e733a402c01f6e1927daa63bf}\label{class_preset_bar_a767b4c5e733a402c01f6e1927daa63bf} 
+\index{PresetBar@{PresetBar}!presetNameLb@{presetNameLb}}
+\index{presetNameLb@{presetNameLb}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{presetNameLb}{presetNameLb}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_custom_label}{Custom\+Label}}$>$ Preset\+Bar\+::preset\+Name\+Lb\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_preset_bar_a8b99a1ff21fbc4505bc3c24855af1576}\label{class_preset_bar_a8b99a1ff21fbc4505bc3c24855af1576} 
+\index{PresetBar@{PresetBar}!presetnavigation\_svg@{presetnavigation\_svg}}
+\index{presetnavigation\_svg@{presetnavigation\_svg}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{presetnavigation\_svg}{presetnavigation\_svg}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Preset\+Bar\+::presetnavigation\+\_\+svg = (const char\texorpdfstring{$\ast$}{*}) \mbox{\hyperlink{_preset_bar_8cpp_ab66f965c236517e2b4dff717bedf9299}{resource\+\_\+\+Preset\+Bar\+\_\+presetnavigation\+\_\+svg}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_preset_bar_a764c9398a2b0dd500f2830262e3af6ea}\label{class_preset_bar_a764c9398a2b0dd500f2830262e3af6ea} 
+\index{PresetBar@{PresetBar}!presetnavigation\_svgSize@{presetnavigation\_svgSize}}
+\index{presetnavigation\_svgSize@{presetnavigation\_svgSize}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{presetnavigation\_svgSize}{presetnavigation\_svgSize}}
+{\footnotesize\ttfamily const int Preset\+Bar\+::presetnavigation\+\_\+svg\+Size = 2078\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_preset_bar_a07cc3c392ade2687bb5fd634b187915d}\label{class_preset_bar_a07cc3c392ade2687bb5fd634b187915d} 
+\index{PresetBar@{PresetBar}!previousBtn@{previousBtn}}
+\index{previousBtn@{previousBtn}!PresetBar@{PresetBar}}
+\doxysubsubsection{\texorpdfstring{previousBtn}{previousBtn}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$juce\+::\+Image\+Button$>$ Preset\+Bar\+::previous\+Btn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Components/\mbox{\hyperlink{_preset_bar_8h}{Preset\+Bar.\+h}}\item 
+Source/\+Components/\mbox{\hyperlink{_preset_bar_8cpp}{Preset\+Bar.\+cpp}}\end{DoxyCompactItemize}

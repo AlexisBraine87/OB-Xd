@@ -1,0 +1,202 @@
+\doxysection{Midi\+Map Class Reference}
+\hypertarget{class_midi_map}{}\label{class_midi_map}\index{MidiMap@{MidiMap}}
+
+
+{\ttfamily \#include $<$midi\+Map.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_midi_map_abbc05c44d2d26eca3ab5c9b24540ba71}{Midi\+Map}} ()
+\item 
+void \mbox{\hyperlink{class_midi_map_a70f4679c3233e820200b917a57571a42}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_midi_map_a4c4020099280584c507994062f3786bb}{set\+\_\+default}} ()
+\item 
+int \& \mbox{\hyperlink{class_midi_map_a1a3e84c7aa9240bcd44579d4ea2ba212}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\item 
+void \mbox{\hyperlink{class_midi_map_a5962d1b4b1719e6d566055cb2a17d4b6}{set\+Xml}} (Xml\+Element \&xml)
+\item 
+String \mbox{\hyperlink{class_midi_map_aa61aebebe4664b537359dbf3822cfe7e}{get\+Tag}} (int para\+Id)
+\item 
+int \mbox{\hyperlink{class_midi_map_a6b25a885daed5820aff6aa3fd6d3803b}{get\+Para\+Id}} (String tag\+Name)
+\item 
+void \mbox{\hyperlink{class_midi_map_ac351f9b7b4b068dcece8e4635333b17c}{get\+Xml}} (Xml\+Element \&xml)
+\item 
+bool \mbox{\hyperlink{class_midi_map_abe29cf3fb17407029436c050b12a4ca7}{load\+File}} (File \&xml)
+\item 
+void \mbox{\hyperlink{class_midi_map_a928ef1dcae977496d34d512b83b28d94}{update\+CC}} (int idx\+\_\+para, int midi\+CC)
+\item 
+void \mbox{\hyperlink{class_midi_map_a81e0c93166321c13c506e858d536236b}{save\+File}} (File \&xml)
+\item 
+void \mbox{\hyperlink{class_midi_map_a41c66d2909a4250ac61a848bfdb14a09}{clean}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_midi_map_a613b22ccc096f4505742442c3cb37a61}{controllers}} \mbox{[}255\mbox{]}
+\item 
+int \mbox{\hyperlink{class_midi_map_a5cd0125612c351f05a23698cb008b9c6}{controllers\+\_\+default}} \mbox{[}255\mbox{]}
+\item 
+std\+::map$<$ String, int $>$ \mbox{\hyperlink{class_midi_map_a9091874b8ffcd095965ade2a2661ffcf}{mapping}}
+\item 
+bool \mbox{\hyperlink{class_midi_map_a4185f5f830bdf6616ba644eaf8b04943}{loaded}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_midi_map_abbc05c44d2d26eca3ab5c9b24540ba71}\label{class_midi_map_abbc05c44d2d26eca3ab5c9b24540ba71} 
+\index{MidiMap@{MidiMap}!MidiMap@{MidiMap}}
+\index{MidiMap@{MidiMap}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{MidiMap()}{MidiMap()}}
+{\footnotesize\ttfamily Midi\+Map\+::\+Midi\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_midi_map_abbc05c44d2d26eca3ab5c9b24540ba71_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_midi_map_a41c66d2909a4250ac61a848bfdb14a09}\label{class_midi_map_a41c66d2909a4250ac61a848bfdb14a09} 
+\index{MidiMap@{MidiMap}!clean@{clean}}
+\index{clean@{clean}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void Midi\+Map\+::clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_midi_map_a41c66d2909a4250ac61a848bfdb14a09_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_midi_map_a6b25a885daed5820aff6aa3fd6d3803b}\label{class_midi_map_a6b25a885daed5820aff6aa3fd6d3803b} 
+\index{MidiMap@{MidiMap}!getParaId@{getParaId}}
+\index{getParaId@{getParaId}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{getParaId()}{getParaId()}}
+{\footnotesize\ttfamily int Midi\+Map\+::get\+Para\+Id (\begin{DoxyParamCaption}\item[{String}]{tag\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_midi_map_aa61aebebe4664b537359dbf3822cfe7e}\label{class_midi_map_aa61aebebe4664b537359dbf3822cfe7e} 
+\index{MidiMap@{MidiMap}!getTag@{getTag}}
+\index{getTag@{getTag}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{getTag()}{getTag()}}
+{\footnotesize\ttfamily String Midi\+Map\+::get\+Tag (\begin{DoxyParamCaption}\item[{int}]{para\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_midi_map_ac351f9b7b4b068dcece8e4635333b17c}\label{class_midi_map_ac351f9b7b4b068dcece8e4635333b17c} 
+\index{MidiMap@{MidiMap}!getXml@{getXml}}
+\index{getXml@{getXml}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{getXml()}{getXml()}}
+{\footnotesize\ttfamily void Midi\+Map\+::get\+Xml (\begin{DoxyParamCaption}\item[{Xml\+Element \&}]{xml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_midi_map_ac351f9b7b4b068dcece8e4635333b17c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_midi_map_abe29cf3fb17407029436c050b12a4ca7}\label{class_midi_map_abe29cf3fb17407029436c050b12a4ca7} 
+\index{MidiMap@{MidiMap}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily bool Midi\+Map\+::load\+File (\begin{DoxyParamCaption}\item[{File \&}]{xml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_midi_map_abe29cf3fb17407029436c050b12a4ca7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_midi_map_a1a3e84c7aa9240bcd44579d4ea2ba212}\label{class_midi_map_a1a3e84c7aa9240bcd44579d4ea2ba212} 
+\index{MidiMap@{MidiMap}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily int \& Midi\+Map\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_midi_map_a70f4679c3233e820200b917a57571a42}\label{class_midi_map_a70f4679c3233e820200b917a57571a42} 
+\index{MidiMap@{MidiMap}!reset@{reset}}
+\index{reset@{reset}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Midi\+Map\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_midi_map_a81e0c93166321c13c506e858d536236b}\label{class_midi_map_a81e0c93166321c13c506e858d536236b} 
+\index{MidiMap@{MidiMap}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily void Midi\+Map\+::save\+File (\begin{DoxyParamCaption}\item[{File \&}]{xml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_midi_map_a81e0c93166321c13c506e858d536236b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_midi_map_a4c4020099280584c507994062f3786bb}\label{class_midi_map_a4c4020099280584c507994062f3786bb} 
+\index{MidiMap@{MidiMap}!set\_default@{set\_default}}
+\index{set\_default@{set\_default}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{set\_default()}{set\_default()}}
+{\footnotesize\ttfamily void Midi\+Map\+::set\+\_\+default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_midi_map_a5962d1b4b1719e6d566055cb2a17d4b6}\label{class_midi_map_a5962d1b4b1719e6d566055cb2a17d4b6} 
+\index{MidiMap@{MidiMap}!setXml@{setXml}}
+\index{setXml@{setXml}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{setXml()}{setXml()}}
+{\footnotesize\ttfamily void Midi\+Map\+::set\+Xml (\begin{DoxyParamCaption}\item[{Xml\+Element \&}]{xml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_midi_map_a5962d1b4b1719e6d566055cb2a17d4b6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_midi_map_a928ef1dcae977496d34d512b83b28d94}\label{class_midi_map_a928ef1dcae977496d34d512b83b28d94} 
+\index{MidiMap@{MidiMap}!updateCC@{updateCC}}
+\index{updateCC@{updateCC}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{updateCC()}{updateCC()}}
+{\footnotesize\ttfamily void Midi\+Map\+::update\+CC (\begin{DoxyParamCaption}\item[{int}]{idx\+\_\+para,  }\item[{int}]{midi\+CC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_midi_map_a613b22ccc096f4505742442c3cb37a61}\label{class_midi_map_a613b22ccc096f4505742442c3cb37a61} 
+\index{MidiMap@{MidiMap}!controllers@{controllers}}
+\index{controllers@{controllers}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{controllers}{controllers}}
+{\footnotesize\ttfamily int Midi\+Map\+::controllers\mbox{[}255\mbox{]}}
+
+\Hypertarget{class_midi_map_a5cd0125612c351f05a23698cb008b9c6}\label{class_midi_map_a5cd0125612c351f05a23698cb008b9c6} 
+\index{MidiMap@{MidiMap}!controllers\_default@{controllers\_default}}
+\index{controllers\_default@{controllers\_default}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{controllers\_default}{controllers\_default}}
+{\footnotesize\ttfamily int Midi\+Map\+::controllers\+\_\+default\mbox{[}255\mbox{]}}
+
+\Hypertarget{class_midi_map_a4185f5f830bdf6616ba644eaf8b04943}\label{class_midi_map_a4185f5f830bdf6616ba644eaf8b04943} 
+\index{MidiMap@{MidiMap}!loaded@{loaded}}
+\index{loaded@{loaded}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{loaded}{loaded}}
+{\footnotesize\ttfamily bool Midi\+Map\+::loaded = false}
+
+\Hypertarget{class_midi_map_a9091874b8ffcd095965ade2a2661ffcf}\label{class_midi_map_a9091874b8ffcd095965ade2a2661ffcf} 
+\index{MidiMap@{MidiMap}!mapping@{mapping}}
+\index{mapping@{mapping}!MidiMap@{MidiMap}}
+\doxysubsubsection{\texorpdfstring{mapping}{mapping}}
+{\footnotesize\ttfamily std\+::map$<$String, int$>$ Midi\+Map\+::mapping}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{midi_map_8h}{midi\+Map.\+h}}\end{DoxyCompactItemize}

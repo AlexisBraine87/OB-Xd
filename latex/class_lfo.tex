@@ -1,0 +1,253 @@
+\doxysection{Lfo Class Reference}
+\hypertarget{class_lfo}{}\label{class_lfo}\index{Lfo@{Lfo}}
+
+
+{\ttfamily \#include $<$Lfo.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lfo_aa1546b11ce8b14895de9200209006332}{Lfo}} ()
+\item 
+void \mbox{\hyperlink{class_lfo_abc3d0ee340343151329d44ca4cdabda9}{set\+Synced}} ()
+\item 
+void \mbox{\hyperlink{class_lfo_a01117fb6ce3ebb3c5ee0a27c5796c9e2}{set\+Unsynced}} ()
+\item 
+void \mbox{\hyperlink{class_lfo_a6e0415e986afaf070acaf0c3c272c802}{host\+Sync\+Retrigger}} (float bpm, float quaters)
+\item 
+float \mbox{\hyperlink{class_lfo_a8e61268fb6ec1905f56d23a970a02584}{get\+Val}} ()
+\item 
+void \mbox{\hyperlink{class_lfo_ae71a394188ebe2d93ee7bc847bde7411}{set\+Samlpe\+Rate}} (float sr)
+\item 
+void \mbox{\hyperlink{class_lfo_a24fa262e808e1265b90eb499d3eef8a1}{update}} ()
+\item 
+void \mbox{\hyperlink{class_lfo_a5d67446551fe5733280999c158f8f642}{set\+Frequency}} (float val)
+\item 
+void \mbox{\hyperlink{class_lfo_a56ccb3b0d1b81ff973fddc786fde4d25}{set\+Raw\+Param}} (float param)
+\item 
+void \mbox{\hyperlink{class_lfo_aa55e888e59f90e9f755d26ac10de8d75}{recalc\+Rate}} (float param)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_lfo_af3670a940cd39facf21d32796db48fbf}{Frequency}}
+\item 
+float \mbox{\hyperlink{class_lfo_a5d2483a38e0308d1473f5ef5af541739}{phase\+Inc}}
+\item 
+float \mbox{\hyperlink{class_lfo_a338d8682cd60f016e82e0a1139b35f71}{fr\+Unsc}}
+\item 
+float \mbox{\hyperlink{class_lfo_a82a570ffd5a9723a9e9380994bff2047}{raw\+Param}}
+\item 
+int \mbox{\hyperlink{class_lfo_af00723ad66df50bcc51d3cd8969609ee}{wave\+Form}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_lfo_a924cf9a97d6d0682278434c67f4b0249}{phase}}
+\item 
+float \mbox{\hyperlink{class_lfo_a9f3975b56d364d2e3ab6f477c3508a28}{s}}
+\item 
+float \mbox{\hyperlink{class_lfo_a555eaafbe4ffb88bc65387b0b51dc3e1}{sq}}
+\item 
+float \mbox{\hyperlink{class_lfo_a4f717cffd5c487cc773c24859359e57a}{sh}}
+\item 
+float \mbox{\hyperlink{class_lfo_aa9743f3012f67e176f31640db565a0bd}{s1}}
+\item 
+Random \mbox{\hyperlink{class_lfo_a2741f9dab77be5a0e04ec89ed34ad179}{rg}}
+\item 
+float \mbox{\hyperlink{class_lfo_a4fb9f52b83ca09e9a2e910d3bc2a8fc4}{Sample\+Rate}}
+\item 
+float \mbox{\hyperlink{class_lfo_a72efcfd68cfd6e2b7ea32100e4e9c040}{Sample\+Rate\+Inv}}
+\item 
+float \mbox{\hyperlink{class_lfo_aa230f0ad99806c38dae0bb738b3b405c}{sync\+Rate}}
+\item 
+bool \mbox{\hyperlink{class_lfo_a07da083ecdae1c925f00c52c77138f85}{synced}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lfo_aa1546b11ce8b14895de9200209006332}\label{class_lfo_aa1546b11ce8b14895de9200209006332} 
+\index{Lfo@{Lfo}!Lfo@{Lfo}}
+\index{Lfo@{Lfo}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{Lfo()}{Lfo()}}
+{\footnotesize\ttfamily Lfo\+::\+Lfo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lfo_a8e61268fb6ec1905f56d23a970a02584}\label{class_lfo_a8e61268fb6ec1905f56d23a970a02584} 
+\index{Lfo@{Lfo}!getVal@{getVal}}
+\index{getVal@{getVal}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{getVal()}{getVal()}}
+{\footnotesize\ttfamily float Lfo\+::get\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{class_lfo_a8e61268fb6ec1905f56d23a970a02584_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_lfo_a6e0415e986afaf070acaf0c3c272c802}\label{class_lfo_a6e0415e986afaf070acaf0c3c272c802} 
+\index{Lfo@{Lfo}!hostSyncRetrigger@{hostSyncRetrigger}}
+\index{hostSyncRetrigger@{hostSyncRetrigger}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{hostSyncRetrigger()}{hostSyncRetrigger()}}
+{\footnotesize\ttfamily void Lfo\+::host\+Sync\+Retrigger (\begin{DoxyParamCaption}\item[{float}]{bpm,  }\item[{float}]{quaters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_lfo_aa55e888e59f90e9f755d26ac10de8d75}\label{class_lfo_aa55e888e59f90e9f755d26ac10de8d75} 
+\index{Lfo@{Lfo}!recalcRate@{recalcRate}}
+\index{recalcRate@{recalcRate}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{recalcRate()}{recalcRate()}}
+{\footnotesize\ttfamily void Lfo\+::recalc\+Rate (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_lfo_a5d67446551fe5733280999c158f8f642}\label{class_lfo_a5d67446551fe5733280999c158f8f642} 
+\index{Lfo@{Lfo}!setFrequency@{setFrequency}}
+\index{setFrequency@{setFrequency}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{setFrequency()}{setFrequency()}}
+{\footnotesize\ttfamily void Lfo\+::set\+Frequency (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_lfo_a56ccb3b0d1b81ff973fddc786fde4d25}\label{class_lfo_a56ccb3b0d1b81ff973fddc786fde4d25} 
+\index{Lfo@{Lfo}!setRawParam@{setRawParam}}
+\index{setRawParam@{setRawParam}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{setRawParam()}{setRawParam()}}
+{\footnotesize\ttfamily void Lfo\+::set\+Raw\+Param (\begin{DoxyParamCaption}\item[{float}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_lfo_a56ccb3b0d1b81ff973fddc786fde4d25_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_lfo_ae71a394188ebe2d93ee7bc847bde7411}\label{class_lfo_ae71a394188ebe2d93ee7bc847bde7411} 
+\index{Lfo@{Lfo}!setSamlpeRate@{setSamlpeRate}}
+\index{setSamlpeRate@{setSamlpeRate}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{setSamlpeRate()}{setSamlpeRate()}}
+{\footnotesize\ttfamily void Lfo\+::set\+Samlpe\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_lfo_abc3d0ee340343151329d44ca4cdabda9}\label{class_lfo_abc3d0ee340343151329d44ca4cdabda9} 
+\index{Lfo@{Lfo}!setSynced@{setSynced}}
+\index{setSynced@{setSynced}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{setSynced()}{setSynced()}}
+{\footnotesize\ttfamily void Lfo\+::set\+Synced (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_lfo_abc3d0ee340343151329d44ca4cdabda9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_lfo_a01117fb6ce3ebb3c5ee0a27c5796c9e2}\label{class_lfo_a01117fb6ce3ebb3c5ee0a27c5796c9e2} 
+\index{Lfo@{Lfo}!setUnsynced@{setUnsynced}}
+\index{setUnsynced@{setUnsynced}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{setUnsynced()}{setUnsynced()}}
+{\footnotesize\ttfamily void Lfo\+::set\+Unsynced (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_lfo_a24fa262e808e1265b90eb499d3eef8a1}\label{class_lfo_a24fa262e808e1265b90eb499d3eef8a1} 
+\index{Lfo@{Lfo}!update@{update}}
+\index{update@{update}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Lfo\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lfo_af3670a940cd39facf21d32796db48fbf}\label{class_lfo_af3670a940cd39facf21d32796db48fbf} 
+\index{Lfo@{Lfo}!Frequency@{Frequency}}
+\index{Frequency@{Frequency}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{Frequency}{Frequency}}
+{\footnotesize\ttfamily float Lfo\+::\+Frequency}
+
+\Hypertarget{class_lfo_a338d8682cd60f016e82e0a1139b35f71}\label{class_lfo_a338d8682cd60f016e82e0a1139b35f71} 
+\index{Lfo@{Lfo}!frUnsc@{frUnsc}}
+\index{frUnsc@{frUnsc}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{frUnsc}{frUnsc}}
+{\footnotesize\ttfamily float Lfo\+::fr\+Unsc}
+
+\Hypertarget{class_lfo_a924cf9a97d6d0682278434c67f4b0249}\label{class_lfo_a924cf9a97d6d0682278434c67f4b0249} 
+\index{Lfo@{Lfo}!phase@{phase}}
+\index{phase@{phase}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily float Lfo\+::phase\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_a5d2483a38e0308d1473f5ef5af541739}\label{class_lfo_a5d2483a38e0308d1473f5ef5af541739} 
+\index{Lfo@{Lfo}!phaseInc@{phaseInc}}
+\index{phaseInc@{phaseInc}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{phaseInc}{phaseInc}}
+{\footnotesize\ttfamily float Lfo\+::phase\+Inc}
+
+\Hypertarget{class_lfo_a82a570ffd5a9723a9e9380994bff2047}\label{class_lfo_a82a570ffd5a9723a9e9380994bff2047} 
+\index{Lfo@{Lfo}!rawParam@{rawParam}}
+\index{rawParam@{rawParam}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{rawParam}{rawParam}}
+{\footnotesize\ttfamily float Lfo\+::raw\+Param}
+
+\Hypertarget{class_lfo_a2741f9dab77be5a0e04ec89ed34ad179}\label{class_lfo_a2741f9dab77be5a0e04ec89ed34ad179} 
+\index{Lfo@{Lfo}!rg@{rg}}
+\index{rg@{rg}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{rg}{rg}}
+{\footnotesize\ttfamily Random Lfo\+::rg\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_a9f3975b56d364d2e3ab6f477c3508a28}\label{class_lfo_a9f3975b56d364d2e3ab6f477c3508a28} 
+\index{Lfo@{Lfo}!s@{s}}
+\index{s@{s}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily float Lfo\+::s\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_aa9743f3012f67e176f31640db565a0bd}\label{class_lfo_aa9743f3012f67e176f31640db565a0bd} 
+\index{Lfo@{Lfo}!s1@{s1}}
+\index{s1@{s1}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{s1}{s1}}
+{\footnotesize\ttfamily float Lfo\+::s1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_a4fb9f52b83ca09e9a2e910d3bc2a8fc4}\label{class_lfo_a4fb9f52b83ca09e9a2e910d3bc2a8fc4} 
+\index{Lfo@{Lfo}!SampleRate@{SampleRate}}
+\index{SampleRate@{SampleRate}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{SampleRate}{SampleRate}}
+{\footnotesize\ttfamily float Lfo\+::\+Sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_a72efcfd68cfd6e2b7ea32100e4e9c040}\label{class_lfo_a72efcfd68cfd6e2b7ea32100e4e9c040} 
+\index{Lfo@{Lfo}!SampleRateInv@{SampleRateInv}}
+\index{SampleRateInv@{SampleRateInv}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{SampleRateInv}{SampleRateInv}}
+{\footnotesize\ttfamily float Lfo\+::\+Sample\+Rate\+Inv\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_a4f717cffd5c487cc773c24859359e57a}\label{class_lfo_a4f717cffd5c487cc773c24859359e57a} 
+\index{Lfo@{Lfo}!sh@{sh}}
+\index{sh@{sh}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{sh}{sh}}
+{\footnotesize\ttfamily float Lfo\+::sh\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_a555eaafbe4ffb88bc65387b0b51dc3e1}\label{class_lfo_a555eaafbe4ffb88bc65387b0b51dc3e1} 
+\index{Lfo@{Lfo}!sq@{sq}}
+\index{sq@{sq}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{sq}{sq}}
+{\footnotesize\ttfamily float Lfo\+::sq\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_a07da083ecdae1c925f00c52c77138f85}\label{class_lfo_a07da083ecdae1c925f00c52c77138f85} 
+\index{Lfo@{Lfo}!synced@{synced}}
+\index{synced@{synced}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{synced}{synced}}
+{\footnotesize\ttfamily bool Lfo\+::synced\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_aa230f0ad99806c38dae0bb738b3b405c}\label{class_lfo_aa230f0ad99806c38dae0bb738b3b405c} 
+\index{Lfo@{Lfo}!syncRate@{syncRate}}
+\index{syncRate@{syncRate}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{syncRate}{syncRate}}
+{\footnotesize\ttfamily float Lfo\+::sync\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_lfo_af00723ad66df50bcc51d3cd8969609ee}\label{class_lfo_af00723ad66df50bcc51d3cd8969609ee} 
+\index{Lfo@{Lfo}!waveForm@{waveForm}}
+\index{waveForm@{waveForm}!Lfo@{Lfo}}
+\doxysubsubsection{\texorpdfstring{waveForm}{waveForm}}
+{\footnotesize\ttfamily int Lfo\+::wave\+Form}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_lfo_8h}{Lfo.\+h}}\end{DoxyCompactItemize}

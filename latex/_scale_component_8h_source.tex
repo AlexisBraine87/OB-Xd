@@ -1,0 +1,92 @@
+\doxysection{Scale\+Component.\+h}
+\hypertarget{_scale_component_8h_source}{}\label{_scale_component_8h_source}\index{Source/Components/ScaleComponent.h@{Source/Components/ScaleComponent.h}}
+\mbox{\hyperlink{_scale_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ ScaleComponent.h}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Created:\ 27\ Aug\ 2021\ 1:26:08pm}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ Author:\ \ discoDSP}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00009\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <JuceHeader.h>}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scalable_component}{ScalableComponent}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5}{\string~ScalableComponent}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e}{setScaleFactor}}(\textcolor{keywordtype}{float}\ newScaleFactor,\ \textcolor{keywordtype}{bool}\ newIsHighResolutionDisplay);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc}{getScaleImage}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{getScaleFactor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{getIsHighResolutionDisplay}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e}{scaleFactorChanged}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4}{ScalableComponent}}(\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}*\ owner\_);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ Image\ \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{getScaledImageFromCache}}(\textcolor{keyword}{const}\ String\&\ imageName,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{isHighResolutionDisplay}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}*\ \mbox{\hyperlink{class_scalable_component_acd5c74b24cae04b0e24d65b167e729e2}{processor}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{isHighResolutionDisplay}};}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_custom_look_and_feel}{CustomLookAndFeel}}\ :\ \textcolor{keyword}{public}\ LookAndFeel\_V4,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_custom_look_and_feel_a31378f200a5733a4fae3f8d7d82400ec}{CustomLookAndFeel}}(\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}*\ owner\_):LookAndFeel\_V4(),\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}(owner\_)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this-\/>setColour(PopupMenu::backgroundColourId,\ Colour(20,\ 20,\ 20));}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this-\/>setColour(PopupMenu::textColourId,\ Colour(245,\ 245,\ 245));}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ this-\/>setColour(PopupMenu::highlightedBackgroundColourId,\ Colour(60,\ 60,\ 60));}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ this-\/>setColour(Label::textColourId,\ Colour(245,\ 245,\ 245));}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ PopupMenu::Options\ \mbox{\hyperlink{class_custom_look_and_feel_a8fe8f80c5eee91652feaf14e5dd19628}{getOptionsForComboBoxPopupMenu}}\ (ComboBox\&\ box,\ Label\&\ label)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ PopupMenu::Options\ option\ =\ LookAndFeel\_V4::getOptionsForComboBoxPopupMenu(box,\ label);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ option.withStandardItemHeight\ (label.getHeight()/\ \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{getScaleFactor}}());}
+\DoxyCodeLine{00064\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \ \ \ \ Font\ \mbox{\hyperlink{class_custom_look_and_feel_aaa328c8fe3a9f9620d14214201c9fe9d}{getPopupMenuFont}}\ ()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00066\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}}\ =\ \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{getScaleFactor}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ DBG(\textcolor{stringliteral}{"{}getPopupMenuFont::scaleFactor\ "{}}\ <<\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}}\ >\ 1.0)\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}}\ *=\ 0.85;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifdef\ JUCE\_MAC}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Font(\textcolor{stringliteral}{"{}Helvetica\ Neue"{}},\ 18.0\ *\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}},\ Font::plain);}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifdef\ JUCE\_WINDOWS}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Font(\textcolor{stringliteral}{"{}Arial"{}},\ 18.0\ *\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}},\ Font::plain);}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifdef\ JUCE\_LINUX}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Font(\textcolor{stringliteral}{"{}DejaVu\ Sans"{}},\ 18.0\ *\ \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scaleFactor}},\ Font::plain);}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ }
+\DoxyCodeLine{00086\ \};}
+
+\end{DoxyCode}

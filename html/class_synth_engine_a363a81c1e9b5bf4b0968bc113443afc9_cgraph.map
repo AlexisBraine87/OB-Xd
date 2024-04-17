@@ -1,0 +1,9 @@
+<map id="SynthEngine::sustainOn" name="SynthEngine::sustainOn">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,168,56"/>
+<area shape="rect" id="Node000002" href="$class_motherboard.html#ab8369283607f6b512a62ba151217b7dd" title=" " alt="" coords="216,31,376,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,41,200,41,200,46,168,46"/>
+<area shape="rect" id="Node000003" href="$class_voice_queue.html#ae3a08fc2751ab423cd8f52e7b1166142" title=" " alt="" coords="424,5,570,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,31,408,27,409,32,377,36"/>
+<area shape="rect" id="Node000004" href="$class_obxd_voice.html#a92d3738f426dd0e6a421ebe3bb9dafbd" title=" " alt="" coords="430,55,565,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="377,50,414,55,414,60,376,56"/>
+</map>

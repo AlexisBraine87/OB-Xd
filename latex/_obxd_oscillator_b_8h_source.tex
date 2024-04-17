@@ -1,0 +1,259 @@
+\doxysection{Obxd\+Oscillator\+B.\+h}
+\hypertarget{_obxd_oscillator_b_8h_source}{}\label{_obxd_oscillator_b_8h_source}\index{Source/Engine/ObxdOscillatorB.h@{Source/Engine/ObxdOscillatorB.h}}
+\mbox{\hyperlink{_obxd_oscillator_b_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ {\ucr}\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_obxd_voice_8h}{ObxdVoice.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_synth_engine_8h}{SynthEngine.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_audio_utils_8h}{AudioUtils.h}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_blep_data_8h}{BlepData.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_delay_line_8h}{DelayLine.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_saw_osc_8h}{SawOsc.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pulse_osc_8h}{PulseOsc.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_triangle_osc_8h}{TriangleOsc.h}}"{}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_oscillator_b}{ObxdOscillatorB}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a926a9b3ac3c7164a507d14fae6fbf5c6}{SampleRate}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a623eb69e7704b05f4481b29b664f40a0}{pitch1}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a0e6c152ea927b585fd7173f48ef79fce}{pitch2}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a2c8189818316de4c09ddd2659d5e9940}{sampleRateInv}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}},\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a814218cd0d073eb28a26abda659a9f8b}{osc1Factor}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a774accb00e0fa700be25064f3de3795d}{osc2Factor}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a6e2c9ebb439d93273c49bbc0737ba787}{pw1w}},\mbox{\hyperlink{class_obxd_oscillator_b_aab1fbc4b44a9f329abb8b254e64eaeb6}{pw2w}};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//blep\ const}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_oscillator_b_a542a86f426b9fcf43648c5bb51f68488}{n}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_oscillator_b_a4b427f994dc251e9e5e75d8234c5d885}{hsam}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//delay\ line\ implements\ fixed\ sample\ delay}}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_delay_line}{DelayLine<Samples>}}\ \mbox{\hyperlink{class_obxd_oscillator_b_a217ad7968f6913300a17791c53414969}{del1}},\mbox{\hyperlink{class_obxd_oscillator_b_a1917b8da62cc2a6f7ef735f1824494f6}{del2}};}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_delay_line}{DelayLine<Samples>}}\ \mbox{\hyperlink{class_obxd_oscillator_b_a3fbd65353c004be95efa9e4b32e0e53c}{xmodd}};}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_delay_line_boolean}{DelayLineBoolean<Samples>}}\ \mbox{\hyperlink{class_obxd_oscillator_b_a2f3e4729d1032f762c5dd416ede0e11e}{syncd}};}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_delay_line}{DelayLine<Samples>}}\ \mbox{\hyperlink{class_obxd_oscillator_b_ac37c952ed9bce38ddadada4b4316f59e}{syncFracd}};}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_delay_line}{DelayLine<Samples>}}\ \mbox{\hyperlink{class_obxd_oscillator_b_aa77d7605fb117bdac76a00757e580b1c}{cvd}};}
+\DoxyCodeLine{00059\ \ \ \ \ Random\ \mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}};}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_saw_osc}{SawOsc}}\ \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}},\mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}};}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_pulse_osc}{PulseOsc}}\ \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}},\mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}};}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_triangle_osc}{TriangleOsc}}\ \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}},\mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}};}
+\DoxyCodeLine{00063\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a4ba6c1bf0790642ef5413f1a5d2bbd48}{tune}};\textcolor{comment}{//+-\/1\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obxd_oscillator_b_a7859d93953d2d424e61d5e5b27a7d148}{oct}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a6ca1b4da73d5b3b5f89ecd6ce6b59594}{dirt}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a2880efc12ae34575fc54e4735d4bbf83}{notePlaying}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_aa4893f437e1509c35c7e37ff1c17c6f3}{totalDetune}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a793b22fc5e6ea387ba1f6a25959b861c}{osc2Det}};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a945e177a6b9f547fc7d4f06f77ca233c}{pulseWidth}};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a700098471a10b622c324757e867b23aa}{pw1}},\mbox{\hyperlink{class_obxd_oscillator_b_abac7a583ae9cddee66583da981101e8d}{pw2}};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_oscillator_b_aa9fa57107c521bc8513c09ea1189475d}{quantizeCw}};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_ae65760594e93810d3188eb471e8c91e3}{o1mx}},\mbox{\hyperlink{class_obxd_oscillator_b_a01531e17d1b608d30b5ae6370b042851}{o2mx}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_ad1948eb9fccb62296eeceae1bbb14c55}{nmx}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_aed94f78d6a53fa49827e11069324d1d3}{pto1}},\mbox{\hyperlink{class_obxd_oscillator_b_a9d5919bb6d92692e0553f80022952f95}{pto2}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//osc\ pitches}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a74e2381abbf583e10b7aa61bf3451a45}{osc1Saw}},\mbox{\hyperlink{class_obxd_oscillator_b_abc5258f7a2d353f74b1386bf0478b86e}{osc2Saw}},}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}{osc1Pul}},\mbox{\hyperlink{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}{osc2Pul}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_aca3a512ee603309d5af8a3dfc742a7e2}{osc1p}},\mbox{\hyperlink{class_obxd_oscillator_b_acb5eb03a2c4161005bb6bec96e8aedc3}{osc2p}};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obxd_oscillator_b_a1381d0cbe8a47cbe6947e6b304204b10}{hardSync}};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_a88ccb86f638b3369771bdf97e3e99b2f}{xmod}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_addc1e95f6fa289bacc89866664a3d7d8}{ObxdOscillatorB}}()\ :\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a542a86f426b9fcf43648c5bb51f68488}{n}}(\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}*2),}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a4b427f994dc251e9e5e75d8234c5d885}{hsam}}(\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}),}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}}(),\mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}}(),}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}}(),\mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}}(),}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}}(),\mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}}()}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a6ca1b4da73d5b3b5f89ecd6ce6b59594}{dirt}}\ =\ 0.1;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa4893f437e1509c35c7e37ff1c17c6f3}{totalDetune}}\ =\ 0;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}\ =\ Random(Random::getSystemRandom().nextInt64());}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a814218cd0d073eb28a26abda659a9f8b}{osc1Factor}}\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}.nextFloat()-\/0.5;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a774accb00e0fa700be25064f3de3795d}{osc2Factor}}\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}.nextFloat()-\/0.5;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_ad1948eb9fccb62296eeceae1bbb14c55}{nmx}}=0;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a7859d93953d2d424e61d5e5b27a7d148}{oct}}=0;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a4ba6c1bf0790642ef5413f1a5d2bbd48}{tune}}=0;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a6e2c9ebb439d93273c49bbc0737ba787}{pw1w}}=\mbox{\hyperlink{class_obxd_oscillator_b_aab1fbc4b44a9f329abb8b254e64eaeb6}{pw2w}}=0;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aed94f78d6a53fa49827e11069324d1d3}{pto1}}=\mbox{\hyperlink{class_obxd_oscillator_b_a9d5919bb6d92692e0553f80022952f95}{pto2}}=0;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a700098471a10b622c324757e867b23aa}{pw1}}=\mbox{\hyperlink{class_obxd_oscillator_b_abac7a583ae9cddee66583da981101e8d}{pw2}}=0;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a88ccb86f638b3369771bdf97e3e99b2f}{xmod}}\ =\ 0;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a1381d0cbe8a47cbe6947e6b304204b10}{hardSync}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aca3a512ee603309d5af8a3dfc742a7e2}{osc1p}}=\mbox{\hyperlink{class_obxd_oscillator_b_acb5eb03a2c4161005bb6bec96e8aedc3}{osc2p}}=10;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a74e2381abbf583e10b7aa61bf3451a45}{osc1Saw}}=\mbox{\hyperlink{class_obxd_oscillator_b_abc5258f7a2d353f74b1386bf0478b86e}{osc2Saw}}=\mbox{\hyperlink{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}{osc1Pul}}=\mbox{\hyperlink{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}{osc2Pul}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a793b22fc5e6ea387ba1f6a25959b861c}{osc2Det}}\ =\ 0;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a2880efc12ae34575fc54e4735d4bbf83}{notePlaying}}\ =\ 30;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a945e177a6b9f547fc7d4f06f77ca233c}{pulseWidth}}\ =\ 0;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_ae65760594e93810d3188eb471e8c91e3}{o1mx}}=\mbox{\hyperlink{class_obxd_oscillator_b_a01531e17d1b608d30b5ae6370b042851}{o2mx}}=0;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}}=\mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}.nextFloat();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}}=\mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}.nextFloat();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{//del1\ =\ new\ DelayLine(hsam);}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//del2\ =\ new\ DelayLine(hsam);}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//xmodd\ =\ new\ DelayLine(hsam);}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//syncd\ =\ new\ DelayLineBoolean(hsam);}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//syncFracd\ =\ \ new\ DelayLine(hsam);}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cvd\ =\ new\ DelayLine(hsam);}}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a7d15f5d5c39d7227e63c8356b45e0974}{\string~ObxdOscillatorB}}()}
+\DoxyCodeLine{00133\ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ del1;}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ del2;}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ xmodd;}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ cvd;}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ syncd;}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ syncFracd;}}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_oscillator_b_ae3164a17b91b0f9232cf848e10e3673e}{setDecimation}}()}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}}.\mbox{\hyperlink{class_pulse_osc_a61366fcb106d20c2ffc5687f46103417}{setDecimation}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}}.\mbox{\hyperlink{class_triangle_osc_aaa238a0e69e98a68c935738aac54ef08}{setDecimation}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}}.\mbox{\hyperlink{class_saw_osc_a7472180eae72c431af58cc0c302030a9}{setDecimation}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}}.\mbox{\hyperlink{class_pulse_osc_a61366fcb106d20c2ffc5687f46103417}{setDecimation}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}}.\mbox{\hyperlink{class_triangle_osc_aaa238a0e69e98a68c935738aac54ef08}{setDecimation}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}}.\mbox{\hyperlink{class_saw_osc_a7472180eae72c431af58cc0c302030a9}{setDecimation}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_oscillator_b_a27399beedd764603188b74a90503c4c5}{removeDecimation}}()}
+\DoxyCodeLine{00151\ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}}.\mbox{\hyperlink{class_pulse_osc_adfae2869d363edeea8acc818281fdced}{removeDecimation}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}}.\mbox{\hyperlink{class_triangle_osc_acaf1dea4fe9fe1a6c211ca6455a3050c}{removeDecimation}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}}.\mbox{\hyperlink{class_saw_osc_a5e6ec728cb30236b6accf605e6b95f52}{removeDecimation}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}}.\mbox{\hyperlink{class_pulse_osc_adfae2869d363edeea8acc818281fdced}{removeDecimation}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}}.\mbox{\hyperlink{class_triangle_osc_acaf1dea4fe9fe1a6c211ca6455a3050c}{removeDecimation}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}}.\mbox{\hyperlink{class_saw_osc_a5e6ec728cb30236b6accf605e6b95f52}{removeDecimation}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obxd_oscillator_b_a2180c5d1fa9a5fe5635be4a18c04f56e}{setSampleRate}}(\textcolor{keywordtype}{float}\ sr)}
+\DoxyCodeLine{00160\ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a926a9b3ac3c7164a507d14fae6fbf5c6}{SampleRate}}\ =\ sr;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a2c8189818316de4c09ddd2659d5e9940}{sampleRateInv}}\ =\ 1.0f\ /\ \mbox{\hyperlink{class_obxd_oscillator_b_a926a9b3ac3c7164a507d14fae6fbf5c6}{SampleRate}};}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obxd_oscillator_b_ac897f2989a6c116dbd046fa4bd8682a3}{ProcessSample}}()}
+\DoxyCodeLine{00165\ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ noiseGen\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}.nextFloat()-\/0.5;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a623eb69e7704b05f4481b29b664f40a0}{pitch1}}\ =\ \mbox{\hyperlink{_audio_utils_8h_a9dc9d1c2f03d5b9379a71fce9a2a6d14}{getPitch}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6ca1b4da73d5b3b5f89ecd6ce6b59594}{dirt}}\ *\ noiseGen\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a2880efc12ae34575fc54e4735d4bbf83}{notePlaying}}\ +\ (\mbox{\hyperlink{class_obxd_oscillator_b_aa9fa57107c521bc8513c09ea1189475d}{quantizeCw}}?((\textcolor{keywordtype}{int})(\mbox{\hyperlink{class_obxd_oscillator_b_aca3a512ee603309d5af8a3dfc742a7e2}{osc1p}})):\mbox{\hyperlink{class_obxd_oscillator_b_aca3a512ee603309d5af8a3dfc742a7e2}{osc1p}})+\ \mbox{\hyperlink{class_obxd_oscillator_b_aed94f78d6a53fa49827e11069324d1d3}{pto1}}\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a4ba6c1bf0790642ef5413f1a5d2bbd48}{tune}}\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a7859d93953d2d424e61d5e5b27a7d148}{oct}}+\mbox{\hyperlink{class_obxd_oscillator_b_aa4893f437e1509c35c7e37ff1c17c6f3}{totalDetune}}*\mbox{\hyperlink{class_obxd_oscillator_b_a814218cd0d073eb28a26abda659a9f8b}{osc1Factor}});}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hsr\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ hsfrac=0;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ fs\ =\ jmin(\mbox{\hyperlink{class_obxd_oscillator_b_a623eb69e7704b05f4481b29b664f40a0}{pitch1}}*(\mbox{\hyperlink{class_obxd_oscillator_b_a2c8189818316de4c09ddd2659d5e9940}{sampleRateInv}}),0.45f);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}}+=fs;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ hsfrac\ =\ 0;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ osc1mix=0.0f;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ pwcalc\ =jlimit<float>(0.1f,1.0f,(\mbox{\hyperlink{class_obxd_oscillator_b_a945e177a6b9f547fc7d4f06f77ca233c}{pulseWidth}}\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a700098471a10b622c324757e867b23aa}{pw1}})*0.5f\ +\ 0.5f);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}{osc1Pul}})}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}}.\mbox{\hyperlink{class_pulse_osc_a3084b7fda0c453465c0e3437a33d3476}{processMaster}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}},fs,pwcalc,\mbox{\hyperlink{class_obxd_oscillator_b_a6e2c9ebb439d93273c49bbc0737ba787}{pw1w}});}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_a74e2381abbf583e10b7aa61bf3451a45}{osc1Saw}})}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}}.\mbox{\hyperlink{class_saw_osc_ab2931f313b93c160a51c5f49e5b7a637}{processMaster}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}},fs);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}{osc1Pul}})}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}}.\mbox{\hyperlink{class_triangle_osc_a8d5fd855bd6d955af2d1d6d76d3f6b3c}{processMaster}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}},fs);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}}\ >=\ 1.0f)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}}-\/=1.0f;}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ hsfrac\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}}/fs;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ hsr\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a6e2c9ebb439d93273c49bbc0737ba787}{pw1w}}\ =\ pwcalc;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ hsr\ \&=\ \mbox{\hyperlink{class_obxd_oscillator_b_a1381d0cbe8a47cbe6947e6b304204b10}{hardSync}};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Delaying\ our\ hard\ sync\ gate\ signal\ and\ frac}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ hsr\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_a2f3e4729d1032f762c5dd416ede0e11e}{syncd}}.\mbox{\hyperlink{class_delay_line_boolean_a9d1d1fc445940a0bd2e05fef33f152d5}{feedReturn}}(hsr)\ !=\ 0.0f;}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ hsfrac\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_ac37c952ed9bce38ddadada4b4316f59e}{syncFracd}}.\mbox{\hyperlink{class_delay_line_ae9c995b546f44c1728df2a3daacd6244}{feedReturn}}(hsfrac);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}{osc1Pul}})}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ osc1mix\ +=\ \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}}.\mbox{\hyperlink{class_pulse_osc_ada005e1cc061378afce4a00a0367410d}{getValue}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}},pwcalc)\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}}.\mbox{\hyperlink{class_pulse_osc_a5720dff8cb08a16048369bd07cdf2539}{aliasReduction}}();}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_a74e2381abbf583e10b7aa61bf3451a45}{osc1Saw}})}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ osc1mix\ +=\ \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}}.\mbox{\hyperlink{class_saw_osc_a776d973da77edae2592e41b9acdcf243}{getValue}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}})\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}}.\mbox{\hyperlink{class_saw_osc_a3a83adbfb8cd26cfa51125acc165b694}{aliasReduction}}();}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}{osc1Pul}})}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ osc1mix\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}}.\mbox{\hyperlink{class_triangle_osc_a9465345520eae1b84e6af75b606715b4}{getValue}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}})\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}}.\mbox{\hyperlink{class_triangle_osc_a0d16403fef2c557216a02a45a7f37140}{aliasReduction}}();}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pitch\ control\ needs\ additional\ delay\ buffer\ to\ compensate}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{comment}{//This\ will\ give\ us\ less\ aliasing\ on\ xmod}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Hard\ sync\ gate\ signal\ delayed\ too}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ noiseGen\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}.nextFloat()-\/0.5;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a0e6c152ea927b585fd7173f48ef79fce}{pitch2}}\ =\ \mbox{\hyperlink{_audio_utils_8h_a9dc9d1c2f03d5b9379a71fce9a2a6d14}{getPitch}}(\mbox{\hyperlink{class_obxd_oscillator_b_aa77d7605fb117bdac76a00757e580b1c}{cvd}}.\mbox{\hyperlink{class_delay_line_ae9c995b546f44c1728df2a3daacd6244}{feedReturn}}(\mbox{\hyperlink{class_obxd_oscillator_b_a6ca1b4da73d5b3b5f89ecd6ce6b59594}{dirt}}\ *noiseGen\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a2880efc12ae34575fc54e4735d4bbf83}{notePlaying}}\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a793b22fc5e6ea387ba1f6a25959b861c}{osc2Det}}\ +\ (\mbox{\hyperlink{class_obxd_oscillator_b_aa9fa57107c521bc8513c09ea1189475d}{quantizeCw}}?((\textcolor{keywordtype}{int})(\mbox{\hyperlink{class_obxd_oscillator_b_acb5eb03a2c4161005bb6bec96e8aedc3}{osc2p}})):\mbox{\hyperlink{class_obxd_oscillator_b_acb5eb03a2c4161005bb6bec96e8aedc3}{osc2p}})\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a9d5919bb6d92692e0553f80022952f95}{pto2}}+\ osc1mix\ *\mbox{\hyperlink{class_obxd_oscillator_b_a88ccb86f638b3369771bdf97e3e99b2f}{xmod}}\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a4ba6c1bf0790642ef5413f1a5d2bbd48}{tune}}\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a7859d93953d2d424e61d5e5b27a7d148}{oct}}\ +\mbox{\hyperlink{class_obxd_oscillator_b_aa4893f437e1509c35c7e37ff1c17c6f3}{totalDetune}}*\mbox{\hyperlink{class_obxd_oscillator_b_a774accb00e0fa700be25064f3de3795d}{osc2Factor}}));}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ fs\ =\ jmin(\mbox{\hyperlink{class_obxd_oscillator_b_a0e6c152ea927b585fd7173f48ef79fce}{pitch2}}\ *\ (\mbox{\hyperlink{class_obxd_oscillator_b_a2c8189818316de4c09ddd2659d5e9940}{sampleRateInv}}),0.45f);}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ pwcalc\ =\ jlimit<float>(0.1f,1.0f,(\mbox{\hyperlink{class_obxd_oscillator_b_a945e177a6b9f547fc7d4f06f77ca233c}{pulseWidth}}\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_abac7a583ae9cddee66583da981101e8d}{pw2}})*0.5f\ +\ 0.5f);}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ osc2mix=0.0f;}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}}\ +=fs;}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}{osc2Pul}})}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}}.\mbox{\hyperlink{class_pulse_osc_a1c52b2b0f6fd0dc001cfaf126bfac5a6}{processSlave}}(\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}},fs,hsr,hsfrac,pwcalc,\mbox{\hyperlink{class_obxd_oscillator_b_aab1fbc4b44a9f329abb8b254e64eaeb6}{pw2w}});}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_abc5258f7a2d353f74b1386bf0478b86e}{osc2Saw}})}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}}.\mbox{\hyperlink{class_saw_osc_a75dcbb86f38492358b12dc5ec8fbdb08}{processSlave}}(\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}},fs,hsr,hsfrac);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}{osc2Pul}})}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}}.\mbox{\hyperlink{class_triangle_osc_a69fcf2b3572d7155c8cdc63777eee612}{processSlave}}(\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}},fs,hsr,hsfrac);}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}}\ >=\ 1.0f)}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}}-\/=1.0;}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aab1fbc4b44a9f329abb8b254e64eaeb6}{pw2w}}=pwcalc;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ hard\ sync\ reset\ slave\ phase\ is\ affected\ that\ way}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(hsr)}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ fracMaster\ =\ (fs\ *\ hsfrac);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}}\ =fracMaster;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Delaying\ osc1\ signal}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{comment}{//And\ getting\ delayed\ back}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ osc1mix\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_a3fbd65353c004be95efa9e4b32e0e53c}{xmodd}}.\mbox{\hyperlink{class_delay_line_ae9c995b546f44c1728df2a3daacd6244}{feedReturn}}(osc1mix);}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}{osc2Pul}})}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ osc2mix\ +=\ \mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}}.\mbox{\hyperlink{class_pulse_osc_ada005e1cc061378afce4a00a0367410d}{getValue}}(\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}},pwcalc)\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}}.\mbox{\hyperlink{class_pulse_osc_a5720dff8cb08a16048369bd07cdf2539}{aliasReduction}}();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_obxd_oscillator_b_abc5258f7a2d353f74b1386bf0478b86e}{osc2Saw}})}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ osc2mix\ +=\ \mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}}.\mbox{\hyperlink{class_saw_osc_a776d973da77edae2592e41b9acdcf243}{getValue}}(\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}})\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}}.\mbox{\hyperlink{class_saw_osc_a3a83adbfb8cd26cfa51125acc165b694}{aliasReduction}}();}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}{osc2Pul}})}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ osc2mix\ =\ \mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}}.\mbox{\hyperlink{class_triangle_osc_a9465345520eae1b84e6af75b606715b4}{getValue}}(\mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}})\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}}.\mbox{\hyperlink{class_triangle_osc_a0d16403fef2c557216a02a45a7f37140}{aliasReduction}}();}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{comment}{//mixing}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ res\ =\mbox{\hyperlink{class_obxd_oscillator_b_ae65760594e93810d3188eb471e8c91e3}{o1mx}}*osc1mix\ +\ \mbox{\hyperlink{class_obxd_oscillator_b_a01531e17d1b608d30b5ae6370b042851}{o2mx}}\ *osc2mix\ +\ (noiseGen)*(\mbox{\hyperlink{class_obxd_oscillator_b_ad1948eb9fccb62296eeceae1bbb14c55}{nmx}}*1.3\ +\ 0.0006);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res*3;}
+\DoxyCodeLine{00252\ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \};}
+
+\end{DoxyCode}

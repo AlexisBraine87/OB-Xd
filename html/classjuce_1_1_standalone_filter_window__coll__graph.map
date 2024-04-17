@@ -1,0 +1,26 @@
+<map id="juce::StandaloneFilterWindow" name="juce::StandaloneFilterWindow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="239,271,433,296"/>
+<area shape="rect" id="Node000007" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html" title=" " alt="" coords="589,163,783,204"/>
+<area shape="poly" id="edge11_Node000007_Node000001" title=" " alt="" coords="436,265,471,257,561,229,633,202,635,207,563,234,472,262,437,270"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="14,311,142,336"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,309,248,294,249,300,158,314"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,179,151,204"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,211,154,235,201,257,239,268,237,273,199,262,151,240,110,216"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="166,188,589,182,589,187,166,193"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="24,261,132,287"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,274,238,277,238,283,148,279"/>
+<area shape="rect" id="Node000005" href="$structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer.html" title=" " alt="" coords="948,163,1142,204"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="934,208,786,233,563,262,433,276,433,271,562,257,785,228,933,202"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="586,113,786,139"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="789,139,924,161,948,165,947,170,923,166,788,145"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="799,181,947,181,947,186,799,186"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="18,73,138,99"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="154,84,176,85,288,81,378,77,420,80,464,89,511,105,564,132,588,149,613,160,611,165,585,154,561,136,509,110,462,94,419,85,378,82,288,87,176,90,154,90"/>
+<area shape="rect" id="Node000011" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area.html" title=" " alt="" coords="200,106,471,147"/>
+<area shape="poly" id="edge13_Node000011_Node000008" title=" " alt="" coords="154,95,201,103,200,108,153,100"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="282,221,389,247"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="405,222,588,195,589,200,405,227"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="269,5,403,31"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="419,6,456,7,495,13,532,26,564,48,574,61,579,74,578,100,577,125,580,138,588,150,601,161,598,165,584,153,575,140,572,126,573,100,573,75,570,63,561,52,529,31,493,19,455,13,418,11"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="480,147,589,165,588,170,479,152"/>
+</map>

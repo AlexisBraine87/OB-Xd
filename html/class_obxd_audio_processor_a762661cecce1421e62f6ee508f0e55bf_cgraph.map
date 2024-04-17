@@ -1,0 +1,23 @@
+<map id="ObxdAudioProcessor::initMidi" name="ObxdAudioProcessor::initMidi">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,112,150,153"/>
+<area shape="rect" id="Node000002" href="$class_obxd_audio_processor.html#aa31dd6071b5e54c9553d76034eef2149" title=" " alt="" coords="198,31,342,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,109,205,75,207,80,129,114"/>
+<area shape="rect" id="Node000004" href="$class_midi_map.html#abe29cf3fb17407029436c050b12a4ca7" title=" " alt="" coords="208,120,332,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,130,193,130,193,135,150,135"/>
+<area shape="rect" id="Node000009" href="$class_midi_map.html#a81e0c93166321c13c506e858d536236b" title=" " alt="" coords="206,193,334,219"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="134,151,221,184,219,189,132,156"/>
+<area shape="rect" id="Node000003" href="$class_obxd_audio_processor.html#a7729e32681fdeee946d73a5e6da05812" title=" " alt="" coords="390,5,534,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,39,374,35,375,40,343,44"/>
+<area shape="rect" id="Node000005" href="$class_midi_map.html#ac351f9b7b4b068dcece8e4635333b17c" title=" " alt="" coords="403,70,522,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="322,116,394,98,395,103,324,121"/>
+<area shape="rect" id="Node000007" href="$class_midi_map.html#a70f4679c3233e820200b917a57571a42" title=" " alt="" coords="409,120,516,145"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="332,130,393,130,393,135,332,135"/>
+<area shape="rect" id="Node000008" href="$class_midi_map.html#a4c4020099280584c507994062f3786bb" title=" " alt="" coords="391,169,533,195"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="324,143,395,162,394,167,322,148"/>
+<area shape="rect" id="Node000006" href="$class_midi_map.html#a6b25a885daed5820aff6aa3fd6d3803b" title=" " alt="" coords="582,70,717,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="522,80,567,80,567,86,522,86"/>
+<area shape="rect" id="Node000010" href="$class_midi_map.html#a5962d1b4b1719e6d566055cb2a17d4b6" title=" " alt="" coords="403,218,522,244"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="334,211,387,218,387,224,333,217"/>
+<area shape="rect" id="Node000011" href="$class_midi_map.html#aa61aebebe4664b537359dbf3822cfe7e" title=" " alt="" coords="591,218,708,244"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="522,228,575,228,575,234,522,234"/>
+</map>

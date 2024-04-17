@@ -1,0 +1,9 @@
+<map id="juce::StandalonePluginHolder::setupAudioDevices" name="juce::StandalonePluginHolder::setupAudioDevices">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,198,79"/>
+<area shape="rect" id="Node000002" href="$classjuce_1_1_standalone_plugin_holder.html#a69672ec60c6cb267cc6bdf149c356913" title=" " alt="" coords="246,39,438,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,56,230,56,230,62,198,62"/>
+<area shape="rect" id="Node000003" href="$classjuce_1_1_standalone_plugin_holder.html#af896cb23041ba3ea551cdd12f9ad73fe" title=" " alt="" coords="486,5,678,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,43,470,39,471,44,439,48"/>
+<area shape="rect" id="Node000004" href="$classjuce_1_1_standalone_plugin_holder.html#adb158cad4f547fa9836d4ea7025245a5" title=" " alt="" coords="486,71,678,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="439,69,471,73,470,79,438,74"/>
+</map>

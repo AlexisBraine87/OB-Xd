@@ -1,0 +1,11 @@
+<map id="Tuning::tunedMidiNote" name="Tuning::tunedMidiNote">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,158,31"/>
+<area shape="rect" id="Node000002" href="$class_tuning.html#a463c4fbf991ef15e1a48ca445792029d" title=" " alt="" coords="206,5,384,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,16,190,16,190,21,158,21"/>
+<area shape="rect" id="Node000003" href="$lib_m_t_s_client_8cpp.html#a43b1c598fda0c61ac4c5338faa92d201" title=" " alt="" coords="432,5,613,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="385,16,416,16,416,21,385,21"/>
+<area shape="rect" id="Node000004" href="$struct_m_t_s_client.html#a2bc41379e637e6f97dcfcbeb04105ca3" title=" " alt="" coords="661,5,813,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="614,16,646,16,646,21,614,21"/>
+<area shape="rect" id="Node000005" href="$structmtsclientglobal.html#af401a3eb85e104e74170fc0faac7c51d" title=" " alt="" coords="861,5,1024,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="813,16,845,16,845,21,813,21"/>
+</map>

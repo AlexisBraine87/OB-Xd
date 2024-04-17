@@ -1,0 +1,17 @@
+<map id="Motherboard::setNoteOn" name="Motherboard::setNoteOn">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,170,80"/>
+<area shape="rect" id="Node000002" href="$class_voice_queue.html#ae3a08fc2751ab423cd8f52e7b1166142" title=" " alt="" coords="223,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,51,223,33,224,38,146,57"/>
+<area shape="rect" id="Node000003" href="$class_obxd_voice.html#a25ec8af99c861e8007703aeb4f56bbc5" title=" " alt="" coords="227,55,365,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,65,211,65,211,70,170,70"/>
+<area shape="rect" id="Node000008" href="$class_motherboard.html#afc35b8657f0389675c776cb919f97292" title=" " alt="" coords="218,104,374,130"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="146,78,224,97,223,102,144,84"/>
+<area shape="rect" id="Node000004" href="$class_delay_line.html#aca48117d2839ca09fa08c03a852cb4a5" title=" " alt="" coords="444,5,584,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,51,439,32,440,38,357,57"/>
+<area shape="rect" id="Node000005" href="$class_obxd_voice.html#a9127c134994520c9a8b367344c2554ed" title=" " alt="" coords="423,55,605,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="365,65,407,65,407,70,365,70"/>
+<area shape="rect" id="Node000007" href="$class_adsr_envelope.html#a122ceb958ef130eb1d5c1e2c25e0fcd6" title=" " alt="" coords="422,104,606,130"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="357,78,440,97,439,103,356,84"/>
+<area shape="rect" id="Node000006" href="$class_adsr_envelope.html#a03b02aa0d8e43714bc3cc58283a21819" title=" " alt="" coords="654,47,854,88"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="606,65,639,65,639,70,606,70"/>
+</map>

@@ -1,0 +1,182 @@
+\doxysection{Tuning Class Reference}
+\hypertarget{class_tuning}{}\label{class_tuning}\index{Tuning@{Tuning}}
+
+
+{\ttfamily \#include $<$Tuning.\+h$>$}
+
+
+
+Collaboration diagram for Tuning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_tuning__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tuning_a02fae50199cc274b770b2b612a9676bd}{Tuning}} ()
+\item 
+\mbox{\hyperlink{class_tuning_a137fc4f5ab5ffccf710b548ec03e6da6}{\texorpdfstring{$\sim$}{\string~}\+Tuning}} ()
+\item 
+void \mbox{\hyperlink{class_tuning_a5c6ed697f4dae7b681c09ad6de771e48}{update\+MTSESPStatus}} ()
+\item 
+double \mbox{\hyperlink{class_tuning_a463c4fbf991ef15e1a48ca445792029d}{midi\+Note\+From\+MTS}} (int midi\+Index)
+\item 
+double \mbox{\hyperlink{class_tuning_a689a8ed4ce87be8cab4a0d61f01d99f9}{tuned\+Midi\+Note}} (int midi\+Index)
+\item 
+bool \mbox{\hyperlink{class_tuning_a554d124958c4f17d8c5cfce70389667e}{has\+MTSMaster}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tuning_abf66f150656139924f2b0e1a7568ccf1}{get\+MTSScale}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343}{Mode}} \{ \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343a2a772144c250e698f98c1c053428c470}{MTS\+\_\+\+ESP}}
+, \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343abb92408ac8564b02266bd32e293b08bc}{TWELVE\+\_\+\+TET}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client}{MTSClient}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tuning_ad05361263bd2df15ac5144896a3468a2}{mts\+\_\+client}} \{nullptr\}
+\item 
+enum \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343}{Tuning\+::\+Mode}} \mbox{\hyperlink{class_tuning_a72a51f80e5fa511ee70668914f7d91e3}{TWELVE\+\_\+\+TET}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_tuning_a79875c3f31299cface7a4c073dcec343}\label{class_tuning_a79875c3f31299cface7a4c073dcec343} 
+\index{Tuning@{Tuning}!Mode@{Mode}}
+\index{Mode@{Mode}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343}{Tuning\+::\+Mode}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MTS\_ESP@{MTS\_ESP}!Tuning@{Tuning}}\index{Tuning@{Tuning}!MTS\_ESP@{MTS\_ESP}}}\Hypertarget{class_tuning_a79875c3f31299cface7a4c073dcec343a2a772144c250e698f98c1c053428c470}\label{class_tuning_a79875c3f31299cface7a4c073dcec343a2a772144c250e698f98c1c053428c470} 
+MTS\+\_\+\+ESP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWELVE\_TET@{TWELVE\_TET}!Tuning@{Tuning}}\index{Tuning@{Tuning}!TWELVE\_TET@{TWELVE\_TET}}}\Hypertarget{class_tuning_a79875c3f31299cface7a4c073dcec343abb92408ac8564b02266bd32e293b08bc}\label{class_tuning_a79875c3f31299cface7a4c073dcec343abb92408ac8564b02266bd32e293b08bc} 
+TWELVE\+\_\+\+TET&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tuning_a02fae50199cc274b770b2b612a9676bd}\label{class_tuning_a02fae50199cc274b770b2b612a9676bd} 
+\index{Tuning@{Tuning}!Tuning@{Tuning}}
+\index{Tuning@{Tuning}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{Tuning()}{Tuning()}}
+{\footnotesize\ttfamily Tuning\+::\+Tuning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tuning_a137fc4f5ab5ffccf710b548ec03e6da6}\label{class_tuning_a137fc4f5ab5ffccf710b548ec03e6da6} 
+\index{Tuning@{Tuning}!````~Tuning@{\texorpdfstring{$\sim$}{\string~}Tuning}}
+\index{````~Tuning@{\texorpdfstring{$\sim$}{\string~}Tuning}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Tuning()}{\string~Tuning()}}
+{\footnotesize\ttfamily Tuning\+::\texorpdfstring{$\sim$}{\string~}\+Tuning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_tuning_a137fc4f5ab5ffccf710b548ec03e6da6_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tuning_abf66f150656139924f2b0e1a7568ccf1}\label{class_tuning_abf66f150656139924f2b0e1a7568ccf1} 
+\index{Tuning@{Tuning}!getMTSScale@{getMTSScale}}
+\index{getMTSScale@{getMTSScale}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{getMTSScale()}{getMTSScale()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Tuning\+::get\+MTSScale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tuning_abf66f150656139924f2b0e1a7568ccf1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tuning_a554d124958c4f17d8c5cfce70389667e}\label{class_tuning_a554d124958c4f17d8c5cfce70389667e} 
+\index{Tuning@{Tuning}!hasMTSMaster@{hasMTSMaster}}
+\index{hasMTSMaster@{hasMTSMaster}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{hasMTSMaster()}{hasMTSMaster()}}
+{\footnotesize\ttfamily bool Tuning\+::has\+MTSMaster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tuning_a554d124958c4f17d8c5cfce70389667e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tuning_a463c4fbf991ef15e1a48ca445792029d}\label{class_tuning_a463c4fbf991ef15e1a48ca445792029d} 
+\index{Tuning@{Tuning}!midiNoteFromMTS@{midiNoteFromMTS}}
+\index{midiNoteFromMTS@{midiNoteFromMTS}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{midiNoteFromMTS()}{midiNoteFromMTS()}}
+{\footnotesize\ttfamily double Tuning\+::midi\+Note\+From\+MTS (\begin{DoxyParamCaption}\item[{int}]{midi\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tuning_a463c4fbf991ef15e1a48ca445792029d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tuning_a689a8ed4ce87be8cab4a0d61f01d99f9}\label{class_tuning_a689a8ed4ce87be8cab4a0d61f01d99f9} 
+\index{Tuning@{Tuning}!tunedMidiNote@{tunedMidiNote}}
+\index{tunedMidiNote@{tunedMidiNote}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{tunedMidiNote()}{tunedMidiNote()}}
+{\footnotesize\ttfamily double Tuning\+::tuned\+Midi\+Note (\begin{DoxyParamCaption}\item[{int}]{midi\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tuning_a689a8ed4ce87be8cab4a0d61f01d99f9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tuning_a5c6ed697f4dae7b681c09ad6de771e48}\label{class_tuning_a5c6ed697f4dae7b681c09ad6de771e48} 
+\index{Tuning@{Tuning}!updateMTSESPStatus@{updateMTSESPStatus}}
+\index{updateMTSESPStatus@{updateMTSESPStatus}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{updateMTSESPStatus()}{updateMTSESPStatus()}}
+{\footnotesize\ttfamily void Tuning\+::update\+MTSESPStatus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tuning_a5c6ed697f4dae7b681c09ad6de771e48_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tuning_ad05361263bd2df15ac5144896a3468a2}\label{class_tuning_ad05361263bd2df15ac5144896a3468a2} 
+\index{Tuning@{Tuning}!mts\_client@{mts\_client}}
+\index{mts\_client@{mts\_client}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{mts\_client}{mts\_client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client}{MTSClient}}\texorpdfstring{$\ast$}{*} Tuning\+::mts\+\_\+client \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tuning_a72a51f80e5fa511ee70668914f7d91e3}\label{class_tuning_a72a51f80e5fa511ee70668914f7d91e3} 
+\index{Tuning@{Tuning}!TWELVE\_TET@{TWELVE\_TET}}
+\index{TWELVE\_TET@{TWELVE\_TET}!Tuning@{Tuning}}
+\doxysubsubsection{\texorpdfstring{TWELVE\_TET}{TWELVE\_TET}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_tuning_a79875c3f31299cface7a4c073dcec343}{Tuning\+::\+Mode}} Tuning\+::\+TWELVE\+\_\+\+TET\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_tuning_8h}{Tuning.\+h}}\end{DoxyCompactItemize}

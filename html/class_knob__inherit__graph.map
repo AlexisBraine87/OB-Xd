@@ -1,0 +1,9 @@
+<map id="Knob" name="Knob">
+<area shape="rect" id="Node000001" title=" " alt="" coords="127,79,178,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,37,133,76,131,81,64,42"/>
+<area shape="rect" id="Node000003" href="$class_scalable_component.html" title=" " alt="" coords="83,5,222,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,46,155,79,150,79,150,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="246,5,374,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="270,40,180,81,178,76,268,35"/>
+</map>

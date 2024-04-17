@@ -1,0 +1,9 @@
+<map id="juce::StandaloneFilterWindow::MainContentComponent::valueChanged" name="juce::StandaloneFilterWindow::MainContentComponent::valueChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,267,90"/>
+<area shape="rect" id="Node000002" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a36d07aa23be8cf5fa41391bea4a246c4" title=" " alt="" coords="315,41,557,97"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,67,299,67,299,72,267,72"/>
+<area shape="rect" id="Node000003" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a618ce5f6b1992ee1b492bab0c00ed020" title=" " alt="" coords="605,5,841,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="557,51,589,47,590,53,558,57"/>
+<area shape="rect" id="Node000004" href="$classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a0803264e2b28f76f3981154a96d11e03" title=" " alt="" coords="613,85,833,126"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="558,82,598,87,597,92,557,87"/>
+</map>

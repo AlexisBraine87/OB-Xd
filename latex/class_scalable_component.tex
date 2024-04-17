@@ -1,0 +1,182 @@
+\doxysection{Scalable\+Component Class Reference}
+\hypertarget{class_scalable_component}{}\label{class_scalable_component}\index{ScalableComponent@{ScalableComponent}}
+
+
+{\ttfamily \#include $<$Scale\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Scalable\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Scalable\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_component__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5}{\texorpdfstring{$\sim$}{\string~}\+Scalable\+Component}} ()
+\item 
+int \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{get\+Scale\+Int}} ()
+\item 
+void \mbox{\hyperlink{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e}{set\+Scale\+Factor}} (float new\+Scale\+Factor, bool new\+Is\+High\+Resolution\+Display)
+\item 
+float \mbox{\hyperlink{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc}{get\+Scale\+Image}} ()
+\item 
+float \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{get\+Scale\+Factor}} () const
+\item 
+bool \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{get\+Is\+High\+Resolution\+Display}} () const
+\item 
+virtual void \mbox{\hyperlink{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e}{scale\+Factor\+Changed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4}{Scalable\+Component}} (\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner\+\_\+)
+\item 
+Image \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{get\+Scaled\+Image\+From\+Cache}} (const String \&image\+Name, float \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scale\+Factor}}, bool \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{is\+High\+Resolution\+Display}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scalable_component_acd5c74b24cae04b0e24d65b167e729e2}{processor}}
+\item 
+float \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scale\+Factor}}
+\item 
+bool \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{is\+High\+Resolution\+Display}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5}\label{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5} 
+\index{ScalableComponent@{ScalableComponent}!````~ScalableComponent@{\texorpdfstring{$\sim$}{\string~}ScalableComponent}}
+\index{````~ScalableComponent@{\texorpdfstring{$\sim$}{\string~}ScalableComponent}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ScalableComponent()}{\string~ScalableComponent()}}
+{\footnotesize\ttfamily Scalable\+Component\+::\texorpdfstring{$\sim$}{\string~}\+Scalable\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4}\label{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4} 
+\index{ScalableComponent@{ScalableComponent}!ScalableComponent@{ScalableComponent}}
+\index{ScalableComponent@{ScalableComponent}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{ScalableComponent()}{ScalableComponent()}}
+{\footnotesize\ttfamily Scalable\+Component\+::\+Scalable\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}}]{owner\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scalable_component_a81361cc705be0667e508476827d2cbe6}\label{class_scalable_component_a81361cc705be0667e508476827d2cbe6} 
+\index{ScalableComponent@{ScalableComponent}!getIsHighResolutionDisplay@{getIsHighResolutionDisplay}}
+\index{getIsHighResolutionDisplay@{getIsHighResolutionDisplay}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{getIsHighResolutionDisplay()}{getIsHighResolutionDisplay()}}
+{\footnotesize\ttfamily bool Scalable\+Component\+::get\+Is\+High\+Resolution\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}\label{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8} 
+\index{ScalableComponent@{ScalableComponent}!getScaledImageFromCache@{getScaledImageFromCache}}
+\index{getScaledImageFromCache@{getScaledImageFromCache}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{getScaledImageFromCache()}{getScaledImageFromCache()}}
+{\footnotesize\ttfamily Image Scalable\+Component\+::get\+Scaled\+Image\+From\+Cache (\begin{DoxyParamCaption}\item[{const String \&}]{image\+Name,  }\item[{float}]{scale\+Factor,  }\item[{bool}]{is\+High\+Resolution\+Display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}\label{class_scalable_component_ae23f6266007c204094dd7698a16ebab0} 
+\index{ScalableComponent@{ScalableComponent}!getScaleFactor@{getScaleFactor}}
+\index{getScaleFactor@{getScaleFactor}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{getScaleFactor()}{getScaleFactor()}}
+{\footnotesize\ttfamily float Scalable\+Component\+::get\+Scale\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc}\label{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc} 
+\index{ScalableComponent@{ScalableComponent}!getScaleImage@{getScaleImage}}
+\index{getScaleImage@{getScaleImage}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{getScaleImage()}{getScaleImage()}}
+{\footnotesize\ttfamily float Scalable\+Component\+::get\+Scale\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}\label{class_scalable_component_ab746359e4aacae97810d592b04d22b3e} 
+\index{ScalableComponent@{ScalableComponent}!getScaleInt@{getScaleInt}}
+\index{getScaleInt@{getScaleInt}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{getScaleInt()}{getScaleInt()}}
+{\footnotesize\ttfamily int Scalable\+Component\+::get\+Scale\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e}\label{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e} 
+\index{ScalableComponent@{ScalableComponent}!scaleFactorChanged@{scaleFactorChanged}}
+\index{scaleFactorChanged@{scaleFactorChanged}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{scaleFactorChanged()}{scaleFactorChanged()}}
+{\footnotesize\ttfamily void Scalable\+Component\+::scale\+Factor\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_button_list_ae7f585c0fa74058ba55302d36855c2ec}{Button\+List}}, \mbox{\hyperlink{class_image_menu_afd08b1d572a3b9811a17ad0eddaad903}{Image\+Menu}}, \mbox{\hyperlink{class_knob_adfcbbe8b41fff33f47dfd7ae2a0059a8}{Knob}}, \mbox{\hyperlink{class_tooglable_button_a7bf6859b52f5afcb8fd46a58836cc198}{Tooglable\+Button}}, and \mbox{\hyperlink{class_obxd_audio_processor_editor_a30455d5db01e4cb8189b9c349b07aeae}{Obxd\+Audio\+Processor\+Editor}}.
+
+\Hypertarget{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e}\label{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e} 
+\index{ScalableComponent@{ScalableComponent}!setScaleFactor@{setScaleFactor}}
+\index{setScaleFactor@{setScaleFactor}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{setScaleFactor()}{setScaleFactor()}}
+{\footnotesize\ttfamily void Scalable\+Component\+::set\+Scale\+Factor (\begin{DoxyParamCaption}\item[{float}]{new\+Scale\+Factor,  }\item[{bool}]{new\+Is\+High\+Resolution\+Display }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}\label{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca} 
+\index{ScalableComponent@{ScalableComponent}!isHighResolutionDisplay@{isHighResolutionDisplay}}
+\index{isHighResolutionDisplay@{isHighResolutionDisplay}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{isHighResolutionDisplay}{isHighResolutionDisplay}}
+{\footnotesize\ttfamily bool Scalable\+Component\+::is\+High\+Resolution\+Display\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_scalable_component_acd5c74b24cae04b0e24d65b167e729e2}\label{class_scalable_component_acd5c74b24cae04b0e24d65b167e729e2} 
+\index{ScalableComponent@{ScalableComponent}!processor@{processor}}
+\index{processor@{processor}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{processor}{processor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}}\texorpdfstring{$\ast$}{*} Scalable\+Component\+::processor\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_scalable_component_a484f110b17af63718e28234656b5686e}\label{class_scalable_component_a484f110b17af63718e28234656b5686e} 
+\index{ScalableComponent@{ScalableComponent}!scaleFactor@{scaleFactor}}
+\index{scaleFactor@{scaleFactor}!ScalableComponent@{ScalableComponent}}
+\doxysubsubsection{\texorpdfstring{scaleFactor}{scaleFactor}}
+{\footnotesize\ttfamily float Scalable\+Component\+::scale\+Factor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Components/\mbox{\hyperlink{_scale_component_8h}{Scale\+Component.\+h}}\item 
+Source/\+Components/\mbox{\hyperlink{_scale_component_8cpp}{Scale\+Component.\+cpp}}\end{DoxyCompactItemize}

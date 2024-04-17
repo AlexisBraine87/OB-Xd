@@ -1,0 +1,1163 @@
+\doxysection{juce\+\_\+\+Standalone\+Filter\+Window.\+h}
+\hypertarget{juce___standalone_filter_window_8h_source}{}\label{juce___standalone_filter_window_8h_source}\index{Modules/juce\_audio\_plugin\_client/Standalone/juce\_StandaloneFilterWindow.h@{Modules/juce\_audio\_plugin\_client/Standalone/juce\_StandaloneFilterWindow.h}}
+\mbox{\hyperlink{juce___standalone_filter_window_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ the\ JUCE\ library.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ Copyright\ (c)\ 2022\ -\/\ Raw\ Material\ Software\ Limited}}
+\DoxyCodeLine{00006\ \textcolor{comment}{}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ JUCE\ is\ an\ open\ source\ library\ subject\ to\ commercial\ or\ open-\/source}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ licensing.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ By\ using\ JUCE,\ you\ agree\ to\ the\ terms\ of\ both\ the\ JUCE\ 7\ End-\/User\ License}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ Agreement\ and\ JUCE\ Privacy\ Policy.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ End\ User\ License\ Agreement:\ www.juce.com/juce-\/7-\/licence}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ Privacy\ Policy:\ www.juce.com/juce-\/privacy-\/policy}}
+\DoxyCodeLine{00015\ \textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ Or:\ You\ may\ also\ use\ this\ code\ under\ the\ terms\ of\ the\ GPL\ v3\ (see}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ www.gnu.org/licenses).}}
+\DoxyCodeLine{00018\ \textcolor{comment}{}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ JUCE\ IS\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ ANY\ WARRANTY,\ AND\ ALL\ WARRANTIES,\ WHETHER}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ EXPRESSED\ OR\ IMPLIED,\ INCLUDING\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ PURPOSE,\ ARE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ DISCLAIMED.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#ifndef\ DOXYGEN}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \#include\ "{}../utility/juce\_CreatePluginFilter.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacejuce}{juce}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{StandalonePluginHolder}}\ \ \ \ :\ \textcolor{keyword}{private}\ AudioIODeviceCallback,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Timer,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Value::Listener}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{PluginInOuts}}\ \ \ \{\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs_a11d4a6e6db04a115f8593d16c7d92c9d}{numIns}},\ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs_a20bac3b610f802f52a2c263da3f0c4ca}{numOuts}};\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_afe37b7ee5c0e1b2b2604c1e21077472f}{StandalonePluginHolder}}\ (PropertySet*\ settingsToUse,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ takeOwnershipOfSettings\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ String\&\ preferredDefaultDeviceName\ =\ String(),}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ AudioDeviceManager::AudioDeviceSetup*\ preferredSetupOptions\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Array<PluginInOuts>\&\ channels\ =\ Array<PluginInOuts>(),}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\textcolor{keywordflow}{if}\ JUCE\_ANDROID\ ||\ JUCE\_IOS}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ shouldAutoOpenMidiDevices\ =\ \textcolor{keyword}{true}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\textcolor{keywordflow}{else}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ shouldAutoOpenMidiDevices\ =\ \textcolor{keyword}{true}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}\ (settingsToUse,\ takeOwnershipOfSettings),}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}\ (channels),}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5cd0c63a20cba1ef1a71e84b411eaf69}{autoOpenMidiDevices}}\ (shouldAutoOpenMidiDevices)}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{shouldMuteInput}}.addListener\ (\textcolor{keyword}{this});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{shouldMuteInput}}\ =\ !\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ab8921b678d9ac859cfc5aaedbef8c8e9}{isInterAppAudioConnected}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a01c2c46967e1339ee39177744bfe3337}{createPlugin}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ inChannels\ =\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}.size()\ >\ 0\ ?\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}[0].numIns}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>getMainBusNumInputChannels());}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (preferredSetupOptions\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa0b47b6e8c528ea14587de8553e4bf6b}{options}}.reset\ (\textcolor{keyword}{new}\ AudioDeviceManager::AudioDeviceSetup\ (*preferredSetupOptions));}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ audioInputRequired\ =\ (inChannels\ >\ 0);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (audioInputRequired\ \&\&\ RuntimePermissions::isRequired\ (RuntimePermissions::recordAudio)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ !\ RuntimePermissions::isGranted\ (RuntimePermissions::recordAudio))}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ RuntimePermissions::request\ (RuntimePermissions::recordAudio,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{keyword}{this},\ preferredDefaultDeviceName]\ (\textcolor{keywordtype}{bool}\ granted)\ \{\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa5aae7bed030a522ce43412c3f38ed08}{init}}\ (granted,\ preferredDefaultDeviceName);\ \});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa5aae7bed030a522ce43412c3f38ed08}{init}}\ (audioInputRequired,\ preferredDefaultDeviceName);}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa5aae7bed030a522ce43412c3f38ed08}{init}}\ (\textcolor{keywordtype}{bool}\ enableAudioInput,\ \textcolor{keyword}{const}\ String\&\ preferredDefaultDeviceName)}
+\DoxyCodeLine{00107\ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_af3777d659c5d376f34d7028ab1768f59}{setupAudioDevices}}\ (enableAudioInput,\ preferredDefaultDeviceName,\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa0b47b6e8c528ea14587de8553e4bf6b}{options}}.get());}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a011acf019b1d26e411961b6503e32230}{reloadPluginState}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1e7c49f80ccce6c3920c645dbef051fd}{startPlaying}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5cd0c63a20cba1ef1a71e84b411eaf69}{autoOpenMidiDevices}})}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ startTimer\ (500);}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a07796aaccb18a3a0aad44797b4007bd7}{\string~StandalonePluginHolder}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00117\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ stopTimer();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a792f24fef2d467bf9fabe1cd600ca1cd}{deletePlugin}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa790078a4e166bc59c431f79d290d733}{shutDownAudioDevices}}();}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a01c2c46967e1339ee39177744bfe3337}{createPlugin}}()}
+\DoxyCodeLine{00126\ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}.reset\ (createPluginFilterOfType\ (AudioProcessor::wrapperType\_Standalone));}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>disableNonMainBuses();}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>setRateAndBufferSizeDetails\ (44100,\ 512);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85b92cc5b4ee85e576167ba6fea4fe47}{processorHasPotentialFeedbackLoop}}\ =\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_af896cb23041ba3ea551cdd12f9ad73fe}{getNumInputChannels}}()\ >\ 0\ \&\&\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adb158cad4f547fa9836d4ea7025245a5}{getNumOutputChannels}}()\ >\ 0);}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a792f24fef2d467bf9fabe1cd600ca1cd}{deletePlugin}}()}
+\DoxyCodeLine{00135\ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a4d099bd36c88e91d51f83c0ee6d6a21c}{stopPlaying}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_af896cb23041ba3ea551cdd12f9ad73fe}{getNumInputChannels}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00141\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}.size()\ >\ 0\ ?\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}[0].numIns}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>getMainBusNumInputChannels());}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adb158cad4f547fa9836d4ea7025245a5}{getNumOutputChannels}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00150\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}.size()\ >\ 0\ ?\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}[0].numOuts}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>getMainBusNumOutputChannels());}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa7425af2361f491329215e65b0ac91fb}{getFilePatterns}}\ (\textcolor{keyword}{const}\ String\&\ fileSuffix)}
+\DoxyCodeLine{00159\ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fileSuffix.isEmpty())}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (fileSuffix.startsWithChar\ (\textcolor{charliteral}{'.'})\ ?\ \textcolor{stringliteral}{"{}*"{}}\ :\ \textcolor{stringliteral}{"{}*."{}})\ +\ fileSuffix;}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00167\ \ \ \ \ Value\&\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a76e89d6dd227b1b4a70485bce33b06e5}{getMuteInputValue}}()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{shouldMuteInput}};\ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aedd2c26c38d5c774ccb02bb7919d6dde}{getProcessorHasPotentialFeedbackLoop}}()\textcolor{keyword}{\ const\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85b92cc5b4ee85e576167ba6fea4fe47}{processorHasPotentialFeedbackLoop}};\ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a92dc39cccba1b3cd0028f5a3fd72579c}{valueChanged}}\ (Value\&\ value)\textcolor{keyword}{\ override\ \ \ \ \ \ \ \ \ \ \ \ }\{\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a191eeef936907b8eeb82c5a41af69f9e}{muteInput}}\ =\ (bool)\ value.getValue();\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00172\ \ \ \ \ File\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6916dfee9dca2b4e5ea5f22a37c74fc3}{getLastFile}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00173\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ File\ f;}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ f\ =\ File\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>getValue\ (\textcolor{stringliteral}{"{}lastStateFile"{}}));}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (f\ ==\ File())}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ f\ =\ File::getSpecialLocation\ (File::userDocumentsDirectory);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ f;}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad87b70a1be5c29b2824dfe99776f926f}{setLastFile}}\ (\textcolor{keyword}{const}\ FileChooser\&\ fc)}
+\DoxyCodeLine{00186\ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>setValue\ (\textcolor{stringliteral}{"{}lastStateFile"{}},\ fc.getResult().getFullPathName());}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa950137559934707a902a050e3b1fa86}{askUserToSaveState}}\ (\textcolor{keyword}{const}\ String\&\ fileSuffix\ =\ String())}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d}{stateFileChooser}}\ =\ std::make\_unique<FileChooser>\ (TRANS(\textcolor{stringliteral}{"{}Save\ current\ state"{}}),}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6916dfee9dca2b4e5ea5f22a37c74fc3}{getLastFile}}(),}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa7425af2361f491329215e65b0ac91fb}{getFilePatterns}}\ (fileSuffix));}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ flags\ =\ FileBrowserComponent::saveMode}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ FileBrowserComponent::canSelectFiles}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ FileBrowserComponent::warnAboutOverwriting;}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d}{stateFileChooser}}-\/>launchAsync\ (flags,\ [\textcolor{keyword}{this}]\ (\textcolor{keyword}{const}\ FileChooser\&\ fc)}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fc.getResult()\ ==\ File\{\})}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad87b70a1be5c29b2824dfe99776f926f}{setLastFile}}\ (fc);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ MemoryBlock\ data;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>getStateInformation\ (data);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ fc.getResult().replaceWithData\ (data.getData(),\ data.getSize()))}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AlertWindow::showMessageBoxAsync\ (AlertWindow::WarningIcon,}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TRANS(\textcolor{stringliteral}{"{}Error\ whilst\ saving"{}}),}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TRANS(\textcolor{stringliteral}{"{}Couldn't\ write\ to\ the\ specified\ file!"{}}));}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a90ea431b62bf47b5f6cae13b35520576}{askUserToLoadState}}\ (\textcolor{keyword}{const}\ String\&\ fileSuffix\ =\ String())}
+\DoxyCodeLine{00220\ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d}{stateFileChooser}}\ =\ std::make\_unique<FileChooser>\ (TRANS(\textcolor{stringliteral}{"{}Load\ a\ saved\ state"{}}),}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6916dfee9dca2b4e5ea5f22a37c74fc3}{getLastFile}}(),}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa7425af2361f491329215e65b0ac91fb}{getFilePatterns}}\ (fileSuffix));}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ flags\ =\ FileBrowserComponent::openMode}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ FileBrowserComponent::canSelectFiles;}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d}{stateFileChooser}}-\/>launchAsync\ (flags,\ [\textcolor{keyword}{this}]\ (\textcolor{keyword}{const}\ FileChooser\&\ fc)}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fc.getResult()\ ==\ File\{\})}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad87b70a1be5c29b2824dfe99776f926f}{setLastFile}}\ (fc);}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ MemoryBlock\ data;}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fc.getResult().loadFileAsData\ (data))}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>setStateInformation\ (data.getData(),\ (\textcolor{keywordtype}{int})\ data.getSize());}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AlertWindow::showMessageBoxAsync\ (AlertWindow::WarningIcon,}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TRANS(\textcolor{stringliteral}{"{}Error\ whilst\ loading"{}}),}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TRANS(\textcolor{stringliteral}{"{}Couldn't\ read\ from\ the\ specified\ file!"{}}));}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00243\ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1e7c49f80ccce6c3920c645dbef051fd}{startPlaying}}()}
+\DoxyCodeLine{00247\ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.setProcessor\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}.get());}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#if\ JucePlugin\_Enable\_IAA\ \&\&\ JUCE\_IOS}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ device\ =\ \textcolor{keyword}{dynamic\_cast<}iOSAudioIODevice*\textcolor{keyword}{>}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.getCurrentAudioDevice()))}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>setPlayHead\ (device-\/>getAudioPlayHead());}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ device-\/>setMidiMessageCollector\ (\&\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.getMidiMessageCollector());}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00257\ \ \ \ \ \}}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a4d099bd36c88e91d51f83c0ee6d6a21c}{stopPlaying}}()}
+\DoxyCodeLine{00260\ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.setProcessor\ (\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00262\ \ \ \ \ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a93aa79fde505e462ba85f926ef2b0968}{showAudioSettingsDialog}}()}
+\DoxyCodeLine{00267\ \ \ \ \ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ DialogWindow::LaunchOptions\ o;}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxNumInputs\ =\ 0,\ maxNumOutputs\ =\ 0;}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}.size()\ >\ 0)}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ defaultConfig\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}}.getReference\ (0);}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ maxNumInputs\ \ =\ jmax\ (0,\ (\textcolor{keywordtype}{int})\ defaultConfig.numIns);}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ maxNumOutputs\ =\ jmax\ (0,\ (\textcolor{keywordtype}{int})\ defaultConfig.numOuts);}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \textcolor{comment}{//\ \ \ \ \ \ \ \ if\ (auto*\ bus\ =\ processor-\/>getBus\ (true,\ 0))}}
+\DoxyCodeLine{00281\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ maxNumInputs\ =\ jmax\ (0,\ bus-\/>getDefaultLayout().size());}}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ bus\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>getBus\ (\textcolor{keyword}{false},\ 0))}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ maxNumOutputs\ =\ jmax\ (0,\ bus-\/>getDefaultLayout().size());}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ content\ =\ std::make\_unique<SettingsComponent>\ (*\textcolor{keyword}{this},\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}},\ maxNumInputs,\ maxNumOutputs);}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ content-\/>setSize\ (500,\ 550);}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ content-\/>setToRecommendedSize();}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ o.content.setOwned\ (content.release());}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ o.dialogTitle\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ TRANS(\textcolor{stringliteral}{"{}Audio/MIDI\ Settings"{}});}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ o.dialogBackgroundColour\ \ \ \ \ \ \ \ =\ o.content-\/>getLookAndFeel().findColour\ (ResizableWindow::backgroundColourId);}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ o.escapeKeyTriggersCloseButton\ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ o.useNativeTitleBar\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ o.resizable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ o.launchAsync();}
+\DoxyCodeLine{00299\ \ \ \ \ \}}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a15b1e3761176da1fd1c743a4f6b644d4}{saveAudioDeviceState}}()}
+\DoxyCodeLine{00302\ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ xml\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.createStateXml();}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>setValue\ (\textcolor{stringliteral}{"{}audioSetup"{}},\ xml.get());}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#if\ !\ (JUCE\_IOS\ ||\ JUCE\_ANDROID)}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>setValue\ (\textcolor{stringliteral}{"{}shouldMuteInput"{}},\ (\textcolor{keywordtype}{bool})\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{shouldMuteInput}}.getValue());}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ \ \ \ \ \}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a69672ec60c6cb267cc6bdf149c356913}{reloadAudioDeviceState}}\ (\textcolor{keywordtype}{bool}\ enableAudioInput,}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ String\&\ preferredDefaultDeviceName,}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ AudioDeviceManager::AudioDeviceSetup*\ preferredSetupOptions)}
+\DoxyCodeLine{00318\ \ \ \ \ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ std::unique\_ptr<XmlElement>\ savedState;}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ savedState\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>getXmlValue\ (\textcolor{stringliteral}{"{}audioSetup"{}});}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#if\ !\ (JUCE\_IOS\ ||\ JUCE\_ANDROID)}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{shouldMuteInput}}.setValue\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>getBoolValue\ (\textcolor{stringliteral}{"{}shouldMuteInput"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{00327\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ inputChannels\ \ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_af896cb23041ba3ea551cdd12f9ad73fe}{getNumInputChannels}}();}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ outputChannels\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adb158cad4f547fa9836d4ea7025245a5}{getNumOutputChannels}}();}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inputChannels\ ==\ 0\ \&\&\ outputChannels\ ==\ 0\ \&\&\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>isMidiEffect())}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ add\ a\ dummy\ output\ channel\ for\ MIDI\ effect\ plug-\/ins\ so\ they\ can\ receive\ audio\ callbacks}}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ outputChannels\ =\ 1;}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.initialise\ (enableAudioInput\ ?\ inputChannels\ :\ 0,}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outputChannels,}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ savedState.get(),}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true},}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ preferredDefaultDeviceName,}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ preferredSetupOptions);}
+\DoxyCodeLine{00345\ \ \ \ \ \}}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a56379ea9654ece067ea635318ac10389}{savePluginState}}()}
+\DoxyCodeLine{00349\ \ \ \ \ \{}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ MemoryBlock\ data;}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>getStateInformation\ (data);}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>setValue\ (\textcolor{stringliteral}{"{}filterState"{}},\ data.toBase64Encoding());}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00357\ \ \ \ \ \}}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a011acf019b1d26e411961b6503e32230}{reloadPluginState}}()}
+\DoxyCodeLine{00360\ \ \ \ \ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ MemoryBlock\ data;}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (data.fromBase64Encoding\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}}-\/>getValue\ (\textcolor{stringliteral}{"{}filterState"{}}))\ \&\&\ data.getSize()\ >\ 0)}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>setStateInformation\ (data.getData(),\ (\textcolor{keywordtype}{int})\ data.getSize());}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00368\ \ \ \ \ \}}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a4d427e8b1082c880be89355df814ed37}{switchToHostApplication}}()}
+\DoxyCodeLine{00372\ \ \ \ \ \{}
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#if\ JUCE\_IOS}}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ device\ =\ \textcolor{keyword}{dynamic\_cast<}iOSAudioIODevice*\textcolor{keyword}{>}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.getCurrentAudioDevice()))}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ device-\/>switchApplication();}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00377\ \ \ \ \ \}}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ab8921b678d9ac859cfc5aaedbef8c8e9}{isInterAppAudioConnected}}()}
+\DoxyCodeLine{00380\ \ \ \ \ \{}
+\DoxyCodeLine{00381\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#if\ JUCE\_IOS}}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ device\ =\ \textcolor{keyword}{dynamic\_cast<}iOSAudioIODevice*\textcolor{keyword}{>}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.getCurrentAudioDevice()))}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ device-\/>isInterAppAudioConnected();}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00387\ \ \ \ \ \}}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ Image\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a19f84e357e1e3c6c6bf9d6d6bddd7a2d}{getIAAHostIcon}}\ (\textcolor{keywordtype}{int}\ size)}
+\DoxyCodeLine{00390\ \ \ \ \ \{}
+\DoxyCodeLine{00391\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#if\ JUCE\_IOS\ \&\&\ JucePlugin\_Enable\_IAA}}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ device\ =\ \textcolor{keyword}{dynamic\_cast<}iOSAudioIODevice*\textcolor{keyword}{>}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.getCurrentAudioDevice()))}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ device-\/>getIcon\ (size);}
+\DoxyCodeLine{00394\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ ignoreUnused\ (size);}
+\DoxyCodeLine{00396\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{StandalonePluginHolder}}*\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ab4efaf01764a7d3f36ceae65542a1bf9}{getInstance}}();}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00404\ \ \ \ \ OptionalScopedPointer<PropertySet>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5b5de61bb01ef86de0129f85cb7a251a}{settings}};}
+\DoxyCodeLine{00405\ \ \ \ \ std::unique\_ptr<AudioProcessor>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}};}
+\DoxyCodeLine{00406\ \ \ \ \ AudioDeviceManager\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}};}
+\DoxyCodeLine{00407\ \ \ \ \ AudioProcessorPlayer\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}};}
+\DoxyCodeLine{00408\ \ \ \ \ Array<PluginInOuts>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ad50d4dd376ff0398f528ed5b6892d223}{channelConfiguration}};}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{comment}{//\ avoid\ feedback\ loop\ by\ default}}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85b92cc5b4ee85e576167ba6fea4fe47}{processorHasPotentialFeedbackLoop}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00412\ \ \ \ \ std::atomic<bool>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a191eeef936907b8eeb82c5a41af69f9e}{muteInput}}\ \{\ \textcolor{keyword}{true}\ \};}
+\DoxyCodeLine{00413\ \ \ \ \ Value\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{shouldMuteInput}};}
+\DoxyCodeLine{00414\ \ \ \ \ AudioBuffer<float>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}{emptyBuffer}};}
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a5cd0c63a20cba1ef1a71e84b411eaf69}{autoOpenMidiDevices}};}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \ \ \ \ std::unique\_ptr<AudioDeviceManager::AudioDeviceSetup>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa0b47b6e8c528ea14587de8553e4bf6b}{options}};}
+\DoxyCodeLine{00418\ \ \ \ \ Array<MidiDeviceInfo>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747}{lastMidiDevices}};}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \ \ \ \ std::unique\_ptr<FileChooser>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abc4a049f4fee95a99a0670002313204d}{stateFileChooser}};}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00423\ \ \ \ \ \textcolor{comment}{/*\ \ This\ class\ can\ be\ used\ to\ ensure\ that\ audio\ callbacks\ use\ buffers\ with\ a}}
+\DoxyCodeLine{00424\ \textcolor{comment}{\ \ \ \ \ \ \ \ predictable\ maximum\ size.}}
+\DoxyCodeLine{00425\ \textcolor{comment}{}}
+\DoxyCodeLine{00426\ \textcolor{comment}{\ \ \ \ \ \ \ \ On\ some\ platforms\ (such\ as\ iOS\ 10),\ the\ expected\ buffer\ size\ reported\ in}}
+\DoxyCodeLine{00427\ \textcolor{comment}{\ \ \ \ \ \ \ \ audioDeviceAboutToStart\ may\ be\ smaller\ than\ the\ blocks\ passed\ to}}
+\DoxyCodeLine{00428\ \textcolor{comment}{\ \ \ \ \ \ \ \ audioDeviceIOCallbackWithContext.\ This\ can\ lead\ to\ out-\/of-\/bounds\ reads\ if\ the\ render}}
+\DoxyCodeLine{00429\ \textcolor{comment}{\ \ \ \ \ \ \ \ callback\ depends\ on\ additional\ buffers\ which\ were\ initialised\ using\ the}}
+\DoxyCodeLine{00430\ \textcolor{comment}{\ \ \ \ \ \ \ \ smaller\ size.}}
+\DoxyCodeLine{00431\ \textcolor{comment}{}}
+\DoxyCodeLine{00432\ \textcolor{comment}{\ \ \ \ \ \ \ \ As\ a\ workaround,\ this\ class\ will\ ensure\ that\ the\ render\ callback\ will}}
+\DoxyCodeLine{00433\ \textcolor{comment}{\ \ \ \ \ \ \ \ only\ ever\ be\ called\ with\ a\ block\ with\ a\ length\ less\ than\ or\ equal\ to\ the}}
+\DoxyCodeLine{00434\ \textcolor{comment}{\ \ \ \ \ \ \ \ expected\ block\ size.}}
+\DoxyCodeLine{00435\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00436\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer}{CallbackMaxSizeEnforcer}}\ \ :\ \textcolor{keyword}{public}\ AudioIODeviceCallback}
+\DoxyCodeLine{00437\ \ \ \ \ \{}
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad78735c75f16f446176f6e7075ed25c9}{CallbackMaxSizeEnforcer}}\ (AudioIODeviceCallback\&\ callbackIn)}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187}{inner}}\ (callbackIn)\ \{\}}
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_ad1161e08da5ee83e286d79fc10362672}{audioDeviceAboutToStart}}\ (AudioIODevice*\ device)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00443\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a4cb63ae7120bd4e40b417b2ee7129fc6}{maximumSize}}\ =\ device-\/>getCurrentBufferSizeSamples();}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}{storedInputChannels}}\ .resize\ ((\textcolor{keywordtype}{size\_t})\ device-\/>getActiveInputChannels()\ .countNumberOfSetBits());}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}{storedOutputChannels}}.resize\ ((\textcolor{keywordtype}{size\_t})\ device-\/>getActiveOutputChannels().countNumberOfSetBits());}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187}{inner}}.audioDeviceAboutToStart\ (device);}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_afb825eeecce1e838fbd5df389e5ab47d}{audioDeviceIOCallbackWithContext}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \textcolor{keyword}{const}*\ inputChannelData,}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numInputChannels,}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ \textcolor{keyword}{const}*\ outputChannelData,}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numOutputChannels,}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numSamples,}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ AudioIODeviceCallbackContext\&\ context)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00457\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ jassertquiet\ ((\textcolor{keywordtype}{int})\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}{storedInputChannels}}.size()\ \ ==\ numInputChannels);}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ jassertquiet\ ((\textcolor{keywordtype}{int})\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}{storedOutputChannels}}.size()\ ==\ numOutputChannels);}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ position\ =\ 0;}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (position\ <\ numSamples)}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ blockLength\ =\ jmin\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a4cb63ae7120bd4e40b417b2ee7129fc6}{maximumSize}},\ numSamples\ -\/\ position);}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a43bacc2f39171be44cda21a74ec1d2a6}{initChannelPointers}}\ (inputChannelData,\ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}{storedInputChannels}},\ \ position);}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a43bacc2f39171be44cda21a74ec1d2a6}{initChannelPointers}}\ (outputChannelData,\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}{storedOutputChannels}},\ position);}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187}{inner}}.audioDeviceIOCallbackWithContext\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}{storedInputChannels}}.data(),}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}{storedInputChannels}}.size(),}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}{storedOutputChannels}}.data(),}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}{storedOutputChannels}}.size(),}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blockLength,}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ context);}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position\ +=\ blockLength;}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a053feff9fb19696a14c260fb801ddf5c}{audioDeviceStopped}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00482\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187}{inner}}.audioDeviceStopped();}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_1_1_get_channel_with_offset}{GetChannelWithOffset}}}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_1_1_get_channel_with_offset_a2853ecd59a71415e8e752fc8ecbf8a60}{offset}};}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Ptr>}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_1_1_get_channel_with_offset_af3591e9e358192b99f2f9893d3b3a184}{operator()\ }}(Ptr\ ptr)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ -\/>\ Ptr\ \{\ \textcolor{keywordflow}{return}\ ptr\ +\ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_1_1_get_channel_with_offset_a2853ecd59a71415e8e752fc8ecbf8a60}{offset}};\ \}}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Ptr,\ \textcolor{keyword}{typename}\ Vector>}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a43bacc2f39171be44cda21a74ec1d2a6}{initChannelPointers}}\ (Ptr\&\&\ source,\ Vector\&\&\ target,\ \textcolor{keywordtype}{int}\ offset)}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ std::transform\ (source,\ source\ +\ target.size(),\ target.begin(),\ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_1_1_get_channel_with_offset}{GetChannelWithOffset}}\ \{\ offset\ \});}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ AudioIODeviceCallback\&\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a9dd0e66873e18b7275dd84fb52a00187}{inner}};}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a4cb63ae7120bd4e40b417b2ee7129fc6}{maximumSize}}\ =\ 0;}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ std::vector<const\ float*>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a63a92dcd6871e9ab6d3a23108e8f8f8c}{storedInputChannels}};}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ std::vector<float*>\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer_a2e0084dbc403075638fd8c7e1828a09b}{storedOutputChannels}};}
+\DoxyCodeLine{00505\ \ \ \ \ \};}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer}{CallbackMaxSizeEnforcer}}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_afc7560359e3f647244abce214e9892ce}{maxSizeEnforcer}}\ \{\ *\textcolor{keyword}{this}\ \};}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00510\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component}{SettingsComponent}}\ :\ \textcolor{keyword}{public}\ Component}
+\DoxyCodeLine{00511\ \ \ \ \ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_acbe1762205ad63e1735c84853652a83f}{SettingsComponent}}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{StandalonePluginHolder}}\&\ pluginHolder,}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AudioDeviceManager\&\ deviceManagerToUse,}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxAudioInputChannels,}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxAudioOutputChannels)}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a7124997045683a3f9b8be6073174e4d4}{owner}}\ (pluginHolder),}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}}\ (deviceManagerToUse,}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ maxAudioInputChannels,}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ maxAudioOutputChannels,}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true,}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (pluginHolder.\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}.get()\ !=\ nullptr\ \&\&\ pluginHolder.\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a6253af3a6f2cd3e90dc9f9524f99c192}{processor}}-\/>producesMidi()),}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true,\ false),}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a93f36dafba66ffcd650b2a1a978b5f86}{shouldMuteLabel}}\ \ (\textcolor{stringliteral}{"{}Feedback\ Loop:"{}},\ \textcolor{stringliteral}{"{}Feedback\ Loop:"{}}),}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_af657d27a10c1ae40338b1337170497df}{shouldMuteButton}}\ (\textcolor{stringliteral}{"{}Mute\ audio\ input"{}})}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ setOpaque\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_af657d27a10c1ae40338b1337170497df}{shouldMuteButton}}.setClickingTogglesState\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_af657d27a10c1ae40338b1337170497df}{shouldMuteButton}}.getToggleStateValue().referTo\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a7124997045683a3f9b8be6073174e4d4}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a232239642cfd40d1dd4b926caabdbd6a}{shouldMuteInput}});}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ addAndMakeVisible\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}});}
+\DoxyCodeLine{00533\ }
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a7124997045683a3f9b8be6073174e4d4}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aedd2c26c38d5c774ccb02bb7919d6dde}{getProcessorHasPotentialFeedbackLoop}}())}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addAndMakeVisible\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_af657d27a10c1ae40338b1337170497df}{shouldMuteButton}});}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addAndMakeVisible\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a93f36dafba66ffcd650b2a1a978b5f86}{shouldMuteLabel}});}
+\DoxyCodeLine{00538\ }
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a93f36dafba66ffcd650b2a1a978b5f86}{shouldMuteLabel}}.attachToComponent\ (\&\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_af657d27a10c1ae40338b1337170497df}{shouldMuteButton}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a480e4b8a78b59124322e4a76c4c7fe65}{paint}}\ (Graphics\&\ g)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00544\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \ \ \ \ g.fillAll\ (getLookAndFeel().findColour\ (ResizableWindow::backgroundColourId));}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a9232131edb294a9f47cd7c8959065856}{resized}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00549\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ ScopedValueSetter<bool>\ scope\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a21372c417b5e131eadc594a59195033a}{isResizing}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ r\ =\ getLocalBounds();}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a7124997045683a3f9b8be6073174e4d4}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aedd2c26c38d5c774ccb02bb7919d6dde}{getProcessorHasPotentialFeedbackLoop}}())}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ itemHeight\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}}.getItemHeight();}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ extra\ =\ r.removeFromTop\ (itemHeight);}
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ seperatorHeight\ =\ (itemHeight\ >>\ 1);}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_af657d27a10c1ae40338b1337170497df}{shouldMuteButton}}.setBounds\ (Rectangle<int>\ (extra.proportionOfWidth\ (0.35f),\ seperatorHeight,}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ extra.proportionOfWidth\ (0.60f),\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}}.getItemHeight()));}
+\DoxyCodeLine{00562\ }
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ r.removeFromTop\ (seperatorHeight);}
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}}.setBounds\ (r);}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00568\ }
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_adbad51ddd50325d500737eeebac4e010}{childBoundsChanged}}\ (Component*\ childComp)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00570\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a21372c417b5e131eadc594a59195033a}{isResizing}}\ \&\&\ childComp\ ==\ \&\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}})}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_acebf4c8bf20e13a1cffb24ad0329e79f}{setToRecommendedSize}}();}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00574\ }
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_acebf4c8bf20e13a1cffb24ad0329e79f}{setToRecommendedSize}}()}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ extraHeight\ =\ [\&]}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a7124997045683a3f9b8be6073174e4d4}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aedd2c26c38d5c774ccb02bb7919d6dde}{getProcessorHasPotentialFeedbackLoop}}())}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ itemHeight\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}}.getItemHeight();}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ separatorHeight\ =\ (itemHeight\ >>\ 1);}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ itemHeight\ +\ separatorHeight;}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \ \ \}();}
+\DoxyCodeLine{00586\ }
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \ \ \ \ setSize\ (getWidth(),\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}}.getHeight()\ +\ extraHeight);}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{StandalonePluginHolder}}\&\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a7124997045683a3f9b8be6073174e4d4}{owner}};}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ AudioDeviceSelectorComponent\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_ade3896f2a0b87200901ca9128dbb48ea}{deviceSelector}};}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ Label\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a93f36dafba66ffcd650b2a1a978b5f86}{shouldMuteLabel}};}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ ToggleButton\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_af657d27a10c1ae40338b1337170497df}{shouldMuteButton}};}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component_a21372c417b5e131eadc594a59195033a}{isResizing}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_1_1_settings_component}{SettingsComponent}})}
+\DoxyCodeLine{00600\ \ \ \ \ \};}
+\DoxyCodeLine{00601\ }
+\DoxyCodeLine{00602\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00603\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a75da9df65fdf4d050ac8aabe10a3019f}{audioDeviceIOCallbackWithContext}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \textcolor{keyword}{const}*\ inputChannelData,}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numInputChannels,}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ \textcolor{keyword}{const}*\ outputChannelData,}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numOutputChannels,}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numSamples,}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ AudioIODeviceCallbackContext\&\ context)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00609\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a191eeef936907b8eeb82c5a41af69f9e}{muteInput}})}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}{emptyBuffer}}.clear();}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ \ \ \ \ inputChannelData\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}{emptyBuffer}}.getArrayOfReadPointers();}
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00615\ }
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.audioDeviceIOCallbackWithContext\ (inputChannelData,}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numInputChannels,}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outputChannelData,}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numOutputChannels,}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numSamples,}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ context);}
+\DoxyCodeLine{00622\ \ \ \ \ \}}
+\DoxyCodeLine{00623\ }
+\DoxyCodeLine{00624\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a567258e942893295bf7ad454227be5cf}{audioDeviceAboutToStart}}\ (AudioIODevice*\ device)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00625\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}{emptyBuffer}}.setSize\ (device-\/>getActiveInputChannels().countNumberOfSetBits(),\ device-\/>getCurrentBufferSizeSamples());}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}{emptyBuffer}}.clear();}
+\DoxyCodeLine{00628\ }
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.audioDeviceAboutToStart\ (device);}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.setMidiOutput\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.getDefaultMidiOutput());}
+\DoxyCodeLine{00631\ \ \ \ \ \}}
+\DoxyCodeLine{00632\ }
+\DoxyCodeLine{00633\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae369629ab08b046000a64bfea367c32b}{audioDeviceStopped}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00634\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.setMidiOutput\ (\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}}.audioDeviceStopped();}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ae804b6fdbe36d8f89278ea43c638071e}{emptyBuffer}}.setSize\ (0,\ 0);}
+\DoxyCodeLine{00638\ \ \ \ \ \}}
+\DoxyCodeLine{00639\ }
+\DoxyCodeLine{00640\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00641\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_af3777d659c5d376f34d7028ab1768f59}{setupAudioDevices}}\ (\textcolor{keywordtype}{bool}\ enableAudioInput,}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ String\&\ preferredDefaultDeviceName,}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ AudioDeviceManager::AudioDeviceSetup*\ preferredSetupOptions)}
+\DoxyCodeLine{00644\ \ \ \ \ \{}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.addAudioCallback\ (\&\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_afc7560359e3f647244abce214e9892ce}{maxSizeEnforcer}});}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.addMidiInputDeviceCallback\ (\{\},\ \&\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}});}
+\DoxyCodeLine{00647\ }
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a69672ec60c6cb267cc6bdf149c356913}{reloadAudioDeviceState}}\ (enableAudioInput,\ preferredDefaultDeviceName,\ preferredSetupOptions);}
+\DoxyCodeLine{00649\ \ \ \ \ \}}
+\DoxyCodeLine{00650\ }
+\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_aa790078a4e166bc59c431f79d290d733}{shutDownAudioDevices}}()}
+\DoxyCodeLine{00652\ \ \ \ \ \{}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a15b1e3761176da1fd1c743a4f6b644d4}{saveAudioDeviceState}}();}
+\DoxyCodeLine{00654\ }
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.removeMidiInputDeviceCallback\ (\{\},\ \&\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a1dafbf8bcd91723b80719792bcd92bc3}{player}});}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.removeAudioCallback\ (\&\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_afc7560359e3f647244abce214e9892ce}{maxSizeEnforcer}});}
+\DoxyCodeLine{00657\ \ \ \ \ \}}
+\DoxyCodeLine{00658\ }
+\DoxyCodeLine{00659\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_abe272b8ab9dce61bf47be6f803094e73}{timerCallback}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00660\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ newMidiDevices\ =\ MidiInput::getAvailableDevices();}
+\DoxyCodeLine{00662\ }
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newMidiDevices\ !=\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747}{lastMidiDevices}})}
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ oldDevice\ :\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747}{lastMidiDevices}})}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ newMidiDevices.contains\ (oldDevice))}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.setMidiInputDeviceEnabled\ (oldDevice.identifier,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00668\ }
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ newDevice\ :\ newMidiDevices)}
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747}{lastMidiDevices}}.contains\ (newDevice))}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_a85ff39024a6f0686e939c7611799d9bc}{deviceManager}}.setMidiInputDeviceEnabled\ (newDevice.identifier,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00672\ }
+\DoxyCodeLine{00673\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_adadfcde66a960743114df3b02e341747}{lastMidiDevices}}\ =\ newMidiDevices;}
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00675\ \ \ \ \ \}}
+\DoxyCodeLine{00676\ }
+\DoxyCodeLine{00677\ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR\ (\mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{StandalonePluginHolder}})}
+\DoxyCodeLine{00678\ \};}
+\DoxyCodeLine{00679\ }
+\DoxyCodeLine{00680\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00690\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{StandaloneFilterWindow}}\ \ \ \ :\ \textcolor{keyword}{public}\ DocumentWindow,}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Button::Listener,}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MenuBarModel}
+\DoxyCodeLine{00693\ \{}
+\DoxyCodeLine{00694\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00695\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00696\ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs}{StandalonePluginHolder::PluginInOuts}}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a9a3669019210fd5d86ab142ce71c3047}{PluginInOuts}};}
+\DoxyCodeLine{00697\ }
+\DoxyCodeLine{00698\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00704\ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_aafff1d5c76b1b984a4c9f4ba5d3912e0}{StandaloneFilterWindow}}\ (\textcolor{keyword}{const}\ String\&\ title,}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Colour\ backgroundColour,}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PropertySet*\ settingsToUse,}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ takeOwnershipOfSettings,}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ String\&\ preferredDefaultDeviceName\ =\ String(),}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ AudioDeviceManager::AudioDeviceSetup*\ preferredSetupOptions\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Array<PluginInOuts>\&\ constrainToConfiguration\ =\ \{\},}
+\DoxyCodeLine{00711\ \textcolor{preprocessor}{\#if\ JUCE\_ANDROID\ ||\ JUCE\_IOS}}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ autoOpenMidiDevices\ =\ \textcolor{keyword}{true}}
+\DoxyCodeLine{00713\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ autoOpenMidiDevices\ =\ \textcolor{keyword}{true}}
+\DoxyCodeLine{00715\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00716\ \ \ \ \ )}
+\DoxyCodeLine{00717\ \#\textcolor{keywordflow}{if}\ JUCE\_MAC}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ :\ DocumentWindow(\textcolor{stringliteral}{"{}"{}},\ backgroundColour,\ DocumentWindow::minimiseButton\ |\ DocumentWindow::closeButton),}
+\DoxyCodeLine{00719\ \#endif}
+\DoxyCodeLine{00720\ }
+\DoxyCodeLine{00721\ \#if\ !\ JUCE\_MAC}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ :\ DocumentWindow(title,\ \mbox{\hyperlink{namespacejuce}{juce}}::Colours::black,\ DocumentWindow::minimiseButton\ |\ DocumentWindow::closeButton),}
+\DoxyCodeLine{00723\ \#endif}
+\DoxyCodeLine{00724\ }
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a1fe1e2a483fb5ecedea9b6bf1bcd4ed0}{menuBar}}(this)}
+\DoxyCodeLine{00726\ \#if\ !\ JUCE\_MAC}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}{optionsButton}}(\textcolor{stringliteral}{"{}Settings"{}})}
+\DoxyCodeLine{00728\ \#endif}
+\DoxyCodeLine{00729\ \ \ \ \ \{}
+\DoxyCodeLine{00730\ \textcolor{preprocessor}{\#if\ JUCE\_IOS\ ||\ JUCE\_ANDROID}}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ setTitleBarHeight(0);}
+\DoxyCodeLine{00732\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00733\ }
+\DoxyCodeLine{00734\ \ \ \ \ \ \ \ \ LookAndFeel\_V4*\ lfv4\ =\ \textcolor{keyword}{dynamic\_cast<}LookAndFeel\_V4*\textcolor{keyword}{>}(\&getLookAndFeel());}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lfv4)\ \{}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ \ \ \ \ lfv4-\/>getCurrentColourScheme().setUIColour(LookAndFeel\_V4::ColourScheme::widgetBackground,\ Colour::fromHSV(0.0f,\ 0.0f,\ 0.1f,\ 1.0f));}
+\DoxyCodeLine{00737\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00738\ }
+\DoxyCodeLine{00739\ \ \ \ \ \ \ \ \ setTitleBarButtonsRequired(DocumentWindow::minimiseButton\ |\ DocumentWindow::closeButton,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00740\ }
+\DoxyCodeLine{00741\ \textcolor{preprocessor}{\#if\ JUCE\_MAC}}
+\DoxyCodeLine{00742\ \ \ \ \ \ \ \ \ setUsingNativeTitleBar(\textcolor{keyword}{true});}
+\DoxyCodeLine{00743\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ad7cc7e673e3021e5f501589e0c541c1c}{menu}}.addItem(1,\ TRANS(\textcolor{stringliteral}{"{}Audio/MIDI\ Settings..."{}}));}
+\DoxyCodeLine{00744\ \ \ \ \ \ \ \ \ MenuBarModel::setMacMainMenu(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ad7cc7e673e3021e5f501589e0c541c1c}{menu}});}
+\DoxyCodeLine{00745\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ \ \ Component::addAndMakeVisible(\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}{optionsButton}});}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}{optionsButton}}.addListener(\textcolor{keyword}{this});}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}{optionsButton}}.setTriggeredOnMouseDown(\textcolor{keyword}{true});}
+\DoxyCodeLine{00749\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00750\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}.reset\ (\textcolor{keyword}{new}\ StandalonePluginHolder\ (settingsToUse,\ takeOwnershipOfSettings,}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ preferredDefaultDeviceName,\ preferredSetupOptions,}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constrainToConfiguration,\ autoOpenMidiDevices));}
+\DoxyCodeLine{00754\ }
+\DoxyCodeLine{00755\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#if\ JUCE\_IOS\ ||\ JUCE\_ANDROID}}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \ \ setFullScreen\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b}{updateContent}}();}
+\DoxyCodeLine{00758\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b}{updateContent}}();}
+\DoxyCodeLine{00760\ }
+\DoxyCodeLine{00761\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ windowScreenBounds\ =\ [\textcolor{keyword}{this}]()\ -\/>\ Rectangle<int>}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00763\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ width\ =\ getWidth();}
+\DoxyCodeLine{00764\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ height\ =\ getHeight();}
+\DoxyCodeLine{00765\ }
+\DoxyCodeLine{00766\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ displays\ =\ Desktop::getInstance().getDisplays();}
+\DoxyCodeLine{00767\ }
+\DoxyCodeLine{00768\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ props\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>settings.get())}
+\DoxyCodeLine{00769\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00770\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ defaultValue\ =\ -\/100;}
+\DoxyCodeLine{00771\ }
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ x\ =\ props-\/>getIntValue\ (\textcolor{stringliteral}{"{}windowX"{}},\ defaultValue);}
+\DoxyCodeLine{00773\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ y\ =\ props-\/>getIntValue\ (\textcolor{stringliteral}{"{}windowY"{}},\ defaultValue);}
+\DoxyCodeLine{00774\ }
+\DoxyCodeLine{00775\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ !=\ defaultValue\ \&\&\ y\ !=\ defaultValue)}
+\DoxyCodeLine{00776\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00777\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ screenLimits\ =\ displays.getDisplayForRect\ (\{\ x,\ y,\ width,\ height\ \})-\/>userArea;}
+\DoxyCodeLine{00778\ }
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ jlimit\ (screenLimits.getX(),\ jmax\ (screenLimits.getX(),\ screenLimits.getRight()\ \ -\/\ width),\ \ x),}
+\DoxyCodeLine{00780\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ jlimit\ (screenLimits.getY(),\ jmax\ (screenLimits.getY(),\ screenLimits.getBottom()\ -\/\ height),\ y),}
+\DoxyCodeLine{00781\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ width,\ height\ \};}
+\DoxyCodeLine{00782\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00783\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00784\ }
+\DoxyCodeLine{00785\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ displayArea\ =\ displays.getPrimaryDisplay()-\/>userArea;}
+\DoxyCodeLine{00786\ }
+\DoxyCodeLine{00787\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ displayArea.getCentreX()\ -\/\ width\ /\ 2,}
+\DoxyCodeLine{00788\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayArea.getCentreY()\ -\/\ height\ /\ 2,}
+\DoxyCodeLine{00789\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ width,\ height\ \};}
+\DoxyCodeLine{00790\ \ \ \ \ \ \ \ \ \}();}
+\DoxyCodeLine{00791\ }
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ setBoundsConstrained\ (windowScreenBounds);}
+\DoxyCodeLine{00793\ }
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ processor\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7}{getAudioProcessor}}())}
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ editor\ =\ processor-\/>getActiveEditor())}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setResizable\ (editor-\/>isResizable(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00797\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00798\ \ \ \ \ \}}
+\DoxyCodeLine{00799\ }
+\DoxyCodeLine{00800\ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a758f9c87895f4985cf87831188a53800}{\string~StandaloneFilterWindow}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00801\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00802\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ JUCE\_MAC}}
+\DoxyCodeLine{00803\ \ \ \ \ \ \ \ \ \ \ \ \ MenuBarModel::setMacMainMenu(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00804\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00805\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#if\ (!\ JUCE\_IOS)\ \&\&\ (!\ JUCE\_ANDROID)}}
+\DoxyCodeLine{00806\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ props\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>settings.get())}
+\DoxyCodeLine{00807\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00808\ \ \ \ \ \ \ \ \ \ \ \ \ props-\/>setValue\ (\textcolor{stringliteral}{"{}windowX"{}},\ getX());}
+\DoxyCodeLine{00809\ \ \ \ \ \ \ \ \ \ \ \ \ props-\/>setValue\ (\textcolor{stringliteral}{"{}windowY"{}},\ getY());}
+\DoxyCodeLine{00810\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00811\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00812\ }
+\DoxyCodeLine{00813\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>stopPlaying();}
+\DoxyCodeLine{00814\ \ \ \ \ \ \ \ \ clearContentComponent();}
+\DoxyCodeLine{00815\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00816\ \ \ \ \ \}}
+\DoxyCodeLine{00817\ }
+\DoxyCodeLine{00818\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00819\ \ \ \ \ AudioProcessor*\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7}{getAudioProcessor}}()\ const\ noexcept\ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>processor.get();\ \}}
+\DoxyCodeLine{00820\ \ \ \ \ AudioDeviceManager\&\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a1771b810390219bbddcfa76a2ef4ed02}{getDeviceManager}}()\ const\ noexcept\ \ \ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>deviceManager;\ \}}
+\DoxyCodeLine{00821\ }
+\DoxyCodeLine{00823\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a723ad1efa22bf8bbe4c2204fd5313147}{resetToDefaultState}}()}
+\DoxyCodeLine{00824\ \ \ \ \ \{}
+\DoxyCodeLine{00825\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>stopPlaying();}
+\DoxyCodeLine{00826\ \ \ \ \ \ \ \ \ clearContentComponent();}
+\DoxyCodeLine{00827\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>deletePlugin();}
+\DoxyCodeLine{00828\ }
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ props\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>settings.get())}
+\DoxyCodeLine{00830\ \ \ \ \ \ \ \ \ \ \ \ \ props-\/>removeValue\ (\textcolor{stringliteral}{"{}filterState"{}});}
+\DoxyCodeLine{00831\ }
+\DoxyCodeLine{00832\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>createPlugin();}
+\DoxyCodeLine{00833\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b}{updateContent}}();}
+\DoxyCodeLine{00834\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>startPlaying();}
+\DoxyCodeLine{00835\ \ \ \ \ \}}
+\DoxyCodeLine{00836\ }
+\DoxyCodeLine{00837\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00838\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a6f4787cebfeef150bfd78c1f870a4295}{closeButtonPressed}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00839\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00840\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>savePluginState();}
+\DoxyCodeLine{00841\ }
+\DoxyCodeLine{00842\ \ \ \ \ \ \ \ \ JUCEApplicationBase::quit();}
+\DoxyCodeLine{00843\ \ \ \ \ \}}
+\DoxyCodeLine{00844\ \ \ \ \ }
+\DoxyCodeLine{00845\ \ \ \ \ StringArray\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a154b7e5ec28511d23f0e697ae39c2693}{getMenuBarNames}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00846\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00847\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ menuNames[]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00848\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StringArray(menuNames);}
+\DoxyCodeLine{00849\ \ \ \ \ \}}
+\DoxyCodeLine{00850\ \ \ \ \ PopupMenu\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a936e646e0df8512716a1726cbc849d8e}{getMenuForIndex}}(\textcolor{keywordtype}{int}\ topLevelMenuIndex,\ \textcolor{keyword}{const}\ String\&\ menuName)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00851\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00852\ \ \ \ \ \ \ \ \ PopupMenu\ m;}
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m;}
+\DoxyCodeLine{00854\ \ \ \ \ \}}
+\DoxyCodeLine{00855\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab59c9627ccc97ea623c6e3e8d3e11dae}{menuItemSelected}}(\textcolor{keywordtype}{int}\ menuItemID,\ \textcolor{keywordtype}{int}\ topLevelMenuIndex)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00856\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00857\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a5bd5ceb67858726cda211e20b009fa2a}{handleMenuResult}}(menuItemID);}
+\DoxyCodeLine{00858\ \ \ \ \ \}}
+\DoxyCodeLine{00859\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a5aba43a9369d5fc4c4e426ee605b1d8e}{menuBarActivated}}(\textcolor{keywordtype}{bool}\ isActive)\textcolor{keyword}{\ override\ }\{\};}
+\DoxyCodeLine{00860\ }
+\DoxyCodeLine{00861\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a5bd5ceb67858726cda211e20b009fa2a}{handleMenuResult}}\ (\textcolor{keywordtype}{int}\ result)}
+\DoxyCodeLine{00862\ \ \ \ \ \{}
+\DoxyCodeLine{00863\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (result)}
+\DoxyCodeLine{00864\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>showAudioSettingsDialog();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00866\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>askUserToSaveState();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00867\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>askUserToLoadState();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00868\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a723ad1efa22bf8bbe4c2204fd5313147}{resetToDefaultState}}();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00869\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00870\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00871\ \ \ \ \ \}}
+\DoxyCodeLine{00872\ }
+\DoxyCodeLine{00873\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a9d6ab9d3e0a3a77461ccd3cc965b2bb5}{menuCallback}}\ (\textcolor{keywordtype}{int}\ result,\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{StandaloneFilterWindow}}*\ button)}
+\DoxyCodeLine{00874\ \ \ \ \ \{}
+\DoxyCodeLine{00875\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (button\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ result\ !=\ 0)}
+\DoxyCodeLine{00876\ \ \ \ \ \ \ \ \ \ \ \ \ button-\/>\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a5bd5ceb67858726cda211e20b009fa2a}{handleMenuResult}}\ (result);}
+\DoxyCodeLine{00877\ \ \ \ \ \}}
+\DoxyCodeLine{00878\ }
+\DoxyCodeLine{00879\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a53b844013f29be730127b58f5d37f3eb}{resized}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00880\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00881\ \ \ \ \ \ \ \ \ DocumentWindow::resized();}
+\DoxyCodeLine{00882\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}{optionsButton}}.setBounds\ (8,\ 6,\ 60,\ getTitleBarHeight()\ -\/\ 8);}
+\DoxyCodeLine{00883\ \ \ \ \ \}}
+\DoxyCodeLine{00884\ }
+\DoxyCodeLine{00885\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{StandalonePluginHolder}}*\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_aa2d1b7b78992b46e8469cea5e4f1ae21}{getPluginHolder}}()\ \ \ \ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}.get();\ \}}
+\DoxyCodeLine{00886\ }
+\DoxyCodeLine{00887\ \ \ \ \ std::unique\_ptr<StandalonePluginHolder>\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}};}
+\DoxyCodeLine{00888\ \ \ \ \ MenuBarComponent\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a1fe1e2a483fb5ecedea9b6bf1bcd4ed0}{menuBar}};}
+\DoxyCodeLine{00889\ \ \ \ \ PopupMenu\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ad7cc7e673e3021e5f501589e0c541c1c}{menu}};}
+\DoxyCodeLine{00890\ }
+\DoxyCodeLine{00891\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00892\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a26d7dc51731d204aecfb0e3d8301263b}{updateContent}}()}
+\DoxyCodeLine{00893\ \ \ \ \ \{}
+\DoxyCodeLine{00894\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}*\ content\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component}{MainContentComponent}}\ (*\textcolor{keyword}{this});}
+\DoxyCodeLine{00895\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a55ec4e0944c13ae0196ed4d59b2f0042}{decoratorConstrainer}}.\mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_a56d2d3d1ee2927853c7d018d232f869b}{setMainContentComponent}}\ (content);}
+\DoxyCodeLine{00896\ }
+\DoxyCodeLine{00897\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#if\ JUCE\_IOS\ ||\ JUCE\_ANDROID}}
+\DoxyCodeLine{00898\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ resizeAutomatically\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00899\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{00900\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ resizeAutomatically\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00901\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00902\ }
+\DoxyCodeLine{00903\ \ \ \ \ \ \ \ \ setContentOwned\ (content,\ resizeAutomatically);}
+\DoxyCodeLine{00904\ \ \ \ \ \}}
+\DoxyCodeLine{00905\ }
+\DoxyCodeLine{00906\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ac0480fb9b100c8d9603b5b47e184c8b8}{buttonClicked}}\ (Button*)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00907\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00908\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>showAudioSettingsDialog();}
+\DoxyCodeLine{00909\ \ \ \ \ \}}
+\DoxyCodeLine{00910\ }
+\DoxyCodeLine{00911\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00912\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component}{MainContentComponent}}\ \ :\ \textcolor{keyword}{public}\ Component,}
+\DoxyCodeLine{00913\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Value::Listener,}
+\DoxyCodeLine{00914\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Button::Listener,}
+\DoxyCodeLine{00915\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ComponentListener}
+\DoxyCodeLine{00916\ \ \ \ \ \{}
+\DoxyCodeLine{00917\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00918\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a8fe61e58c9761e8d8f941f54c872197a}{MainContentComponent}}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{StandaloneFilterWindow}}\&\ filterWindow)}
+\DoxyCodeLine{00919\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}\ (filterWindow),\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a77eafe1bc0bd7a82685caff8b4ba3f0b}{notification}}\ (this),}
+\DoxyCodeLine{00920\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7}{getAudioProcessor}}()-\/>hasEditor()\ ?\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7}{getAudioProcessor}}()-\/>createEditorIfNeeded()}
+\DoxyCodeLine{00921\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ new\ GenericAudioProcessorEditor\ (*\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a0d1dbc5b20058f20d1899ba717942ae7}{getAudioProcessor}}()))}
+\DoxyCodeLine{00922\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00923\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a775ad442bb5b8ec48dc47155eacb32ba}{inputMutedValue}}.referTo\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>getMuteInputValue());}
+\DoxyCodeLine{00924\ }
+\DoxyCodeLine{00925\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00926\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00927\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}-\/>addComponentListener\ (\textcolor{keyword}{this});}
+\DoxyCodeLine{00928\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_afa382f41115d59cb7bef9bef6c9d8165}{componentMovedOrResized}}\ (*\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}},\ \textcolor{keyword}{false},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00929\ }
+\DoxyCodeLine{00930\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addAndMakeVisible\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}.get());}
+\DoxyCodeLine{00931\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00932\ }
+\DoxyCodeLine{00933\ \ \ \ \ \ \ \ \ \ \ \ \ addChildComponent\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a77eafe1bc0bd7a82685caff8b4ba3f0b}{notification}});}
+\DoxyCodeLine{00934\ }
+\DoxyCodeLine{00935\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>getProcessorHasPotentialFeedbackLoop())}
+\DoxyCodeLine{00936\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00937\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a775ad442bb5b8ec48dc47155eacb32ba}{inputMutedValue}}.addListener\ (\textcolor{keyword}{this});}
+\DoxyCodeLine{00938\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}}\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a775ad442bb5b8ec48dc47155eacb32ba}{inputMutedValue}}.getValue();}
+\DoxyCodeLine{00939\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00940\ }
+\DoxyCodeLine{00941\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a36d07aa23be8cf5fa41391bea4a246c4}{inputMutedChanged}}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}});}
+\DoxyCodeLine{00942\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00943\ }
+\DoxyCodeLine{00944\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_aa3a2528ce0ba5136299ce760800ad3c0}{\string~MainContentComponent}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00945\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00946\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00947\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00948\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}-\/>removeComponentListener\ (\textcolor{keyword}{this});}
+\DoxyCodeLine{00949\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>processor-\/>editorBeingDeleted\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}.get());}
+\DoxyCodeLine{00950\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00951\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00952\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00953\ }
+\DoxyCodeLine{00954\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a0803264e2b28f76f3981154a96d11e03}{resized}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00955\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00956\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ r\ =\ getLocalBounds();}
+\DoxyCodeLine{00957\ }
+\DoxyCodeLine{00958\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}})}
+\DoxyCodeLine{00959\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a77eafe1bc0bd7a82685caff8b4ba3f0b}{notification}}.setBounds\ (r.removeFromTop\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_af27d2bcbaf6a03413da9d791047740cbac198e2109a7f1c87c5f04c13fc2ad213}{NotificationArea::height}}));}
+\DoxyCodeLine{00960\ }
+\DoxyCodeLine{00961\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00962\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00963\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ newPos\ =\ r.getTopLeft().toFloat().transformedBy\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}-\/>getTransform().inverted());}
+\DoxyCodeLine{00964\ }
+\DoxyCodeLine{00965\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a9259a85da31b1ca14344b930e36833bf}{preventResizingEditor}})}
+\DoxyCodeLine{00966\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}-\/>setTopLeftPosition\ (newPos.roundToInt());}
+\DoxyCodeLine{00967\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00968\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}-\/>setBoundsConstrained\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}-\/>getLocalArea\ (\textcolor{keyword}{this},\ r.toFloat()).withPosition\ (newPos).toNearestInt());}
+\DoxyCodeLine{00969\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00970\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00971\ }
+\DoxyCodeLine{00972\ \ \ \ \ \ \ \ \ ComponentBoundsConstrainer*\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_aafa7a08abbc3850b7ac429a4017257a0}{getEditorConstrainer}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00973\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00974\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ e\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}.get())}
+\DoxyCodeLine{00975\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ e-\/>getConstrainer();}
+\DoxyCodeLine{00976\ }
+\DoxyCodeLine{00977\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00978\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00979\ }
+\DoxyCodeLine{00980\ \ \ \ \ \ \ \ \ BorderSize<int>\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_aa09220b14d4b9557dd91e7868334ef12}{computeBorder}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00981\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00982\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ nativeFrame\ =\ [\&]()\ -\/>\ BorderSize<int>}
+\DoxyCodeLine{00983\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00984\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}*\ peer\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.getPeer())}
+\DoxyCodeLine{00985\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ frameSize\ =\ peer-\/>getFrameSizeIfPresent())}
+\DoxyCodeLine{00986\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *frameSize;}
+\DoxyCodeLine{00987\ }
+\DoxyCodeLine{00988\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00989\ \ \ \ \ \ \ \ \ \ \ \ \ \}();}
+\DoxyCodeLine{00990\ }
+\DoxyCodeLine{00991\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ nativeFrame.addedTo\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.getContentComponentBorder())}
+\DoxyCodeLine{00992\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addedTo\ (BorderSize<int>\ \{\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}}\ ?\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_af27d2bcbaf6a03413da9d791047740cbac198e2109a7f1c87c5f04c13fc2ad213}{NotificationArea::height}}\ :\ 0,\ 0,\ 0,\ 0\ \});}
+\DoxyCodeLine{00993\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00994\ }
+\DoxyCodeLine{00995\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00996\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00997\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area}{NotificationArea}}\ :\ \textcolor{keyword}{public}\ Component}
+\DoxyCodeLine{00998\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00999\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{01000\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \{\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_af27d2bcbaf6a03413da9d791047740cbac198e2109a7f1c87c5f04c13fc2ad213}{height}}\ =\ 30\ \};}
+\DoxyCodeLine{01001\ }
+\DoxyCodeLine{01002\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a74dad3cea15d26cbfb0f91f767cf9103}{NotificationArea}}\ (Button::Listener*\ settingsButtonListener)}
+\DoxyCodeLine{01003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a62a68d775c153b50c1e6a601afc847a6}{notification}}\ (\textcolor{stringliteral}{"{}notification"{}},\ \textcolor{stringliteral}{"{}Audio\ input\ is\ muted\ to\ avoid\ feedback\ loop"{}}),}
+\DoxyCodeLine{01004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#if\ JUCE\_IOS\ ||\ JUCE\_ANDROID}
+\DoxyCodeLine{01005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a6c41a18f8786e29ce1559446484bcf7a}{settingsButton}}\ (\textcolor{stringliteral}{"{}Unmute\ Input"{}})}
+\DoxyCodeLine{01006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#else}
+\DoxyCodeLine{01007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a6c41a18f8786e29ce1559446484bcf7a}{settingsButton}}\ (\textcolor{stringliteral}{"{}Settings..."{}})}
+\DoxyCodeLine{01008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif}
+\DoxyCodeLine{01009\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setOpaque\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{01011\ }
+\DoxyCodeLine{01012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a62a68d775c153b50c1e6a601afc847a6}{notification}}.setColour\ (Label::textColourId,\ Colours::black);}
+\DoxyCodeLine{01013\ }
+\DoxyCodeLine{01014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a6c41a18f8786e29ce1559446484bcf7a}{settingsButton}}.addListener\ (settingsButtonListener);}
+\DoxyCodeLine{01015\ }
+\DoxyCodeLine{01016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addAndMakeVisible\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a62a68d775c153b50c1e6a601afc847a6}{notification}});}
+\DoxyCodeLine{01017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addAndMakeVisible\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a6c41a18f8786e29ce1559446484bcf7a}{settingsButton}});}
+\DoxyCodeLine{01018\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01019\ }
+\DoxyCodeLine{01020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_ad1cf4dfc28de27ce23cd5049b0395db8}{paint}}\ (Graphics\&\ g)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{01021\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{01022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ r\ =\ getLocalBounds();}
+\DoxyCodeLine{01023\ }
+\DoxyCodeLine{01024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g.setColour\ (Colours::darkgoldenrod);}
+\DoxyCodeLine{01025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g.fillRect\ (r.removeFromBottom\ (1));}
+\DoxyCodeLine{01026\ }
+\DoxyCodeLine{01027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g.setColour\ (Colours::lightgoldenrodyellow);}
+\DoxyCodeLine{01028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g.fillRect\ (r);}
+\DoxyCodeLine{01029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01030\ }
+\DoxyCodeLine{01031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a6469da8831d8aeec6e57003e7ebb4b12}{resized}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{01032\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{01033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ r\ =\ getLocalBounds().reduced\ (5);}
+\DoxyCodeLine{01034\ }
+\DoxyCodeLine{01035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a6c41a18f8786e29ce1559446484bcf7a}{settingsButton}}.setBounds\ (r.removeFromRight\ (70));}
+\DoxyCodeLine{01036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a62a68d775c153b50c1e6a601afc847a6}{notification}}.setBounds\ (r);}
+\DoxyCodeLine{01037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{01039\ \ \ \ \ \ \ \ \ \ \ \ \ Label\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a62a68d775c153b50c1e6a601afc847a6}{notification}};}
+\DoxyCodeLine{01040\ \ \ \ \ \ \ \ \ \ \ \ \ TextButton\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_a6c41a18f8786e29ce1559446484bcf7a}{settingsButton}};}
+\DoxyCodeLine{01041\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{01042\ }
+\DoxyCodeLine{01043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{01044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a36d07aa23be8cf5fa41391bea4a246c4}{inputMutedChanged}}\ (\textcolor{keywordtype}{bool}\ newInputMutedValue)}
+\DoxyCodeLine{01045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}}\ =\ newInputMutedValue;}
+\DoxyCodeLine{01047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a77eafe1bc0bd7a82685caff8b4ba3f0b}{notification}}.setVisible\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}});}
+\DoxyCodeLine{01048\ }
+\DoxyCodeLine{01049\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#if\ JUCE\_IOS\ ||\ JUCE\_ANDROID}}
+\DoxyCodeLine{01050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a0803264e2b28f76f3981154a96d11e03}{resized}}();}
+\DoxyCodeLine{01051\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{01052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{01053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ extraHeight\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}}\ ?\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_af27d2bcbaf6a03413da9d791047740cbac198e2109a7f1c87c5f04c13fc2ad213}{NotificationArea::height}}\ :\ 0;}
+\DoxyCodeLine{01055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ rect\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a618ce5f6b1992ee1b492bab0c00ed020}{getSizeToContainEditor}}();}
+\DoxyCodeLine{01056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setSize\ (rect.getWidth(),\ rect.getHeight()\ +\ extraHeight);}
+\DoxyCodeLine{01057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01058\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{01059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01060\ }
+\DoxyCodeLine{01061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a4b27119ec732f89c530ffdb3e1587e6b}{valueChanged}}\ (Value\&\ value)\textcolor{keyword}{\ override\ \ \ \ \ }\{\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a36d07aa23be8cf5fa41391bea4a246c4}{inputMutedChanged}}\ (value.getValue());\ \}}
+\DoxyCodeLine{01062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a721cc2de9f7c0beef1b2f44ef5d30dc0}{buttonClicked}}\ (Button*)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{01063\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{01064\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#if\ JUCE\_IOS\ ||\ JUCE\_ANDROID}}
+\DoxyCodeLine{01065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>getMuteInputValue().setValue\ (\textcolor{keyword}{false});}
+\DoxyCodeLine{01066\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{01067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}}.\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a654c7d962a6f5cc116cead41cdd5a4ef}{pluginHolder}}-\/>showAudioSettingsDialog();}
+\DoxyCodeLine{01068\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{01069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01070\ }
+\DoxyCodeLine{01071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{01072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_afa382f41115d59cb7bef9bef6c9d8165}{componentMovedOrResized}}\ (Component\&,\ \textcolor{keywordtype}{bool},\ \textcolor{keywordtype}{bool})\textcolor{keyword}{\ override}}
+\DoxyCodeLine{01073\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{01074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ ScopedValueSetter<bool>\ scope\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a9259a85da31b1ca14344b930e36833bf}{preventResizingEditor}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{01075\ }
+\DoxyCodeLine{01076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{01077\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ rect\ =\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a618ce5f6b1992ee1b492bab0c00ed020}{getSizeToContainEditor}}();}
+\DoxyCodeLine{01079\ }
+\DoxyCodeLine{01080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setSize\ (rect.getWidth(),}
+\DoxyCodeLine{01081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rect.getHeight()\ +\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}}\ ?\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area_af27d2bcbaf6a03413da9d791047740cbac198e2109a7f1c87c5f04c13fc2ad213}{NotificationArea::height}}\ :\ 0));}
+\DoxyCodeLine{01082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01084\ }
+\DoxyCodeLine{01085\ \ \ \ \ \ \ \ \ Rectangle<int>\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a618ce5f6b1992ee1b492bab0c00ed020}{getSizeToContainEditor}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{01086\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{01087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{01088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ getLocalArea\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}.get(),\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}}-\/>getLocalBounds());}
+\DoxyCodeLine{01089\ }
+\DoxyCodeLine{01090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{01091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01092\ }
+\DoxyCodeLine{01093\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{01094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{StandaloneFilterWindow}}\&\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a93d038b4f37df3e8568c529b0846ea2d}{owner}};}
+\DoxyCodeLine{01095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area}{NotificationArea}}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a77eafe1bc0bd7a82685caff8b4ba3f0b}{notification}};}
+\DoxyCodeLine{01096\ \ \ \ \ \ \ \ \ std::unique\_ptr<AudioProcessorEditor>\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_ae74b8eea7d503cb6b32ce4b400c7ce33}{editor}};}
+\DoxyCodeLine{01097\ \ \ \ \ \ \ \ \ Value\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a775ad442bb5b8ec48dc47155eacb32ba}{inputMutedValue}};}
+\DoxyCodeLine{01098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a941c88a3846c5dcde07b7364d85535c5}{shouldShowNotification}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_a9259a85da31b1ca14344b930e36833bf}{preventResizingEditor}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01100\ }
+\DoxyCodeLine{01101\ \ \ \ \ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component}{MainContentComponent}})}
+\DoxyCodeLine{01102\ \ \ \ \ \};}
+\DoxyCodeLine{01103\ }
+\DoxyCodeLine{01104\ \ \ \ \ \textcolor{comment}{/*\ \ This\ custom\ constrainer\ checks\ with\ the\ AudioProcessorEditor\ (which\ might\ itself\ be}}
+\DoxyCodeLine{01105\ \textcolor{comment}{\ \ \ \ \ \ \ \ constrained)\ to\ ensure\ that\ any\ size\ we\ choose\ for\ the\ standalone\ window\ will\ be\ suitable}}
+\DoxyCodeLine{01106\ \textcolor{comment}{\ \ \ \ \ \ \ \ for\ the\ editor\ too.}}
+\DoxyCodeLine{01107\ \textcolor{comment}{}}
+\DoxyCodeLine{01108\ \textcolor{comment}{\ \ \ \ \ \ \ \ Without\ this\ constrainer,\ attempting\ to\ resize\ the\ standalone\ window\ may\ set\ bounds\ on\ the}}
+\DoxyCodeLine{01109\ \textcolor{comment}{\ \ \ \ \ \ \ \ peer\ that\ are\ unsupported\ by\ the\ inner\ editor.\ In\ this\ scenario,\ the\ peer\ will\ be\ set\ to\ a}}
+\DoxyCodeLine{01110\ \textcolor{comment}{\ \ \ \ \ \ \ \ 'bad'\ size,\ then\ the\ inner\ editor\ will\ be\ resized.\ The\ editor\ will\ check\ the\ new\ bounds\ with}}
+\DoxyCodeLine{01111\ \textcolor{comment}{\ \ \ \ \ \ \ \ its\ own\ constrainer,\ and\ may\ set\ itself\ to\ a\ more\ suitable\ size.\ After\ that,\ the\ resizable}}
+\DoxyCodeLine{01112\ \textcolor{comment}{\ \ \ \ \ \ \ \ window\ will\ see\ that\ its\ content\ component\ has\ changed\ size,\ and\ set\ the\ bounds\ of\ the\ peer}}
+\DoxyCodeLine{01113\ \textcolor{comment}{\ \ \ \ \ \ \ \ accordingly.\ The\ end\ result\ is\ that\ the\ peer\ is\ resized\ twice\ in\ a\ row\ to\ different\ sizes,}}
+\DoxyCodeLine{01114\ \textcolor{comment}{\ \ \ \ \ \ \ \ which\ can\ appear\ glitchy/flickery\ to\ the\ user.}}
+\DoxyCodeLine{01115\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{01116\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer}{DecoratorConstrainer}}\ :\ \textcolor{keyword}{public}\ ComponentBoundsConstrainer}
+\DoxyCodeLine{01117\ \ \ \ \ \{}
+\DoxyCodeLine{01118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_ac939445ad8655239e20b3118c6be415a}{checkBounds}}\ (Rectangle<int>\&\ bounds,}
+\DoxyCodeLine{01119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Rectangle<int>\&\ previousBounds,}
+\DoxyCodeLine{01120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Rectangle<int>\&\ limits,}
+\DoxyCodeLine{01121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isStretchingTop,}
+\DoxyCodeLine{01122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isStretchingLeft,}
+\DoxyCodeLine{01123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isStretchingBottom,}
+\DoxyCodeLine{01124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isStretchingRight)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{01125\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{01126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}*\ decorated\ =\ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_a53589b6dcd6d2d422c7b105ec26142d0}{contentComponent}}\ !=\ \textcolor{keyword}{nullptr}\ ?\ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_a53589b6dcd6d2d422c7b105ec26142d0}{contentComponent}}-\/>\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_aafa7a08abbc3850b7ac429a4017257a0}{getEditorConstrainer}}()}
+\DoxyCodeLine{01127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{01128\ }
+\DoxyCodeLine{01129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (decorated\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{01130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ border\ =\ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_a53589b6dcd6d2d422c7b105ec26142d0}{contentComponent}}-\/>\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component_aa09220b14d4b9557dd91e7868334ef12}{computeBorder}}();}
+\DoxyCodeLine{01132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ requestedBounds\ =\ bounds;}
+\DoxyCodeLine{01133\ }
+\DoxyCodeLine{01134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border.subtractFrom\ (bounds);}
+\DoxyCodeLine{01135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ decorated-\/>checkBounds\ (bounds,}
+\DoxyCodeLine{01136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border.subtractedFrom\ (previousBounds),}
+\DoxyCodeLine{01137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ limits,}
+\DoxyCodeLine{01138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingTop,}
+\DoxyCodeLine{01139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingLeft,}
+\DoxyCodeLine{01140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingBottom,}
+\DoxyCodeLine{01141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingRight);}
+\DoxyCodeLine{01142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border.addTo\ (bounds);}
+\DoxyCodeLine{01143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounds\ =\ bounds.withPosition\ (requestedBounds.getPosition());}
+\DoxyCodeLine{01144\ }
+\DoxyCodeLine{01145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isStretchingTop\ \&\&\ !\ isStretchingBottom)}
+\DoxyCodeLine{01146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounds\ =\ bounds.withBottomY\ (previousBounds.getBottom());}
+\DoxyCodeLine{01147\ }
+\DoxyCodeLine{01148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ isStretchingTop\ \&\&\ isStretchingBottom)}
+\DoxyCodeLine{01149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounds\ =\ bounds.withY\ (previousBounds.getY());}
+\DoxyCodeLine{01150\ }
+\DoxyCodeLine{01151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isStretchingLeft\ \&\&\ !\ isStretchingRight)}
+\DoxyCodeLine{01152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounds\ =\ bounds.withRightX\ (previousBounds.getRight());}
+\DoxyCodeLine{01153\ }
+\DoxyCodeLine{01154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ isStretchingLeft\ \&\&\ isStretchingRight)}
+\DoxyCodeLine{01155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounds\ =\ bounds.withX\ (previousBounds.getX());}
+\DoxyCodeLine{01156\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{01158\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ComponentBoundsConstrainer::checkBounds\ (bounds,}
+\DoxyCodeLine{01160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ previousBounds,}
+\DoxyCodeLine{01161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ limits,}
+\DoxyCodeLine{01162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingTop,}
+\DoxyCodeLine{01163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingLeft,}
+\DoxyCodeLine{01164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingBottom,}
+\DoxyCodeLine{01165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isStretchingRight);}
+\DoxyCodeLine{01166\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01168\ }
+\DoxyCodeLine{01169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_a56d2d3d1ee2927853c7d018d232f869b}{setMainContentComponent}}\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component}{MainContentComponent}}*\ in)\ \{\ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_a53589b6dcd6d2d422c7b105ec26142d0}{contentComponent}}\ =\ in;\ \}}
+\DoxyCodeLine{01170\ }
+\DoxyCodeLine{01171\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{01172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_1_1_main_content_component}{MainContentComponent}}*\ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer_a53589b6dcd6d2d422c7b105ec26142d0}{contentComponent}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{01173\ \ \ \ \ \};}
+\DoxyCodeLine{01174\ }
+\DoxyCodeLine{01175\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{01176\ \ \ \ \ TextButton\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_ab0b299310d7429cd4934484971e5806c}{optionsButton}};}
+\DoxyCodeLine{01177\ \ \ \ \ \mbox{\hyperlink{structjuce_1_1_standalone_filter_window_1_1_decorator_constrainer}{DecoratorConstrainer}}\ \mbox{\hyperlink{classjuce_1_1_standalone_filter_window_a55ec4e0944c13ae0196ed4d59b2f0042}{decoratorConstrainer}};}
+\DoxyCodeLine{01178\ }
+\DoxyCodeLine{01179\ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR\ (\mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{StandaloneFilterWindow}})}
+\DoxyCodeLine{01180\ \};}
+\DoxyCodeLine{01181\ }
+\DoxyCodeLine{01182\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder}{StandalonePluginHolder}}*\ \mbox{\hyperlink{classjuce_1_1_standalone_plugin_holder_ab4efaf01764a7d3f36ceae65542a1bf9}{StandalonePluginHolder::getInstance}}()}
+\DoxyCodeLine{01183\ \{}
+\DoxyCodeLine{01184\ \textcolor{preprocessor}{\ \ \ \#if\ JucePlugin\_Enable\_IAA\ ||\ JucePlugin\_Build\_Standalone}}
+\DoxyCodeLine{01185\ \ \ \ \ \textcolor{keywordflow}{if}\ (PluginHostType::getPluginLoadedAs()\ ==\ AudioProcessor::wrapperType\_Standalone)}
+\DoxyCodeLine{01186\ \ \ \ \ \{}
+\DoxyCodeLine{01187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ desktop\ =\ Desktop::getInstance();}
+\DoxyCodeLine{01188\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ numTopLevelWindows\ =\ desktop.getNumComponents();}
+\DoxyCodeLine{01189\ }
+\DoxyCodeLine{01190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numTopLevelWindows;\ ++i)}
+\DoxyCodeLine{01191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ window\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classjuce_1_1_standalone_filter_window}{StandaloneFilterWindow}}*\textcolor{keyword}{>}\ (desktop.getComponent\ (i)))}
+\DoxyCodeLine{01192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ window-\/>getPluginHolder();}
+\DoxyCodeLine{01193\ \ \ \ \ \}}
+\DoxyCodeLine{01194\ \textcolor{preprocessor}{\ \ \ \#endif}}
+\DoxyCodeLine{01195\ }
+\DoxyCodeLine{01196\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{01197\ \}}
+\DoxyCodeLine{01198\ }
+\DoxyCodeLine{01199\ \}\ \textcolor{comment}{//\ namespace\ juce}}
+
+\end{DoxyCode}

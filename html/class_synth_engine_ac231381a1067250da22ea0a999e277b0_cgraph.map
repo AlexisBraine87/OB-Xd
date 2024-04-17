@@ -1,0 +1,15 @@
+<map id="SynthEngine::setVoiceCount" name="SynthEngine::setVoiceCount">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,195,80"/>
+<area shape="rect" id="Node000002" href="$class_motherboard.html#ae3618e91f4a028b2999aff6ffb59ec51" title=" " alt="" coords="243,55,430,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,65,227,65,227,70,195,70"/>
+<area shape="rect" id="Node000003" href="$class_obxd_voice.html#abcad3a5f43b4bbf50edc805536af74cb" title=" " alt="" coords="500,5,639,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,51,490,32,491,37,401,57"/>
+<area shape="rect" id="Node000005" href="$class_voice_queue.html#aa8fb429906bd14725d4035aecc2ddc04" title=" " alt="" coords="505,55,634,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="431,65,489,65,489,70,431,70"/>
+<area shape="rect" id="Node000006" href="$class_obxd_voice.html#a9127c134994520c9a8b367344c2554ed" title=" " alt="" coords="478,104,660,130"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="401,78,491,98,490,103,400,84"/>
+<area shape="rect" id="Node000004" href="$class_adsr_envelope.html#ad34d2d7ac4ff869b511153090dc78298" title=" " alt="" coords="711,5,905,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="639,16,695,16,695,21,639,21"/>
+<area shape="rect" id="Node000007" href="$class_adsr_envelope.html#a03b02aa0d8e43714bc3cc58283a21819" title=" " alt="" coords="708,97,908,137"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="661,114,693,114,693,120,661,120"/>
+</map>

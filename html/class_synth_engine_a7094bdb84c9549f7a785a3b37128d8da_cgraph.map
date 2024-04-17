@@ -1,0 +1,11 @@
+<map id="SynthEngine::sustainOff" name="SynthEngine::sustainOff">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,169,56"/>
+<area shape="rect" id="Node000002" href="$class_motherboard.html#a6301682b5c92741491855b894fec98c4" title=" " alt="" coords="217,31,378,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,41,201,41,201,46,169,46"/>
+<area shape="rect" id="Node000003" href="$class_voice_queue.html#ae3a08fc2751ab423cd8f52e7b1166142" title=" " alt="" coords="426,5,572,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="378,31,410,27,411,32,379,36"/>
+<area shape="rect" id="Node000004" href="$class_obxd_voice.html#a53c15c195b36e4f633b6f29b0c636085" title=" " alt="" coords="431,55,567,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="379,50,416,55,415,60,378,56"/>
+<area shape="rect" id="Node000005" href="$class_adsr_envelope.html#ad34d2d7ac4ff869b511153090dc78298" title=" " alt="" coords="620,55,815,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="568,65,605,65,605,70,568,70"/>
+</map>

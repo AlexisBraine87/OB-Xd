@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['n_0',['n',['../class_obxd_oscillator_b.html#a542a86f426b9fcf43648c5bb51f68488',1,'ObxdOscillatorB::n'],['../class_pulse_osc.html#acc27ae6bace14f40aeb5d0e338200f16',1,'PulseOsc::n'],['../class_saw_osc.html#a3f7698eb0606c7dcb65f73b4b7ef01a3',1,'SawOsc::n'],['../class_triangle_osc.html#a7a3e6cfe519744fbd8ed245ceb625ae1',1,'TriangleOsc::n']]],
+  ['name_1',['name',['../class_obxd_params.html#adc31475fb396812e3ece707da65e666d',1,'ObxdParams::name'],['../structfx_program_set.html#a5d9b6bee0ce8e6f1d8839256a62125f8',1,'fxProgramSet::name']]],
+  ['nametexteditor_2',['nameTextEditor',['../class_set_preset_name_window.html#a6f467d74561085f63b893aef0b7b4922',1,'SetPresetNameWindow']]],
+  ['neednotifytohost_3',['needNotifytoHost',['../class_obxd_audio_processor_editor.html#a6cf1cc03c08b7f73e6b7fa3dfcac5011',1,'ObxdAudioProcessorEditor']]],
+  ['nextbtn_4',['nextBtn',['../class_preset_bar.html#a299791bbd2f8157f9a0312d5aee1855e',1,'PresetBar']]],
+  ['nextmidi_5',['nextMidi',['../class_obxd_audio_processor.html#a87ca3b3f8dbe70340a949c3fabafb66a',1,'ObxdAudioProcessor']]],
+  ['ng_6',['ng',['../class_obxd_voice.html#a0cb723768c794ea4c06b1ef15bfd8aa3',1,'ObxdVoice']]],
+  ['nmx_7',['nmx',['../class_obxd_oscillator_b.html#ad1948eb9fccb62296eeceae1bbb14c55',1,'ObxdOscillatorB']]],
+  ['noisemixknob_8',['noiseMixKnob',['../class_obxd_audio_processor_editor.html#a0643971c479275a1e89bfa44c28bec8b',1,'ObxdAudioProcessorEditor']]],
+  ['noteplaying_9',['notePlaying',['../class_obxd_oscillator_b.html#a2880efc12ae34575fc54e4735d4bbf83',1,'ObxdOscillatorB']]],
+  ['notification_10',['notification',['../classjuce_1_1_standalone_filter_window_1_1_main_content_component_1_1_notification_area.html#a62a68d775c153b50c1e6a601afc847a6',1,'juce::StandaloneFilterWindow::MainContentComponent::NotificationArea::notification'],['../classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a77eafe1bc0bd7a82685caff8b4ba3f0b',1,'juce::StandaloneFilterWindow::MainContentComponent::notification']]],
+  ['notloadskin_11',['notLoadSkin',['../class_obxd_audio_processor_editor.html#a670f7c29f6ba2897d6c99b15cd5a9b07',1,'ObxdAudioProcessorEditor']]],
+  ['nu_12',['Nu',['../class_ap_interpolator.html#a29a80c80dee5f0a6df3b939872a1e03d',1,'ApInterpolator']]],
+  ['numfr_13',['numFr',['../class_knob.html#a37b10841f822790090fbc40f854b288a',1,'Knob']]],
+  ['numins_14',['numIns',['../structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs.html#a11d4a6e6db04a115f8593d16c7d92c9d',1,'juce::StandalonePluginHolder::PluginInOuts']]],
+  ['numouts_15',['numOuts',['../structjuce_1_1_standalone_plugin_holder_1_1_plugin_in_outs.html#a20bac3b610f802f52a2c263da3f0c4ca',1,'juce::StandalonePluginHolder::PluginInOuts']]],
+  ['numparams_16',['numParams',['../structfx_program.html#acf2ee79103010a0c9910b27d9081ffc7',1,'fxProgram']]],
+  ['numprograms_17',['numPrograms',['../structfx_set.html#ada22cbea37393ab481f13c4c1d584522',1,'fxSet::numPrograms'],['../structfx_chunk_set.html#acd9a7f70428faab38ef08446e123c375',1,'fxChunkSet::numPrograms'],['../structfx_program_set.html#ad2bf5a9c1d2397ae366ec4ccec2e7114',1,'fxProgramSet::numPrograms']]]
+];

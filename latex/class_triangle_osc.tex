@@ -1,0 +1,236 @@
+\doxysection{Triangle\+Osc Class Reference}
+\hypertarget{class_triangle_osc}{}\label{class_triangle_osc}\index{TriangleOsc@{TriangleOsc}}
+
+
+{\ttfamily \#include $<$Triangle\+Osc.\+h$>$}
+
+
+
+Collaboration diagram for Triangle\+Osc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_triangle_osc__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_osc_a401512e451c380d9786bcd707906d18a}{Triangle\+Osc}} ()
+\item 
+\mbox{\hyperlink{class_triangle_osc_a35162eade9566adc56820438cf511010}{\texorpdfstring{$\sim$}{\string~}\+Triangle\+Osc}} ()
+\item 
+void \mbox{\hyperlink{class_triangle_osc_aaa238a0e69e98a68c935738aac54ef08}{set\+Decimation}} ()
+\item 
+void \mbox{\hyperlink{class_triangle_osc_acaf1dea4fe9fe1a6c211ca6455a3050c}{remove\+Decimation}} ()
+\item 
+float \mbox{\hyperlink{class_triangle_osc_a0d16403fef2c557216a02a45a7f37140}{alias\+Reduction}} ()
+\item 
+void \mbox{\hyperlink{class_triangle_osc_a8d5fd855bd6d955af2d1d6d76d3f6b3c}{process\+Master}} (float x, float delta)
+\item 
+float \mbox{\hyperlink{class_triangle_osc_a9465345520eae1b84e6af75b606715b4}{get\+Value}} (float x)
+\item 
+float \mbox{\hyperlink{class_triangle_osc_a06d54418e6bef3c7d58f2c725576d8b6}{get\+Value\+Fast}} (float x)
+\item 
+void \mbox{\hyperlink{class_triangle_osc_a69fcf2b3572d7155c8cdc63777eee612}{process\+Slave}} (float x, float delta, bool hard\+Sync\+Reset, float hard\+Sync\+Frac)
+\item 
+void \mbox{\hyperlink{class_triangle_osc_a75ee1064bbfb5542df82373039e2ba69}{mix\+In\+Blamp\+Center}} (float \texorpdfstring{$\ast$}{*}buf, int \&bpos, float offset, float scale)
+\item 
+void \mbox{\hyperlink{class_triangle_osc_a9ce9501eccc7d934fc0e14791018dada}{mix\+In\+Impulse\+Center}} (float \texorpdfstring{$\ast$}{*}buf, int \&bpos, float offset, float scale)
+\item 
+float \mbox{\hyperlink{class_triangle_osc_afdfb2c3a5a681cd56f503f1a3b8b8eed}{get\+Next\+Blep}} (float \texorpdfstring{$\ast$}{*}buf, int \&bpos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_triangle_osc_ab53f23d8229f0c1c7a8f452e2a6b13d1}{del1}}
+\item 
+bool \mbox{\hyperlink{class_triangle_osc_a72fd1b70c7dcd4728a1244ec4e3475e2}{fall}}
+\item 
+float \mbox{\hyperlink{class_triangle_osc_aa65d674bab632df17e16ae06ef7b44b3}{buffer1}} \mbox{[}\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{class_triangle_osc_a66128c09a3862bf0462abcc882987fd4}{hsam}}
+\item 
+const int \mbox{\hyperlink{class_triangle_osc_a7a3e6cfe519744fbd8ed245ceb625ae1}{n}}
+\item 
+float const  \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_triangle_osc_a94ec8cd8fc1dbf65a68f278021766efc}{blep\+PTR}}
+\item 
+float const  \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_triangle_osc_aeaee110718acee3aa474f9119f5cb06b}{blamp\+PTR}}
+\item 
+int \mbox{\hyperlink{class_triangle_osc_a73f191f8e15180ef42b6cdb13b869236}{b\+P1}}
+\item 
+int \mbox{\hyperlink{class_triangle_osc_a637e6f1655dfff8964c499aa413f09a2}{b\+P2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_triangle_osc_a401512e451c380d9786bcd707906d18a}\label{class_triangle_osc_a401512e451c380d9786bcd707906d18a} 
+\index{TriangleOsc@{TriangleOsc}!TriangleOsc@{TriangleOsc}}
+\index{TriangleOsc@{TriangleOsc}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{TriangleOsc()}{TriangleOsc()}}
+{\footnotesize\ttfamily Triangle\+Osc\+::\+Triangle\+Osc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_triangle_osc_a35162eade9566adc56820438cf511010}\label{class_triangle_osc_a35162eade9566adc56820438cf511010} 
+\index{TriangleOsc@{TriangleOsc}!````~TriangleOsc@{\texorpdfstring{$\sim$}{\string~}TriangleOsc}}
+\index{````~TriangleOsc@{\texorpdfstring{$\sim$}{\string~}TriangleOsc}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TriangleOsc()}{\string~TriangleOsc()}}
+{\footnotesize\ttfamily Triangle\+Osc\+::\texorpdfstring{$\sim$}{\string~}\+Triangle\+Osc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_triangle_osc_a0d16403fef2c557216a02a45a7f37140}\label{class_triangle_osc_a0d16403fef2c557216a02a45a7f37140} 
+\index{TriangleOsc@{TriangleOsc}!aliasReduction@{aliasReduction}}
+\index{aliasReduction@{aliasReduction}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{aliasReduction()}{aliasReduction()}}
+{\footnotesize\ttfamily float Triangle\+Osc\+::alias\+Reduction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_triangle_osc_a0d16403fef2c557216a02a45a7f37140_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_triangle_osc_afdfb2c3a5a681cd56f503f1a3b8b8eed}\label{class_triangle_osc_afdfb2c3a5a681cd56f503f1a3b8b8eed} 
+\index{TriangleOsc@{TriangleOsc}!getNextBlep@{getNextBlep}}
+\index{getNextBlep@{getNextBlep}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{getNextBlep()}{getNextBlep()}}
+{\footnotesize\ttfamily float Triangle\+Osc\+::get\+Next\+Blep (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int \&}]{bpos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_triangle_osc_a9465345520eae1b84e6af75b606715b4}\label{class_triangle_osc_a9465345520eae1b84e6af75b606715b4} 
+\index{TriangleOsc@{TriangleOsc}!getValue@{getValue}}
+\index{getValue@{getValue}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily float Triangle\+Osc\+::get\+Value (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_triangle_osc_a9465345520eae1b84e6af75b606715b4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_triangle_osc_a06d54418e6bef3c7d58f2c725576d8b6}\label{class_triangle_osc_a06d54418e6bef3c7d58f2c725576d8b6} 
+\index{TriangleOsc@{TriangleOsc}!getValueFast@{getValueFast}}
+\index{getValueFast@{getValueFast}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{getValueFast()}{getValueFast()}}
+{\footnotesize\ttfamily float Triangle\+Osc\+::get\+Value\+Fast (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_triangle_osc_a75ee1064bbfb5542df82373039e2ba69}\label{class_triangle_osc_a75ee1064bbfb5542df82373039e2ba69} 
+\index{TriangleOsc@{TriangleOsc}!mixInBlampCenter@{mixInBlampCenter}}
+\index{mixInBlampCenter@{mixInBlampCenter}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{mixInBlampCenter()}{mixInBlampCenter()}}
+{\footnotesize\ttfamily void Triangle\+Osc\+::mix\+In\+Blamp\+Center (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int \&}]{bpos,  }\item[{float}]{offset,  }\item[{float}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_triangle_osc_a9ce9501eccc7d934fc0e14791018dada}\label{class_triangle_osc_a9ce9501eccc7d934fc0e14791018dada} 
+\index{TriangleOsc@{TriangleOsc}!mixInImpulseCenter@{mixInImpulseCenter}}
+\index{mixInImpulseCenter@{mixInImpulseCenter}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{mixInImpulseCenter()}{mixInImpulseCenter()}}
+{\footnotesize\ttfamily void Triangle\+Osc\+::mix\+In\+Impulse\+Center (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int \&}]{bpos,  }\item[{float}]{offset,  }\item[{float}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_triangle_osc_a8d5fd855bd6d955af2d1d6d76d3f6b3c}\label{class_triangle_osc_a8d5fd855bd6d955af2d1d6d76d3f6b3c} 
+\index{TriangleOsc@{TriangleOsc}!processMaster@{processMaster}}
+\index{processMaster@{processMaster}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{processMaster()}{processMaster()}}
+{\footnotesize\ttfamily void Triangle\+Osc\+::process\+Master (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_triangle_osc_a8d5fd855bd6d955af2d1d6d76d3f6b3c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_triangle_osc_a69fcf2b3572d7155c8cdc63777eee612}\label{class_triangle_osc_a69fcf2b3572d7155c8cdc63777eee612} 
+\index{TriangleOsc@{TriangleOsc}!processSlave@{processSlave}}
+\index{processSlave@{processSlave}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{processSlave()}{processSlave()}}
+{\footnotesize\ttfamily void Triangle\+Osc\+::process\+Slave (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{delta,  }\item[{bool}]{hard\+Sync\+Reset,  }\item[{float}]{hard\+Sync\+Frac }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_triangle_osc_a69fcf2b3572d7155c8cdc63777eee612_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_triangle_osc_acaf1dea4fe9fe1a6c211ca6455a3050c}\label{class_triangle_osc_acaf1dea4fe9fe1a6c211ca6455a3050c} 
+\index{TriangleOsc@{TriangleOsc}!removeDecimation@{removeDecimation}}
+\index{removeDecimation@{removeDecimation}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{removeDecimation()}{removeDecimation()}}
+{\footnotesize\ttfamily void Triangle\+Osc\+::remove\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_triangle_osc_aaa238a0e69e98a68c935738aac54ef08}\label{class_triangle_osc_aaa238a0e69e98a68c935738aac54ef08} 
+\index{TriangleOsc@{TriangleOsc}!setDecimation@{setDecimation}}
+\index{setDecimation@{setDecimation}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{setDecimation()}{setDecimation()}}
+{\footnotesize\ttfamily void Triangle\+Osc\+::set\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_triangle_osc_aeaee110718acee3aa474f9119f5cb06b}\label{class_triangle_osc_aeaee110718acee3aa474f9119f5cb06b} 
+\index{TriangleOsc@{TriangleOsc}!blampPTR@{blampPTR}}
+\index{blampPTR@{blampPTR}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{blampPTR}{blampPTR}}
+{\footnotesize\ttfamily float const\texorpdfstring{$\ast$}{*} Triangle\+Osc\+::blamp\+PTR\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_a94ec8cd8fc1dbf65a68f278021766efc}\label{class_triangle_osc_a94ec8cd8fc1dbf65a68f278021766efc} 
+\index{TriangleOsc@{TriangleOsc}!blepPTR@{blepPTR}}
+\index{blepPTR@{blepPTR}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{blepPTR}{blepPTR}}
+{\footnotesize\ttfamily float const\texorpdfstring{$\ast$}{*} Triangle\+Osc\+::blep\+PTR\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_a73f191f8e15180ef42b6cdb13b869236}\label{class_triangle_osc_a73f191f8e15180ef42b6cdb13b869236} 
+\index{TriangleOsc@{TriangleOsc}!bP1@{bP1}}
+\index{bP1@{bP1}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{bP1}{bP1}}
+{\footnotesize\ttfamily int Triangle\+Osc\+::b\+P1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_a637e6f1655dfff8964c499aa413f09a2}\label{class_triangle_osc_a637e6f1655dfff8964c499aa413f09a2} 
+\index{TriangleOsc@{TriangleOsc}!bP2@{bP2}}
+\index{bP2@{bP2}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{bP2}{bP2}}
+{\footnotesize\ttfamily int Triangle\+Osc\+::b\+P2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_aa65d674bab632df17e16ae06ef7b44b3}\label{class_triangle_osc_aa65d674bab632df17e16ae06ef7b44b3} 
+\index{TriangleOsc@{TriangleOsc}!buffer1@{buffer1}}
+\index{buffer1@{buffer1}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{buffer1}{buffer1}}
+{\footnotesize\ttfamily float Triangle\+Osc\+::buffer1\mbox{[}\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} \texorpdfstring{$\ast$}{*}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_ab53f23d8229f0c1c7a8f452e2a6b13d1}\label{class_triangle_osc_ab53f23d8229f0c1c7a8f452e2a6b13d1} 
+\index{TriangleOsc@{TriangleOsc}!del1@{del1}}
+\index{del1@{del1}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{del1}{del1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Triangle\+Osc\+::del1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_a72fd1b70c7dcd4728a1244ec4e3475e2}\label{class_triangle_osc_a72fd1b70c7dcd4728a1244ec4e3475e2} 
+\index{TriangleOsc@{TriangleOsc}!fall@{fall}}
+\index{fall@{fall}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{fall}{fall}}
+{\footnotesize\ttfamily bool Triangle\+Osc\+::fall\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_a66128c09a3862bf0462abcc882987fd4}\label{class_triangle_osc_a66128c09a3862bf0462abcc882987fd4} 
+\index{TriangleOsc@{TriangleOsc}!hsam@{hsam}}
+\index{hsam@{hsam}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{hsam}{hsam}}
+{\footnotesize\ttfamily const int Triangle\+Osc\+::hsam\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_triangle_osc_a7a3e6cfe519744fbd8ed245ceb625ae1}\label{class_triangle_osc_a7a3e6cfe519744fbd8ed245ceb625ae1} 
+\index{TriangleOsc@{TriangleOsc}!n@{n}}
+\index{n@{n}!TriangleOsc@{TriangleOsc}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily const int Triangle\+Osc\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_triangle_osc_8h}{Triangle\+Osc.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\doxysection{Param\+Smoother Class Reference}
+\hypertarget{class_param_smoother}{}\label{class_param_smoother}\index{ParamSmoother@{ParamSmoother}}
+
+
+{\ttfamily \#include $<$Param\+Smoother.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_param_smoother_a6160afc1f57abbaaa6cd44e4cf9b1ab1}{Param\+Smoother}} ()
+\item 
+float \mbox{\hyperlink{class_param_smoother_a9899646f602ac85aeccb6802c4799744}{smooth\+Step}} ()
+\item 
+void \mbox{\hyperlink{class_param_smoother_a85556d53d5cf41433cd444641a1f088b}{set\+Steep}} (float value)
+\item 
+void \mbox{\hyperlink{class_param_smoother_a41e1d83b750d4a72bb7e73b89290836a}{set\+Sample\+Rate}} (float sr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_param_smoother_a769641970fa2743d5a8d17a22a6db93c}{steep\+Value}}
+\item 
+float \mbox{\hyperlink{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}{integral\+Value}}
+\item 
+float \mbox{\hyperlink{class_param_smoother_a45fd693c00f353bac64a496812f69c15}{sr\+Cor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_param_smoother_a6160afc1f57abbaaa6cd44e4cf9b1ab1}\label{class_param_smoother_a6160afc1f57abbaaa6cd44e4cf9b1ab1} 
+\index{ParamSmoother@{ParamSmoother}!ParamSmoother@{ParamSmoother}}
+\index{ParamSmoother@{ParamSmoother}!ParamSmoother@{ParamSmoother}}
+\doxysubsubsection{\texorpdfstring{ParamSmoother()}{ParamSmoother()}}
+{\footnotesize\ttfamily Param\+Smoother\+::\+Param\+Smoother (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_param_smoother_a41e1d83b750d4a72bb7e73b89290836a}\label{class_param_smoother_a41e1d83b750d4a72bb7e73b89290836a} 
+\index{ParamSmoother@{ParamSmoother}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!ParamSmoother@{ParamSmoother}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void Param\+Smoother\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_param_smoother_a85556d53d5cf41433cd444641a1f088b}\label{class_param_smoother_a85556d53d5cf41433cd444641a1f088b} 
+\index{ParamSmoother@{ParamSmoother}!setSteep@{setSteep}}
+\index{setSteep@{setSteep}!ParamSmoother@{ParamSmoother}}
+\doxysubsubsection{\texorpdfstring{setSteep()}{setSteep()}}
+{\footnotesize\ttfamily void Param\+Smoother\+::set\+Steep (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_param_smoother_a9899646f602ac85aeccb6802c4799744}\label{class_param_smoother_a9899646f602ac85aeccb6802c4799744} 
+\index{ParamSmoother@{ParamSmoother}!smoothStep@{smoothStep}}
+\index{smoothStep@{smoothStep}!ParamSmoother@{ParamSmoother}}
+\doxysubsubsection{\texorpdfstring{smoothStep()}{smoothStep()}}
+{\footnotesize\ttfamily float Param\+Smoother\+::smooth\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}\label{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901} 
+\index{ParamSmoother@{ParamSmoother}!integralValue@{integralValue}}
+\index{integralValue@{integralValue}!ParamSmoother@{ParamSmoother}}
+\doxysubsubsection{\texorpdfstring{integralValue}{integralValue}}
+{\footnotesize\ttfamily float Param\+Smoother\+::integral\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_param_smoother_a45fd693c00f353bac64a496812f69c15}\label{class_param_smoother_a45fd693c00f353bac64a496812f69c15} 
+\index{ParamSmoother@{ParamSmoother}!srCor@{srCor}}
+\index{srCor@{srCor}!ParamSmoother@{ParamSmoother}}
+\doxysubsubsection{\texorpdfstring{srCor}{srCor}}
+{\footnotesize\ttfamily float Param\+Smoother\+::sr\+Cor\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_param_smoother_a769641970fa2743d5a8d17a22a6db93c}\label{class_param_smoother_a769641970fa2743d5a8d17a22a6db93c} 
+\index{ParamSmoother@{ParamSmoother}!steepValue@{steepValue}}
+\index{steepValue@{steepValue}!ParamSmoother@{ParamSmoother}}
+\doxysubsubsection{\texorpdfstring{steepValue}{steepValue}}
+{\footnotesize\ttfamily float Param\+Smoother\+::steep\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_param_smoother_8h}{Param\+Smoother.\+h}}\end{DoxyCompactItemize}

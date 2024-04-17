@@ -1,0 +1,190 @@
+\doxysection{Knob.\+h}
+\hypertarget{_knob_8h_source}{}\label{_knob_8h_source}\index{Source/Gui/Knob.h@{Source/Gui/Knob.h}}
+\mbox{\hyperlink{_knob_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ {\ucr}\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}../Source/Engine/SynthEngine.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_scale_component_8h}{../Components/ScaleComponent.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_knob_look_and_feel}{KnobLookAndFeel}}\ :\ \textcolor{keyword}{public}\ LookAndFeel\_V4}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_knob_look_and_feel_a6540426b4f043251ba87b057886a5409}{KnobLookAndFeel}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ setColour(BubbleComponent::ColourIds::backgroundColourId,\ Colours::white.withAlpha(0.8f));}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ setColour(BubbleComponent::ColourIds::outlineColourId,\ Colours::transparentBlack);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ setColour(TooltipWindow::textColourId,\ Colours::black);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_knob_look_and_feel_a0cee2c10098cf73b78459bae1f686849}{getSliderPopupPlacement}}(Slider\&)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BubbleComponent::BubblePlacement::above;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR(\mbox{\hyperlink{class_knob_look_and_feel}{KnobLookAndFeel}})}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_knob}{Knob}}\ \ :\ \textcolor{keyword}{public}\ Slider,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}},\ \textcolor{keyword}{public}\ ActionBroadcaster}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ juce::String\ \mbox{\hyperlink{class_knob_aee69595aa70b6dffe988ba42a5784cb1}{img\_name}};}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//Knob(Image\ image,\ const\ int\ numFrames,\ const\ bool\ stripIsHorizontal)\ :\ Slider("{}Knob"{})}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\{}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ \ setTextBoxStyle(NoTextBox,\ 0,\ 0,\ 0);}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ \ setSliderStyle(RotaryVerticalDrag);}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ \ setRange(0.0f,\ 1.0f,\ 0.001f);}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\}}}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_knob_a4eafcbb3785fdda2895c76434018f3ce}{Knob}}\ (juce::String\ name,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_knob_a72d9650bfcbc0b4c088e4cc946577677}{fh}},\ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}*\ owner\_)\ :\ Slider(\textcolor{stringliteral}{"{}Knob"{}}),\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}(owner\_),\ \mbox{\hyperlink{class_knob_aee69595aa70b6dffe988ba42a5784cb1}{img\_name}}(name)}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_adfcbbe8b41fff33f47dfd7ae2a0059a8}{scaleFactorChanged}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf}{h2}}\ =\ \mbox{\hyperlink{class_knob_a72d9650bfcbc0b4c088e4cc946577677}{fh}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_acc93c09c5ba43d02fef607f46ba3e13d}{w2}}\ =\ \mbox{\hyperlink{class_knob_a7e9c862c9a3d460b035f358e93dfeef7}{kni}}.getWidth();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_a37b10841f822790090fbc40f854b288a}{numFr}}\ =\ \mbox{\hyperlink{class_knob_a7e9c862c9a3d460b035f358e93dfeef7}{kni}}.getHeight()\ /\ \mbox{\hyperlink{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf}{h2}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ setLookAndFeel(\&\mbox{\hyperlink{class_knob_a73c154f825e073a007329031ef21c3db}{lookAndFeel}});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ setVelocityModeParameters(1.0,\ 1,\ 0.0,\ \textcolor{keyword}{true},\ ModifierKeys::ctrlModifier);}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_knob_a8b061711ecd0109e6244e3ce8b99f8c4}{\string~Knob}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00069\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ setLookAndFeel(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_knob_adfcbbe8b41fff33f47dfd7ae2a0059a8}{scaleFactorChanged}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00074\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_a7e9c862c9a3d460b035f358e93dfeef7}{kni}}\ =\ \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{getScaledImageFromCache}}(\mbox{\hyperlink{class_knob_aee69595aa70b6dffe988ba42a5784cb1}{img\_name}},\ \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{getScaleFactor}}(),\ \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{getIsHighResolutionDisplay}}());}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ backgroundImage\ =}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ allImage.getClippedImage(Rectangle<int>(0,}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getHeight()\ /\ 2,}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getWidth(),}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getHeight()\ /\ 2));}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ repaint();}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_knob_a641ec2a7caf09a04acdcd97bbc4d2c95}{mouseDown}}(\textcolor{keyword}{const}\ MouseEvent\&\ event)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00087\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.mods.isShiftDown())}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_knob_a53ec12691ab9bab9addb5dbcb3a74f89}{shouldResetOnShiftClick}})}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sendActionMessage(\mbox{\hyperlink{class_knob_a228de9b78d16d912183d554d347cfb5b}{resetActionMessage}});}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ Slider::mouseDown(event);}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_knob_a921febd9d038898b0180fc76c72aaefd}{mouseDrag}}(\textcolor{keyword}{const}\ MouseEvent\&\ event)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00099\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ Slider::mouseDrag(event);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.mods.isShiftDown())}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_knob_aa169323e14391329cc4dba04de77dbd7}{shiftDragCallback}})}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setValue(\mbox{\hyperlink{class_knob_aa169323e14391329cc4dba04de77dbd7}{shiftDragCallback}}(getValue()),\ sendNotificationAsync);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.mods.isAltDown())}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_knob_a96ef927225d33fa4fc3440f46683fa90}{altDragCallback}})}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setValue(\mbox{\hyperlink{class_knob_a96ef927225d33fa4fc3440f46683fa90}{altDragCallback}}(getValue()),\ sendNotificationAsync);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_knob_a328112858b7a5ca191f693d0cad3f655}{alternativeValueMapCallback}})}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ setValue(\mbox{\hyperlink{class_knob_a328112858b7a5ca191f693d0cad3f655}{alternativeValueMapCallback}}(getValue()),\ sendNotificationAsync);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ Source:\ https://git.iem.at/audioplugins/IEMPluginSuite/-\//blob/master/resources/customComponents/ReverseSlider.h}}
+\DoxyCodeLine{00122\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_knob_1_1_knob_attachment}{KnobAttachment}}\ \ :\ \textcolor{keyword}{public}\ juce::AudioProcessorValueTreeState::SliderAttachment}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ RangedAudioParameter*\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_ab9bc7e4b174ba5aaaa0508028b53153c}{parameter}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob}{Knob}}*\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a739a67885c50eeaff6a1c49442d815a2}{sliderToControl}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a86926b550dbc0d3c82fdada6373b2d93}{KnobAttachment}}\ (juce::AudioProcessorValueTreeState\&\ stateToControl,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ juce::String\&\ parameterID,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob}{Knob}}\&\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a739a67885c50eeaff6a1c49442d815a2}{sliderToControl}})\ :\ AudioProcessorValueTreeState::SliderAttachment\ (stateToControl,\ parameterID,\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a739a67885c50eeaff6a1c49442d815a2}{sliderToControl}}),\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a739a67885c50eeaff6a1c49442d815a2}{sliderToControl}}(\&\mbox{\hyperlink{class_knob_1_1_knob_attachment_a739a67885c50eeaff6a1c49442d815a2}{sliderToControl}})}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_1_1_knob_attachment_ab9bc7e4b174ba5aaaa0508028b53153c}{parameter}}\ =\ stateToControl.getParameter\ (parameterID);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a739a67885c50eeaff6a1c49442d815a2}{sliderToControl}}.\mbox{\hyperlink{class_knob_acb8a5156869f481b1b7306bcedeef8ae}{setParameter}}\ (\mbox{\hyperlink{class_knob_1_1_knob_attachment_ab9bc7e4b174ba5aaaa0508028b53153c}{parameter}});}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*KnobAttachment\ (juce::AudioProcessorValueTreeState\&\ stateToControl,}}
+\DoxyCodeLine{00138\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ juce::String\&\ parameterID,}}
+\DoxyCodeLine{00139\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Slider\&\ sliderToControl)\ :\ AudioProcessorValueTreeState::SliderAttachment\ (stateToControl,\ parameterID,\ sliderToControl)}}
+\DoxyCodeLine{00140\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00141\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a637d1c12a5aee612cdc4c228971d3f5a}{updateToSlider}}()\{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ val\ =\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_ab9bc7e4b174ba5aaaa0508028b53153c}{parameter}}-\/>getValue();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//sliderToControl-\/>setValue(parameter-\/>convertFrom0to1(val0to1));}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_1_1_knob_attachment_a739a67885c50eeaff6a1c49442d815a2}{sliderToControl}}-\/>setValue(val,\ NotificationType::dontSendNotification);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//DBG("{}\ Slider:\ "{}\ <<\ parameter-\/>name\ <<\ "{}\ "{}\ <<\ sliderToControl-\/>getValue()\ <<\ "{}\ \ Parameter:\ "{}<<\ "{}\ "{}\ <<\ parameter-\/>getValue());}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_knob_1_1_knob_attachment_aafda93260394e42a2b71b0f6376a11f6}{\string~KnobAttachment}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00151\ \ \ \ \ \};}
+\DoxyCodeLine{00152\ \ \ \ \ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_knob_acb8a5156869f481b1b7306bcedeef8ae}{setParameter}}\ (AudioProcessorParameter*\ p)}
+\DoxyCodeLine{00154\ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_knob_a6d960947d182bf2f2501e2807fe0f452}{parameter}}\ ==\ p)}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_a6d960947d182bf2f2501e2807fe0f452}{parameter}}\ =\ p;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ updateText();}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ repaint();}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_knob_aa300f05166099cbe56825dbef7fb3cfa}{paint}}\ (Graphics\&\ g)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00164\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ofs\ =\ (int)\ ((getValue()\ -\/\ getMinimum())\ /\ (getMaximum()\ -\/\ getMinimum())\ *\ (\mbox{\hyperlink{class_knob_a37b10841f822790090fbc40f854b288a}{numFr}}\ -\/\ 1));}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ g.drawImage\ (\mbox{\hyperlink{class_knob_a7e9c862c9a3d460b035f358e93dfeef7}{kni}},\ 0,\ 0,\ getWidth(),\ getHeight(),\ 0,\ \mbox{\hyperlink{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf}{h2}}\ *\ ofs\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}(),\ \mbox{\hyperlink{class_knob_acc93c09c5ba43d02fef607f46ba3e13d}{w2}}\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}(),\ \mbox{\hyperlink{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf}{h2}}\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}());}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_knob_a730d6dc583e1b4b9231770664d3dc40e}{resetOnShiftClick}}(\textcolor{keywordtype}{bool}\ value,\ \textcolor{keyword}{const}\ String\&\ identifier)}
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_a53ec12691ab9bab9addb5dbcb3a74f89}{shouldResetOnShiftClick}}\ =\ value;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_knob_a228de9b78d16d912183d554d347cfb5b}{resetActionMessage}}\ =\ identifier;}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ std::function<double(\textcolor{keywordtype}{double})>\ \mbox{\hyperlink{class_knob_aa169323e14391329cc4dba04de77dbd7}{shiftDragCallback}},\ \mbox{\hyperlink{class_knob_a96ef927225d33fa4fc3440f46683fa90}{altDragCallback}},\ \mbox{\hyperlink{class_knob_a328112858b7a5ca191f693d0cad3f655}{alternativeValueMapCallback}};}
+\DoxyCodeLine{00176\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00177\ \ \ \ \ Image\ \mbox{\hyperlink{class_knob_a7e9c862c9a3d460b035f358e93dfeef7}{kni}};}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_knob_a72d9650bfcbc0b4c088e4cc946577677}{fh}},\ \mbox{\hyperlink{class_knob_a37b10841f822790090fbc40f854b288a}{numFr}};}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_knob_acc93c09c5ba43d02fef607f46ba3e13d}{w2}},\ \mbox{\hyperlink{class_knob_ae563f459d0cb2d1b5e7a1656f869b3bf}{h2}};}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_knob_a53ec12691ab9bab9addb5dbcb3a74f89}{shouldResetOnShiftClick}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00181\ \ \ \ \ String\ \mbox{\hyperlink{class_knob_a228de9b78d16d912183d554d347cfb5b}{resetActionMessage}}\{\};}
+\DoxyCodeLine{00182\ \ \ \ \ AudioProcessorParameter*\ \mbox{\hyperlink{class_knob_a6d960947d182bf2f2501e2807fe0f452}{parameter}}\ \{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{class_knob_look_and_feel}{KnobLookAndFeel}}\ \mbox{\hyperlink{class_knob_a73c154f825e073a007329031ef21c3db}{lookAndFeel}};}
+\DoxyCodeLine{00184\ \};}
+
+\end{DoxyCode}

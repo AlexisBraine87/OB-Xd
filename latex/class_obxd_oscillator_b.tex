@@ -1,0 +1,495 @@
+\doxysection{Obxd\+OscillatorB Class Reference}
+\hypertarget{class_obxd_oscillator_b}{}\label{class_obxd_oscillator_b}\index{ObxdOscillatorB@{ObxdOscillatorB}}
+
+
+{\ttfamily \#include $<$Obxd\+Oscillator\+B.\+h$>$}
+
+
+
+Collaboration diagram for Obxd\+OscillatorB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_oscillator_b__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obxd_oscillator_b_addc1e95f6fa289bacc89866664a3d7d8}{Obxd\+OscillatorB}} ()
+\item 
+\mbox{\hyperlink{class_obxd_oscillator_b_a7d15f5d5c39d7227e63c8356b45e0974}{\texorpdfstring{$\sim$}{\string~}\+Obxd\+OscillatorB}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_oscillator_b_ae3164a17b91b0f9232cf848e10e3673e}{set\+Decimation}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_oscillator_b_a27399beedd764603188b74a90503c4c5}{remove\+Decimation}} ()
+\item 
+void \mbox{\hyperlink{class_obxd_oscillator_b_a2180c5d1fa9a5fe5635be4a18c04f56e}{set\+Sample\+Rate}} (float sr)
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_ac897f2989a6c116dbd046fa4bd8682a3}{Process\+Sample}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a4ba6c1bf0790642ef5413f1a5d2bbd48}{tune}}
+\item 
+int \mbox{\hyperlink{class_obxd_oscillator_b_a7859d93953d2d424e61d5e5b27a7d148}{oct}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a6ca1b4da73d5b3b5f89ecd6ce6b59594}{dirt}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a2880efc12ae34575fc54e4735d4bbf83}{note\+Playing}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_aa4893f437e1509c35c7e37ff1c17c6f3}{total\+Detune}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a793b22fc5e6ea387ba1f6a25959b861c}{osc2\+Det}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a945e177a6b9f547fc7d4f06f77ca233c}{pulse\+Width}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a700098471a10b622c324757e867b23aa}{pw1}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_abac7a583ae9cddee66583da981101e8d}{pw2}}
+\item 
+bool \mbox{\hyperlink{class_obxd_oscillator_b_aa9fa57107c521bc8513c09ea1189475d}{quantize\+Cw}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_ae65760594e93810d3188eb471e8c91e3}{o1mx}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a01531e17d1b608d30b5ae6370b042851}{o2mx}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_ad1948eb9fccb62296eeceae1bbb14c55}{nmx}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_aed94f78d6a53fa49827e11069324d1d3}{pto1}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a9d5919bb6d92692e0553f80022952f95}{pto2}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a74e2381abbf583e10b7aa61bf3451a45}{osc1\+Saw}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_abc5258f7a2d353f74b1386bf0478b86e}{osc2\+Saw}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}{osc1\+Pul}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}{osc2\+Pul}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_aca3a512ee603309d5af8a3dfc742a7e2}{osc1p}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_acb5eb03a2c4161005bb6bec96e8aedc3}{osc2p}}
+\item 
+bool \mbox{\hyperlink{class_obxd_oscillator_b_a1381d0cbe8a47cbe6947e6b304204b10}{hard\+Sync}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a88ccb86f638b3369771bdf97e3e99b2f}{xmod}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a926a9b3ac3c7164a507d14fae6fbf5c6}{Sample\+Rate}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a623eb69e7704b05f4481b29b664f40a0}{pitch1}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a0e6c152ea927b585fd7173f48ef79fce}{pitch2}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a2c8189818316de4c09ddd2659d5e9940}{sample\+Rate\+Inv}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}{x1}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}{x2}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a814218cd0d073eb28a26abda659a9f8b}{osc1\+Factor}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a774accb00e0fa700be25064f3de3795d}{osc2\+Factor}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_a6e2c9ebb439d93273c49bbc0737ba787}{pw1w}}
+\item 
+float \mbox{\hyperlink{class_obxd_oscillator_b_aab1fbc4b44a9f329abb8b254e64eaeb6}{pw2w}}
+\item 
+const int \mbox{\hyperlink{class_obxd_oscillator_b_a542a86f426b9fcf43648c5bb51f68488}{n}}
+\item 
+const int \mbox{\hyperlink{class_obxd_oscillator_b_a4b427f994dc251e9e5e75d8234c5d885}{hsam}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_obxd_oscillator_b_a217ad7968f6913300a17791c53414969}{del1}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_obxd_oscillator_b_a1917b8da62cc2a6f7ef735f1824494f6}{del2}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_obxd_oscillator_b_a3fbd65353c004be95efa9e4b32e0e53c}{xmodd}}
+\item 
+\mbox{\hyperlink{class_delay_line_boolean}{Delay\+Line\+Boolean}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_obxd_oscillator_b_a2f3e4729d1032f762c5dd416ede0e11e}{syncd}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_obxd_oscillator_b_ac37c952ed9bce38ddadada4b4316f59e}{sync\+Fracd}}
+\item 
+\mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}} $>$ \mbox{\hyperlink{class_obxd_oscillator_b_aa77d7605fb117bdac76a00757e580b1c}{cvd}}
+\item 
+Random \mbox{\hyperlink{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}{wn}}
+\item 
+\mbox{\hyperlink{class_saw_osc}{Saw\+Osc}} \mbox{\hyperlink{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}{o1s}}
+\item 
+\mbox{\hyperlink{class_saw_osc}{Saw\+Osc}} \mbox{\hyperlink{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}{o2s}}
+\item 
+\mbox{\hyperlink{class_pulse_osc}{Pulse\+Osc}} \mbox{\hyperlink{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}{o1p}}
+\item 
+\mbox{\hyperlink{class_pulse_osc}{Pulse\+Osc}} \mbox{\hyperlink{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}{o2p}}
+\item 
+\mbox{\hyperlink{class_triangle_osc}{Triangle\+Osc}} \mbox{\hyperlink{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}{o1t}}
+\item 
+\mbox{\hyperlink{class_triangle_osc}{Triangle\+Osc}} \mbox{\hyperlink{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}{o2t}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_obxd_oscillator_b_addc1e95f6fa289bacc89866664a3d7d8}\label{class_obxd_oscillator_b_addc1e95f6fa289bacc89866664a3d7d8} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!ObxdOscillatorB@{ObxdOscillatorB}}
+\index{ObxdOscillatorB@{ObxdOscillatorB}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{ObxdOscillatorB()}{ObxdOscillatorB()}}
+{\footnotesize\ttfamily Obxd\+Oscillator\+B\+::\+Obxd\+OscillatorB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_obxd_oscillator_b_a7d15f5d5c39d7227e63c8356b45e0974}\label{class_obxd_oscillator_b_a7d15f5d5c39d7227e63c8356b45e0974} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!````~ObxdOscillatorB@{\texorpdfstring{$\sim$}{\string~}ObxdOscillatorB}}
+\index{````~ObxdOscillatorB@{\texorpdfstring{$\sim$}{\string~}ObxdOscillatorB}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ObxdOscillatorB()}{\string~ObxdOscillatorB()}}
+{\footnotesize\ttfamily Obxd\+Oscillator\+B\+::\texorpdfstring{$\sim$}{\string~}\+Obxd\+OscillatorB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_obxd_oscillator_b_ac897f2989a6c116dbd046fa4bd8682a3}\label{class_obxd_oscillator_b_ac897f2989a6c116dbd046fa4bd8682a3} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!ProcessSample@{ProcessSample}}
+\index{ProcessSample@{ProcessSample}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{ProcessSample()}{ProcessSample()}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::\+Process\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_oscillator_b_ac897f2989a6c116dbd046fa4bd8682a3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_oscillator_b_a27399beedd764603188b74a90503c4c5}\label{class_obxd_oscillator_b_a27399beedd764603188b74a90503c4c5} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!removeDecimation@{removeDecimation}}
+\index{removeDecimation@{removeDecimation}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{removeDecimation()}{removeDecimation()}}
+{\footnotesize\ttfamily void Obxd\+Oscillator\+B\+::remove\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_oscillator_b_a27399beedd764603188b74a90503c4c5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_oscillator_b_ae3164a17b91b0f9232cf848e10e3673e}\label{class_obxd_oscillator_b_ae3164a17b91b0f9232cf848e10e3673e} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!setDecimation@{setDecimation}}
+\index{setDecimation@{setDecimation}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{setDecimation()}{setDecimation()}}
+{\footnotesize\ttfamily void Obxd\+Oscillator\+B\+::set\+Decimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obxd_oscillator_b_ae3164a17b91b0f9232cf848e10e3673e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obxd_oscillator_b_a2180c5d1fa9a5fe5635be4a18c04f56e}\label{class_obxd_oscillator_b_a2180c5d1fa9a5fe5635be4a18c04f56e} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void Obxd\+Oscillator\+B\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_obxd_oscillator_b_aa77d7605fb117bdac76a00757e580b1c}\label{class_obxd_oscillator_b_aa77d7605fb117bdac76a00757e580b1c} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!cvd@{cvd}}
+\index{cvd@{cvd}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{cvd}{cvd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Obxd\+Oscillator\+B\+::cvd\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a217ad7968f6913300a17791c53414969}\label{class_obxd_oscillator_b_a217ad7968f6913300a17791c53414969} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!del1@{del1}}
+\index{del1@{del1}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{del1}{del1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Obxd\+Oscillator\+B\+::del1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a1917b8da62cc2a6f7ef735f1824494f6}\label{class_obxd_oscillator_b_a1917b8da62cc2a6f7ef735f1824494f6} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!del2@{del2}}
+\index{del2@{del2}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{del2}{del2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Obxd\+Oscillator\+B\+::del2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a6ca1b4da73d5b3b5f89ecd6ce6b59594}\label{class_obxd_oscillator_b_a6ca1b4da73d5b3b5f89ecd6ce6b59594} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!dirt@{dirt}}
+\index{dirt@{dirt}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{dirt}{dirt}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::dirt}
+
+\Hypertarget{class_obxd_oscillator_b_a1381d0cbe8a47cbe6947e6b304204b10}\label{class_obxd_oscillator_b_a1381d0cbe8a47cbe6947e6b304204b10} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!hardSync@{hardSync}}
+\index{hardSync@{hardSync}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{hardSync}{hardSync}}
+{\footnotesize\ttfamily bool Obxd\+Oscillator\+B\+::hard\+Sync}
+
+\Hypertarget{class_obxd_oscillator_b_a4b427f994dc251e9e5e75d8234c5d885}\label{class_obxd_oscillator_b_a4b427f994dc251e9e5e75d8234c5d885} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!hsam@{hsam}}
+\index{hsam@{hsam}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{hsam}{hsam}}
+{\footnotesize\ttfamily const int Obxd\+Oscillator\+B\+::hsam\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a542a86f426b9fcf43648c5bb51f68488}\label{class_obxd_oscillator_b_a542a86f426b9fcf43648c5bb51f68488} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!n@{n}}
+\index{n@{n}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily const int Obxd\+Oscillator\+B\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_ad1948eb9fccb62296eeceae1bbb14c55}\label{class_obxd_oscillator_b_ad1948eb9fccb62296eeceae1bbb14c55} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!nmx@{nmx}}
+\index{nmx@{nmx}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{nmx}{nmx}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::nmx}
+
+\Hypertarget{class_obxd_oscillator_b_a2880efc12ae34575fc54e4735d4bbf83}\label{class_obxd_oscillator_b_a2880efc12ae34575fc54e4735d4bbf83} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!notePlaying@{notePlaying}}
+\index{notePlaying@{notePlaying}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{notePlaying}{notePlaying}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::note\+Playing}
+
+\Hypertarget{class_obxd_oscillator_b_ae65760594e93810d3188eb471e8c91e3}\label{class_obxd_oscillator_b_ae65760594e93810d3188eb471e8c91e3} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o1mx@{o1mx}}
+\index{o1mx@{o1mx}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o1mx}{o1mx}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::o1mx}
+
+\Hypertarget{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab}\label{class_obxd_oscillator_b_abb51fc2845f932db3a0c5cd4c70f4cab} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o1p@{o1p}}
+\index{o1p@{o1p}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o1p}{o1p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pulse_osc}{Pulse\+Osc}} Obxd\+Oscillator\+B\+::o1p\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b}\label{class_obxd_oscillator_b_aa2bf40d6ccda4bb4010397f18284691b} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o1s@{o1s}}
+\index{o1s@{o1s}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o1s}{o1s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_saw_osc}{Saw\+Osc}} Obxd\+Oscillator\+B\+::o1s\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098}\label{class_obxd_oscillator_b_afacb7a4eb1b1f547fd2d4fcf61f03098} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o1t@{o1t}}
+\index{o1t@{o1t}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o1t}{o1t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_osc}{Triangle\+Osc}} Obxd\+Oscillator\+B\+::o1t\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a01531e17d1b608d30b5ae6370b042851}\label{class_obxd_oscillator_b_a01531e17d1b608d30b5ae6370b042851} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o2mx@{o2mx}}
+\index{o2mx@{o2mx}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o2mx}{o2mx}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::o2mx}
+
+\Hypertarget{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889}\label{class_obxd_oscillator_b_a1f4b525092342bdcf45bd53213b97889} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o2p@{o2p}}
+\index{o2p@{o2p}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o2p}{o2p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pulse_osc}{Pulse\+Osc}} Obxd\+Oscillator\+B\+::o2p\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134}\label{class_obxd_oscillator_b_a419cfc714a4df71f9748eecdfe0b5134} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o2s@{o2s}}
+\index{o2s@{o2s}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o2s}{o2s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_saw_osc}{Saw\+Osc}} Obxd\+Oscillator\+B\+::o2s\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd}\label{class_obxd_oscillator_b_ae7d2cfbef15fff1588a64de29e6f84dd} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!o2t@{o2t}}
+\index{o2t@{o2t}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{o2t}{o2t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_osc}{Triangle\+Osc}} Obxd\+Oscillator\+B\+::o2t\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a7859d93953d2d424e61d5e5b27a7d148}\label{class_obxd_oscillator_b_a7859d93953d2d424e61d5e5b27a7d148} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!oct@{oct}}
+\index{oct@{oct}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{oct}{oct}}
+{\footnotesize\ttfamily int Obxd\+Oscillator\+B\+::oct}
+
+\Hypertarget{class_obxd_oscillator_b_a814218cd0d073eb28a26abda659a9f8b}\label{class_obxd_oscillator_b_a814218cd0d073eb28a26abda659a9f8b} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc1Factor@{osc1Factor}}
+\index{osc1Factor@{osc1Factor}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc1Factor}{osc1Factor}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc1\+Factor\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_aca3a512ee603309d5af8a3dfc742a7e2}\label{class_obxd_oscillator_b_aca3a512ee603309d5af8a3dfc742a7e2} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc1p@{osc1p}}
+\index{osc1p@{osc1p}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc1p}{osc1p}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc1p}
+
+\Hypertarget{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2}\label{class_obxd_oscillator_b_ab56326b4abf43c4154044fcd4ca0afd2} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc1Pul@{osc1Pul}}
+\index{osc1Pul@{osc1Pul}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc1Pul}{osc1Pul}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc1\+Pul}
+
+\Hypertarget{class_obxd_oscillator_b_a74e2381abbf583e10b7aa61bf3451a45}\label{class_obxd_oscillator_b_a74e2381abbf583e10b7aa61bf3451a45} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc1Saw@{osc1Saw}}
+\index{osc1Saw@{osc1Saw}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc1Saw}{osc1Saw}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc1\+Saw}
+
+\Hypertarget{class_obxd_oscillator_b_a793b22fc5e6ea387ba1f6a25959b861c}\label{class_obxd_oscillator_b_a793b22fc5e6ea387ba1f6a25959b861c} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc2Det@{osc2Det}}
+\index{osc2Det@{osc2Det}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc2Det}{osc2Det}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc2\+Det}
+
+\Hypertarget{class_obxd_oscillator_b_a774accb00e0fa700be25064f3de3795d}\label{class_obxd_oscillator_b_a774accb00e0fa700be25064f3de3795d} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc2Factor@{osc2Factor}}
+\index{osc2Factor@{osc2Factor}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc2Factor}{osc2Factor}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc2\+Factor\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_acb5eb03a2c4161005bb6bec96e8aedc3}\label{class_obxd_oscillator_b_acb5eb03a2c4161005bb6bec96e8aedc3} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc2p@{osc2p}}
+\index{osc2p@{osc2p}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc2p}{osc2p}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc2p}
+
+\Hypertarget{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a}\label{class_obxd_oscillator_b_ad19e16bc791ca0bddae2ca5e0eeef65a} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc2Pul@{osc2Pul}}
+\index{osc2Pul@{osc2Pul}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc2Pul}{osc2Pul}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc2\+Pul}
+
+\Hypertarget{class_obxd_oscillator_b_abc5258f7a2d353f74b1386bf0478b86e}\label{class_obxd_oscillator_b_abc5258f7a2d353f74b1386bf0478b86e} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!osc2Saw@{osc2Saw}}
+\index{osc2Saw@{osc2Saw}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{osc2Saw}{osc2Saw}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::osc2\+Saw}
+
+\Hypertarget{class_obxd_oscillator_b_a623eb69e7704b05f4481b29b664f40a0}\label{class_obxd_oscillator_b_a623eb69e7704b05f4481b29b664f40a0} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pitch1@{pitch1}}
+\index{pitch1@{pitch1}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pitch1}{pitch1}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pitch1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a0e6c152ea927b585fd7173f48ef79fce}\label{class_obxd_oscillator_b_a0e6c152ea927b585fd7173f48ef79fce} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pitch2@{pitch2}}
+\index{pitch2@{pitch2}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pitch2}{pitch2}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pitch2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_aed94f78d6a53fa49827e11069324d1d3}\label{class_obxd_oscillator_b_aed94f78d6a53fa49827e11069324d1d3} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pto1@{pto1}}
+\index{pto1@{pto1}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pto1}{pto1}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pto1}
+
+\Hypertarget{class_obxd_oscillator_b_a9d5919bb6d92692e0553f80022952f95}\label{class_obxd_oscillator_b_a9d5919bb6d92692e0553f80022952f95} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pto2@{pto2}}
+\index{pto2@{pto2}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pto2}{pto2}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pto2}
+
+\Hypertarget{class_obxd_oscillator_b_a945e177a6b9f547fc7d4f06f77ca233c}\label{class_obxd_oscillator_b_a945e177a6b9f547fc7d4f06f77ca233c} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pulseWidth@{pulseWidth}}
+\index{pulseWidth@{pulseWidth}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pulseWidth}{pulseWidth}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pulse\+Width}
+
+\Hypertarget{class_obxd_oscillator_b_a700098471a10b622c324757e867b23aa}\label{class_obxd_oscillator_b_a700098471a10b622c324757e867b23aa} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pw1@{pw1}}
+\index{pw1@{pw1}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pw1}{pw1}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pw1}
+
+\Hypertarget{class_obxd_oscillator_b_a6e2c9ebb439d93273c49bbc0737ba787}\label{class_obxd_oscillator_b_a6e2c9ebb439d93273c49bbc0737ba787} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pw1w@{pw1w}}
+\index{pw1w@{pw1w}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pw1w}{pw1w}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pw1w\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_abac7a583ae9cddee66583da981101e8d}\label{class_obxd_oscillator_b_abac7a583ae9cddee66583da981101e8d} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pw2@{pw2}}
+\index{pw2@{pw2}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pw2}{pw2}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pw2}
+
+\Hypertarget{class_obxd_oscillator_b_aab1fbc4b44a9f329abb8b254e64eaeb6}\label{class_obxd_oscillator_b_aab1fbc4b44a9f329abb8b254e64eaeb6} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!pw2w@{pw2w}}
+\index{pw2w@{pw2w}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{pw2w}{pw2w}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::pw2w\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_aa9fa57107c521bc8513c09ea1189475d}\label{class_obxd_oscillator_b_aa9fa57107c521bc8513c09ea1189475d} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!quantizeCw@{quantizeCw}}
+\index{quantizeCw@{quantizeCw}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{quantizeCw}{quantizeCw}}
+{\footnotesize\ttfamily bool Obxd\+Oscillator\+B\+::quantize\+Cw}
+
+\Hypertarget{class_obxd_oscillator_b_a926a9b3ac3c7164a507d14fae6fbf5c6}\label{class_obxd_oscillator_b_a926a9b3ac3c7164a507d14fae6fbf5c6} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!SampleRate@{SampleRate}}
+\index{SampleRate@{SampleRate}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{SampleRate}{SampleRate}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::\+Sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a2c8189818316de4c09ddd2659d5e9940}\label{class_obxd_oscillator_b_a2c8189818316de4c09ddd2659d5e9940} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!sampleRateInv@{sampleRateInv}}
+\index{sampleRateInv@{sampleRateInv}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{sampleRateInv}{sampleRateInv}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::sample\+Rate\+Inv\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a2f3e4729d1032f762c5dd416ede0e11e}\label{class_obxd_oscillator_b_a2f3e4729d1032f762c5dd416ede0e11e} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!syncd@{syncd}}
+\index{syncd@{syncd}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{syncd}{syncd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line_boolean}{Delay\+Line\+Boolean}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Obxd\+Oscillator\+B\+::syncd\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_ac37c952ed9bce38ddadada4b4316f59e}\label{class_obxd_oscillator_b_ac37c952ed9bce38ddadada4b4316f59e} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!syncFracd@{syncFracd}}
+\index{syncFracd@{syncFracd}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{syncFracd}{syncFracd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Obxd\+Oscillator\+B\+::sync\+Fracd\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_aa4893f437e1509c35c7e37ff1c17c6f3}\label{class_obxd_oscillator_b_aa4893f437e1509c35c7e37ff1c17c6f3} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!totalDetune@{totalDetune}}
+\index{totalDetune@{totalDetune}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{totalDetune}{totalDetune}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::total\+Detune}
+
+\Hypertarget{class_obxd_oscillator_b_a4ba6c1bf0790642ef5413f1a5d2bbd48}\label{class_obxd_oscillator_b_a4ba6c1bf0790642ef5413f1a5d2bbd48} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!tune@{tune}}
+\index{tune@{tune}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{tune}{tune}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::tune}
+
+\Hypertarget{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df}\label{class_obxd_oscillator_b_a18c4fe0ea8d3f0acc791a0023d7209df} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!wn@{wn}}
+\index{wn@{wn}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{wn}{wn}}
+{\footnotesize\ttfamily Random Obxd\+Oscillator\+B\+::wn\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73}\label{class_obxd_oscillator_b_a6a1dd91fb35a823ea4302f83d90dcc73} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!x1@{x1}}
+\index{x1@{x1}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::x1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba}\label{class_obxd_oscillator_b_aa8a62dc487f69234c9588a64a409d5ba} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!x2@{x2}}
+\index{x2@{x2}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{x2}{x2}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::x2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_obxd_oscillator_b_a88ccb86f638b3369771bdf97e3e99b2f}\label{class_obxd_oscillator_b_a88ccb86f638b3369771bdf97e3e99b2f} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!xmod@{xmod}}
+\index{xmod@{xmod}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{xmod}{xmod}}
+{\footnotesize\ttfamily float Obxd\+Oscillator\+B\+::xmod}
+
+\Hypertarget{class_obxd_oscillator_b_a3fbd65353c004be95efa9e4b32e0e53c}\label{class_obxd_oscillator_b_a3fbd65353c004be95efa9e4b32e0e53c} 
+\index{ObxdOscillatorB@{ObxdOscillatorB}!xmodd@{xmodd}}
+\index{xmodd@{xmodd}!ObxdOscillatorB@{ObxdOscillatorB}}
+\doxysubsubsection{\texorpdfstring{xmodd}{xmodd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_delay_line}{Delay\+Line}}$<$\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}$>$ Obxd\+Oscillator\+B\+::xmodd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_obxd_oscillator_b_8h}{Obxd\+Oscillator\+B.\+h}}\end{DoxyCompactItemize}

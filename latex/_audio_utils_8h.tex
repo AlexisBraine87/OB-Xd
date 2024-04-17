@@ -1,0 +1,111 @@
+\doxysection{Source/\+Engine/\+Audio\+Utils.h File Reference}
+\hypertarget{_audio_utils_8h}{}\label{_audio_utils_8h}\index{Source/Engine/AudioUtils.h@{Source/Engine/AudioUtils.h}}
+{\ttfamily \#include "{}Synth\+Engine.\+h"{}}\newline
+Include dependency graph for Audio\+Utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_audio_utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_audio_utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{_audio_utils_8h_a9dc9d1c2f03d5b9379a71fce9a2a6d14}{get\+Pitch}} (float index)
+\item 
+static float \mbox{\hyperlink{_audio_utils_8h_ac3859c5924990491cd92652dee7d5321}{tptlpupw}} (float \&state, float inp, float cutoff, float sr\+Inv)
+\item 
+static float \mbox{\hyperlink{_audio_utils_8h_af3cc14994ff9c8a9d8c08a68a74aab59}{tptlp}} (float \&state, float inp, float cutoff, float sr\+Inv)
+\item 
+static float \mbox{\hyperlink{_audio_utils_8h_a3c51b4c070577ec0a8964423e22c2d0d}{tptpc}} (float \&state, float inp, float cutoff)
+\item 
+static float \mbox{\hyperlink{_audio_utils_8h_ada07461abdebc44c78bea4c951f6ed79}{linsc}} (float param, const float min, const float max)
+\item 
+static float \mbox{\hyperlink{_audio_utils_8h_a86c573cb84544ddad4fd2dd6d1b2104e}{logsc}} (float param, const float min, const float max, const float rolloff=19.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{_audio_utils_8h_a57e88770d78e1b604ad49a015ecc28dd}{sq2\+\_\+12}} = 1.\+0594630943592953f
+\item 
+const float \mbox{\hyperlink{_audio_utils_8h_a9000fe1bff7c39526c3d25bd9cb1db68}{dc}} = 1e-\/18
+\item 
+const float \mbox{\hyperlink{_audio_utils_8h_ae83e5030253f51f2b5370310d392abfa}{ln2}} = 0.\+69314718056f
+\item 
+const float \mbox{\hyperlink{_audio_utils_8h_aab14d0b619a7dd46654e4b116b294544}{mult}} = \mbox{\hyperlink{_audio_utils_8h_ae83e5030253f51f2b5370310d392abfa}{ln2}} / 12.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_audio_utils_8h_a9dc9d1c2f03d5b9379a71fce9a2a6d14}\label{_audio_utils_8h_a9dc9d1c2f03d5b9379a71fce9a2a6d14} 
+\index{AudioUtils.h@{AudioUtils.h}!getPitch@{getPitch}}
+\index{getPitch@{getPitch}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{getPitch()}{getPitch()}}
+{\footnotesize\ttfamily static float get\+Pitch (\begin{DoxyParamCaption}\item[{float}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{_audio_utils_8h_ada07461abdebc44c78bea4c951f6ed79}\label{_audio_utils_8h_ada07461abdebc44c78bea4c951f6ed79} 
+\index{AudioUtils.h@{AudioUtils.h}!linsc@{linsc}}
+\index{linsc@{linsc}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{linsc()}{linsc()}}
+{\footnotesize\ttfamily static float linsc (\begin{DoxyParamCaption}\item[{float}]{param,  }\item[{const float}]{min,  }\item[{const float}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{_audio_utils_8h_a86c573cb84544ddad4fd2dd6d1b2104e}\label{_audio_utils_8h_a86c573cb84544ddad4fd2dd6d1b2104e} 
+\index{AudioUtils.h@{AudioUtils.h}!logsc@{logsc}}
+\index{logsc@{logsc}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{logsc()}{logsc()}}
+{\footnotesize\ttfamily static float logsc (\begin{DoxyParamCaption}\item[{float}]{param,  }\item[{const float}]{min,  }\item[{const float}]{max,  }\item[{const float}]{rolloff = {\ttfamily 19.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{_audio_utils_8h_af3cc14994ff9c8a9d8c08a68a74aab59}\label{_audio_utils_8h_af3cc14994ff9c8a9d8c08a68a74aab59} 
+\index{AudioUtils.h@{AudioUtils.h}!tptlp@{tptlp}}
+\index{tptlp@{tptlp}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{tptlp()}{tptlp()}}
+{\footnotesize\ttfamily static float tptlp (\begin{DoxyParamCaption}\item[{float \&}]{state,  }\item[{float}]{inp,  }\item[{float}]{cutoff,  }\item[{float}]{sr\+Inv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{_audio_utils_8h_ac3859c5924990491cd92652dee7d5321}\label{_audio_utils_8h_ac3859c5924990491cd92652dee7d5321} 
+\index{AudioUtils.h@{AudioUtils.h}!tptlpupw@{tptlpupw}}
+\index{tptlpupw@{tptlpupw}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{tptlpupw()}{tptlpupw()}}
+{\footnotesize\ttfamily static float tptlpupw (\begin{DoxyParamCaption}\item[{float \&}]{state,  }\item[{float}]{inp,  }\item[{float}]{cutoff,  }\item[{float}]{sr\+Inv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{_audio_utils_8h_a3c51b4c070577ec0a8964423e22c2d0d}\label{_audio_utils_8h_a3c51b4c070577ec0a8964423e22c2d0d} 
+\index{AudioUtils.h@{AudioUtils.h}!tptpc@{tptpc}}
+\index{tptpc@{tptpc}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{tptpc()}{tptpc()}}
+{\footnotesize\ttfamily static float tptpc (\begin{DoxyParamCaption}\item[{float \&}]{state,  }\item[{float}]{inp,  }\item[{float}]{cutoff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_audio_utils_8h_a9000fe1bff7c39526c3d25bd9cb1db68}\label{_audio_utils_8h_a9000fe1bff7c39526c3d25bd9cb1db68} 
+\index{AudioUtils.h@{AudioUtils.h}!dc@{dc}}
+\index{dc@{dc}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{dc}{dc}}
+{\footnotesize\ttfamily const float dc = 1e-\/18}
+
+\Hypertarget{_audio_utils_8h_ae83e5030253f51f2b5370310d392abfa}\label{_audio_utils_8h_ae83e5030253f51f2b5370310d392abfa} 
+\index{AudioUtils.h@{AudioUtils.h}!ln2@{ln2}}
+\index{ln2@{ln2}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{ln2}{ln2}}
+{\footnotesize\ttfamily const float ln2 = 0.\+69314718056f}
+
+\Hypertarget{_audio_utils_8h_aab14d0b619a7dd46654e4b116b294544}\label{_audio_utils_8h_aab14d0b619a7dd46654e4b116b294544} 
+\index{AudioUtils.h@{AudioUtils.h}!mult@{mult}}
+\index{mult@{mult}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{mult}{mult}}
+{\footnotesize\ttfamily const float mult = \mbox{\hyperlink{_audio_utils_8h_ae83e5030253f51f2b5370310d392abfa}{ln2}} / 12.\+0}
+
+\Hypertarget{_audio_utils_8h_a57e88770d78e1b604ad49a015ecc28dd}\label{_audio_utils_8h_a57e88770d78e1b604ad49a015ecc28dd} 
+\index{AudioUtils.h@{AudioUtils.h}!sq2\_12@{sq2\_12}}
+\index{sq2\_12@{sq2\_12}!AudioUtils.h@{AudioUtils.h}}
+\doxysubsubsection{\texorpdfstring{sq2\_12}{sq2\_12}}
+{\footnotesize\ttfamily const float sq2\+\_\+12 = 1.\+0594630943592953f}
+

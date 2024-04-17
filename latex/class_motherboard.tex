@@ -1,0 +1,418 @@
+\doxysection{Motherboard Class Reference}
+\hypertarget{class_motherboard}{}\label{class_motherboard}\index{Motherboard@{Motherboard}}
+
+
+{\ttfamily \#include $<$Motherboard.\+h$>$}
+
+
+
+Collaboration diagram for Motherboard\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_motherboard_a7d8e651645b17aea61c4e125fd198140}{Motherboard}} ()
+\item 
+\mbox{\hyperlink{class_motherboard_a09b292213956ae5c987a28c033774180}{\texorpdfstring{$\sim$}{\string~}\+Motherboard}} ()
+\item 
+void \mbox{\hyperlink{class_motherboard_ae3618e91f4a028b2999aff6ffb59ec51}{set\+Voice\+Count}} (int count)
+\item 
+void \mbox{\hyperlink{class_motherboard_afc35b8657f0389675c776cb919f97292}{unison\+On}} ()
+\item 
+void \mbox{\hyperlink{class_motherboard_a2a4af6fda2ee1efda5e1663115dc48ed}{set\+Sample\+Rate}} (float sr)
+\item 
+void \mbox{\hyperlink{class_motherboard_ab8369283607f6b512a62ba151217b7dd}{sustain\+On}} ()
+\item 
+void \mbox{\hyperlink{class_motherboard_a6301682b5c92741491855b894fec98c4}{sustain\+Off}} ()
+\item 
+void \mbox{\hyperlink{class_motherboard_af81b1a3d81c381f9f7f5f1c690df2aad}{set\+Note\+On}} (int note\+No, float velocity)
+\item 
+void \mbox{\hyperlink{class_motherboard_a4ac4ef6b754f8d1782febc13e6284d02}{set\+Note\+Off}} (int note\+No)
+\item 
+void \mbox{\hyperlink{class_motherboard_a75b5415cb6fde12502d876edffd33529}{Set\+Oversample}} (bool over)
+\item 
+float \mbox{\hyperlink{class_motherboard_af292fe964ee7852694e6b8bf45e91ed7}{process\+Synth\+Voice}} (\mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \&b, float lfo\+In, float vib\+In)
+\item 
+void \mbox{\hyperlink{class_motherboard_aeb4816be0663be82f81d5e74ae1d26aa}{process\+Sample}} (float \texorpdfstring{$\ast$}{*}sm1, float \texorpdfstring{$\ast$}{*}sm2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tuning}{Tuning}} \mbox{\hyperlink{class_motherboard_a581de901f6e2a2c20ee8b9bd6b194a31}{tuning}}
+\item 
+bool \mbox{\hyperlink{class_motherboard_ac38fb5ea58358cea2fc3a4a24546cea1}{as\+Played\+Mode}}
+\item 
+\mbox{\hyperlink{class_lfo}{Lfo}} \mbox{\hyperlink{class_motherboard_aa6245099f320017cd4f683a7385be041}{mlfo}}
+\item 
+\mbox{\hyperlink{class_lfo}{Lfo}} \mbox{\hyperlink{class_motherboard_addf514ced35c00f3e9686434c3153b9c}{vibrato\+Lfo}}
+\item 
+float \mbox{\hyperlink{class_motherboard_a2b77a6f986b035c1e6bed9e94a2d3a78}{vibrato\+Amount}}
+\item 
+bool \mbox{\hyperlink{class_motherboard_aaab1ee127ba75b74ba5684a25168c59d}{vibrato\+Enabled}}
+\item 
+float \mbox{\hyperlink{class_motherboard_a27fdce7c8592d9b6ad9ca448e8bc46c3}{Volume}}
+\item 
+float \mbox{\hyperlink{class_motherboard_a588a66963827f2dadb3e6cfecf7b46f5}{pannings}} \mbox{[}\mbox{\hyperlink{class_motherboard_a6b29558f52f537835d3eac34b1dded9a}{MAX\+\_\+\+PANNINGS}}\mbox{]}
+\item 
+\mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \mbox{\hyperlink{class_motherboard_a9f092efa06586783ac1cbd300300e4e0}{voices}} \mbox{[}\mbox{\hyperlink{class_motherboard_a7fe8da07b91bf5ba2efbef92fb9151a8}{MAX\+\_\+\+VOICES}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{class_motherboard_a3f0c123fc7bcb2cf93f76af549f22ec9}{uni}}
+\item 
+bool \mbox{\hyperlink{class_motherboard_a8e350b2ddd732dd60a4495b80ef82faf}{Oversample}}
+\item 
+bool \mbox{\hyperlink{class_motherboard_ae17cc5cd679fe3f8bd5d7d7377fbf2a4}{economy\+Mode}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_motherboard_a7fe8da07b91bf5ba2efbef92fb9151a8}{MAX\+\_\+\+VOICES}} = 32
+\item 
+static const int \mbox{\hyperlink{class_motherboard_a6b29558f52f537835d3eac34b1dded9a}{MAX\+\_\+\+PANNINGS}} = 8
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_voice_queue}{Voice\+Queue}} \mbox{\hyperlink{class_motherboard_a708a26a0ac419cf14e82875d44f561ee}{vq}}
+\item 
+int \mbox{\hyperlink{class_motherboard_a534aa3aab3eb48f117d4b36aaeabac6e}{totalvc}}
+\item 
+bool \mbox{\hyperlink{class_motherboard_aeee6f93d5a54dfb693c5946a013407b0}{was\+Uni}}
+\item 
+bool \mbox{\hyperlink{class_motherboard_ac6c47bb28e405a5ade0aba38ba28d1bf}{awaitingkeys}} \mbox{[}129\mbox{]}
+\item 
+int \mbox{\hyperlink{class_motherboard_a20049a569a58178ef019581cb5a5e043}{priorities}} \mbox{[}129\mbox{]}
+\item 
+\mbox{\hyperlink{class_decimator17}{Decimator17}} \mbox{\hyperlink{class_motherboard_aab40c5b11d92899d33b9f03a8dbe9f6a}{left}}
+\item 
+\mbox{\hyperlink{class_decimator17}{Decimator17}} \mbox{\hyperlink{class_motherboard_a018f722b922bf82b42cc337b2c036363}{right}}
+\item 
+int \mbox{\hyperlink{class_motherboard_aa1cd0d64aab24052eeff6d13fa0a12ff}{as\+Played\+Counter}}
+\item 
+float \mbox{\hyperlink{class_motherboard_a87b5d2175cdc3c574e37cf1e071f8092}{lkl}}
+\item 
+float \mbox{\hyperlink{class_motherboard_a444be0c6f3942a744d996c8d6584ca82}{lkr}}
+\item 
+float \mbox{\hyperlink{class_motherboard_a2555d2fe94e849def0651ca5a7468939}{sample\+Rate}}
+\item 
+float \mbox{\hyperlink{class_motherboard_ad63b284b422c04fea548c375b965ae60}{sample\+Rate\+Inv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_motherboard_a7d8e651645b17aea61c4e125fd198140}\label{class_motherboard_a7d8e651645b17aea61c4e125fd198140} 
+\index{Motherboard@{Motherboard}!Motherboard@{Motherboard}}
+\index{Motherboard@{Motherboard}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{Motherboard()}{Motherboard()}}
+{\footnotesize\ttfamily Motherboard\+::\+Motherboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_motherboard_a09b292213956ae5c987a28c033774180}\label{class_motherboard_a09b292213956ae5c987a28c033774180} 
+\index{Motherboard@{Motherboard}!````~Motherboard@{\texorpdfstring{$\sim$}{\string~}Motherboard}}
+\index{````~Motherboard@{\texorpdfstring{$\sim$}{\string~}Motherboard}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Motherboard()}{\string~Motherboard()}}
+{\footnotesize\ttfamily Motherboard\+::\texorpdfstring{$\sim$}{\string~}\+Motherboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_motherboard_aeb4816be0663be82f81d5e74ae1d26aa}\label{class_motherboard_aeb4816be0663be82f81d5e74ae1d26aa} 
+\index{Motherboard@{Motherboard}!processSample@{processSample}}
+\index{processSample@{processSample}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{processSample()}{processSample()}}
+{\footnotesize\ttfamily void Motherboard\+::process\+Sample (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{sm1,  }\item[{float \texorpdfstring{$\ast$}{*}}]{sm2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_aeb4816be0663be82f81d5e74ae1d26aa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_af292fe964ee7852694e6b8bf45e91ed7}\label{class_motherboard_af292fe964ee7852694e6b8bf45e91ed7} 
+\index{Motherboard@{Motherboard}!processSynthVoice@{processSynthVoice}}
+\index{processSynthVoice@{processSynthVoice}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{processSynthVoice()}{processSynthVoice()}}
+{\footnotesize\ttfamily float Motherboard\+::process\+Synth\+Voice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} \&}]{b,  }\item[{float}]{lfo\+In,  }\item[{float}]{vib\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_af292fe964ee7852694e6b8bf45e91ed7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_a4ac4ef6b754f8d1782febc13e6284d02}\label{class_motherboard_a4ac4ef6b754f8d1782febc13e6284d02} 
+\index{Motherboard@{Motherboard}!setNoteOff@{setNoteOff}}
+\index{setNoteOff@{setNoteOff}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{setNoteOff()}{setNoteOff()}}
+{\footnotesize\ttfamily void Motherboard\+::set\+Note\+Off (\begin{DoxyParamCaption}\item[{int}]{note\+No }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_a4ac4ef6b754f8d1782febc13e6284d02_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_af81b1a3d81c381f9f7f5f1c690df2aad}\label{class_motherboard_af81b1a3d81c381f9f7f5f1c690df2aad} 
+\index{Motherboard@{Motherboard}!setNoteOn@{setNoteOn}}
+\index{setNoteOn@{setNoteOn}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{setNoteOn()}{setNoteOn()}}
+{\footnotesize\ttfamily void Motherboard\+::set\+Note\+On (\begin{DoxyParamCaption}\item[{int}]{note\+No,  }\item[{float}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_af81b1a3d81c381f9f7f5f1c690df2aad_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_a75b5415cb6fde12502d876edffd33529}\label{class_motherboard_a75b5415cb6fde12502d876edffd33529} 
+\index{Motherboard@{Motherboard}!SetOversample@{SetOversample}}
+\index{SetOversample@{SetOversample}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{SetOversample()}{SetOversample()}}
+{\footnotesize\ttfamily void Motherboard\+::\+Set\+Oversample (\begin{DoxyParamCaption}\item[{bool}]{over }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_a75b5415cb6fde12502d876edffd33529_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_a2a4af6fda2ee1efda5e1663115dc48ed}\label{class_motherboard_a2a4af6fda2ee1efda5e1663115dc48ed} 
+\index{Motherboard@{Motherboard}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void Motherboard\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_a2a4af6fda2ee1efda5e1663115dc48ed_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_ae3618e91f4a028b2999aff6ffb59ec51}\label{class_motherboard_ae3618e91f4a028b2999aff6ffb59ec51} 
+\index{Motherboard@{Motherboard}!setVoiceCount@{setVoiceCount}}
+\index{setVoiceCount@{setVoiceCount}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{setVoiceCount()}{setVoiceCount()}}
+{\footnotesize\ttfamily void Motherboard\+::set\+Voice\+Count (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_ae3618e91f4a028b2999aff6ffb59ec51_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_a6301682b5c92741491855b894fec98c4}\label{class_motherboard_a6301682b5c92741491855b894fec98c4} 
+\index{Motherboard@{Motherboard}!sustainOff@{sustainOff}}
+\index{sustainOff@{sustainOff}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{sustainOff()}{sustainOff()}}
+{\footnotesize\ttfamily void Motherboard\+::sustain\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motherboard_a6301682b5c92741491855b894fec98c4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_ab8369283607f6b512a62ba151217b7dd}\label{class_motherboard_ab8369283607f6b512a62ba151217b7dd} 
+\index{Motherboard@{Motherboard}!sustainOn@{sustainOn}}
+\index{sustainOn@{sustainOn}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{sustainOn()}{sustainOn()}}
+{\footnotesize\ttfamily void Motherboard\+::sustain\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_motherboard_ab8369283607f6b512a62ba151217b7dd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motherboard_afc35b8657f0389675c776cb919f97292}\label{class_motherboard_afc35b8657f0389675c776cb919f97292} 
+\index{Motherboard@{Motherboard}!unisonOn@{unisonOn}}
+\index{unisonOn@{unisonOn}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{unisonOn()}{unisonOn()}}
+{\footnotesize\ttfamily void Motherboard\+::unison\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_motherboard_aa1cd0d64aab24052eeff6d13fa0a12ff}\label{class_motherboard_aa1cd0d64aab24052eeff6d13fa0a12ff} 
+\index{Motherboard@{Motherboard}!asPlayedCounter@{asPlayedCounter}}
+\index{asPlayedCounter@{asPlayedCounter}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{asPlayedCounter}{asPlayedCounter}}
+{\footnotesize\ttfamily int Motherboard\+::as\+Played\+Counter\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_ac38fb5ea58358cea2fc3a4a24546cea1}\label{class_motherboard_ac38fb5ea58358cea2fc3a4a24546cea1} 
+\index{Motherboard@{Motherboard}!asPlayedMode@{asPlayedMode}}
+\index{asPlayedMode@{asPlayedMode}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{asPlayedMode}{asPlayedMode}}
+{\footnotesize\ttfamily bool Motherboard\+::as\+Played\+Mode}
+
+\Hypertarget{class_motherboard_ac6c47bb28e405a5ade0aba38ba28d1bf}\label{class_motherboard_ac6c47bb28e405a5ade0aba38ba28d1bf} 
+\index{Motherboard@{Motherboard}!awaitingkeys@{awaitingkeys}}
+\index{awaitingkeys@{awaitingkeys}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{awaitingkeys}{awaitingkeys}}
+{\footnotesize\ttfamily bool Motherboard\+::awaitingkeys\mbox{[}129\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_ae17cc5cd679fe3f8bd5d7d7377fbf2a4}\label{class_motherboard_ae17cc5cd679fe3f8bd5d7d7377fbf2a4} 
+\index{Motherboard@{Motherboard}!economyMode@{economyMode}}
+\index{economyMode@{economyMode}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{economyMode}{economyMode}}
+{\footnotesize\ttfamily bool Motherboard\+::economy\+Mode}
+
+\Hypertarget{class_motherboard_aab40c5b11d92899d33b9f03a8dbe9f6a}\label{class_motherboard_aab40c5b11d92899d33b9f03a8dbe9f6a} 
+\index{Motherboard@{Motherboard}!left@{left}}
+\index{left@{left}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_decimator17}{Decimator17}} Motherboard\+::left\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_a87b5d2175cdc3c574e37cf1e071f8092}\label{class_motherboard_a87b5d2175cdc3c574e37cf1e071f8092} 
+\index{Motherboard@{Motherboard}!lkl@{lkl}}
+\index{lkl@{lkl}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{lkl}{lkl}}
+{\footnotesize\ttfamily float Motherboard\+::lkl\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_a444be0c6f3942a744d996c8d6584ca82}\label{class_motherboard_a444be0c6f3942a744d996c8d6584ca82} 
+\index{Motherboard@{Motherboard}!lkr@{lkr}}
+\index{lkr@{lkr}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{lkr}{lkr}}
+{\footnotesize\ttfamily float Motherboard\+::lkr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_a6b29558f52f537835d3eac34b1dded9a}\label{class_motherboard_a6b29558f52f537835d3eac34b1dded9a} 
+\index{Motherboard@{Motherboard}!MAX\_PANNINGS@{MAX\_PANNINGS}}
+\index{MAX\_PANNINGS@{MAX\_PANNINGS}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{MAX\_PANNINGS}{MAX\_PANNINGS}}
+{\footnotesize\ttfamily const int Motherboard\+::\+MAX\+\_\+\+PANNINGS = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_motherboard_a7fe8da07b91bf5ba2efbef92fb9151a8}\label{class_motherboard_a7fe8da07b91bf5ba2efbef92fb9151a8} 
+\index{Motherboard@{Motherboard}!MAX\_VOICES@{MAX\_VOICES}}
+\index{MAX\_VOICES@{MAX\_VOICES}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{MAX\_VOICES}{MAX\_VOICES}}
+{\footnotesize\ttfamily const int Motherboard\+::\+MAX\+\_\+\+VOICES = 32\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_motherboard_aa6245099f320017cd4f683a7385be041}\label{class_motherboard_aa6245099f320017cd4f683a7385be041} 
+\index{Motherboard@{Motherboard}!mlfo@{mlfo}}
+\index{mlfo@{mlfo}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{mlfo}{mlfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_lfo}{Lfo}} Motherboard\+::mlfo}
+
+\Hypertarget{class_motherboard_a8e350b2ddd732dd60a4495b80ef82faf}\label{class_motherboard_a8e350b2ddd732dd60a4495b80ef82faf} 
+\index{Motherboard@{Motherboard}!Oversample@{Oversample}}
+\index{Oversample@{Oversample}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{Oversample}{Oversample}}
+{\footnotesize\ttfamily bool Motherboard\+::\+Oversample}
+
+\Hypertarget{class_motherboard_a588a66963827f2dadb3e6cfecf7b46f5}\label{class_motherboard_a588a66963827f2dadb3e6cfecf7b46f5} 
+\index{Motherboard@{Motherboard}!pannings@{pannings}}
+\index{pannings@{pannings}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{pannings}{pannings}}
+{\footnotesize\ttfamily float Motherboard\+::pannings\mbox{[}\mbox{\hyperlink{class_motherboard_a6b29558f52f537835d3eac34b1dded9a}{MAX\+\_\+\+PANNINGS}}\mbox{]}}
+
+\Hypertarget{class_motherboard_a20049a569a58178ef019581cb5a5e043}\label{class_motherboard_a20049a569a58178ef019581cb5a5e043} 
+\index{Motherboard@{Motherboard}!priorities@{priorities}}
+\index{priorities@{priorities}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{priorities}{priorities}}
+{\footnotesize\ttfamily int Motherboard\+::priorities\mbox{[}129\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_a018f722b922bf82b42cc337b2c036363}\label{class_motherboard_a018f722b922bf82b42cc337b2c036363} 
+\index{Motherboard@{Motherboard}!right@{right}}
+\index{right@{right}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_decimator17}{Decimator17}} Motherboard\+::right\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_a2555d2fe94e849def0651ca5a7468939}\label{class_motherboard_a2555d2fe94e849def0651ca5a7468939} 
+\index{Motherboard@{Motherboard}!sampleRate@{sampleRate}}
+\index{sampleRate@{sampleRate}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{sampleRate}{sampleRate}}
+{\footnotesize\ttfamily float Motherboard\+::sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_ad63b284b422c04fea548c375b965ae60}\label{class_motherboard_ad63b284b422c04fea548c375b965ae60} 
+\index{Motherboard@{Motherboard}!sampleRateInv@{sampleRateInv}}
+\index{sampleRateInv@{sampleRateInv}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{sampleRateInv}{sampleRateInv}}
+{\footnotesize\ttfamily float Motherboard\+::sample\+Rate\+Inv\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_a534aa3aab3eb48f117d4b36aaeabac6e}\label{class_motherboard_a534aa3aab3eb48f117d4b36aaeabac6e} 
+\index{Motherboard@{Motherboard}!totalvc@{totalvc}}
+\index{totalvc@{totalvc}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{totalvc}{totalvc}}
+{\footnotesize\ttfamily int Motherboard\+::totalvc\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_a581de901f6e2a2c20ee8b9bd6b194a31}\label{class_motherboard_a581de901f6e2a2c20ee8b9bd6b194a31} 
+\index{Motherboard@{Motherboard}!tuning@{tuning}}
+\index{tuning@{tuning}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{tuning}{tuning}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tuning}{Tuning}} Motherboard\+::tuning}
+
+\Hypertarget{class_motherboard_a3f0c123fc7bcb2cf93f76af549f22ec9}\label{class_motherboard_a3f0c123fc7bcb2cf93f76af549f22ec9} 
+\index{Motherboard@{Motherboard}!uni@{uni}}
+\index{uni@{uni}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{uni}{uni}}
+{\footnotesize\ttfamily bool Motherboard\+::uni}
+
+\Hypertarget{class_motherboard_a2b77a6f986b035c1e6bed9e94a2d3a78}\label{class_motherboard_a2b77a6f986b035c1e6bed9e94a2d3a78} 
+\index{Motherboard@{Motherboard}!vibratoAmount@{vibratoAmount}}
+\index{vibratoAmount@{vibratoAmount}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{vibratoAmount}{vibratoAmount}}
+{\footnotesize\ttfamily float Motherboard\+::vibrato\+Amount}
+
+\Hypertarget{class_motherboard_aaab1ee127ba75b74ba5684a25168c59d}\label{class_motherboard_aaab1ee127ba75b74ba5684a25168c59d} 
+\index{Motherboard@{Motherboard}!vibratoEnabled@{vibratoEnabled}}
+\index{vibratoEnabled@{vibratoEnabled}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{vibratoEnabled}{vibratoEnabled}}
+{\footnotesize\ttfamily bool Motherboard\+::vibrato\+Enabled}
+
+\Hypertarget{class_motherboard_addf514ced35c00f3e9686434c3153b9c}\label{class_motherboard_addf514ced35c00f3e9686434c3153b9c} 
+\index{Motherboard@{Motherboard}!vibratoLfo@{vibratoLfo}}
+\index{vibratoLfo@{vibratoLfo}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{vibratoLfo}{vibratoLfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_lfo}{Lfo}} Motherboard\+::vibrato\+Lfo}
+
+\Hypertarget{class_motherboard_a9f092efa06586783ac1cbd300300e4e0}\label{class_motherboard_a9f092efa06586783ac1cbd300300e4e0} 
+\index{Motherboard@{Motherboard}!voices@{voices}}
+\index{voices@{voices}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{voices}{voices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obxd_voice}{Obxd\+Voice}} Motherboard\+::voices\mbox{[}\mbox{\hyperlink{class_motherboard_a7fe8da07b91bf5ba2efbef92fb9151a8}{MAX\+\_\+\+VOICES}}\mbox{]}}
+
+\Hypertarget{class_motherboard_a27fdce7c8592d9b6ad9ca448e8bc46c3}\label{class_motherboard_a27fdce7c8592d9b6ad9ca448e8bc46c3} 
+\index{Motherboard@{Motherboard}!Volume@{Volume}}
+\index{Volume@{Volume}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{Volume}{Volume}}
+{\footnotesize\ttfamily float Motherboard\+::\+Volume}
+
+\Hypertarget{class_motherboard_a708a26a0ac419cf14e82875d44f561ee}\label{class_motherboard_a708a26a0ac419cf14e82875d44f561ee} 
+\index{Motherboard@{Motherboard}!vq@{vq}}
+\index{vq@{vq}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{vq}{vq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_voice_queue}{Voice\+Queue}} Motherboard\+::vq\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_motherboard_aeee6f93d5a54dfb693c5946a013407b0}\label{class_motherboard_aeee6f93d5a54dfb693c5946a013407b0} 
+\index{Motherboard@{Motherboard}!wasUni@{wasUni}}
+\index{wasUni@{wasUni}!Motherboard@{Motherboard}}
+\doxysubsubsection{\texorpdfstring{wasUni}{wasUni}}
+{\footnotesize\ttfamily bool Motherboard\+::was\+Uni\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_motherboard_8h}{Motherboard.\+h}}\end{DoxyCompactItemize}

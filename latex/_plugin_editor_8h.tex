@@ -1,0 +1,172 @@
+\doxysection{Source/\+Plugin\+Editor.h File Reference}
+\hypertarget{_plugin_editor_8h}{}\label{_plugin_editor_8h}\index{Source/PluginEditor.h@{Source/PluginEditor.h}}
+{\ttfamily \#include "{}../\+Juce\+Library\+Code/\+Juce\+Header.\+h"{}}\newline
+{\ttfamily \#include "{}Plugin\+Processor.\+h"{}}\newline
+{\ttfamily \#include "{}Gui/\+Knob.\+h"{}}\newline
+{\ttfamily \#include "{}Gui/\+Tooglable\+Button.\+h"{}}\newline
+{\ttfamily \#include "{}Gui/\+Button\+List.\+h"{}}\newline
+{\ttfamily \#include "{}Components/\+Set\+Preset\+Name\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}Components/\+Preset\+Bar.\+h"{}}\newline
+{\ttfamily \#include "{}Components/\+Scale\+Component.\+h"{}}\newline
+Include dependency graph for Plugin\+Editor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_plugin_editor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_plugin_editor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_obxd_audio_processor_editor}{Obxd\+Audio\+Processor\+Editor}}
+\item 
+struct \mbox{\hyperlink{struct_obxd_audio_processor_editor_1_1_action}{Obxd\+Audio\+Processor\+Editor\+::\+Action}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_plugin_editor_8h_a8f509889dd68c0b5ab940df3af700e8e}{PLUGINEDITOR\+\_\+\+H\+\_\+\+INCLUDED}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ff}{Key\+Press\+Command\+IDs}} \{ \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffada106b534d93d526cc8b0f00cbcbf7ae}{button\+Next\+Program}} = 1
+, \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa1bde10d7fb3849c9765b0254454f42ed}{button\+Prev\+Program}}
+, \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa2650f1d6a9b7067207c61dcfaa15a412}{button\+Pad\+Next\+Program}}
+, \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffafc9796ee5352c66596820ea8fae7634b}{button\+Pad\+Prev\+Program}}
+ \}
+\item 
+enum \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3}{Menu\+Action}} \{ \newline
+\mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a94740273f4260406fffc4a312e1b6c01}{Cancel}} = 0
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3acb05b59c21f135fef34cb734e363090c}{Toggle\+Midi\+Keyboard}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a876915a60b68861f9d10e1700487be24}{Import\+Preset}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a425396a573f21dfde5d32e3bf5101fa9}{Import\+Bank}}
+, \newline
+\mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a3bc54321980bbd706f1e3abd21cc5ee8}{Export\+Bank}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a7742364b2e881f079ae4b082e2ec7bff}{Export\+Preset}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a73a7f990b989810ca61c60e570f53880}{Save\+Preset}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a561e88eea12268d8b127f1b62fbbf0f3}{New\+Preset}}
+, \newline
+\mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a0436854bd7c2b88e7680c5ed8f4cdf9a}{Rename\+Preset}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a9e99407fc2c0ec2a5a4cbbab3489e7e7}{Delete\+Preset}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a93980bde5b6bcbab12e22d24237460b1}{Delete\+Bank}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a4153f93739ace3b08635fa221baf0b18}{Show\+Banks}}
+, \newline
+\mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a6e18cb997393fc7759e4dd8c12256a53}{Copy\+Preset}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a28dcd4ef651235373a3bba3b44936810}{Paste\+Preset}}
+, \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3ac774d8dc1a8dffb9cf31414de29c3bca}{Load\+Bank}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_plugin_editor_8h_a8f509889dd68c0b5ab940df3af700e8e}\label{_plugin_editor_8h_a8f509889dd68c0b5ab940df3af700e8e} 
+\index{PluginEditor.h@{PluginEditor.h}!PLUGINEDITOR\_H\_INCLUDED@{PLUGINEDITOR\_H\_INCLUDED}}
+\index{PLUGINEDITOR\_H\_INCLUDED@{PLUGINEDITOR\_H\_INCLUDED}!PluginEditor.h@{PluginEditor.h}}
+\doxysubsubsection{\texorpdfstring{PLUGINEDITOR\_H\_INCLUDED}{PLUGINEDITOR\_H\_INCLUDED}}
+{\footnotesize\ttfamily \#define PLUGINEDITOR\+\_\+\+H\+\_\+\+INCLUDED}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ff}\label{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ff} 
+\index{PluginEditor.h@{PluginEditor.h}!KeyPressCommandIDs@{KeyPressCommandIDs}}
+\index{KeyPressCommandIDs@{KeyPressCommandIDs}!PluginEditor.h@{PluginEditor.h}}
+\doxysubsubsection{\texorpdfstring{KeyPressCommandIDs}{KeyPressCommandIDs}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ff}{Key\+Press\+Command\+IDs}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{buttonNextProgram@{buttonNextProgram}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!buttonNextProgram@{buttonNextProgram}}}\Hypertarget{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffada106b534d93d526cc8b0f00cbcbf7ae}\label{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffada106b534d93d526cc8b0f00cbcbf7ae} 
+button\+Next\+Program&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{buttonPrevProgram@{buttonPrevProgram}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!buttonPrevProgram@{buttonPrevProgram}}}\Hypertarget{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa1bde10d7fb3849c9765b0254454f42ed}\label{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa1bde10d7fb3849c9765b0254454f42ed} 
+button\+Prev\+Program&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{buttonPadNextProgram@{buttonPadNextProgram}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!buttonPadNextProgram@{buttonPadNextProgram}}}\Hypertarget{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa2650f1d6a9b7067207c61dcfaa15a412}\label{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffa2650f1d6a9b7067207c61dcfaa15a412} 
+button\+Pad\+Next\+Program&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{buttonPadPrevProgram@{buttonPadPrevProgram}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!buttonPadPrevProgram@{buttonPadPrevProgram}}}\Hypertarget{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffafc9796ee5352c66596820ea8fae7634b}\label{_plugin_editor_8h_a9ad5bc8698ad46c1c7f58dca9736b5ffafc9796ee5352c66596820ea8fae7634b} 
+button\+Pad\+Prev\+Program&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3} 
+\index{PluginEditor.h@{PluginEditor.h}!MenuAction@{MenuAction}}
+\index{MenuAction@{MenuAction}!PluginEditor.h@{PluginEditor.h}}
+\doxysubsubsection{\texorpdfstring{MenuAction}{MenuAction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3}{Menu\+Action}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cancel@{Cancel}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!Cancel@{Cancel}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a94740273f4260406fffc4a312e1b6c01}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a94740273f4260406fffc4a312e1b6c01} 
+Cancel&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ToggleMidiKeyboard@{ToggleMidiKeyboard}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!ToggleMidiKeyboard@{ToggleMidiKeyboard}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3acb05b59c21f135fef34cb734e363090c}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3acb05b59c21f135fef34cb734e363090c} 
+Toggle\+Midi\+Keyboard&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ImportPreset@{ImportPreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!ImportPreset@{ImportPreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a876915a60b68861f9d10e1700487be24}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a876915a60b68861f9d10e1700487be24} 
+Import\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ImportBank@{ImportBank}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!ImportBank@{ImportBank}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a425396a573f21dfde5d32e3bf5101fa9}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a425396a573f21dfde5d32e3bf5101fa9} 
+Import\+Bank&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ExportBank@{ExportBank}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!ExportBank@{ExportBank}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a3bc54321980bbd706f1e3abd21cc5ee8}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a3bc54321980bbd706f1e3abd21cc5ee8} 
+Export\+Bank&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ExportPreset@{ExportPreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!ExportPreset@{ExportPreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a7742364b2e881f079ae4b082e2ec7bff}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a7742364b2e881f079ae4b082e2ec7bff} 
+Export\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SavePreset@{SavePreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!SavePreset@{SavePreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a73a7f990b989810ca61c60e570f53880}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a73a7f990b989810ca61c60e570f53880} 
+Save\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NewPreset@{NewPreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!NewPreset@{NewPreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a561e88eea12268d8b127f1b62fbbf0f3}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a561e88eea12268d8b127f1b62fbbf0f3} 
+New\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RenamePreset@{RenamePreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!RenamePreset@{RenamePreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a0436854bd7c2b88e7680c5ed8f4cdf9a}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a0436854bd7c2b88e7680c5ed8f4cdf9a} 
+Rename\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DeletePreset@{DeletePreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!DeletePreset@{DeletePreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a9e99407fc2c0ec2a5a4cbbab3489e7e7}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a9e99407fc2c0ec2a5a4cbbab3489e7e7} 
+Delete\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DeleteBank@{DeleteBank}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!DeleteBank@{DeleteBank}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a93980bde5b6bcbab12e22d24237460b1}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a93980bde5b6bcbab12e22d24237460b1} 
+Delete\+Bank&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShowBanks@{ShowBanks}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!ShowBanks@{ShowBanks}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a4153f93739ace3b08635fa221baf0b18}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a4153f93739ace3b08635fa221baf0b18} 
+Show\+Banks&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CopyPreset@{CopyPreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!CopyPreset@{CopyPreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a6e18cb997393fc7759e4dd8c12256a53}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a6e18cb997393fc7759e4dd8c12256a53} 
+Copy\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PastePreset@{PastePreset}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!PastePreset@{PastePreset}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a28dcd4ef651235373a3bba3b44936810}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3a28dcd4ef651235373a3bba3b44936810} 
+Paste\+Preset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LoadBank@{LoadBank}!PluginEditor.h@{PluginEditor.h}}\index{PluginEditor.h@{PluginEditor.h}!LoadBank@{LoadBank}}}\Hypertarget{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3ac774d8dc1a8dffb9cf31414de29c3bca}\label{_plugin_editor_8h_ab99074a1f6b7e8ff7730342913aae3a3ac774d8dc1a8dffb9cf31414de29c3bca} 
+Load\+Bank&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['value_0',['Value',['../class_adsr_envelope.html#a00d1303df02c0b29287eb70376ea25d5',1,'AdsrEnvelope']]],
+  ['values_1',['values',['../class_obxd_params.html#a9ffa2c5fc973ee479014cfafd77f252e',1,'ObxdParams']]],
+  ['vamp_2',['vamp',['../class_obxd_voice.html#a7695b5733995c3261432ef9dc5668325',1,'ObxdVoice']]],
+  ['veloampenvknob_3',['veloAmpEnvKnob',['../class_obxd_audio_processor_editor.html#a909de28dd452f0c5e88b9c0b7af83fd7',1,'ObxdAudioProcessorEditor']]],
+  ['velocityvalue_4',['velocityValue',['../class_obxd_voice.html#a93abf19abf49e8e79bc5e460a4f411a0',1,'ObxdVoice']]],
+  ['velofltenvknob_5',['veloFltEnvKnob',['../class_obxd_audio_processor_editor.html#afa62a04109562834b1dc332a16bcfc35',1,'ObxdAudioProcessorEditor']]],
+  ['version_6',['version',['../structfx_program.html#ab39ddd617a62cee7f7745a98db81d4f3',1,'fxProgram::version'],['../structfx_set.html#a0649cb2f6303a6abceae577648650027',1,'fxSet::version'],['../structfx_chunk_set.html#a5a3bdf5463857164f3e24292af5c37fb',1,'fxChunkSet::version'],['../structfx_program_set.html#a7827cbd2329a8fc00759493876f1dd99',1,'fxProgramSet::version']]],
+  ['vflt_7',['vflt',['../class_obxd_voice.html#a4ff277c8a14cd7251721f75b43cea01f',1,'ObxdVoice']]],
+  ['vibratoamount_8',['vibratoAmount',['../class_motherboard.html#a2b77a6f986b035c1e6bed9e94a2d3a78',1,'Motherboard']]],
+  ['vibratoenabled_9',['vibratoEnabled',['../class_motherboard.html#aaab1ee127ba75b74ba5684a25168c59d',1,'Motherboard']]],
+  ['vibratolfo_10',['vibratoLfo',['../class_motherboard.html#addf514ced35c00f3e9686434c3153b9c',1,'Motherboard']]],
+  ['voicedetuneknob_11',['voiceDetuneKnob',['../class_obxd_audio_processor_editor.html#ab5f290d1cbbb8dc617f3e1bd81e8bab6',1,'ObxdAudioProcessorEditor']]],
+  ['voices_12',['voices',['../class_motherboard.html#a9f092efa06586783ac1cbd300300e4e0',1,'Motherboard::voices'],['../class_voice_queue.html#ad2477a77e6a3767abad1c6e9ce54338c',1,'VoiceQueue::voices']]],
+  ['voiceswitch_13',['voiceSwitch',['../class_obxd_audio_processor_editor.html#aeec7c4cdc480f9e2e1ac93e67838dc1c',1,'ObxdAudioProcessorEditor']]],
+  ['volume_14',['Volume',['../class_motherboard.html#a27fdce7c8592d9b6ad9ca448e8bc46c3',1,'Motherboard::Volume'],['../class_obxd_voice.html#a87e7da885c87610c4dac5e5e35512ea7',1,'ObxdVoice::Volume']]],
+  ['volumeknob_15',['volumeKnob',['../class_obxd_audio_processor_editor.html#acc125d861dbfd1cc74ecce0c5c36eb7f',1,'ObxdAudioProcessorEditor']]],
+  ['vq_16',['vq',['../class_motherboard.html#a708a26a0ac419cf14e82875d44f561ee',1,'Motherboard']]]
+];

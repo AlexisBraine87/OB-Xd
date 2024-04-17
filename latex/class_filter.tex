@@ -1,0 +1,261 @@
+\doxysection{Filter Class Reference}
+\hypertarget{class_filter}{}\label{class_filter}\index{Filter@{Filter}}
+
+
+{\ttfamily \#include $<$Filter.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_filter_ad15994c30d497afd567a6445446a249e}{Filter}} ()
+\item 
+void \mbox{\hyperlink{class_filter_a2c397a070000b4e7e7d5ef521a9377d3}{set\+Multimode}} (float m)
+\item 
+void \mbox{\hyperlink{class_filter_a63645acc79f1944479c40dcfff722b41}{set\+Sample\+Rate}} (float sr)
+\item 
+void \mbox{\hyperlink{class_filter_aeadcb020e820db3758750dc399329741}{set\+Resonance}} (float res)
+\item 
+float \mbox{\hyperlink{class_filter_ac3e08fcbc90da7b4e384ba233e4c708b}{diode\+Pair\+Resistance\+Approx}} (float x)
+\item 
+float \mbox{\hyperlink{class_filter_a750ab6ef3c4f42e61a269ea35dbef4f3}{NR}} (float sample, float g)
+\item 
+float \mbox{\hyperlink{class_filter_a3d169bbe607678d74a04c8835057b4e6}{Apply}} (float sample, float g)
+\item 
+float \mbox{\hyperlink{class_filter_a86690c0da48d3c8a110d4ab755c550b7}{NR24}} (float sample, float g, float lpc)
+\item 
+float \mbox{\hyperlink{class_filter_a2f9ab17a705b5701f3af54a0a54affbf}{Apply4\+Pole}} (float sample, float g)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_filter_a93bc26150790b2ff1ad28a286ff16548}{Sample\+Rate}}
+\item 
+float \mbox{\hyperlink{class_filter_a3871134234e558e635209957910b5677}{sample\+Rate\+Inv}}
+\item 
+bool \mbox{\hyperlink{class_filter_a67984880c0bdb0904f12e202c11dcebf}{band\+Pass\+Sw}}
+\item 
+float \mbox{\hyperlink{class_filter_a6d1f2df3d03c9a1416f62e6c79a42c42}{mm}}
+\item 
+bool \mbox{\hyperlink{class_filter_adfc253cbc44deee65f65ffe679c51a32}{self\+Osc\+Push}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_filter_abe312a5f299488de199a43f6b3ac7206}{s1}}
+\item 
+float \mbox{\hyperlink{class_filter_ad72eb430fb929994f85658e23e06ca00}{s2}}
+\item 
+float \mbox{\hyperlink{class_filter_a477215c185d0950017649a827f332845}{s3}}
+\item 
+float \mbox{\hyperlink{class_filter_acc5d19fe870dfe474b96b75e86d62608}{s4}}
+\item 
+float \mbox{\hyperlink{class_filter_a72d745c9de88dddd3c02cfbd1201a362}{R}}
+\item 
+float \mbox{\hyperlink{class_filter_a16088e478d493ce7546bf30451af30b8}{R24}}
+\item 
+float \mbox{\hyperlink{class_filter_ad4155131d1994b03f5af1ba83d033a7d}{rcor}}
+\item 
+float \mbox{\hyperlink{class_filter_a83ca59c05d777f63969987af2de722f4}{rcor\+Inv}}
+\item 
+float \mbox{\hyperlink{class_filter_aea7d0c6f7a7d5eed9b4077869d84116d}{rcor24}}
+\item 
+float \mbox{\hyperlink{class_filter_a4bcd49417bfcee1337bb0149aa1b05b8}{rcor24\+Inv}}
+\item 
+float \mbox{\hyperlink{class_filter_aa35af56d6a58e96455d467dfc632912a}{mmt}}
+\item 
+int \mbox{\hyperlink{class_filter_afc3273ad30d7e965eefbb6a1d774e193}{mmch}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_filter_ad15994c30d497afd567a6445446a249e}\label{class_filter_ad15994c30d497afd567a6445446a249e} 
+\index{Filter@{Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{Filter()}{Filter()}}
+{\footnotesize\ttfamily Filter\+::\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_filter_a3d169bbe607678d74a04c8835057b4e6}\label{class_filter_a3d169bbe607678d74a04c8835057b4e6} 
+\index{Filter@{Filter}!Apply@{Apply}}
+\index{Apply@{Apply}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily float Filter\+::\+Apply (\begin{DoxyParamCaption}\item[{float}]{sample,  }\item[{float}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_filter_a3d169bbe607678d74a04c8835057b4e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_filter_a2f9ab17a705b5701f3af54a0a54affbf}\label{class_filter_a2f9ab17a705b5701f3af54a0a54affbf} 
+\index{Filter@{Filter}!Apply4Pole@{Apply4Pole}}
+\index{Apply4Pole@{Apply4Pole}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{Apply4Pole()}{Apply4Pole()}}
+{\footnotesize\ttfamily float Filter\+::\+Apply4\+Pole (\begin{DoxyParamCaption}\item[{float}]{sample,  }\item[{float}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_filter_a2f9ab17a705b5701f3af54a0a54affbf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_filter_ac3e08fcbc90da7b4e384ba233e4c708b}\label{class_filter_ac3e08fcbc90da7b4e384ba233e4c708b} 
+\index{Filter@{Filter}!diodePairResistanceApprox@{diodePairResistanceApprox}}
+\index{diodePairResistanceApprox@{diodePairResistanceApprox}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{diodePairResistanceApprox()}{diodePairResistanceApprox()}}
+{\footnotesize\ttfamily float Filter\+::diode\+Pair\+Resistance\+Approx (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_filter_a750ab6ef3c4f42e61a269ea35dbef4f3}\label{class_filter_a750ab6ef3c4f42e61a269ea35dbef4f3} 
+\index{Filter@{Filter}!NR@{NR}}
+\index{NR@{NR}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{NR()}{NR()}}
+{\footnotesize\ttfamily float Filter\+::\+NR (\begin{DoxyParamCaption}\item[{float}]{sample,  }\item[{float}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_filter_a750ab6ef3c4f42e61a269ea35dbef4f3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_filter_a86690c0da48d3c8a110d4ab755c550b7}\label{class_filter_a86690c0da48d3c8a110d4ab755c550b7} 
+\index{Filter@{Filter}!NR24@{NR24}}
+\index{NR24@{NR24}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{NR24()}{NR24()}}
+{\footnotesize\ttfamily float Filter\+::\+NR24 (\begin{DoxyParamCaption}\item[{float}]{sample,  }\item[{float}]{g,  }\item[{float}]{lpc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_filter_a2c397a070000b4e7e7d5ef521a9377d3}\label{class_filter_a2c397a070000b4e7e7d5ef521a9377d3} 
+\index{Filter@{Filter}!setMultimode@{setMultimode}}
+\index{setMultimode@{setMultimode}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setMultimode()}{setMultimode()}}
+{\footnotesize\ttfamily void Filter\+::set\+Multimode (\begin{DoxyParamCaption}\item[{float}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_filter_aeadcb020e820db3758750dc399329741}\label{class_filter_aeadcb020e820db3758750dc399329741} 
+\index{Filter@{Filter}!setResonance@{setResonance}}
+\index{setResonance@{setResonance}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setResonance()}{setResonance()}}
+{\footnotesize\ttfamily void Filter\+::set\+Resonance (\begin{DoxyParamCaption}\item[{float}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_filter_a63645acc79f1944479c40dcfff722b41}\label{class_filter_a63645acc79f1944479c40dcfff722b41} 
+\index{Filter@{Filter}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void Filter\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{sr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_filter_a67984880c0bdb0904f12e202c11dcebf}\label{class_filter_a67984880c0bdb0904f12e202c11dcebf} 
+\index{Filter@{Filter}!bandPassSw@{bandPassSw}}
+\index{bandPassSw@{bandPassSw}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{bandPassSw}{bandPassSw}}
+{\footnotesize\ttfamily bool Filter\+::band\+Pass\+Sw}
+
+\Hypertarget{class_filter_a6d1f2df3d03c9a1416f62e6c79a42c42}\label{class_filter_a6d1f2df3d03c9a1416f62e6c79a42c42} 
+\index{Filter@{Filter}!mm@{mm}}
+\index{mm@{mm}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{mm}{mm}}
+{\footnotesize\ttfamily float Filter\+::mm}
+
+\Hypertarget{class_filter_afc3273ad30d7e965eefbb6a1d774e193}\label{class_filter_afc3273ad30d7e965eefbb6a1d774e193} 
+\index{Filter@{Filter}!mmch@{mmch}}
+\index{mmch@{mmch}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{mmch}{mmch}}
+{\footnotesize\ttfamily int Filter\+::mmch\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_aa35af56d6a58e96455d467dfc632912a}\label{class_filter_aa35af56d6a58e96455d467dfc632912a} 
+\index{Filter@{Filter}!mmt@{mmt}}
+\index{mmt@{mmt}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{mmt}{mmt}}
+{\footnotesize\ttfamily float Filter\+::mmt\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_a72d745c9de88dddd3c02cfbd1201a362}\label{class_filter_a72d745c9de88dddd3c02cfbd1201a362} 
+\index{Filter@{Filter}!R@{R}}
+\index{R@{R}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily float Filter\+::R\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_a16088e478d493ce7546bf30451af30b8}\label{class_filter_a16088e478d493ce7546bf30451af30b8} 
+\index{Filter@{Filter}!R24@{R24}}
+\index{R24@{R24}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{R24}{R24}}
+{\footnotesize\ttfamily float Filter\+::\+R24\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_ad4155131d1994b03f5af1ba83d033a7d}\label{class_filter_ad4155131d1994b03f5af1ba83d033a7d} 
+\index{Filter@{Filter}!rcor@{rcor}}
+\index{rcor@{rcor}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{rcor}{rcor}}
+{\footnotesize\ttfamily float Filter\+::rcor\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_aea7d0c6f7a7d5eed9b4077869d84116d}\label{class_filter_aea7d0c6f7a7d5eed9b4077869d84116d} 
+\index{Filter@{Filter}!rcor24@{rcor24}}
+\index{rcor24@{rcor24}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{rcor24}{rcor24}}
+{\footnotesize\ttfamily float Filter\+::rcor24\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_a4bcd49417bfcee1337bb0149aa1b05b8}\label{class_filter_a4bcd49417bfcee1337bb0149aa1b05b8} 
+\index{Filter@{Filter}!rcor24Inv@{rcor24Inv}}
+\index{rcor24Inv@{rcor24Inv}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{rcor24Inv}{rcor24Inv}}
+{\footnotesize\ttfamily float Filter\+::rcor24\+Inv\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_a83ca59c05d777f63969987af2de722f4}\label{class_filter_a83ca59c05d777f63969987af2de722f4} 
+\index{Filter@{Filter}!rcorInv@{rcorInv}}
+\index{rcorInv@{rcorInv}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{rcorInv}{rcorInv}}
+{\footnotesize\ttfamily float Filter\+::rcor\+Inv\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_abe312a5f299488de199a43f6b3ac7206}\label{class_filter_abe312a5f299488de199a43f6b3ac7206} 
+\index{Filter@{Filter}!s1@{s1}}
+\index{s1@{s1}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{s1}{s1}}
+{\footnotesize\ttfamily float Filter\+::s1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_ad72eb430fb929994f85658e23e06ca00}\label{class_filter_ad72eb430fb929994f85658e23e06ca00} 
+\index{Filter@{Filter}!s2@{s2}}
+\index{s2@{s2}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{s2}{s2}}
+{\footnotesize\ttfamily float Filter\+::s2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_a477215c185d0950017649a827f332845}\label{class_filter_a477215c185d0950017649a827f332845} 
+\index{Filter@{Filter}!s3@{s3}}
+\index{s3@{s3}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{s3}{s3}}
+{\footnotesize\ttfamily float Filter\+::s3\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_acc5d19fe870dfe474b96b75e86d62608}\label{class_filter_acc5d19fe870dfe474b96b75e86d62608} 
+\index{Filter@{Filter}!s4@{s4}}
+\index{s4@{s4}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{s4}{s4}}
+{\footnotesize\ttfamily float Filter\+::s4\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_filter_a93bc26150790b2ff1ad28a286ff16548}\label{class_filter_a93bc26150790b2ff1ad28a286ff16548} 
+\index{Filter@{Filter}!SampleRate@{SampleRate}}
+\index{SampleRate@{SampleRate}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{SampleRate}{SampleRate}}
+{\footnotesize\ttfamily float Filter\+::\+Sample\+Rate}
+
+\Hypertarget{class_filter_a3871134234e558e635209957910b5677}\label{class_filter_a3871134234e558e635209957910b5677} 
+\index{Filter@{Filter}!sampleRateInv@{sampleRateInv}}
+\index{sampleRateInv@{sampleRateInv}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{sampleRateInv}{sampleRateInv}}
+{\footnotesize\ttfamily float Filter\+::sample\+Rate\+Inv}
+
+\Hypertarget{class_filter_adfc253cbc44deee65f65ffe679c51a32}\label{class_filter_adfc253cbc44deee65f65ffe679c51a32} 
+\index{Filter@{Filter}!selfOscPush@{selfOscPush}}
+\index{selfOscPush@{selfOscPush}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{selfOscPush}{selfOscPush}}
+{\footnotesize\ttfamily bool Filter\+::self\+Osc\+Push}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Engine/\mbox{\hyperlink{_filter_8h}{Filter.\+h}}\end{DoxyCompactItemize}

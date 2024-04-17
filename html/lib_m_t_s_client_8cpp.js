@@ -1,0 +1,28 @@
+var lib_m_t_s_client_8cpp =
+[
+    [ "mtsclientglobal", "structmtsclientglobal.html", "structmtsclientglobal" ],
+    [ "MTSClient", "struct_m_t_s_client.html", "struct_m_t_s_client" ],
+    [ "mts_bc", "lib_m_t_s_client_8cpp.html#a6aaf04d6e3b13f495b95d69eb47cc429", null ],
+    [ "mts_bcc", "lib_m_t_s_client_8cpp.html#a7c0503d73cfd5700ac78f81ce9755f78", null ],
+    [ "mts_bool", "lib_m_t_s_client_8cpp.html#a810704ff4088358bdcddb86ee2eef48e", null ],
+    [ "mts_cd", "lib_m_t_s_client_8cpp.html#ac99ae656087266f11c3ad1f199e58db6", null ],
+    [ "mts_cdc", "lib_m_t_s_client_8cpp.html#aac80c02d563c2327ef3fd064b4324b58", null ],
+    [ "mts_pcc", "lib_m_t_s_client_8cpp.html#abecfeceef2e486a54b079f1f3911d0e3", null ],
+    [ "mts_void", "lib_m_t_s_client_8cpp.html#a003a337657c912bdea1c3371466e5f4c", null ],
+    [ "freqToNoteET", "lib_m_t_s_client_8cpp.html#a3cbe506bb19746bfa0e49828c0a75d9b", null ],
+    [ "MTS_DeregisterClient", "lib_m_t_s_client_8cpp.html#a0c9b6dec8535e7220dc0f357c49faca5", null ],
+    [ "MTS_FrequencyToNote", "lib_m_t_s_client_8cpp.html#a5bd7c27bc3f006fc1d64082f34fb94d8", null ],
+    [ "MTS_FrequencyToNoteAndChannel", "lib_m_t_s_client_8cpp.html#a151ff788c14e06e658456167ad679f92", null ],
+    [ "MTS_GetScaleName", "lib_m_t_s_client_8cpp.html#a49497ca200e2ca58b9b630212a45a3cb", null ],
+    [ "MTS_HasMaster", "lib_m_t_s_client_8cpp.html#a3263194a12cb35a3542eb71c9cd35cb7", null ],
+    [ "MTS_NoteToFrequency", "lib_m_t_s_client_8cpp.html#a891f974b40b27ab41707a964346121f9", null ],
+    [ "MTS_ParseMIDIData", "lib_m_t_s_client_8cpp.html#a5c569afdadb911d4bc4483a5af030052", null ],
+    [ "MTS_ParseMIDIDataU", "lib_m_t_s_client_8cpp.html#a82dfa34e35aedda26a63bca05847d5fc", null ],
+    [ "MTS_RegisterClient", "lib_m_t_s_client_8cpp.html#a76696080794280bbac195d9e85096510", null ],
+    [ "MTS_RetuningAsRatio", "lib_m_t_s_client_8cpp.html#a1b4502ea863eb9369fe10569a3897d67", null ],
+    [ "MTS_RetuningInSemitones", "lib_m_t_s_client_8cpp.html#a43b1c598fda0c61ac4c5338faa92d201", null ],
+    [ "MTS_ShouldFilterNote", "lib_m_t_s_client_8cpp.html#a96f4fbd471b64a496e98a023829769f7", null ],
+    [ "global", "lib_m_t_s_client_8cpp.html#a5cf68de0f54f994efbc1803e7d7b96ae", null ],
+    [ "ln2", "lib_m_t_s_client_8cpp.html#a703f4fc93e5a57058ce6ba2ba196918d", null ],
+    [ "ratioToSemitones", "lib_m_t_s_client_8cpp.html#a2c1776fc46438dbf7d498d2b5d406db0", null ]
+];

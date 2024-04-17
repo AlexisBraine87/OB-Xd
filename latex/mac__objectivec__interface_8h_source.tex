@@ -1,0 +1,24 @@
+\doxysection{mac\+\_\+objectivec\+\_\+interface.\+h}
+\hypertarget{mac__objectivec__interface_8h_source}{}\label{mac__objectivec__interface_8h_source}\index{Modules/juce\_gui\_basics/native/mac\_objectivec\_interface.h@{Modules/juce\_gui\_basics/native/mac\_objectivec\_interface.h}}
+\mbox{\hyperlink{mac__objectivec__interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Native\ Mac\ interface}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Interface\ from\ C++\ to\ Objective\ C}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacejuce}{juce}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Mac\ Clipboard}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classjuce_1_1mac_pasteboard}{macPasteboard}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classjuce_1_1mac_pasteboard_a1f0135b6e2e2a2b3ba03958ce9fd3d9b}{copyPresetDataToClipboard}}(\textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ size);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Copy\ Preset\ data\ to\ the\ clipboard}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1mac_pasteboard_a481d413b043036c06a44f350e0b61455}{containsPresetData}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Indicates\ if\ Preset\ data\ is\ on\ the\ clipboard}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classjuce_1_1mac_pasteboard_ad2d470ec92f1e6f8a12917794e64a10f}{fetchPresetDataFromClipboard}}(juce::MemoryBlock\&\ mb);\ \ \ \ \textcolor{comment}{//\ Load\ Preset\ from\ the\ clipboard\ into\ a\ juce\ MemoryBlock}}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ \}\ \textcolor{comment}{//\ namespace}}
+\DoxyCodeLine{00018\ }
+
+\end{DoxyCode}

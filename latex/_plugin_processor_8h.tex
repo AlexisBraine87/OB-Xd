@@ -1,0 +1,118 @@
+\doxysection{Source/\+Plugin\+Processor.h File Reference}
+\hypertarget{_plugin_processor_8h}{}\label{_plugin_processor_8h}\index{Source/PluginProcessor.h@{Source/PluginProcessor.h}}
+{\ttfamily \#include "{}../\+Juce\+Library\+Code/\+Juce\+Header.\+h"{}}\newline
+{\ttfamily \#include "{}Engine/\+Synth\+Engine.\+h"{}}\newline
+{\ttfamily \#include "{}Engine/midi\+Map.\+h"{}}\newline
+{\ttfamily \#include "{}Engine/\+Obxd\+Bank.\+h"{}}\newline
+Include dependency graph for Plugin\+Processor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_plugin_processor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_plugin_processor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfx_program}{fx\+Program}}
+\item 
+struct \mbox{\hyperlink{structfx_set}{fx\+Set}}
+\item 
+struct \mbox{\hyperlink{structfx_chunk_set}{fx\+Chunk\+Set}}
+\item 
+struct \mbox{\hyperlink{structfx_program_set}{fx\+Program\+Set}}
+\item 
+class \mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}} \{ \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7abcfaccebf745acfd5e75351095a5394a}{Disable}} = 0
+, \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7a7d919eba63e049fd35156f65852afcce}{Standard\+Display}}
+, \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7add79bcc9fa0cc9843c7d5ef72bf5228d}{Full\+Display}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{_plugin_processor_8h_ac902551f2559b275302d13ab59a72e1d}{compare\+Magic}} (int32 magic, const char \texorpdfstring{$\ast$}{*}name) noexcept
+\item 
+static int32 \mbox{\hyperlink{_plugin_processor_8h_a12504fea2e3d9ad72459a1c7c77073fa}{fxb\+Name}} (const char \texorpdfstring{$\ast$}{*}name) noexcept
+\item 
+static int32 \mbox{\hyperlink{_plugin_processor_8h_a6656d80a5749bf87ac4e3d86794d4d1d}{fxb\+Swap}} (const int32 x) noexcept
+\item 
+static float \mbox{\hyperlink{_plugin_processor_8h_ad6d1d7da578d96e7dd719b2f1788df5d}{fxb\+Swap\+Float}} (const float x) noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_plugin_processor_8h_a58bd9a06919191498462996534cf41e1}{fxb\+Version\+Num}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}\label{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7} 
+\index{PluginProcessor.h@{PluginProcessor.h}!Tooltip@{Tooltip}}
+\index{Tooltip@{Tooltip}!PluginProcessor.h@{PluginProcessor.h}}
+\doxysubsubsection{\texorpdfstring{Tooltip}{Tooltip}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7}{Tooltip}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disable@{Disable}!PluginProcessor.h@{PluginProcessor.h}}\index{PluginProcessor.h@{PluginProcessor.h}!Disable@{Disable}}}\Hypertarget{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7abcfaccebf745acfd5e75351095a5394a}\label{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7abcfaccebf745acfd5e75351095a5394a} 
+Disable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StandardDisplay@{StandardDisplay}!PluginProcessor.h@{PluginProcessor.h}}\index{PluginProcessor.h@{PluginProcessor.h}!StandardDisplay@{StandardDisplay}}}\Hypertarget{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7a7d919eba63e049fd35156f65852afcce}\label{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7a7d919eba63e049fd35156f65852afcce} 
+Standard\+Display&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FullDisplay@{FullDisplay}!PluginProcessor.h@{PluginProcessor.h}}\index{PluginProcessor.h@{PluginProcessor.h}!FullDisplay@{FullDisplay}}}\Hypertarget{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7add79bcc9fa0cc9843c7d5ef72bf5228d}\label{_plugin_processor_8h_aea3d9c4f850da5e2167f002ea6ebd6e7add79bcc9fa0cc9843c7d5ef72bf5228d} 
+Full\+Display&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_plugin_processor_8h_ac902551f2559b275302d13ab59a72e1d}\label{_plugin_processor_8h_ac902551f2559b275302d13ab59a72e1d} 
+\index{PluginProcessor.h@{PluginProcessor.h}!compareMagic@{compareMagic}}
+\index{compareMagic@{compareMagic}!PluginProcessor.h@{PluginProcessor.h}}
+\doxysubsubsection{\texorpdfstring{compareMagic()}{compareMagic()}}
+{\footnotesize\ttfamily static bool compare\+Magic (\begin{DoxyParamCaption}\item[{int32}]{magic,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{_plugin_processor_8h_a12504fea2e3d9ad72459a1c7c77073fa}\label{_plugin_processor_8h_a12504fea2e3d9ad72459a1c7c77073fa} 
+\index{PluginProcessor.h@{PluginProcessor.h}!fxbName@{fxbName}}
+\index{fxbName@{fxbName}!PluginProcessor.h@{PluginProcessor.h}}
+\doxysubsubsection{\texorpdfstring{fxbName()}{fxbName()}}
+{\footnotesize\ttfamily static int32 fxb\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{_plugin_processor_8h_a6656d80a5749bf87ac4e3d86794d4d1d}\label{_plugin_processor_8h_a6656d80a5749bf87ac4e3d86794d4d1d} 
+\index{PluginProcessor.h@{PluginProcessor.h}!fxbSwap@{fxbSwap}}
+\index{fxbSwap@{fxbSwap}!PluginProcessor.h@{PluginProcessor.h}}
+\doxysubsubsection{\texorpdfstring{fxbSwap()}{fxbSwap()}}
+{\footnotesize\ttfamily static int32 fxb\+Swap (\begin{DoxyParamCaption}\item[{const int32}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{_plugin_processor_8h_ad6d1d7da578d96e7dd719b2f1788df5d}\label{_plugin_processor_8h_ad6d1d7da578d96e7dd719b2f1788df5d} 
+\index{PluginProcessor.h@{PluginProcessor.h}!fxbSwapFloat@{fxbSwapFloat}}
+\index{fxbSwapFloat@{fxbSwapFloat}!PluginProcessor.h@{PluginProcessor.h}}
+\doxysubsubsection{\texorpdfstring{fxbSwapFloat()}{fxbSwapFloat()}}
+{\footnotesize\ttfamily static float fxb\+Swap\+Float (\begin{DoxyParamCaption}\item[{const float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_plugin_processor_8h_a58bd9a06919191498462996534cf41e1}\label{_plugin_processor_8h_a58bd9a06919191498462996534cf41e1} 
+\index{PluginProcessor.h@{PluginProcessor.h}!fxbVersionNum@{fxbVersionNum}}
+\index{fxbVersionNum@{fxbVersionNum}!PluginProcessor.h@{PluginProcessor.h}}
+\doxysubsubsection{\texorpdfstring{fxbVersionNum}{fxbVersionNum}}
+{\footnotesize\ttfamily const int fxb\+Version\+Num = 1}
+

@@ -1,0 +1,17 @@
+<map id="Knob::scaleFactorChanged" name="Knob::scaleFactorChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,185,104"/>
+<area shape="rect" id="Node000002" href="$class_scalable_component.html#a81361cc705be0667e508476827d2cbe6" title=" " alt="" coords="233,5,416,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,75,235,48,237,53,143,80"/>
+<area shape="rect" id="Node000003" href="$class_scalable_component.html#ad50b7cfc6a69d37ac7f0f1bdea7b12e8" title=" " alt="" coords="233,71,416,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,88,217,88,217,94,185,94"/>
+<area shape="rect" id="Node000008" href="$class_scalable_component.html#ae23f6266007c204094dd7698a16ebab0" title=" " alt="" coords="251,136,398,177"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="143,102,237,129,236,134,142,107"/>
+<area shape="rect" id="Node000004" href="$class_obxd_audio_processor.html#aa68bb4f73b273dc03ce3481709e88c92" title=" " alt="" coords="464,39,616,79"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="416,75,448,70,449,75,416,80"/>
+<area shape="rect" id="Node000007" href="$class_scalable_component.html#ab746359e4aacae97810d592b04d22b3e" title=" " alt="" coords="467,104,613,145"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="416,103,452,108,451,113,416,108"/>
+<area shape="rect" id="Node000005" href="$class_obxd_audio_processor.html#afa7832080a1d323dfd9d41ad9eb540b4" title=" " alt="" coords="664,39,809,79"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="617,56,649,56,649,62,617,62"/>
+<area shape="rect" id="Node000006" href="$class_obxd_audio_processor.html#a7729e32681fdeee946d73a5e6da05812" title=" " alt="" coords="857,39,1001,79"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="809,56,841,56,841,62,809,62"/>
+</map>

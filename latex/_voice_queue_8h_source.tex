@@ -1,0 +1,60 @@
+\doxysection{Voice\+Queue.\+h}
+\hypertarget{_voice_queue_8h_source}{}\label{_voice_queue_8h_source}\index{Source/Engine/VoiceQueue.h@{Source/Engine/VoiceQueue.h}}
+\mbox{\hyperlink{_voice_queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ )\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_obxd_voice_8h}{ObxdVoice.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_voice_queue}{VoiceQueue}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_obxd_voice}{ObxdVoice}}*\ \mbox{\hyperlink{class_voice_queue_ad2477a77e6a3767abad1c6e9ce54338c}{voices}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}},\mbox{\hyperlink{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}{total}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_voice_queue_ab3336f7e7ae81aec4bfdd1b205089bf6}{VoiceQueue}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_ad2477a77e6a3767abad1c6e9ce54338c}{voices}}\ \ =\ NULL;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}{total}}\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_voice_queue_ab688a7226db43172cb1b0c2f55a59802}{VoiceQueue}}(\textcolor{keywordtype}{int}\ voiceCount,\mbox{\hyperlink{class_obxd_voice}{ObxdVoice}}*\ voicesReference)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_ad2477a77e6a3767abad1c6e9ce54338c}{voices}}\ =\ voicesReference;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}\ =\ 0;\mbox{\hyperlink{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}{total}}\ =\ voiceCount;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_obxd_voice}{ObxdVoice}}*\ \mbox{\hyperlink{class_voice_queue_ae3a08fc2751ab423cd8f52e7b1166142}{getNext}}()}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}\ =\ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}\ +\ 1;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}\ \%=\mbox{\hyperlink{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}{total}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{class_voice_queue_ad2477a77e6a3767abad1c6e9ce54338c}{voices}}[\mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}];}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_voice_queue_aa8fb429906bd14725d4035aecc2ddc04}{reInit}}(\textcolor{keywordtype}{int}\ voiceCount)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}{total}}\ =\ voiceCount;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}\ =\ \mbox{\hyperlink{class_voice_queue_a9a40bb9cd7c7855094c156db2c000e8f}{idx}}\%\mbox{\hyperlink{class_voice_queue_a63846d0f8681e0b59666d197da3297e0}{total}};}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

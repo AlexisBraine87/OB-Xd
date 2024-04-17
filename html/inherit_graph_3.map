@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="50,5,163,31"/>
+<area shape="rect" id="Node000001" href="$class_obxd_audio_processor.html" title=" " alt="" coords="256,55,400,80"/>
+<area shape="poly" id="edge40_Node000000_Node000001" title=" " alt="" coords="179,32,268,51,266,57,178,37"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="38,55,175,80"/>
+<area shape="poly" id="edge41_Node000002_Node000001" title=" " alt="" coords="190,65,255,65,255,70,190,70"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,105,208,145"/>
+<area shape="poly" id="edge42_Node000003_Node000001" title=" " alt="" coords="201,98,275,78,276,84,203,103"/>
+</map>

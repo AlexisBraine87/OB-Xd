@@ -1,0 +1,9 @@
+<map id="ObxdAudioProcessorEditor::rebuildComponents" name="ObxdAudioProcessorEditor::rebuildComponents">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,46"/>
+<area shape="rect" id="Node000002" href="$class_obxd_audio_processor.html#aa68bb4f73b273dc03ce3481709e88c92" title=" " alt="" coords="232,5,384,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,216,23,216,28,184,28"/>
+<area shape="rect" id="Node000003" href="$class_obxd_audio_processor.html#afa7832080a1d323dfd9d41ad9eb540b4" title=" " alt="" coords="432,5,576,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="385,23,416,23,416,28,385,28"/>
+<area shape="rect" id="Node000004" href="$class_obxd_audio_processor.html#a7729e32681fdeee946d73a5e6da05812" title=" " alt="" coords="624,5,769,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="577,23,609,23,609,28,577,28"/>
+</map>

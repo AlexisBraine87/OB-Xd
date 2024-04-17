@@ -1,0 +1,134 @@
+\doxysection{Saw\+Osc.\+h}
+\hypertarget{_saw_osc_8h_source}{}\label{_saw_osc_8h_source}\index{Source/Engine/SawOsc.h@{Source/Engine/SawOsc.h}}
+\mbox{\hyperlink{_saw_osc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ ©\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_synth_engine_8h}{SynthEngine.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_blep_data_8h}{BlepData.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_saw_osc}{SawOsc}}\ }
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_delay_line}{DelayLine<Samples>}}\ \mbox{\hyperlink{class_saw_osc_a490840e6f052f170345b3c535674a200}{del1}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}{buffer1}}[\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}*2];}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_saw_osc_a9dc1bf9dab40991dae62d72e489b0920}{hsam}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ \textcolor{keyword}{const}\ *\ \mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_saw_osc_adea169e9d0128898b824c05b0d64525a}{bP1}};}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a9f28d813beb0a94f9bb3c6e04da902b9}{SawOsc}}()\ :\ \mbox{\hyperlink{class_saw_osc_a9dc1bf9dab40991dae62d72e489b0920}{hsam}}(\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}}(\mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}*2)}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_adea169e9d0128898b824c05b0d64525a}{bP1}}=0;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//del1\ =\ new\ DelayLine(hsam);}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//buffer1=\ new\ float[n];}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ \mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}}\ ;\ i++)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}{buffer1}}[i]=0;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}}\ =\ \mbox{\hyperlink{_blep_data_8h_a5bd97e773836fdc8ba1ccf87028c0f09}{blep}};}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a61dc576a48650b82861fce15434d31ca}{\string~SawOsc}}()}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ del1;}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ buffer1;}}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_saw_osc_a7472180eae72c431af58cc0c302030a9}{setDecimation}}()}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}}\ =\ \mbox{\hyperlink{_blep_data_8h_a0eebced4b0548133389ef0f64357cb9e}{blepd2}};}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_saw_osc_a5e6ec728cb30236b6accf605e6b95f52}{removeDecimation}}()}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}}\ =\ \mbox{\hyperlink{_blep_data_8h_a5bd97e773836fdc8ba1ccf87028c0f09}{blep}};}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_saw_osc_a3a83adbfb8cd26cfa51125acc165b694}{aliasReduction}}()}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/\mbox{\hyperlink{class_saw_osc_ac2c9998d1ad20bac8790432efaf57cef}{getNextBlep}}(\mbox{\hyperlink{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}{buffer1}},\mbox{\hyperlink{class_saw_osc_adea169e9d0128898b824c05b0d64525a}{bP1}});}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_saw_osc_ab2931f313b93c160a51c5f49e5b7a637}{processMaster}}(\textcolor{keywordtype}{float}\ x,\textcolor{keywordtype}{float}\ delta)}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(x\ >=\ 1.0f)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ x-\/=1.0f;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a5a5aa2e22a44aea115c7ae2de26ef91e}{mixInImpulseCenter}}(\mbox{\hyperlink{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}{buffer1}},\mbox{\hyperlink{class_saw_osc_adea169e9d0128898b824c05b0d64525a}{bP1}},x/delta,\ 1);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_saw_osc_a776d973da77edae2592e41b9acdcf243}{getValue}}(\textcolor{keywordtype}{float}\ x)}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_saw_osc_a490840e6f052f170345b3c535674a200}{del1}}.\mbox{\hyperlink{class_delay_line_ae9c995b546f44c1728df2a3daacd6244}{feedReturn}}(x-\/0.5);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_saw_osc_a80cddcfc62b29d99c8335224aadc2011}{getValueFast}}(\textcolor{keywordtype}{float}\ x)}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ x\ -\/\ 0.5;}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_saw_osc_a75dcbb86f38492358b12dc5ec8fbdb08}{processSlave}}(\textcolor{keywordtype}{float}\ x\ ,\ \textcolor{keywordtype}{float}\ delta,\textcolor{keywordtype}{bool}\ hardSyncReset,\textcolor{keywordtype}{float}\ hardSyncFrac)}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(x\ >=\ 1.0f)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ x\ -\/=\ 1.0f;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(((!hardSyncReset)||(x/delta\ >\ hardSyncFrac)))\textcolor{comment}{//de\ morgan\ processed\ equation}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a5a5aa2e22a44aea115c7ae2de26ef91e}{mixInImpulseCenter}}(\mbox{\hyperlink{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}{buffer1}},\mbox{\hyperlink{class_saw_osc_adea169e9d0128898b824c05b0d64525a}{bP1}},x/delta,\ 1);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ transition\ do\ not\ ocurred\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x+=1;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(hardSyncReset)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ fracMaster\ =\ (delta\ *\ hardSyncFrac);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ trans\ =\ (x-\/fracMaster);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_saw_osc_a5a5aa2e22a44aea115c7ae2de26ef91e}{mixInImpulseCenter}}(\mbox{\hyperlink{class_saw_osc_aa2f43b9c046256d82cb354694b8c5550}{buffer1}},\mbox{\hyperlink{class_saw_osc_adea169e9d0128898b824c05b0d64525a}{bP1}},hardSyncFrac,trans);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_saw_osc_a5a5aa2e22a44aea115c7ae2de26ef91e}{mixInImpulseCenter}}(\textcolor{keywordtype}{float}\ *\ buf,\textcolor{keywordtype}{int}\&\ bpos,\textcolor{keywordtype}{float}\ offset,\ \textcolor{keywordtype}{float}\ scale)\ }
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lpIn\ =(int)(\mbox{\hyperlink{_blep_data_8h_aa658c52347b2a5cf732fa6179501b238}{B\_OVERSAMPLING}}*(offset));}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ frac\ =\ offset\ *\ \mbox{\hyperlink{_blep_data_8h_aa658c52347b2a5cf732fa6179501b238}{B\_OVERSAMPLING}}\ -\/\ lpIn;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ f1\ =\ 1.0f-\/frac;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}};i++)}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ mixvalue\ =\ (\mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}}[lpIn]*f1+\mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}}[lpIn+1]*frac);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ buf[(bpos+i)\&(\mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}}-\/1)]\ \ +=\ mixvalue*scale;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ lpIn\ +=\ \mbox{\hyperlink{_blep_data_8h_aa658c52347b2a5cf732fa6179501b238}{B\_OVERSAMPLING}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ \mbox{\hyperlink{_blep_data_8h_a56b34e454c20f19f42bd9c434ad62b54}{Samples}}\ ;\ i\ <\mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}};i++)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ mixvalue\ =\ (\mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}}[lpIn]*f1+\mbox{\hyperlink{class_saw_osc_a9c51911c6c74498d885f5603f6405b63}{blepPTR}}[lpIn+1]*frac);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ buf[(bpos+i)\&(\mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}}-\/1)]\ \ -\/=\ mixvalue*scale;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ lpIn\ +=\ \mbox{\hyperlink{_blep_data_8h_aa658c52347b2a5cf732fa6179501b238}{B\_OVERSAMPLING}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_saw_osc_ac2c9998d1ad20bac8790432efaf57cef}{getNextBlep}}(\textcolor{keywordtype}{float}*\ buf,\textcolor{keywordtype}{int}\&\ bpos)\ }
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ buf[bpos]=\ 0.0f;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ bpos++;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wrap\ pos}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ bpos\&=(\mbox{\hyperlink{class_saw_osc_a3f7698eb0606c7dcb65f73b4b7ef01a3}{n}}-\/1);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ buf[bpos];}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,60 @@
+\doxysection{Param\+Smoother.\+h}
+\hypertarget{_param_smoother_8h_source}{}\label{_param_smoother_8h_source}\index{Source/Engine/ParamSmoother.h@{Source/Engine/ParamSmoother.h}}
+\mbox{\hyperlink{_param_smoother_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ ©\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_synth_engine_8h}{SynthEngine.h}}"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_param_smoother_8h_a16bc6094151f0f2fb1496f99c5610194}{PSSC}}\ =\ 0.0030;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_param_smoother}{ParamSmoother}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_param_smoother_a769641970fa2743d5a8d17a22a6db93c}{steepValue}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}{integralValue}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_param_smoother_a45fd693c00f353bac64a496812f69c15}{srCor}};}
+\DoxyCodeLine{00034\ \ \ \ \ public\ :}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_param_smoother_a6160afc1f57abbaaa6cd44e4cf9b1ab1}{ParamSmoother}}()}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_param_smoother_a769641970fa2743d5a8d17a22a6db93c}{steepValue}}=\mbox{\hyperlink{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}{integralValue}}=0;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_param_smoother_a45fd693c00f353bac64a496812f69c15}{srCor}}=1;}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_param_smoother_a9899646f602ac85aeccb6802c4799744}{smoothStep}}()}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}{integralValue}}\ =\ \mbox{\hyperlink{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}{integralValue}}\ +\ (\ \mbox{\hyperlink{class_param_smoother_a769641970fa2743d5a8d17a22a6db93c}{steepValue}}\ -\/\ \mbox{\hyperlink{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}{integralValue}})*\mbox{\hyperlink{_param_smoother_8h_a16bc6094151f0f2fb1496f99c5610194}{PSSC}}*\mbox{\hyperlink{class_param_smoother_a45fd693c00f353bac64a496812f69c15}{srCor}}\ +\ \mbox{\hyperlink{_audio_utils_8h_a9000fe1bff7c39526c3d25bd9cb1db68}{dc}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_param_smoother_a222c34c0af8e2d282e18c0df812e2901}{integralValue}};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_param_smoother_a85556d53d5cf41433cd444641a1f088b}{setSteep}}(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_param_smoother_a769641970fa2743d5a8d17a22a6db93c}{steepValue}}\ =\ value;}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_param_smoother_a41e1d83b750d4a72bb7e73b89290836a}{setSampleRate}}(\textcolor{keywordtype}{float}\ sr)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_param_smoother_a45fd693c00f353bac64a496812f69c15}{srCor}}\ =\ sr\ /\ 44000;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

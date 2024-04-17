@@ -1,0 +1,94 @@
+\doxysection{Preset\+Bar.\+h}
+\hypertarget{_preset_bar_8h_source}{}\label{_preset_bar_8h_source}\index{Source/Components/PresetBar.h@{Source/Components/PresetBar.h}}
+\mbox{\hyperlink{_preset_bar_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ This\ is\ an\ automatically\ generated\ GUI\ class\ created\ by\ the\ Projucer!}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ Be\ careful\ when\ adding\ custom\ code\ to\ these\ files,\ as\ only\ the\ code\ within}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ the\ "{}//[xyz]"{}\ and\ "{}//[/xyz]"{}\ sections\ will\ be\ retained\ when\ the\ file\ is\ loaded}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ and\ re-\/saved.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ Created\ with\ Projucer\ version:\ 6.0.8}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ \textcolor{comment}{}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ The\ Projucer\ is\ part\ of\ the\ JUCE\ library.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ Copyright\ (c)\ 2020\ -\/\ Raw\ Material\ Software\ Limited.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ ==============================================================================}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//[Headers]\ \ \ \ \ -\/-\/\ You\ can\ add\ your\ own\ extra\ header\ files\ here\ -\/-\/}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <JuceHeader.h>}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor_editor}{ObxdAudioProcessorEditor}};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_custom_label}{CustomLabel}}:\ \textcolor{keyword}{public}\ juce::Label\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_custom_label_a8c73c9158bc32382be6f113ee75b1013}{CustomLabel}}\ (\textcolor{keyword}{const}\ String\&\ componentName\ =\ String(),}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ String\&\ labelText\ =\ String()):\ \mbox{\hyperlink{namespacejuce}{juce}}::Label(componentName,\ labelText)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ std::function<void(juce::Point<int>\ pos)>\ \mbox{\hyperlink{class_custom_label_a9a75c8e8913904bd956aad05cb0ab736}{leftClicked}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_custom_label_a064f819b284e9414f4a9bdef4a54bcdf}{mouseDown}}\ (\textcolor{keyword}{const}\ juce::MouseEvent\&\ event)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>getBounds().contains(event.getMouseDownPosition())\ \&\&\ event.mods.isLeftButtonDown())\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_custom_label_a9a75c8e8913904bd956aad05cb0ab736}{leftClicked}}(event.getScreenPosition());}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ \textcolor{comment}{//[/Headers]}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_preset_bar}{PresetBar}}\ \ :\ \textcolor{keyword}{public}\ juce::Component,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Timer,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ juce::Button::Listener}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_preset_bar_abe66666e022116a514a3af24c34d07a2}{PresetBar}}\ (\mbox{\hyperlink{class_obxd_audio_processor_editor}{ObxdAudioProcessorEditor}}\ \&gui);}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_preset_bar_a64f57e42a16c1666a40d5a2967f00f4f}{\string~PresetBar}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//[UserMethods]\ \ \ \ \ -\/-\/\ You\ can\ add\ your\ own\ custom\ methods\ in\ this\ section.}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_preset_bar_a5880d0f793fb75660cf46ccca4b3e3d3}{timerCallback}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_preset_bar_a4b7a2bde492e526d35e4d8e539b4fe80}{update}}();}
+\DoxyCodeLine{00063\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ std::function<void(juce::Point<int>\ \&pos)>\ \mbox{\hyperlink{class_preset_bar_af9bfecd6dccfa500afd37231fbcbb752}{leftClicked}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//[/UserMethods]}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_preset_bar_af3904b8ae7b35793404241dd33d57607}{paint}}\ (juce::Graphics\&\ g)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_preset_bar_a07c119b651b8f7cd5fece0e695eee182}{resized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_preset_bar_aa5b562d417e91ed7a752e1802e7f00f9}{buttonClicked}}\ (juce::Button*\ buttonThatWasClicked)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Binary\ resources:}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_preset_bar_a8b99a1ff21fbc4505bc3c24855af1576}{presetnavigation\_svg}};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_preset_bar_a764c9398a2b0dd500f2830262e3af6ea}{presetnavigation\_svgSize}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//[UserVariables]\ \ \ -\/-\/\ You\ can\ add\ your\ own\ custom\ variables\ in\ this\ section.}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_obxd_audio_processor_editor}{ObxdAudioProcessorEditor}}\ \&\mbox{\hyperlink{class_preset_bar_a3df12acf23fe22571ad041e6a8f2a18a}{editor}};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//[/UserVariables]}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00083\ \ \ \ \ std::unique\_ptr<CustomLabel>\ \mbox{\hyperlink{class_preset_bar_a767b4c5e733a402c01f6e1927daa63bf}{presetNameLb}};}
+\DoxyCodeLine{00084\ \ \ \ \ std::unique\_ptr<juce::ImageButton>\ \mbox{\hyperlink{class_preset_bar_a07cc3c392ade2687bb5fd634b187915d}{previousBtn}};}
+\DoxyCodeLine{00085\ \ \ \ \ std::unique\_ptr<juce::ImageButton>\ \mbox{\hyperlink{class_preset_bar_a299791bbd2f8157f9a0312d5aee1855e}{nextBtn}};}
+\DoxyCodeLine{00086\ \ \ \ \ std::unique\_ptr<juce::Drawable>\ \mbox{\hyperlink{class_preset_bar_ad43d8b94239cb96a98152555180a6c40}{drawable1}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{00090\ \ \ \ \ JUCE\_DECLARE\_NON\_COPYABLE\_WITH\_LEAK\_DETECTOR\ (\mbox{\hyperlink{class_preset_bar}{PresetBar}})}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{comment}{//[EndFile]\ You\ can\ add\ extra\ defines\ here...}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//[/EndFile]}}
+\DoxyCodeLine{00095\ }
+
+\end{DoxyCode}

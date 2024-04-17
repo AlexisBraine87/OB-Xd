@@ -1,0 +1,77 @@
+\doxysection{Delay\+Line.\+h}
+\hypertarget{_delay_line_8h_source}{}\label{_delay_line_8h_source}\index{Source/Engine/DelayLine.h@{Source/Engine/DelayLine.h}}
+\mbox{\hyperlink{_delay_line_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ ©\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_synth_engine_8h}{SynthEngine.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//Always\ feed\ first\ then\ get\ delayed\ sample!}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DEMAX\ 64}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ DM>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_delay_line}{DelayLine}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_delay_line_ae176c7fabb670c26cecf614fa4b1ef3a}{dl}}[\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}}];}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_delay_line_a1442c41709b9c547cfd5da472ac36061}{iidx}};}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_aa1276e64d30d880d7939b870d776bda6}{DelayLine}}()\ }
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_a1442c41709b9c547cfd5da472ac36061}{iidx}}\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ zeromem(\mbox{\hyperlink{class_delay_line_ae176c7fabb670c26cecf614fa4b1ef3a}{dl}},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//jassert(DM\ >\ DMAX);}}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_delay_line_ae9c995b546f44c1728df2a3daacd6244}{feedReturn}}(\textcolor{keywordtype}{float}\ sm)}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_ae176c7fabb670c26cecf614fa4b1ef3a}{dl}}[\mbox{\hyperlink{class_delay_line_a1442c41709b9c547cfd5da472ac36061}{iidx}}]\ =\ sm;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_a1442c41709b9c547cfd5da472ac36061}{iidx}}-\/-\/;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_a1442c41709b9c547cfd5da472ac36061}{iidx}}=(\mbox{\hyperlink{class_delay_line_a1442c41709b9c547cfd5da472ac36061}{iidx}}\&(\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}}-\/1));}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_delay_line_ae176c7fabb670c26cecf614fa4b1ef3a}{dl}}[(\mbox{\hyperlink{class_delay_line_a1442c41709b9c547cfd5da472ac36061}{iidx}}\ +\ DM)\&(\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}}-\/1)];}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_line_aca48117d2839ca09fa08c03a852cb4a5}{fillZeroes}}()}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ zeromem(\mbox{\hyperlink{class_delay_line_ae176c7fabb670c26cecf614fa4b1ef3a}{dl}},\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ DM>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_delay_line_boolean}{DelayLineBoolean}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_delay_line_boolean_af9f74fccc3cf8372c83e319dc5fddde7}{dl}}[\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}}];}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_delay_line_boolean_ad5d6f2eb62af2074951bf292019aa5d3}{iidx}};}
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_boolean_a7748985f866f4f58f7efa927195a2b74}{DelayLineBoolean}}()\ }
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_boolean_ad5d6f2eb62af2074951bf292019aa5d3}{iidx}}\ =\ 0;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ zeromem(\mbox{\hyperlink{class_delay_line_boolean_af9f74fccc3cf8372c83e319dc5fddde7}{dl}},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}});}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_delay_line_boolean_a9d1d1fc445940a0bd2e05fef33f152d5}{feedReturn}}(\textcolor{keywordtype}{bool}\ sm)}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_boolean_af9f74fccc3cf8372c83e319dc5fddde7}{dl}}[\mbox{\hyperlink{class_delay_line_boolean_ad5d6f2eb62af2074951bf292019aa5d3}{iidx}}]\ =\ sm;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_boolean_ad5d6f2eb62af2074951bf292019aa5d3}{iidx}}-\/-\/;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delay_line_boolean_ad5d6f2eb62af2074951bf292019aa5d3}{iidx}}=(\mbox{\hyperlink{class_delay_line_boolean_ad5d6f2eb62af2074951bf292019aa5d3}{iidx}}\&(\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}}-\/1));}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_delay_line_boolean_af9f74fccc3cf8372c83e319dc5fddde7}{dl}}[(\mbox{\hyperlink{class_delay_line_boolean_ad5d6f2eb62af2074951bf292019aa5d3}{iidx}}\ +\ DM)\&(\mbox{\hyperlink{_delay_line_8h_a86a0312b09a7e7c84efd33a3a9024b58}{DEMAX}}-\/1)];}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \};}
+
+\end{DoxyCode}

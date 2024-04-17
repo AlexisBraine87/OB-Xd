@@ -1,0 +1,9 @@
+<map id="ObxdOscillatorB::setDecimation" name="ObxdOscillatorB::setDecimation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,214,80"/>
+<area shape="rect" id="Node000002" href="$class_pulse_osc.html#a61366fcb106d20c2ffc5687f46103417" title=" " alt="" coords="268,5,439,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,51,271,32,272,37,177,57"/>
+<area shape="rect" id="Node000003" href="$class_saw_osc.html#a7472180eae72c431af58cc0c302030a9" title=" " alt="" coords="272,55,435,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,65,256,65,256,70,214,70"/>
+<area shape="rect" id="Node000004" href="$class_triangle_osc.html#aaa238a0e69e98a68c935738aac54ef08" title=" " alt="" coords="262,104,445,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,78,272,98,271,103,176,84"/>
+</map>

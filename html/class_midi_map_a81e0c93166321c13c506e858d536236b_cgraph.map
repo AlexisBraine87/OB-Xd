@@ -1,0 +1,7 @@
+<map id="MidiMap::saveFile" name="MidiMap::saveFile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,133,31"/>
+<area shape="rect" id="Node000002" href="$class_midi_map.html#a5962d1b4b1719e6d566055cb2a17d4b6" title=" " alt="" coords="181,5,300,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,165,16,165,21,133,21"/>
+<area shape="rect" id="Node000003" href="$class_midi_map.html#aa61aebebe4664b537359dbf3822cfe7e" title=" " alt="" coords="348,5,465,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,16,333,16,333,21,300,21"/>
+</map>

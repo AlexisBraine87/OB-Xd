@@ -1,0 +1,182 @@
+\doxysection{Tooglable\+Button Class Reference}
+\hypertarget{class_tooglable_button}{}\label{class_tooglable_button}\index{TooglableButton@{TooglableButton}}
+
+
+{\ttfamily \#include $<$Tooglable\+Button.\+h$>$}
+
+
+
+Inheritance diagram for Tooglable\+Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_tooglable_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tooglable\+Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tooglable_button__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_tooglable_button_1_1_toggle_attachment}{Toggle\+Attachment}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tooglable_button_a2f948d1107b37f0e32e0d1922ac9af59}{Tooglable\+Button}} (juce\+::\+String name, \mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner)
+\item 
+void \mbox{\hyperlink{class_tooglable_button_a7bf6859b52f5afcb8fd46a58836cc198}{scale\+Factor\+Changed}} () override
+\item 
+\mbox{\hyperlink{class_tooglable_button_acf35b461adf2e3ae63ff19e4d8f33359}{\texorpdfstring{$\sim$}{\string~}\+Tooglable\+Button}} () override
+\item 
+void \mbox{\hyperlink{class_tooglable_button_aaf11eabcf4b9c2b3de2bff98f605f4c0}{paint\+Button}} (Graphics \&g, bool is\+Mouse\+Over\+Button, bool is\+Button\+Down) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5}{\texorpdfstring{$\sim$}{\string~}\+Scalable\+Component}} ()
+\item 
+int \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{get\+Scale\+Int}} ()
+\item 
+void \mbox{\hyperlink{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e}{set\+Scale\+Factor}} (float new\+Scale\+Factor, bool new\+Is\+High\+Resolution\+Display)
+\item 
+float \mbox{\hyperlink{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc}{get\+Scale\+Image}} ()
+\item 
+float \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{get\+Scale\+Factor}} () const
+\item 
+bool \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{get\+Is\+High\+Resolution\+Display}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+juce\+::\+String \mbox{\hyperlink{class_tooglable_button_a624858e2265ab6c7cc4543174246f1b7}{img\+\_\+name}}
+\item 
+Image \mbox{\hyperlink{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06}{kni}}
+\item 
+int \mbox{\hyperlink{class_tooglable_button_a86ef244dc42696b44033a01a97be0f31}{width}}
+\item 
+int \mbox{\hyperlink{class_tooglable_button_a3ffdeba5928d5bcb780841275c04319b}{height}}
+\item 
+int \mbox{\hyperlink{class_tooglable_button_a00ec442925293b0cde7590a75487e6ed}{w2}}
+\item 
+int \mbox{\hyperlink{class_tooglable_button_a1f52038722a300337e0f9d9533827fb0}{h2}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4}{Scalable\+Component}} (\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner\+\_\+)
+\item 
+Image \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{get\+Scaled\+Image\+From\+Cache}} (const String \&image\+Name, float \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scale\+Factor}}, bool \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{is\+High\+Resolution\+Display}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tooglable_button_a2f948d1107b37f0e32e0d1922ac9af59}\label{class_tooglable_button_a2f948d1107b37f0e32e0d1922ac9af59} 
+\index{TooglableButton@{TooglableButton}!TooglableButton@{TooglableButton}}
+\index{TooglableButton@{TooglableButton}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{TooglableButton()}{TooglableButton()}}
+{\footnotesize\ttfamily Tooglable\+Button\+::\+Tooglable\+Button (\begin{DoxyParamCaption}\item[{juce\+::\+String}]{name,  }\item[{\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tooglable_button_a2f948d1107b37f0e32e0d1922ac9af59_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tooglable_button_acf35b461adf2e3ae63ff19e4d8f33359}\label{class_tooglable_button_acf35b461adf2e3ae63ff19e4d8f33359} 
+\index{TooglableButton@{TooglableButton}!````~TooglableButton@{\texorpdfstring{$\sim$}{\string~}TooglableButton}}
+\index{````~TooglableButton@{\texorpdfstring{$\sim$}{\string~}TooglableButton}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TooglableButton()}{\string~TooglableButton()}}
+{\footnotesize\ttfamily Tooglable\+Button\+::\texorpdfstring{$\sim$}{\string~}\+Tooglable\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tooglable_button_aaf11eabcf4b9c2b3de2bff98f605f4c0}\label{class_tooglable_button_aaf11eabcf4b9c2b3de2bff98f605f4c0} 
+\index{TooglableButton@{TooglableButton}!paintButton@{paintButton}}
+\index{paintButton@{paintButton}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{paintButton()}{paintButton()}}
+{\footnotesize\ttfamily void Tooglable\+Button\+::paint\+Button (\begin{DoxyParamCaption}\item[{Graphics \&}]{g,  }\item[{bool}]{is\+Mouse\+Over\+Button,  }\item[{bool}]{is\+Button\+Down }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tooglable_button_aaf11eabcf4b9c2b3de2bff98f605f4c0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tooglable_button_a7bf6859b52f5afcb8fd46a58836cc198}\label{class_tooglable_button_a7bf6859b52f5afcb8fd46a58836cc198} 
+\index{TooglableButton@{TooglableButton}!scaleFactorChanged@{scaleFactorChanged}}
+\index{scaleFactorChanged@{scaleFactorChanged}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{scaleFactorChanged()}{scaleFactorChanged()}}
+{\footnotesize\ttfamily void Tooglable\+Button\+::scale\+Factor\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e}{Scalable\+Component}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tooglable_button_a7bf6859b52f5afcb8fd46a58836cc198_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tooglable_button_a1f52038722a300337e0f9d9533827fb0}\label{class_tooglable_button_a1f52038722a300337e0f9d9533827fb0} 
+\index{TooglableButton@{TooglableButton}!h2@{h2}}
+\index{h2@{h2}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{h2}{h2}}
+{\footnotesize\ttfamily int Tooglable\+Button\+::h2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tooglable_button_a3ffdeba5928d5bcb780841275c04319b}\label{class_tooglable_button_a3ffdeba5928d5bcb780841275c04319b} 
+\index{TooglableButton@{TooglableButton}!height@{height}}
+\index{height@{height}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Tooglable\+Button\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tooglable_button_a624858e2265ab6c7cc4543174246f1b7}\label{class_tooglable_button_a624858e2265ab6c7cc4543174246f1b7} 
+\index{TooglableButton@{TooglableButton}!img\_name@{img\_name}}
+\index{img\_name@{img\_name}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{img\_name}{img\_name}}
+{\footnotesize\ttfamily juce\+::\+String Tooglable\+Button\+::img\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06}\label{class_tooglable_button_a4fd48d40ae3b509303d0baf3ce2fbb06} 
+\index{TooglableButton@{TooglableButton}!kni@{kni}}
+\index{kni@{kni}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{kni}{kni}}
+{\footnotesize\ttfamily Image Tooglable\+Button\+::kni\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tooglable_button_a00ec442925293b0cde7590a75487e6ed}\label{class_tooglable_button_a00ec442925293b0cde7590a75487e6ed} 
+\index{TooglableButton@{TooglableButton}!w2@{w2}}
+\index{w2@{w2}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{w2}{w2}}
+{\footnotesize\ttfamily int Tooglable\+Button\+::w2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tooglable_button_a86ef244dc42696b44033a01a97be0f31}\label{class_tooglable_button_a86ef244dc42696b44033a01a97be0f31} 
+\index{TooglableButton@{TooglableButton}!width@{width}}
+\index{width@{width}!TooglableButton@{TooglableButton}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Tooglable\+Button\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Gui/\mbox{\hyperlink{_tooglable_button_8h}{Tooglable\+Button.\+h}}\end{DoxyCompactItemize}

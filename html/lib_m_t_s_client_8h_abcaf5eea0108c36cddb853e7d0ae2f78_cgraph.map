@@ -1,0 +1,7 @@
+<map id="MTS_HasMaster" name="MTS_HasMaster">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,126,31"/>
+<area shape="rect" id="Node000002" href="$struct_m_t_s_client.html#ab0eedb28326e7f0b3e504b8147e950aa" title=" " alt="" coords="174,5,326,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,16,158,16,158,21,126,21"/>
+<area shape="rect" id="Node000003" href="$structmtsclientglobal.html#af401a3eb85e104e74170fc0faac7c51d" title=" " alt="" coords="374,5,537,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="326,16,358,16,358,21,326,21"/>
+</map>

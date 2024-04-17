@@ -1,0 +1,206 @@
+\doxysection{Button\+List Class Reference}
+\hypertarget{class_button_list}{}\label{class_button_list}\index{ButtonList@{ButtonList}}
+
+
+{\ttfamily \#include $<$Button\+List.\+h$>$}
+
+
+
+Inheritance diagram for Button\+List\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_button_list__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Button\+List\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_list__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_button_list_1_1_button_list_attachment}{Button\+List\+Attachment}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button_list_ad59a07a037cd2daca162784d11747d17}{Button\+List}} (juce\+::\+String name\+Img, int fh, \mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner)
+\item 
+void \mbox{\hyperlink{class_button_list_ae7f585c0fa74058ba55302d36855c2ec}{scale\+Factor\+Changed}} () override
+\item 
+void \mbox{\hyperlink{class_button_list_a46307f2653d8fc25e2ebb4f801a44a3b}{set\+Parameter}} (const Audio\+Processor\+Parameter \texorpdfstring{$\ast$}{*}p)
+\item 
+void \mbox{\hyperlink{class_button_list_a9155ff738b3b5f1c335cfdfa476768c1}{add\+Choice}} (String name)
+\item 
+float \mbox{\hyperlink{class_button_list_a81602d1f611547ca6154990c519e8d16}{get\+Value}} ()
+\item 
+void \mbox{\hyperlink{class_button_list_afc190aaea67642e823945294cb5e12c0}{set\+Value}} (float val, Notification\+Type notify)
+\item 
+void \mbox{\hyperlink{class_button_list_a53252fe2f56b7343f22812fd3f436be6}{paint\+Over\+Children}} (Graphics \&g) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_ad8323853debab5e3d0a1e8f5092c9cf5}{\texorpdfstring{$\sim$}{\string~}\+Scalable\+Component}} ()
+\item 
+int \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{get\+Scale\+Int}} ()
+\item 
+void \mbox{\hyperlink{class_scalable_component_acb484fedaaf5d1c063d615ccf972660e}{set\+Scale\+Factor}} (float new\+Scale\+Factor, bool new\+Is\+High\+Resolution\+Display)
+\item 
+float \mbox{\hyperlink{class_scalable_component_a01be496bdf27f88d3bcdce5a822f00cc}{get\+Scale\+Image}} ()
+\item 
+float \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{get\+Scale\+Factor}} () const
+\item 
+bool \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{get\+Is\+High\+Resolution\+Display}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+juce\+::\+String \mbox{\hyperlink{class_button_list_a80977a648fbcf659a3a038bb25ef9d44}{img\+\_\+name}}
+\item 
+int \mbox{\hyperlink{class_button_list_ab732f280676d0233ea7e63b8fa6536e5}{count}}
+\item 
+Image \mbox{\hyperlink{class_button_list_aa3f075c6d797575b85ac6f4990dc6bde}{kni}}
+\item 
+int \mbox{\hyperlink{class_button_list_a8a32e51fbd27bcaef9a9fc6934bc7afc}{w2}}
+\item 
+int \mbox{\hyperlink{class_button_list_aaee37251e28cdbc34b6baa9c69548568}{h2}}
+\item 
+const Audio\+Processor\+Parameter \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_button_list_a1b897ca069b11f0d8a47b7760f735e58}{parameter}} \{nullptr\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_scalable_component}{Scalable\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scalable_component_a5c197f991e3d754bc1db8f791b9766f4}{Scalable\+Component}} (\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}owner\+\_\+)
+\item 
+Image \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{get\+Scaled\+Image\+From\+Cache}} (const String \&image\+Name, float \mbox{\hyperlink{class_scalable_component_a484f110b17af63718e28234656b5686e}{scale\+Factor}}, bool \mbox{\hyperlink{class_scalable_component_a37d3bb5b2da01822280a40ac24a53eca}{is\+High\+Resolution\+Display}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_button_list_ad59a07a037cd2daca162784d11747d17}\label{class_button_list_ad59a07a037cd2daca162784d11747d17} 
+\index{ButtonList@{ButtonList}!ButtonList@{ButtonList}}
+\index{ButtonList@{ButtonList}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{ButtonList()}{ButtonList()}}
+{\footnotesize\ttfamily Button\+List\+::\+Button\+List (\begin{DoxyParamCaption}\item[{juce\+::\+String}]{name\+Img,  }\item[{int}]{fh,  }\item[{\mbox{\hyperlink{class_obxd_audio_processor}{Obxd\+Audio\+Processor}} \texorpdfstring{$\ast$}{*}}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_list_ad59a07a037cd2daca162784d11747d17_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_button_list_a9155ff738b3b5f1c335cfdfa476768c1}\label{class_button_list_a9155ff738b3b5f1c335cfdfa476768c1} 
+\index{ButtonList@{ButtonList}!addChoice@{addChoice}}
+\index{addChoice@{addChoice}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{addChoice()}{addChoice()}}
+{\footnotesize\ttfamily void Button\+List\+::add\+Choice (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_button_list_a81602d1f611547ca6154990c519e8d16}\label{class_button_list_a81602d1f611547ca6154990c519e8d16} 
+\index{ButtonList@{ButtonList}!getValue@{getValue}}
+\index{getValue@{getValue}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily float Button\+List\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_button_list_a53252fe2f56b7343f22812fd3f436be6}\label{class_button_list_a53252fe2f56b7343f22812fd3f436be6} 
+\index{ButtonList@{ButtonList}!paintOverChildren@{paintOverChildren}}
+\index{paintOverChildren@{paintOverChildren}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{paintOverChildren()}{paintOverChildren()}}
+{\footnotesize\ttfamily void Button\+List\+::paint\+Over\+Children (\begin{DoxyParamCaption}\item[{Graphics \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_list_a53252fe2f56b7343f22812fd3f436be6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_button_list_ae7f585c0fa74058ba55302d36855c2ec}\label{class_button_list_ae7f585c0fa74058ba55302d36855c2ec} 
+\index{ButtonList@{ButtonList}!scaleFactorChanged@{scaleFactorChanged}}
+\index{scaleFactorChanged@{scaleFactorChanged}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{scaleFactorChanged()}{scaleFactorChanged()}}
+{\footnotesize\ttfamily void Button\+List\+::scale\+Factor\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scalable_component_a48382f38a6930447c622f1cb7b894e0e}{Scalable\+Component}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_list_ae7f585c0fa74058ba55302d36855c2ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_button_list_a46307f2653d8fc25e2ebb4f801a44a3b}\label{class_button_list_a46307f2653d8fc25e2ebb4f801a44a3b} 
+\index{ButtonList@{ButtonList}!setParameter@{setParameter}}
+\index{setParameter@{setParameter}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{setParameter()}{setParameter()}}
+{\footnotesize\ttfamily void Button\+List\+::set\+Parameter (\begin{DoxyParamCaption}\item[{const Audio\+Processor\+Parameter \texorpdfstring{$\ast$}{*}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_button_list_afc190aaea67642e823945294cb5e12c0}\label{class_button_list_afc190aaea67642e823945294cb5e12c0} 
+\index{ButtonList@{ButtonList}!setValue@{setValue}}
+\index{setValue@{setValue}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Button\+List\+::set\+Value (\begin{DoxyParamCaption}\item[{float}]{val,  }\item[{Notification\+Type}]{notify }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_button_list_ab732f280676d0233ea7e63b8fa6536e5}\label{class_button_list_ab732f280676d0233ea7e63b8fa6536e5} 
+\index{ButtonList@{ButtonList}!count@{count}}
+\index{count@{count}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int Button\+List\+::count\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_button_list_aaee37251e28cdbc34b6baa9c69548568}\label{class_button_list_aaee37251e28cdbc34b6baa9c69548568} 
+\index{ButtonList@{ButtonList}!h2@{h2}}
+\index{h2@{h2}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{h2}{h2}}
+{\footnotesize\ttfamily int Button\+List\+::h2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_button_list_a80977a648fbcf659a3a038bb25ef9d44}\label{class_button_list_a80977a648fbcf659a3a038bb25ef9d44} 
+\index{ButtonList@{ButtonList}!img\_name@{img\_name}}
+\index{img\_name@{img\_name}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{img\_name}{img\_name}}
+{\footnotesize\ttfamily juce\+::\+String Button\+List\+::img\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_button_list_aa3f075c6d797575b85ac6f4990dc6bde}\label{class_button_list_aa3f075c6d797575b85ac6f4990dc6bde} 
+\index{ButtonList@{ButtonList}!kni@{kni}}
+\index{kni@{kni}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{kni}{kni}}
+{\footnotesize\ttfamily Image Button\+List\+::kni\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_button_list_a1b897ca069b11f0d8a47b7760f735e58}\label{class_button_list_a1b897ca069b11f0d8a47b7760f735e58} 
+\index{ButtonList@{ButtonList}!parameter@{parameter}}
+\index{parameter@{parameter}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{parameter}{parameter}}
+{\footnotesize\ttfamily const Audio\+Processor\+Parameter\texorpdfstring{$\ast$}{*} Button\+List\+::parameter \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_button_list_a8a32e51fbd27bcaef9a9fc6934bc7afc}\label{class_button_list_a8a32e51fbd27bcaef9a9fc6934bc7afc} 
+\index{ButtonList@{ButtonList}!w2@{w2}}
+\index{w2@{w2}!ButtonList@{ButtonList}}
+\doxysubsubsection{\texorpdfstring{w2}{w2}}
+{\footnotesize\ttfamily int Button\+List\+::w2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Gui/\mbox{\hyperlink{_button_list_8h}{Button\+List.\+h}}\end{DoxyCompactItemize}

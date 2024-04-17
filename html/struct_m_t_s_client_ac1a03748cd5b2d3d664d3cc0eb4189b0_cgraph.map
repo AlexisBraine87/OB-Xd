@@ -1,0 +1,12 @@
+<map id="MTSClient::freqToNote" name="MTSClient::freqToNote">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,25,161,51"/>
+<area shape="rect" id="Node000002" href="$struct_m_t_s_client.html#ad8df8aba8644831be6b67042e47133a4" title=" " alt="" coords="412,25,525,51"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,36,396,36,396,41,161,41"/>
+<area shape="rect" id="Node000003" href="$structmtsclientglobal.html#af401a3eb85e104e74170fc0faac7c51d" title=" " alt="" coords="573,25,737,51"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="161,23,208,17,367,4,437,4,526,10,584,19,583,24,525,16,436,9,367,9,209,22,161,28"/>
+<area shape="rect" id="Node000004" href="$struct_m_t_s_client.html#af3322becc4e6c9ea62b2fb3aaf14a80d" title=" " alt="" coords="209,76,364,102"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,49,218,69,216,74,137,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="526,36,558,36,558,41,526,41"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="335,73,405,53,406,58,336,78"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="364,80,525,61,576,52,577,57,526,66,365,85"/>
+</map>

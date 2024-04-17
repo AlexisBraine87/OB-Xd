@@ -1,0 +1,19 @@
+<map id="ObxdVoice::setHQ" name="ObxdVoice::setHQ">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,141,137,167"/>
+<area shape="rect" id="Node000002" href="$class_obxd_oscillator_b.html#a27399beedd764603188b74a90503c4c5" title=" " alt="" coords="185,92,418,118"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,138,223,119,224,124,135,143"/>
+<area shape="rect" id="Node000006" href="$class_obxd_oscillator_b.html#ae3164a17b91b0f9232cf848e10e3673e" title=" " alt="" coords="197,165,406,191"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="137,158,182,163,182,168,137,164"/>
+<area shape="rect" id="Node000003" href="$class_pulse_osc.html#adfae2869d363edeea8acc818281fdced" title=" " alt="" coords="473,5,668,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="333,89,393,65,465,40,490,33,492,38,467,45,395,70,335,94"/>
+<area shape="rect" id="Node000004" href="$class_saw_osc.html#a5e6ec728cb30236b6accf605e6b95f52" title=" " alt="" coords="476,55,664,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="398,89,460,80,461,85,399,94"/>
+<area shape="rect" id="Node000005" href="$class_triangle_osc.html#acaf1dea4fe9fe1a6c211ca6455a3050c" title=" " alt="" coords="466,104,674,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="419,107,450,109,450,114,419,113"/>
+<area shape="rect" id="Node000007" href="$class_pulse_osc.html#a61366fcb106d20c2ffc5687f46103417" title=" " alt="" coords="485,153,655,179"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="406,171,470,168,470,173,406,176"/>
+<area shape="rect" id="Node000008" href="$class_saw_osc.html#a7472180eae72c431af58cc0c302030a9" title=" " alt="" coords="489,203,652,228"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="399,189,473,199,473,205,398,194"/>
+<area shape="rect" id="Node000009" href="$class_triangle_osc.html#aaa238a0e69e98a68c935738aac54ef08" title=" " alt="" coords="479,252,662,278"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="335,189,395,213,467,238,492,245,490,250,465,243,393,218,333,194"/>
+</map>

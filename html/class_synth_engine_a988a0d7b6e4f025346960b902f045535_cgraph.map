@@ -1,0 +1,5 @@
+<map id="SynthEngine::processFilterEnvelopeSustain" name="SynthEngine::processFilterEnvelopeSustain">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,46"/>
+<area shape="rect" id="Node000002" href="$class_adsr_envelope.html#af133fb1ff5da1e1f29a095380b94044b" title=" " alt="" coords="232,13,404,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,216,23,216,28,184,28"/>
+</map>

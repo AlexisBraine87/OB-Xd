@@ -1,0 +1,375 @@
+\doxysection{MTSClient Struct Reference}
+\hypertarget{struct_m_t_s_client}{}\label{struct_m_t_s_client}\index{MTSClient@{MTSClient}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378}{e\+Sysex\+State}} \{ \newline
+\mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378aff3824c11fb3b9f3a06b822aaa16ddea}{e\+Ignoring}} =0
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a0f384ca7b6bd502ebe20a03b4b8b684b}{e\+Matching\+Sysex}}
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a378fa5a14884f54ab16ebe159fecf115}{e\+Sysex\+Valid}}
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a3cefcbec4a8f4ee66e67547a23b7e0db}{e\+Matching\+MTS}}
+, \newline
+\mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a2ddaf2ad3d743a57c45c7b95abe053ff}{e\+Matching\+Bank}}
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a2f92cbeeee5e3016fef58e0edf603e55}{e\+Matching\+Prog}}
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a69962506ce61947e1ccdacaa6a7bc326}{e\+Matching\+Channel}}
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a0a4edeaa2c0681b5297e9bba33d77d93}{e\+Tuning\+Name}}
+, \newline
+\mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378ad27fa129562ab2051a10a14484cf5aa5}{e\+Num\+Tunings}}
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a46742a7e4bb0356a9cc1e7b879baf4d3}{e\+Tuning\+Data}}
+, \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a200df1a9682bdae4422f79c5ed7934c2}{e\+Check\+Sum}}
+ \}
+\item 
+enum \mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4}{e\+MTSFormat}} \{ \newline
+\mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4ae5ca644628b9ca4f16474ccc4b1e3f59}{e\+Request}} =0
+, \mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4aecc389104e4737e7b1547855e67ceed2}{e\+Bulk}}
+, \mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a721595c5ce96213200f6dad2a1508920}{e\+Single}}
+, \mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a4e2b1eb7573b6997ef4ab295a806da7f}{e\+Scale\+Oct\+One\+Byte}}
+, \newline
+\mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4aae398bfe3136157ff7450fc92675e1b6}{e\+Scale\+Oct\+Two\+Byte}}
+, \mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a62278b3e52974a8461d3af7c39c4f342}{e\+Scale\+Oct\+One\+Byte\+Ext}}
+, \mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4afd67d295ca6602bc6437fbd24ea958e3}{e\+Scale\+Oct\+Two\+Byte\+Ext}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_a8a23f3d95d900713ebae14d780e575d6}{MTSClient}} ()
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{virtual}} \mbox{\hyperlink{struct_m_t_s_client_ab55712cb529cfffb3d16ca348a53c142}{\texorpdfstring{$\sim$}{\string~}\+MTSClient}} ()
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} \mbox{\hyperlink{struct_m_t_s_client_ab0eedb28326e7f0b3e504b8147e950aa}{has\+Master}} ()
+\item 
+double \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{freq}} (char midinote, char midichannel)
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} \mbox{\hyperlink{struct_m_t_s_client_ab17fe7f79b0d324021db7dc3aa69dc2b}{ratio}} (\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midinote}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}})
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} \mbox{\hyperlink{struct_m_t_s_client_a2bc41379e637e6f97dcfcbeb04105ca3}{semitones}} (\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midinote}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}})
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} \mbox{\hyperlink{struct_m_t_s_client_a4c0ba288c27ebcad11768ca6999890ed}{should\+Filter\+Note}} (\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midinote}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}})
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_af3322becc4e6c9ea62b2fb3aaf14a80d}{freq\+To\+Note}} (\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{freq}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}})
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_ac1a03748cd5b2d3d664d3cc0eb4189b0}{freq\+To\+Note}} (\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{freq}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{midichannel}})
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{void}} \mbox{\hyperlink{struct_m_t_s_client_abab47d5b930efae34a1c96a1d30153d8}{parse\+MIDIData}} (\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{const}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{unsigned}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{buffer}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{int}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{len}})
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{void}} \mbox{\hyperlink{struct_m_t_s_client_ad61b91f646eff63ad6ff303764770ab3}{update\+Tuning}} (\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{int}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{note}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{int}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{retune\+Note}}, \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{detune}})
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{const}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_m_t_s_client_af869fec2183eeddb1598367fda5cd79c}{get\+Scale\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} \mbox{\hyperlink{struct_m_t_s_client_ab69dfcad9b9ef4f673ebb41dfd7fdae3}{retuning}} \mbox{[}128\mbox{]}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \mbox{\hyperlink{struct_m_t_s_client_aa8c893cec5e620ed16a472103555df71}{tuning\+Name}} \mbox{[}17\mbox{]}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} \mbox{\hyperlink{struct_m_t_s_client_abb36b16447b20166d686208c77838323}{supports\+Note\+Filtering}}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} \mbox{\hyperlink{struct_m_t_s_client_aa88c22386e60ad1e48793388703bdc4c}{supports\+Multi\+Channel\+Note\+Filtering}}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} \mbox{\hyperlink{struct_m_t_s_client_af3d0d46ec39e49759698fa3bb6cb5428}{supports\+Multi\+Channel\+Tuning}}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} \mbox{\hyperlink{struct_m_t_s_client_a94face7c29c8ed8abee5d2b113a6d640}{freq\+Request\+Received}}
+\item 
+\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} \mbox{\hyperlink{struct_m_t_s_client_a720ef5e707a1d34743543689a6091b8e}{supports\+MTSSysex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4} 
+\index{MTSClient@{MTSClient}!eMTSFormat@{eMTSFormat}}
+\index{eMTSFormat@{eMTSFormat}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{eMTSFormat}{eMTSFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{enum}} \mbox{\hyperlink{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4}{MTSClient\+::e\+MTSFormat}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eRequest@{eRequest}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eRequest@{eRequest}}}\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4ae5ca644628b9ca4f16474ccc4b1e3f59}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4ae5ca644628b9ca4f16474ccc4b1e3f59} 
+e\+Request&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eBulk@{eBulk}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eBulk@{eBulk}}}\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4aecc389104e4737e7b1547855e67ceed2}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4aecc389104e4737e7b1547855e67ceed2} 
+e\+Bulk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eSingle@{eSingle}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eSingle@{eSingle}}}\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a721595c5ce96213200f6dad2a1508920}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a721595c5ce96213200f6dad2a1508920} 
+e\+Single&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eScaleOctOneByte@{eScaleOctOneByte}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eScaleOctOneByte@{eScaleOctOneByte}}}\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a4e2b1eb7573b6997ef4ab295a806da7f}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a4e2b1eb7573b6997ef4ab295a806da7f} 
+e\+Scale\+Oct\+One\+Byte&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eScaleOctTwoByte@{eScaleOctTwoByte}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eScaleOctTwoByte@{eScaleOctTwoByte}}}\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4aae398bfe3136157ff7450fc92675e1b6}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4aae398bfe3136157ff7450fc92675e1b6} 
+e\+Scale\+Oct\+Two\+Byte&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eScaleOctOneByteExt@{eScaleOctOneByteExt}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eScaleOctOneByteExt@{eScaleOctOneByteExt}}}\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a62278b3e52974a8461d3af7c39c4f342}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4a62278b3e52974a8461d3af7c39c4f342} 
+e\+Scale\+Oct\+One\+Byte\+Ext&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eScaleOctTwoByteExt@{eScaleOctTwoByteExt}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eScaleOctTwoByteExt@{eScaleOctTwoByteExt}}}\Hypertarget{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4afd67d295ca6602bc6437fbd24ea958e3}\label{struct_m_t_s_client_a13f2b4683a207b3d8f8df905a577d4b4afd67d295ca6602bc6437fbd24ea958e3} 
+e\+Scale\+Oct\+Two\+Byte\+Ext&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378} 
+\index{MTSClient@{MTSClient}!eSysexState@{eSysexState}}
+\index{eSysexState@{eSysexState}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{eSysexState}{eSysexState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{enum}} \mbox{\hyperlink{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378}{MTSClient\+::e\+Sysex\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eIgnoring@{eIgnoring}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eIgnoring@{eIgnoring}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378aff3824c11fb3b9f3a06b822aaa16ddea}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378aff3824c11fb3b9f3a06b822aaa16ddea} 
+e\+Ignoring&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eMatchingSysex@{eMatchingSysex}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eMatchingSysex@{eMatchingSysex}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a0f384ca7b6bd502ebe20a03b4b8b684b}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a0f384ca7b6bd502ebe20a03b4b8b684b} 
+e\+Matching\+Sysex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eSysexValid@{eSysexValid}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eSysexValid@{eSysexValid}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a378fa5a14884f54ab16ebe159fecf115}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a378fa5a14884f54ab16ebe159fecf115} 
+e\+Sysex\+Valid&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eMatchingMTS@{eMatchingMTS}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eMatchingMTS@{eMatchingMTS}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a3cefcbec4a8f4ee66e67547a23b7e0db}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a3cefcbec4a8f4ee66e67547a23b7e0db} 
+e\+Matching\+MTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eMatchingBank@{eMatchingBank}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eMatchingBank@{eMatchingBank}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a2ddaf2ad3d743a57c45c7b95abe053ff}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a2ddaf2ad3d743a57c45c7b95abe053ff} 
+e\+Matching\+Bank&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eMatchingProg@{eMatchingProg}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eMatchingProg@{eMatchingProg}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a2f92cbeeee5e3016fef58e0edf603e55}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a2f92cbeeee5e3016fef58e0edf603e55} 
+e\+Matching\+Prog&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eMatchingChannel@{eMatchingChannel}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eMatchingChannel@{eMatchingChannel}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a69962506ce61947e1ccdacaa6a7bc326}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a69962506ce61947e1ccdacaa6a7bc326} 
+e\+Matching\+Channel&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eTuningName@{eTuningName}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eTuningName@{eTuningName}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a0a4edeaa2c0681b5297e9bba33d77d93}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a0a4edeaa2c0681b5297e9bba33d77d93} 
+e\+Tuning\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eNumTunings@{eNumTunings}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eNumTunings@{eNumTunings}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378ad27fa129562ab2051a10a14484cf5aa5}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378ad27fa129562ab2051a10a14484cf5aa5} 
+e\+Num\+Tunings&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eTuningData@{eTuningData}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eTuningData@{eTuningData}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a46742a7e4bb0356a9cc1e7b879baf4d3}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a46742a7e4bb0356a9cc1e7b879baf4d3} 
+e\+Tuning\+Data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eCheckSum@{eCheckSum}!MTSClient@{MTSClient}}\index{MTSClient@{MTSClient}!eCheckSum@{eCheckSum}}}\Hypertarget{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a200df1a9682bdae4422f79c5ed7934c2}\label{struct_m_t_s_client_a61676d79a7c5cd441a643c9e928cc378a200df1a9682bdae4422f79c5ed7934c2} 
+e\+Check\+Sum&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_m_t_s_client_a8a23f3d95d900713ebae14d780e575d6}\label{struct_m_t_s_client_a8a23f3d95d900713ebae14d780e575d6} 
+\index{MTSClient@{MTSClient}!MTSClient@{MTSClient}}
+\index{MTSClient@{MTSClient}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{MTSClient()}{MTSClient()}}
+{\footnotesize\ttfamily MTSClient\+::\+MTSClient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_m_t_s_client_ab55712cb529cfffb3d16ca348a53c142}\label{struct_m_t_s_client_ab55712cb529cfffb3d16ca348a53c142} 
+\index{MTSClient@{MTSClient}!````~MTSClient@{\texorpdfstring{$\sim$}{\string~}MTSClient}}
+\index{````~MTSClient@{\texorpdfstring{$\sim$}{\string~}MTSClient}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MTSClient()}{\string~MTSClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{virtual}} MTSClient\+::\texorpdfstring{$\sim$}{\string~}\+MTSClient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}\label{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4} 
+\index{MTSClient@{MTSClient}!freq@{freq}}
+\index{freq@{freq}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{freq()}{freq()}}
+{\footnotesize\ttfamily double MTSClient\+::freq (\begin{DoxyParamCaption}\item[{char}]{midinote,  }\item[{char}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_ac1a03748cd5b2d3d664d3cc0eb4189b0}\label{struct_m_t_s_client_ac1a03748cd5b2d3d664d3cc0eb4189b0} 
+\index{MTSClient@{MTSClient}!freqToNote@{freqToNote}}
+\index{freqToNote@{freqToNote}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{freqToNote()}{freqToNote()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} MTSClient\+::freq\+To\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}}}]{freq,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \texorpdfstring{$\ast$}{*}}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_ac1a03748cd5b2d3d664d3cc0eb4189b0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_af3322becc4e6c9ea62b2fb3aaf14a80d}\label{struct_m_t_s_client_af3322becc4e6c9ea62b2fb3aaf14a80d} 
+\index{MTSClient@{MTSClient}!freqToNote@{freqToNote}}
+\index{freqToNote@{freqToNote}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{freqToNote()}{freqToNote()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} MTSClient\+::freq\+To\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}}}]{freq,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}}}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_af3322becc4e6c9ea62b2fb3aaf14a80d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_af869fec2183eeddb1598367fda5cd79c}\label{struct_m_t_s_client_af869fec2183eeddb1598367fda5cd79c} 
+\index{MTSClient@{MTSClient}!getScaleName@{getScaleName}}
+\index{getScaleName@{getScaleName}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{getScaleName()}{getScaleName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{const}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \texorpdfstring{$\ast$}{*} MTSClient\+::get\+Scale\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_af869fec2183eeddb1598367fda5cd79c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_ab0eedb28326e7f0b3e504b8147e950aa}\label{struct_m_t_s_client_ab0eedb28326e7f0b3e504b8147e950aa} 
+\index{MTSClient@{MTSClient}!hasMaster@{hasMaster}}
+\index{hasMaster@{hasMaster}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{hasMaster()}{hasMaster()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} MTSClient\+::has\+Master (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_ab0eedb28326e7f0b3e504b8147e950aa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_abab47d5b930efae34a1c96a1d30153d8}\label{struct_m_t_s_client_abab47d5b930efae34a1c96a1d30153d8} 
+\index{MTSClient@{MTSClient}!parseMIDIData@{parseMIDIData}}
+\index{parseMIDIData@{parseMIDIData}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{parseMIDIData()}{parseMIDIData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{void}} MTSClient\+::parse\+MIDIData (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{const}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{unsigned}} \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{int}}}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_abab47d5b930efae34a1c96a1d30153d8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_ab17fe7f79b0d324021db7dc3aa69dc2b}\label{struct_m_t_s_client_ab17fe7f79b0d324021db7dc3aa69dc2b} 
+\index{MTSClient@{MTSClient}!ratio@{ratio}}
+\index{ratio@{ratio}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{ratio()}{ratio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} MTSClient\+::ratio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}}}]{midinote,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}}}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{struct_m_t_s_client_ab17fe7f79b0d324021db7dc3aa69dc2b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_a2bc41379e637e6f97dcfcbeb04105ca3}\label{struct_m_t_s_client_a2bc41379e637e6f97dcfcbeb04105ca3} 
+\index{MTSClient@{MTSClient}!semitones@{semitones}}
+\index{semitones@{semitones}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{semitones()}{semitones()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} MTSClient\+::semitones (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}}}]{midinote,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}}}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_a2bc41379e637e6f97dcfcbeb04105ca3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_a4c0ba288c27ebcad11768ca6999890ed}\label{struct_m_t_s_client_a4c0ba288c27ebcad11768ca6999890ed} 
+\index{MTSClient@{MTSClient}!shouldFilterNote@{shouldFilterNote}}
+\index{shouldFilterNote@{shouldFilterNote}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{shouldFilterNote()}{shouldFilterNote()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} MTSClient\+::should\+Filter\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}}}]{midinote,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}}}]{midichannel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_a4c0ba288c27ebcad11768ca6999890ed_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_m_t_s_client_ad61b91f646eff63ad6ff303764770ab3}\label{struct_m_t_s_client_ad61b91f646eff63ad6ff303764770ab3} 
+\index{MTSClient@{MTSClient}!updateTuning@{updateTuning}}
+\index{updateTuning@{updateTuning}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{updateTuning()}{updateTuning()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{void}} MTSClient\+::update\+Tuning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{int}}}]{note,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{int}}}]{retune\+Note,  }\item[{\mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}}}]{detune }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_m_t_s_client_ad61b91f646eff63ad6ff303764770ab3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_m_t_s_client_a94face7c29c8ed8abee5d2b113a6d640}\label{struct_m_t_s_client_a94face7c29c8ed8abee5d2b113a6d640} 
+\index{MTSClient@{MTSClient}!freqRequestReceived@{freqRequestReceived}}
+\index{freqRequestReceived@{freqRequestReceived}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{freqRequestReceived}{freqRequestReceived}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} MTSClient\+::freq\+Request\+Received}
+
+\Hypertarget{struct_m_t_s_client_ab69dfcad9b9ef4f673ebb41dfd7fdae3}\label{struct_m_t_s_client_ab69dfcad9b9ef4f673ebb41dfd7fdae3} 
+\index{MTSClient@{MTSClient}!retuning@{retuning}}
+\index{retuning@{retuning}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{retuning}{retuning}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{double}} MTSClient\+::retuning\mbox{[}128\mbox{]}}
+
+\Hypertarget{struct_m_t_s_client_a720ef5e707a1d34743543689a6091b8e}\label{struct_m_t_s_client_a720ef5e707a1d34743543689a6091b8e} 
+\index{MTSClient@{MTSClient}!supportsMTSSysex@{supportsMTSSysex}}
+\index{supportsMTSSysex@{supportsMTSSysex}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{supportsMTSSysex}{supportsMTSSysex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} MTSClient\+::supports\+MTSSysex}
+
+\Hypertarget{struct_m_t_s_client_aa88c22386e60ad1e48793388703bdc4c}\label{struct_m_t_s_client_aa88c22386e60ad1e48793388703bdc4c} 
+\index{MTSClient@{MTSClient}!supportsMultiChannelNoteFiltering@{supportsMultiChannelNoteFiltering}}
+\index{supportsMultiChannelNoteFiltering@{supportsMultiChannelNoteFiltering}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{supportsMultiChannelNoteFiltering}{supportsMultiChannelNoteFiltering}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} MTSClient\+::supports\+Multi\+Channel\+Note\+Filtering}
+
+\Hypertarget{struct_m_t_s_client_af3d0d46ec39e49759698fa3bb6cb5428}\label{struct_m_t_s_client_af3d0d46ec39e49759698fa3bb6cb5428} 
+\index{MTSClient@{MTSClient}!supportsMultiChannelTuning@{supportsMultiChannelTuning}}
+\index{supportsMultiChannelTuning@{supportsMultiChannelTuning}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{supportsMultiChannelTuning}{supportsMultiChannelTuning}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} MTSClient\+::supports\+Multi\+Channel\+Tuning}
+
+\Hypertarget{struct_m_t_s_client_abb36b16447b20166d686208c77838323}\label{struct_m_t_s_client_abb36b16447b20166d686208c77838323} 
+\index{MTSClient@{MTSClient}!supportsNoteFiltering@{supportsNoteFiltering}}
+\index{supportsNoteFiltering@{supportsNoteFiltering}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{supportsNoteFiltering}{supportsNoteFiltering}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{bool}} MTSClient\+::supports\+Note\+Filtering}
+
+\Hypertarget{struct_m_t_s_client_aa8c893cec5e620ed16a472103555df71}\label{struct_m_t_s_client_aa8c893cec5e620ed16a472103555df71} 
+\index{MTSClient@{MTSClient}!tuningName@{tuningName}}
+\index{tuningName@{tuningName}!MTSClient@{MTSClient}}
+\doxysubsubsection{\texorpdfstring{tuningName}{tuningName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_t_s_client_ad8df8aba8644831be6b67042e47133a4}{char}} MTSClient\+::tuning\+Name\mbox{[}17\mbox{]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+MTS/\mbox{\hyperlink{lib_m_t_s_client_8cpp}{lib\+MTSClient.\+cpp}}\end{DoxyCompactItemize}

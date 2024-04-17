@@ -1,0 +1,17 @@
+<map id="SynthEngine::processEnvelopeDetune" name="SynthEngine::processEnvelopeDetune">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,209,89"/>
+<area shape="rect" id="Node000002" href="$_audio_utils_8h.html#ada07461abdebc44c78bea4c951f6ed79" title=" " alt="" coords="310,31,359,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,55,295,45,295,50,209,60"/>
+<area shape="rect" id="Node000003" href="$class_obxd_voice.html#a1b480c4a1a951467986ea69e92a7f94e" title=" " alt="" coords="257,80,412,106"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,77,242,80,241,86,209,82"/>
+<area shape="rect" id="Node000004" href="$class_adsr_envelope.html#a74126f9fb44efe59a14c2ea1c06b7249" title=" " alt="" coords="460,80,691,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="412,90,444,90,444,96,412,96"/>
+<area shape="rect" id="Node000005" href="$class_adsr_envelope.html#a2a6ba5bcb5d1b80e1e724bbc0db6d40f" title=" " alt="" coords="744,5,911,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="618,77,739,40,761,33,763,38,740,45,619,82"/>
+<area shape="rect" id="Node000006" href="$class_adsr_envelope.html#a44976ed74cca7deab505c7acd52062ac" title=" " alt="" coords="744,55,911,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="691,79,729,75,729,80,692,84"/>
+<area shape="rect" id="Node000007" href="$class_adsr_envelope.html#aaec1b9c371a2c5404985f6514ffe9cff" title=" " alt="" coords="739,104,916,130"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="692,101,724,104,723,110,691,107"/>
+<area shape="rect" id="Node000008" href="$class_adsr_envelope.html#af133fb1ff5da1e1f29a095380b94044b" title=" " alt="" coords="741,153,914,179"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="621,104,740,140,763,146,761,151,739,145,620,109"/>
+</map>

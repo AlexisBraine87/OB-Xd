@@ -1,0 +1,124 @@
+\doxysection{Button\+List.\+h}
+\hypertarget{_button_list_8h_source}{}\label{_button_list_8h_source}\index{Source/Gui/ButtonList.h@{Source/Gui/ButtonList.h}}
+\mbox{\hyperlink{_button_list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ This\ file\ is\ part\ of\ Obxd\ synthesizer.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ {\ucr}\ 2013-\/2014\ Filatov\ Vadim}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Contact\ author\ via\ email\ :}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ justdat\_@\_e1.ru}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ This\ file\ may\ be\ licensed\ under\ the\ terms\ of\ of\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ Version\ 2\ (the\ \`{}\`{}GPL'').}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Software\ distributed\ under\ the\ License\ is\ distributed}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ on\ an\ \`{}\`{}AS\ IS''\ basis,\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ either}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ express\ or\ implied.\ See\ the\ GPL\ for\ the\ specific\ language}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ governing\ rights\ and\ limitations.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GPL\ along\ with\ this}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ program.\ If\ not,\ go\ to\ http://www.gnu.org/licenses/gpl.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ or\ write\ to\ the\ Free\ Software\ Foundation,\ Inc.,\ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,\ MA\ 02110-\/1301,\ USA.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ ==============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}../Source/Engine/SynthEngine.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_list}{ButtonList}}\ \ :\ \textcolor{keyword}{public}\ ComboBox,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ juce::String\ \mbox{\hyperlink{class_button_list_a80977a648fbcf659a3a038bb25ef9d44}{img\_name}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_button_list_ad59a07a037cd2daca162784d11747d17}{ButtonList}}\ (juce::String\ nameImg,\ \textcolor{keywordtype}{int}\ fh,\ \mbox{\hyperlink{class_obxd_audio_processor}{ObxdAudioProcessor}}\ *owner)\ :\ ComboBox(\textcolor{stringliteral}{"{}cb"{}}),\ \mbox{\hyperlink{class_scalable_component}{ScalableComponent}}(owner),\ \mbox{\hyperlink{class_button_list_a80977a648fbcf659a3a038bb25ef9d44}{img\_name}}(nameImg)}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_ae7f585c0fa74058ba55302d36855c2ec}{scaleFactorChanged}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_ab732f280676d0233ea7e63b8fa6536e5}{count}}\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_aaee37251e28cdbc34b6baa9c69548568}{h2}}\ =\ fh;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_a8a32e51fbd27bcaef9a9fc6934bc7afc}{w2}}\ =\ \mbox{\hyperlink{class_button_list_aa3f075c6d797575b85ac6f4990dc6bde}{kni}}.getWidth();}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//int\ addItem}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_list_ae7f585c0fa74058ba55302d36855c2ec}{scaleFactorChanged}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00041\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_aa3f075c6d797575b85ac6f4990dc6bde}{kni}}\ =\ \mbox{\hyperlink{class_scalable_component_ad50b7cfc6a69d37ac7f0f1bdea7b12e8}{getScaledImageFromCache}}(\mbox{\hyperlink{class_button_list_a80977a648fbcf659a3a038bb25ef9d44}{img\_name}},\ \mbox{\hyperlink{class_scalable_component_ae23f6266007c204094dd7698a16ebab0}{getScaleFactor}}(),\ \mbox{\hyperlink{class_scalable_component_a81361cc705be0667e508476827d2cbe6}{getIsHighResolutionDisplay}}());}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ backgroundImage\ =}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ allImage.getClippedImage(Rectangle<int>(0,}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getHeight()\ /\ 2,}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getWidth(),}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allImage.getHeight()\ /\ 2));}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ repaint();}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Source:\ https://git.iem.at/audioplugins/IEMPluginSuite/-\//blob/master/resources/customComponents/ReverseSlider.h}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_list_1_1_button_list_attachment}{ButtonListAttachment}}\ \ :\ \textcolor{keyword}{public}\ juce::AudioProcessorValueTreeState::ComboBoxAttachment}
+\DoxyCodeLine{00055\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ RangedAudioParameter*\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a3e03cc50bc51fa6655fea53a6d03f0d6}{parameter}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list}{ButtonList}}*\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a938f3c812bf28cfaefd6e47341b6660f}{buttonListToControl}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a0f94871460e12ddfe5854e40b00b6011}{ButtonListAttachment}}\ (juce::AudioProcessorValueTreeState\&\ stateToControl,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ juce::String\&\ parameterID,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list}{ButtonList}}\&\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a938f3c812bf28cfaefd6e47341b6660f}{buttonListToControl}})\ :\ AudioProcessorValueTreeState::ComboBoxAttachment\ (stateToControl,\ parameterID,\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a938f3c812bf28cfaefd6e47341b6660f}{buttonListToControl}}),\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a938f3c812bf28cfaefd6e47341b6660f}{buttonListToControl}}(\&\mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a938f3c812bf28cfaefd6e47341b6660f}{buttonListToControl}})}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a3e03cc50bc51fa6655fea53a6d03f0d6}{parameter}}\ =\ stateToControl.getParameter\ (parameterID);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a938f3c812bf28cfaefd6e47341b6660f}{buttonListToControl}}.\mbox{\hyperlink{class_button_list_a46307f2653d8fc25e2ebb4f801a44a3b}{setParameter}}\ (\mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a3e03cc50bc51fa6655fea53a6d03f0d6}{parameter}});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ ButtonListAttachment\ (juce::AudioProcessorValueTreeState\&\ stateToControl,}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ juce::String\&\ parameterID,}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ComboBox\&\ buttonListToControl)\ :\ AudioProcessorValueTreeState::ComboBoxAttachment\ (stateToControl,\ parameterID,\ buttonListToControl)}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a69d42639f51de2494057a8ffb9631476}{updateToSlider}}()\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ val\ =\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a3e03cc50bc51fa6655fea53a6d03f0d6}{parameter}}-\/>getValue();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//buttonListToControl-\/>setValue(val,\ NotificationType::dontSendNotification);}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//buttonListToControl-\/>setValue(parameter-\/>convertFrom0to1(val0to1),\ NotificationType::dontSendNotification);}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_a938f3c812bf28cfaefd6e47341b6660f}{buttonListToControl}}-\/>\mbox{\hyperlink{class_button_list_afc190aaea67642e823945294cb5e12c0}{setValue}}(val,\ NotificationType::dontSendNotification);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_button_list_1_1_button_list_attachment_aeec6ae1a2161a6fa971942e316d8fd8b}{\string~ButtonListAttachment}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_list_a46307f2653d8fc25e2ebb4f801a44a3b}{setParameter}}\ (\textcolor{keyword}{const}\ AudioProcessorParameter*\ p)}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_list_a1b897ca069b11f0d8a47b7760f735e58}{parameter}}\ ==\ p)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_list_a1b897ca069b11f0d8a47b7760f735e58}{parameter}}\ =\ p;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ repaint();}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_list_a9155ff738b3b5f1c335cfdfa476768c1}{addChoice}}\ (String\ name)}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ addItem\ (name,\ ++\mbox{\hyperlink{class_button_list_ab732f280676d0233ea7e63b8fa6536e5}{count}});}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_button_list_a81602d1f611547ca6154990c519e8d16}{getValue}}()}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ((getSelectedId()\ -\/\ 1)\ /\ (\textcolor{keywordtype}{float})\ (\mbox{\hyperlink{class_button_list_ab732f280676d0233ea7e63b8fa6536e5}{count}}\ -\/\ 1));}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_list_afc190aaea67642e823945294cb5e12c0}{setValue}}\ (\textcolor{keywordtype}{float}\ val,\ NotificationType\ notify)}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ setSelectedId\ ((\textcolor{keywordtype}{int})\ (val\ *\ (\mbox{\hyperlink{class_button_list_ab732f280676d0233ea7e63b8fa6536e5}{count}}\ -\/\ 1)\ +\ 1),\ notify);}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_list_a53252fe2f56b7343f22812fd3f436be6}{paintOverChildren}}\ (Graphics\&\ g)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00108\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ofs\ =\ getSelectedId()\ -\/\ 1;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ g.drawImage(\mbox{\hyperlink{class_button_list_aa3f075c6d797575b85ac6f4990dc6bde}{kni}},\ 0,\ 0,\ getWidth(),\ getHeight(),\ 0,\ \mbox{\hyperlink{class_button_list_aaee37251e28cdbc34b6baa9c69548568}{h2}}\ *\ ofs\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}(),\ \mbox{\hyperlink{class_button_list_a8a32e51fbd27bcaef9a9fc6934bc7afc}{w2}}\ *\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}()\ ,\ \mbox{\hyperlink{class_button_list_aaee37251e28cdbc34b6baa9c69548568}{h2}}*\ \mbox{\hyperlink{class_scalable_component_ab746359e4aacae97810d592b04d22b3e}{getScaleInt}}());}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_button_list_ab732f280676d0233ea7e63b8fa6536e5}{count}};}
+\DoxyCodeLine{00115\ \ \ \ \ Image\ \mbox{\hyperlink{class_button_list_aa3f075c6d797575b85ac6f4990dc6bde}{kni}};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_button_list_a8a32e51fbd27bcaef9a9fc6934bc7afc}{w2}},\ \mbox{\hyperlink{class_button_list_aaee37251e28cdbc34b6baa9c69548568}{h2}};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{const}\ AudioProcessorParameter*\ \mbox{\hyperlink{class_button_list_a1b897ca069b11f0d8a47b7760f735e58}{parameter}}\ \{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00118\ \};}
+
+\end{DoxyCode}

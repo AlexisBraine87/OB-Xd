@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['imagemenu_0',['ImageMenu',['../class_image_menu.html#ace1e751688537c4cff5165667511ebcb',1,'ImageMenu']]],
+  ['init_1',['init',['../classjuce_1_1_standalone_plugin_holder.html#aa5aae7bed030a522ce43412c3f38ed08',1,'juce::StandalonePluginHolder']]],
+  ['initallparams_2',['initAllParams',['../class_obxd_audio_processor.html#afc5e82462ccae91ff5be9ec20f185384',1,'ObxdAudioProcessor']]],
+  ['initchannelpointers_3',['initChannelPointers',['../classjuce_1_1_standalone_plugin_holder_1_1_callback_max_size_enforcer.html#a43bacc2f39171be44cda21a74ec1d2a6',1,'juce::StandalonePluginHolder::CallbackMaxSizeEnforcer']]],
+  ['initmidi_4',['initMidi',['../class_obxd_audio_processor.html#a762661cecce1421e62f6ee508f0e55bf',1,'ObxdAudioProcessor']]],
+  ['inittuning_5',['initTuning',['../class_obxd_voice.html#a97734225fe9e3290932f49b02d71943e',1,'ObxdVoice']]],
+  ['inputmutedchanged_6',['inputMutedChanged',['../classjuce_1_1_standalone_filter_window_1_1_main_content_component.html#a36d07aa23be8cf5fa41391bea4a246c4',1,'juce::StandaloneFilterWindow::MainContentComponent']]],
+  ['isactive_7',['isActive',['../class_adsr_envelope.html#a7c0b7a099c3af0bd9f14fa0292339a5d',1,'AdsrEnvelope']]],
+  ['isembeddedinforegroundprocess_8',['isEmbeddedInForegroundProcess',['../namespacejuce.html#a3753e5c701e88d306a4b61c34c49415a',1,'juce']]],
+  ['isforegroundorembeddedprocess_9',['isForegroundOrEmbeddedProcess',['../namespacejuce.html#af3eb432200eb2c2794fe3878d9e38c5a',1,'juce']]],
+  ['ishighresolutiondisplay_10',['isHighResolutionDisplay',['../class_obxd_audio_processor_editor.html#a18022ae1d7a1e675fda1a6adb02ba3a6',1,'ObxdAudioProcessorEditor']]],
+  ['isinputchannelstereopair_11',['isInputChannelStereoPair',['../class_obxd_audio_processor.html#afc7001c07d88e0de90bafea577063865',1,'ObxdAudioProcessor']]],
+  ['isinterappaudioconnected_12',['isInterAppAudioConnected',['../classjuce_1_1_standalone_plugin_holder.html#ab8921b678d9ac859cfc5aaedbef8c8e9',1,'juce::StandalonePluginHolder']]],
+  ['isinterestedinfiledrag_13',['isInterestedInFileDrag',['../class_obxd_audio_processor_editor.html#aeac5137c4f7cb2ae2126b3d9de322192',1,'ObxdAudioProcessorEditor']]],
+  ['ismemoryblockapreset_14',['isMemoryBlockAPreset',['../class_obxd_audio_processor.html#ae22d8d445e7878a7fbe69362c5c4fb30',1,'ObxdAudioProcessor']]],
+  ['isonline_15',['isOnline',['../structmtsclientglobal.html#af401a3eb85e104e74170fc0faac7c51d',1,'mtsclientglobal']]],
+  ['isoutputchannelstereopair_16',['isOutputChannelStereoPair',['../class_obxd_audio_processor.html#abec7fe75f6b0888c3582b2617c921c23',1,'ObxdAudioProcessor']]],
+  ['iswindowoncurrentvirtualdesktop_17',['isWindowOnCurrentVirtualDesktop',['../namespacejuce.html#ac60d6ad3a4ae93d882f223fbb5e99831',1,'juce']]]
+];
